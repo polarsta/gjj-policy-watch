@@ -1,0 +1,75 @@
+name: weekly
+
+on:
+  schedule:
+    # 每周一 09:00 CST（= UTC 01:00）
+    - cron: "0 1 * * 1"
+  workflow_dispatch:   # 允许手动触发
+
+permissions:
+  contents: write        # 自动建分支提交周报/变更
+  pull-requests: write   # gh pr create
+
+concurrency:
+  group: weekly
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 恢复 seen 缓存（跨运行去重）
+        uses: actions/cache@v4
+        with:
+          path: data/seen_announcements.json
+          key: seen-announcements-${{ github.run_id }}
+          restore-keys: seen-announcements-
+
+      - name: 周巡检 + URL 健康检查
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          TAVILY_KEY: ${{ secrets.TAVILY_KEY }}
+          BOCHA_KEY: ${{ secrets.BOCHA_KEY }}
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        run: python -m gjjwatch.cli weekly
+
+      - name: 上传周报 artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-report-${{ github.run_number }}
+          path: reports/
+          if-no-files-found: ignore
+          retention-days: 90
+
+      # 人工确认环节：若数据库或报告有变更，自动建分支并开 PR，由维护者人工审阅合并
+      - name: 提交变更到分支并创建 PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          BRANCH="weekly/$(date +%Y%m%d)"
+          git config user.email "gjj-watch-bot@users.noreply.github.com"
+          git config user.name "gjj-watch-bot"
+          git checkout -b "$BRANCH"
+          # 仅提交有变更的文件；无变更则跳过 PR
+          git add data/gjj_policy_database.json data/change_log.json reports/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "无变更，跳过 PR"
+            exit 0
+          fi
+          git commit -m "chore(weekly): $(date +%Y-%m-%d) 周报与数据库变更"
+          git push -u origin "$BRANCH"
+          gh pr create \
+            --title "weekly $(date +%Y-%m-%d) 公积金政策周报" \
+            --body "自动生成的周报与数据库变更，请人工确认后合并（PR 即人工确认环节）。" \
+            --base main --head "$BRANCH" || true

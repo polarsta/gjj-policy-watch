@@ -1,0 +1,60 @@
+name: daily
+
+on:
+  schedule:
+    # 每天 08:00 CST（= UTC 00:00）
+    - cron: "0 0 * * *"
+  workflow_dispatch:   # 允许手动触发
+
+permissions:
+  contents: read
+
+concurrency:              # 防止上一次未跑完又触发新的
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    env:                  # job 级 env，step 的 if 条件才能引用
+      WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 恢复 seen 缓存（跨运行去重）
+        uses: actions/cache@v4
+        with:
+          path: data/seen_announcements.json
+          key: seen-announcements-${{ github.run_id }}
+          restore-keys: seen-announcements-
+
+      - name: 每日巡检（不动数据库）
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          TAVILY_KEY: ${{ secrets.TAVILY_KEY }}
+          BOCHA_KEY: ${{ secrets.BOCHA_KEY }}
+        run: python -m gjjwatch.cli daily
+
+      - name: 失败时 webhook 兜底通知
+        if: failure() && env.WEBHOOK_URL != ''
+        run: |
+          # 巡检步骤失败时也能收到告警
+          curl -sS -X POST -H 'Content-Type: application/json' \
+            -d '{"msgtype":"markdown","markdown":{"content":"⚠️ gjj-policy-watch daily 任务失败，请查看 Actions 日志"}}' \
+            "$WEBHOOK_URL" || true
+
+      - name: 上传巡检输出
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reports-${{ github.run_number }}
+          path: reports/
+          if-no-files-found: ignore
+          retention-days: 30

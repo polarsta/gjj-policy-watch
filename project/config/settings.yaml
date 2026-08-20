@@ -1,0 +1,34 @@
+date_window_days: 7            # 搜索限定的日期范围（最近N天）
+request_timeout: 15
+request_delay: 1.0             # 每请求间隔秒数（礼貌限速）
+user_agent: "Mozilla/5.0 (compatible; gjj-policy-watch/1.0)"
+keywords:                      # detector 命中词
+  - 缴存基数
+  - 贷款额度
+  - 最高额度
+  - 提取
+  - 利率
+  - 首付
+  - 调整
+  - 优化
+  - 新政
+  - 通知
+search:
+  backend: bing_html           # bing_html | serpapi | tavily | bocha
+  results_per_query: 10
+  policy_terms: [贷款, 提取, 缴存, 利率, 首付]   # 与城市名组合成查询词
+  domain_boost: ["gov.cn"]     # 结果排序加权
+llm:
+  enabled: false               # 需 OPENAI_API_KEY 才开启
+  base_url: "https://api.openai.com/v1"
+  model: "gpt-4o-mini"
+notify:
+  console: true
+  webhook_url: ""              # 企业微信/飞书 webhook，可空
+  smtp: {enabled: false, host: "", port: 465, user: "", to: []}
+paths:
+  db: data/gjj_policy_database.json
+  seen: data/seen_announcements.json
+  snapshots: data/snapshots
+  change_log: data/change_log.json
+  reports: reports

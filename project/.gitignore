@@ -1,0 +1,12 @@
+# 运行时数据
+data/seen_announcements.json
+data/change_log.json
+data/snapshots/
+reports/
+
+# Python
+__pycache__/
+*.pyc
+
+# 本地密钥
+.env
