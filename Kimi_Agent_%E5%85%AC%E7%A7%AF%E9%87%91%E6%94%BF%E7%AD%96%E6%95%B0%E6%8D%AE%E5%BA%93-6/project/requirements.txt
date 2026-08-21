@@ -1,8 +1,0 @@
-# 运行时依赖（无其他重依赖）
-requests
-beautifulsoup4
-pyyaml
-lxml
-
-# 测试依赖（不在 Docker 镜像内安装）：
-# pytest
