@@ -1,0 +1,59 @@
+# 放在前端仓库（如 gjj-portal）的 .github/workflows/ 下
+# 作用：每周一 10:00（数据仓库周报 PR 之后）从数据仓库拉取最新 db.json 并提交，触发 Pages 部署
+name: sync-db
+
+on:
+  schedule:
+    - cron: "0 2 * * 1"     # 每周一 10:00 CST（= UTC 02:00）
+  repository_dispatch:      # 支持数据仓库"合并即触发"
+    types: [db-updated]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  DATA_REPO: "你的用户名/gjj-policy-watch"   # ← 改成你的数据仓库
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 从数据仓库拉取最新数据库
+        env:
+          DATA_REPO_PAT: ${{ secrets.DATA_REPO_PAT }}   # 私有仓库必需；公开仓库可省略此 env 并改用无认证 URL
+        run: |
+          curl -sS -H "Authorization: Bearer $DATA_REPO_PAT" \
+               -H "Accept: application/vnd.github.raw" \
+               "https://api.github.com/repos/$DATA_REPO/contents/data/gjj_policy_database.json?ref=main" \
+               -o db.json
+          # 校验确实是合法 JSON（拉取失败时 GitHub API 会返回错误对象而不是数据库）
+          python3 -c "import json; d=json.load(open('db.json')); assert 'cities' in d and d['city_count']>100, 'invalid db'"
+          curl -sS -H "Authorization: Bearer $DATA_REPO_PAT" \
+               -H "Accept: application/vnd.github.raw" \
+               "https://api.github.com/repos/$DATA_REPO/contents/data/change_log.json?ref=main" \
+               -o change_log.json || echo "change_log 不存在，跳过"
+
+      - name: 提交变更
+        run: |
+          git config user.email "gjj-portal-bot@users.noreply.github.com"
+          git config user.name "gjj-portal-bot"
+          git add db.json change_log.json 2>/dev/null || git add db.json
+          if git diff --cached --quiet; then
+            echo "数据库无变化，跳过"
+            exit 0
+          fi
+          git commit -m "chore(sync): db $(date +%Y-%m-%d)"
+          git push
+
+# 【可选】在数据仓库 gjj-policy-watch 的 weekly.yml 末尾加一步，实现"PR 合并即触发前端同步"：
+#   - name: 通知前端仓库拉取新数据
+#     run: |
+#       curl -sS -X POST \
+#         -H "Authorization: Bearer ${{ secrets.PORTAL_DISPATCH_PAT }}" \
+#         -H "Accept: application/vnd.github+json" \
+#         "https://api.github.com/repos/<你的用户名>/gjj-portal/dispatches" \
+#         -d '{"event_type":"db-updated"}'
+# 其中 PORTAL_DISPATCH_PAT 是对前端仓库有 contents:write 权限的 PAT

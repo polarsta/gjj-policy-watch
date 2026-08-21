@@ -1,0 +1,941 @@
+- city: 北京
+  province: 北京市
+  official_site: https://gjj.beijing.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 北京
+- city: 上海
+  province: 上海市
+  official_site: https://www.shgjj.com
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 上海
+- city: 深圳
+  province: 广东省
+  official_site: https://zjj.sz.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 深圳
+- city: 广州
+  province: 广东省
+  official_site: http://gjj.gz.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 广州
+- city: 天津
+  province: 天津市
+  official_site: http://www.zfgjj.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 天津
+- city: 重庆
+  province: 重庆市
+  official_site: https://www.cqgjj.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 重庆
+- city: 佛山
+  province: 广东省
+  official_site: http://fsgjj.foshan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 佛山
+- city: 东莞
+  province: 广东省
+  official_site: https://dggjj.dg.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 东莞
+- city: 珠海
+  province: 广东省
+  official_site: https://gjj.zhuhai.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 珠海
+- city: 惠州
+  province: 广东省
+  official_site: http://hzgjj.huizhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 惠州
+- city: 中山
+  province: 广东省
+  official_site: http://zszfgjj.zs.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 中山
+- city: 江门
+  province: 广东省
+  official_site: http://www.jiangmen.gov.cn/jmzjj
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 江门
+- city: 湛江
+  province: 广东省
+  official_site: https://www.zhanjiang.gov.cn/zfgjj
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 湛江
+- city: 清远
+  province: 广东省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 清远
+- city: 海口
+  province: 海南省
+  official_site: https://gjj.hainan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 海口
+- city: 三亚
+  province: 海南省
+  official_site: https://gjj.hainan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 三亚
+- city: 南宁
+  province: 广西壮族自治区
+  official_site: https://gjj.nanning.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 南宁
+- city: 杭州
+  province: 浙江省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 杭州
+- city: 南京
+  province: 江苏省
+  official_site: https://gjj.nanjing.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 南京
+- city: 苏州
+  province: 江苏省
+  official_site: https://gjj.suzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 苏州
+- city: 无锡
+  province: 江苏省
+  official_site: https://www.wuxi.gov.cn/gjj/
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 无锡
+- city: 宁波
+  province: 浙江省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 宁波
+- city: 温州
+  province: 浙江省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 温州
+- city: 南通
+  province: 江苏省
+  official_site: https://www.ntgjj.com
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 南通
+- city: 常州
+  province: 江苏省
+  official_site: https://gjj.changzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 常州
+- city: 扬州
+  province: 江苏省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 扬州
+- city: 徐州
+  province: 江苏省
+  official_site: http://gjj.xz.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 徐州
+- city: 盐城
+  province: 江苏省
+  official_site: https://ycgjj.yancheng.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 盐城
+- city: 泰州
+  province: 江苏省
+  official_site: https://gjj.taizhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 泰州
+- city: 连云港
+  province: 江苏省
+  official_site: http://zfgjj.lyg.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 连云港
+- city: 镇江
+  province: 江苏省
+  official_site: https://gjj.zhenjiang.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 镇江
+- city: 绍兴
+  province: 浙江省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 绍兴
+- city: 嘉兴
+  province: 浙江省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 嘉兴
+- city: 金华
+  province: 浙江省
+  official_site: http://zfgjj.jinhua.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 金华
+- city: 台州
+  province: 浙江省
+  official_site: https://gjj.zjtz.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 台州
+- city: 衢州
+  province: 浙江省
+  official_site: http://gjjzx.qz.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 衢州
+- city: 湖州
+  province: 浙江省
+  official_site: http://hzgjj.huzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 湖州
+- city: 舟山
+  province: 浙江省
+  official_site: http://zsgjj.zhoushan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 舟山
+- city: 合肥
+  province: 安徽省
+  official_site: https://gjjzx.hefei.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 合肥
+- city: 芜湖
+  province: 安徽省
+  official_site: http://gjj.wuhu.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 芜湖
+- city: 淮南
+  province: 安徽省
+  official_site: https://gjj.huainan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 淮南
+- city: 马鞍山
+  province: 安徽省
+  official_site: https://masgjj.mas.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 马鞍山
+- city: 安庆
+  province: 安徽省
+  official_site: http://gjj.anqing.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 安庆
+- city: 六安
+  province: 安徽省
+  official_site: http://zfgjj.luan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 六安
+- city: 淮北
+  province: 安徽省
+  official_site: https://hbzfgjj.huaibei.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 淮北
+- city: 南昌
+  province: 江西省
+  official_site: http://ncgjj.nc.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 南昌
+- city: 赣州
+  province: 江西省
+  official_site: https://zfgjj.ganzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 赣州
+- city: 上饶
+  province: 江西省
+  official_site: http://gjj.zgsr.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 上饶
+- city: 九江
+  province: 江西省
+  official_site: https://www.jjszfgjj.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 九江
+- city: 景德镇
+  province: 江西省
+  official_site: http://www.jdzgjj.com
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 景德镇
+- city: 武汉
+  province: 湖北省
+  official_site: https://gjj.wuhan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 武汉
+- city: 宜昌
+  province: 湖北省
+  official_site: http://www.yygjj.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 宜昌
+- city: 黄石
+  province: 湖北省
+  official_site: https://gjj.huangshi.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 黄石
+- city: 十堰
+  province: 湖北省
+  official_site: http://gjj.shiyan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 十堰
+- city: 襄阳
+  province: 湖北省
+  official_site: https://gjj.xiangyang.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 襄阳
+- city: 黄冈
+  province: 湖北省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 黄冈
+- city: 孝感
+  province: 湖北省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 孝感
+- city: 荆州
+  province: 湖北省
+  official_site: http://gjj.zwgk.jingzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 荆州
+- city: 长沙
+  province: 湖南省
+  official_site: http://gjjzx.changsha.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 长沙
+- city: 株洲
+  province: 湖南省
+  official_site: https://gjj.zhuzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 株洲
+- city: 衡阳
+  province: 湖南省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 衡阳
+- city: 湘潭
+  province: 湖南省
+  official_site: http://www.xtzfgjj.org.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 湘潭
+- city: 娄底
+  province: 湖南省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 娄底
+- city: 郑州
+  province: 河南省
+  official_site: https://zzgjj.zhengzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 郑州
+- city: 南阳
+  province: 河南省
+  official_site: https://zfgjj.nanyang.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 南阳
+- city: 洛阳
+  province: 河南省
+  official_site: https://zfgjj.ly.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 洛阳
+- city: 安阳
+  province: 河南省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 安阳
+- city: 许昌
+  province: 河南省
+  official_site: https://zfgjj.xuchang.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 许昌
+- city: 成都
+  province: 四川
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 成都
+- city: 绵阳
+  province: 四川
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 绵阳
+- city: 泸州
+  province: 四川
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 泸州
+- city: 乐山
+  province: 四川
+  official_site: https://www.leshan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 乐山
+- city: 西安
+  province: 陕西
+  official_site: https://zfgjj.xa.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 西安
+- city: 榆林
+  province: 陕西
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 榆林
+- city: 咸阳
+  province: 陕西
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 咸阳
+- city: 宝鸡
+  province: 陕西
+  official_site: https://www.baoji.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 宝鸡
+- city: 昆明
+  province: 云南
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 昆明
+- city: 曲靖
+  province: 云南
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 曲靖
+- city: 丽江
+  province: 云南
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 丽江
+- city: 红河
+  province: 云南
+  official_site: https://www.hh.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 红河州
+  - 红河
+- city: 贵阳
+  province: 贵州
+  official_site: http://gjj.guiyang.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 贵阳
+- city: 遵义
+  province: 贵州
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 遵义
+- city: 六盘水
+  province: 贵州
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 六盘水
+- city: 兰州
+  province: 甘肃
+  official_site: https://gjj.lanzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 兰州
+- city: 银川
+  province: 宁夏
+  official_site: http://gjj.yinchuan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 银川
+- city: 西宁
+  province: 青海
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 西宁
+- city: 石家庄
+  province: 河北省
+  official_site: https://www.sjz.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 石家庄
+- city: 唐山
+  province: 河北省
+  official_site: http://www.tsgjj.com
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 唐山
+- city: 雄安
+  province: 河北省
+  official_site: https://www.xiongan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 雄安新区
+  - 雄安
+- city: 太原
+  province: 山西省
+  official_site: https://zfgjj.taiyuan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 太原
+- city: 晋城
+  province: 山西省
+  official_site: https://www.jcgov.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 晋城
+- city: 吕梁
+  province: 山西省
+  official_site: http://www.lvliang.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 吕梁
+- city: 朔州
+  province: 山西省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 朔州
+- city: 呼和浩特
+  province: 内蒙古自治区
+  official_site: http://www.hhhtgjj.org.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 呼和浩特
+- city: 包头
+  province: 内蒙古自治区
+  official_site: http://zfhcxjsj.baotou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 包头
+- city: 鄂尔多斯
+  province: 内蒙古自治区
+  official_site: http://www.ordosgjj.org.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 鄂尔多斯
+- city: 呼伦贝尔
+  province: 内蒙古自治区
+  official_site: https://zjj.hlbe.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 呼伦贝尔
+- city: 沈阳
+  province: 辽宁省
+  official_site: https://sygjj.shenyang.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 沈阳
+- city: 大连
+  province: 辽宁省
+  official_site: https://gjj.dl.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 大连
+- city: 长春
+  province: 吉林省
+  official_site: http://zfgjj.changchun.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 长春
+- city: 吉林
+  province: 吉林省
+  official_site: http://www.jlcity.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 吉林市
+  - 吉林
+- city: 通化
+  province: 吉林省
+  official_site: http://gjj.tonghua.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 通化
+- city: 哈尔滨
+  province: 黑龙江省
+  official_site: https://www.hrbgjj.org.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 哈尔滨
+- city: 大庆
+  province: 黑龙江省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 大庆
+- city: 营口
+  province: 辽宁省
+  official_site: http://gjj.yingkou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 营口
+- city: 锦州
+  province: 辽宁省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 锦州
+- city: 盘锦
+  province: 辽宁省
+  official_site: http://www.pjzfgjj.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 盘锦
+- city: 鞍山
+  province: 辽宁省
+  official_site: https://asgjj.anshan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 鞍山
+- city: 丹东
+  province: 辽宁省
+  official_site: https://www.ddzfgjj.com
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 丹东
+- city: 抚顺
+  province: 辽宁省
+  official_site: http://fsgjj.org.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 抚顺
+- city: 济南
+  province: 山东省
+  official_site: http://gjj.jinan.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 济南
+- city: 青岛
+  province: 山东省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 青岛
+- city: 烟台
+  province: 山东省
+  official_site: http://gjj.yantai.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 烟台
+- city: 潍坊
+  province: 山东省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 潍坊
+- city: 日照
+  province: 山东省
+  official_site: http://www.rizhaozfgjj.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 日照
+- city: 威海
+  province: 山东省
+  official_site: https://zfgjj.weihai.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 威海
+- city: 东营
+  province: 山东省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 东营
+- city: 济宁
+  province: 山东省
+  official_site: https://www.jining.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 济宁
+- city: 淄博
+  province: 山东省
+  official_site: https://zfgjj.zibo.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 淄博
+- city: 聊城
+  province: 山东省
+  official_site: http://gjj.liaocheng.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 聊城
+- city: 滨州
+  province: 山东省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 滨州
+- city: 临沂
+  province: 山东省
+  official_site: https://gjj.linyi.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 临沂
+- city: 厦门
+  province: 福建省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 厦门
+- city: 福州
+  province: 福建省
+  official_site: https://zfgjj.fuzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 福州
+- city: 泉州
+  province: 福建省
+  official_site: https://qzgjj.quanzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 泉州
+- city: 漳州
+  province: 福建省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 漳州
+- city: 莆田
+  province: 福建省
+  official_site: https://www.putian.gov.cn/ptgjj
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 莆田
+- city: 宁德
+  province: 福建省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 宁德
+- city: 三明
+  province: 福建省
+  official_site: http://www.sm.gov.cn/zw/ztzl/smszfgjjzt
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 三明
+- city: 龙岩
+  province: 福建省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 龙岩
+- city: 乌鲁木齐
+  province: 新疆维吾尔自治区
+  official_site: https://xjgjj.xjjs.gov.cn/wlmqgjj
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 乌鲁木齐
+- city: 石河子
+  province: 新疆维吾尔自治区（新疆生产建设兵团第八师）
+  official_site: https://www.xjbtgjj.com
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 石河子
+- city: 廊坊
+  province: 河北省
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 廊坊
+- city: 柳州
+  province: 广西壮族自治区
+  official_site: http://zfgjj.liuzhou.gov.cn
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 柳州
