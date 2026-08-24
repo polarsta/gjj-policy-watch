@@ -939,3 +939,10 @@
   list_selector: a
   search_aliases:
   - 柳州
+- city: 阜阳
+  province: 安徽
+  official_site: null
+  notice_list_url: null
+  list_selector: a
+  search_aliases:
+  - 阜阳
