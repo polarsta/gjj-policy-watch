@@ -1,0 +1,470 @@
+[
+ {
+  "city": "杭州",
+  "province": "浙江省",
+  "report_2025": {
+   "title": "杭州市住房公积金2025年年度报告",
+   "url": "https://gjj.hangzhou.gov.cn/col/col1229287769/art/2026/art_de77001aa6054cce9da41d3adc51e164.html",
+   "publish_date": "2026-04-01"
+  },
+  "report_2024": {
+   "title": "杭州市住房公积金2024年年度报告",
+   "url": "https://gjj.hangzhou.gov.cn/art/2025/3/26/art_1229287769_4341250.html",
+   "publish_date": "2025-03-26"
+  },
+  "stats_2025": {
+   "new_units": {"value": 21682, "unit": "家"},
+   "active_units": {"value": 20.1952, "unit": "万家", "yoy": "+4.8%"},
+   "new_employees": {"value": 69.2, "unit": "万人"},
+   "active_employees": {"value": 402.5, "unit": "万人"},
+   "deposit_amount": {"value": 1129.0, "unit": "亿元", "yoy": "+4.5%"},
+   "withdraw_amount": {"value": 863.1, "unit": "亿元"},
+   "loan_issued": {"value": 321.0, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 517.4, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 364.8, "unit": "亿元"}},
+  "note": "杭州年报为含省直中心口径（市中心+省直单位中心）。2025年报：新开户单位21682家、实缴单位201952家（+4.8%）、新开户职工69.2万人、实缴职工402.5万人（+1.4%）、缴存额1129.0亿元（+4.5%）、提取额863.1亿元、发放个人住房贷款4.1万笔321.0亿元（+7.4%）、年末住房公积金存款517.4亿元。2024年报存款364.8亿元。"
+ },
+ {
+  "city": "南京",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "南京住房公积金2025年年度报告",
+   "url": "https://gjj.nanjing.gov.cn/zwgk/tzgg/202603/t20260331_5815267.html",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "南京住房公积金2024年年度报告",
+   "url": "https://gjj.nanjing.gov.cn/zwgk/tzgg/202503/t20250330_5106886.html",
+   "publish_date": "2025-03-31"
+  },
+  "stats_2025": {
+   "new_units": {"value": 17496, "unit": "家"},
+   "active_units": {"value": 10.5603, "unit": "万家", "yoy": "+2.50%"},
+   "new_employees": {"value": 26.22, "unit": "万人"},
+   "active_employees": {"value": 299.39, "unit": "万人"},
+   "deposit_amount": {"value": 771.34, "unit": "亿元", "yoy": "+5.92%"},
+   "withdraw_amount": {"value": 586.37, "unit": "亿元"},
+   "loan_issued": {"value": 265.41, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 422.29, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 279.79, "unit": "亿元"}},
+  "note": "南京2025年报（官网）：实缴单位105603家（+2.50%）、实缴职工299.39万人（-0.71%）、缴存额771.34亿元（+5.92%）、提取586.37亿元、发放贷款265.41亿元、年末住房公积金存款422.29亿元。"
+ },
+ {
+  "city": "苏州",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "苏州市住房公积金2025年年度报告",
+   "url": "https://www.suzhou.gov.cn/szsrmzf/zfgjjndbg/202605/ad2d817f9b3b473b95d9c67f28735fcc.shtml",
+   "publish_date": "2026-05-14"
+  },
+  "report_2024": {
+   "title": "苏州市住房公积金2024年年度报告",
+   "url": "https://www.suzhou.gov.cn/szsrmzf/zfgjjndbg/202504/c76cea6340414740bb72067c6fb0a6f5.shtml",
+   "publish_date": "2025-04-01"
+  },
+  "stats_2025": {
+   "new_units": {"value": 50462, "unit": "家"},
+   "active_units": {"value": 19.7126, "unit": "万家", "yoy": "+4.02%"},
+   "new_employees": {"value": 78.65, "unit": "万人"},
+   "active_employees": {"value": 471.39, "unit": "万人"},
+   "deposit_amount": {"value": 883.20, "unit": "亿元", "yoy": "+5.56%"},
+   "withdraw_amount": {"value": 626.01, "unit": "亿元"},
+   "loan_issued": {"value": 539.47, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 94.11, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 76.20, "unit": "亿元"}},
+  "note": "苏州年报为含苏州工业园区口径。实缴职工471.39万人同比+1.73%。2024年末存款76.20亿元（其中园区中心29.24亿元）。年报落款2026-03-27，市政府网站2026-05-14发布（中心官网gjj.suzhou.gov.cn 2026年3月底已发布）。"
+ },
+ {
+  "city": "无锡",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "无锡市住房公积金2025年年度报告",
+   "url": "https://www.wuxi.gov.cn/doc/2026/03/31/4752758.shtml",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "无锡市住房公积金2024年年度报告",
+   "url": "https://www.wuxi.gov.cn/gjj/doc/2025/03/28/4531290.shtml",
+   "publish_date": "2025-03-28"
+  },
+  "stats_2025": {
+   "new_units": {"value": 11882, "unit": "家"},
+   "active_units": {"value": 10.9057, "unit": "万家", "yoy": "+1.46%"},
+   "new_employees": {"value": 21.45, "unit": "万人"},
+   "active_employees": {"value": 200.66, "unit": "万人"},
+   "deposit_amount": {"value": 379.07, "unit": "亿元", "yoy": "+6.1%"},
+   "withdraw_amount": {"value": 268.16, "unit": "亿元"},
+   "loan_issued": {"value": 130.52, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 356.13, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 271.82, "unit": "亿元"}},
+  "note": "无锡2025年报（市政府官网）：实缴职工200.66万人同比-0.08%。存款余额356.13亿元为2025年末资金存储数。2024年末存款271.82亿元。"
+ },
+ {
+  "city": "宁波",
+  "province": "浙江省",
+  "report_2025": {
+   "title": "宁波市住房公积金2025年年度报告",
+   "url": "http://epaper.cnnb.com.cn/nbwb/pc/content/202603/31/content_269159.html",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "宁波市住房公积金2024年年度报告",
+   "url": "https://zjw.ningbo.gov.cn/art/2025/3/30/art_1229322076_4610960.html",
+   "publish_date": "2025-03-30"
+  },
+  "stats_2025": {
+   "new_units": {"value": 9923, "unit": "家"},
+   "active_units": {"value": 7.9313, "unit": "万家", "yoy": "+3.06%"},
+   "new_employees": {"value": 35.54, "unit": "万人"},
+   "active_employees": {"value": 217.74, "unit": "万人"},
+   "deposit_amount": {"value": 425.93, "unit": "亿元", "yoy": "+4.40%"},
+   "withdraw_amount": {"value": 319.85, "unit": "亿元"},
+   "loan_issued": {"value": 169.41, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 130.13, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 80.01, "unit": "亿元"}},
+  "note": "宁波2025年报全文为《宁波晚报》数字报刊官方全文刊载（2026-03-31），数据与年报原文一致：实缴职工217.74万人（+1.38%）、发放贷款2.13万笔169.41亿元、年末存款130.13亿元。2024年报见宁波市住建局官网。"
+ },
+ {
+  "city": "温州",
+  "province": "浙江省",
+  "report_2025": {
+   "title": "温州市住房公积金2025年年度报告",
+   "url": "https://m12333.cn/policy/spzyp.html",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "温州市住房公积金2024年年度报告",
+   "url": "https://zfgjj.wenzhou.gov.cn/art/2025/3/31/art_1229322000_4284818.html",
+   "publish_date": "2025-03-31"
+  },
+  "stats_2025": {
+   "new_units": {"value": 3466, "unit": "家"},
+   "active_units": {"value": 4.3823, "unit": "万家", "yoy": null},
+   "new_employees": {"value": 16.36, "unit": "万人"},
+   "active_employees": {"value": 107.92, "unit": "万人"},
+   "deposit_amount": {"value": 210.09, "unit": "亿元", "yoy": null},
+   "withdraw_amount": {"value": 154.52, "unit": "亿元"},
+   "loan_issued": {"value": 62.52, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 162.63, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 98.52, "unit": "亿元"}},
+  "note": "温州2025年报未检索到官网直接URL，采用人社通(m12333)转载的年报全文（2026-03-31收录，资金存储：年末住房公积金存款162.63亿元），并经温州网2026-03-31报道交叉验证（缴存210.09亿、提取154.52亿、发放贷款62.52亿、实缴单位43823家、实缴107.92万人、新开户单位3466家、新开户16.36万人）。实缴单位同比未获取。"
+ },
+ {
+  "city": "南通",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "南通市住房公积金2025年年度报告",
+   "url": "https://www.ntgjj.com/NewsDetail.aspx?DetailId=24663910&UrlTowClass=61&UrlOneClass=58",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "南通市住房公积金2024年年度报告",
+   "url": "https://si12333.cn/policy/pypku.html",
+   "publish_date": "2025-03-31"
+  },
+  "stats_2025": {
+   "new_units": {"value": 3620, "unit": "家"},
+   "active_units": {"value": 3.0815, "unit": "万家", "yoy": "+2.75%"},
+   "new_employees": {"value": 14.90, "unit": "万人"},
+   "active_employees": {"value": 110.75, "unit": "万人"},
+   "deposit_amount": {"value": 219.84, "unit": "亿元", "yoy": null},
+   "withdraw_amount": {"value": 165.05, "unit": "亿元"},
+   "loan_issued": {"value": 62.88, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 195.64, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 131.34, "unit": "亿元"}},
+  "note": "南通2025年报为市公积金中心官网(ntgjj.com)全文。缴存额同比未在获取片段中显示。2024年报存款131.34亿元（人社通转载全文核对）。"
+ },
+ {
+  "city": "常州",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "常州市住房公积金2025年年度报告",
+   "url": "https://www.jintan.gov.cn/html/czjt/2026/POACAQOP_0413/30607.html",
+   "publish_date": "2026-04-13"
+  },
+  "report_2024": {
+   "title": "常州市住房公积金2024年年度报告",
+   "url": "https://epaper.cz001.com.cn/czrbpaper/pad/con/202504/01/content_143945.html",
+   "publish_date": "2025-04-01"
+  },
+  "stats_2025": {
+   "new_units": {"value": 5614, "unit": "家"},
+   "active_units": {"value": 5.3504, "unit": "万家", "yoy": "+4.15%"},
+   "new_employees": {"value": 19.90, "unit": "万人"},
+   "active_employees": {"value": 137.08, "unit": "万人"},
+   "deposit_amount": {"value": 235.85, "unit": "亿元", "yoy": "+6.82%"},
+   "withdraw_amount": {"value": 190.11, "unit": "亿元"},
+   "loan_issued": {"value": 124.33, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 36.0, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 50.68, "unit": "亿元"}},
+  "note": "常州2025年报全文发布于金坛区政府网站（官方转载，2026-04-13）。实缴职工137.08万人同比+7.16%。2024年报全文见常州日报数字报（2025-04-01 A02版），2024年末存款50.68亿元。"
+ },
+ {
+  "city": "扬州",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "扬州市住房公积金2025年年度报告",
+   "url": "https://m12333.cn/policy/spypd.html",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "扬州市住房公积金2024年年度报告",
+   "url": "https://gjjzx.yangzhou.gov.cn/zfxxgk/fdzdgk/tzgg/art/2025/art_2375f6a08d66421583661f108dcba29d.html",
+   "publish_date": "2025-03-31"
+  },
+  "stats_2025": {
+   "new_units": {"value": 1706, "unit": "家"},
+   "active_units": {"value": 1.6508, "unit": "万家", "yoy": "+0.3%"},
+   "new_employees": {"value": 6.88, "unit": "万人"},
+   "active_employees": {"value": 62.72, "unit": "万人"},
+   "deposit_amount": {"value": 125.57, "unit": "亿元", "yoy": "+2.1%"},
+   "withdraw_amount": {"value": 89.78, "unit": "亿元"},
+   "loan_issued": {"value": 30.32, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 148.23, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 106.75, "unit": "亿元"}},
+  "note": "扬州2025年报采用人社通(m12333)转载全文（2026-03-31收录）：实缴人数62.72万人同比-3.3%，发放个人住房贷款0.53万笔30.32亿元，年末住房公积金存款148.23亿元。2024年报为市公积金中心官网原文。"
+ },
+ {
+  "city": "徐州",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "徐州市住房公积金2025年年度报告",
+   "url": "https://gjj.xz.gov.cn/govxxgk/466543007/2026-03-31/9e4cdd31-1d89-497b-a9ef-f956760d07f9.html",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "徐州市住房公积金2024年年度报告",
+   "url": "https://gjj.xz.gov.cn/govxxgk/466543007/2025-03-31/35decb69-0a87-4485-bba2-74a9383f7623.html",
+   "publish_date": "2025-03-31"
+  },
+  "stats_2025": {
+   "new_units": {"value": 1717, "unit": "家"},
+   "active_units": {"value": 1.3741, "unit": "万家", "yoy": "+5.74%"},
+   "new_employees": {"value": 10.51, "unit": "万人"},
+   "active_employees": {"value": 76.83, "unit": "万人"},
+   "deposit_amount": {"value": 192.65, "unit": "亿元", "yoy": "+7.96%"},
+   "withdraw_amount": {"value": 137.86, "unit": "亿元"},
+   "loan_issued": {"value": 76.51, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 196.03, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 146.88, "unit": "亿元"}},
+  "note": "徐州2025年报为官网PDF全文（已读取）：实缴单位13741家（+5.74%）、实缴76.83万人（+4.63%）、缴存192.65亿（+7.96%）、提取137.86亿、发放贷款15672笔76.51亿、年末存款196.03亿。2024年报官网PDF：存款146.88亿。2025年徐矿集团中心并入徐州市中心管理。"
+ },
+ {
+  "city": "盐城",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "盐城市住房公积金2025年年度报告",
+   "url": "https://m12333.cn/policy/spray.html",
+   "publish_date": "2026-03-29"
+  },
+  "report_2024": {
+   "title": "盐城市住房公积金2024年年度报告",
+   "url": "https://ycgjj.yancheng.gov.cn/art/2025/3/30/art_6592_4308265.html",
+   "publish_date": "2025-03-30"
+  },
+  "stats_2025": {
+   "new_units": {"value": 2655, "unit": "家"},
+   "active_units": {"value": 2.1865, "unit": "万家", "yoy": "+3.9%"},
+   "new_employees": {"value": 8.98, "unit": "万人"},
+   "active_employees": {"value": 84.35, "unit": "万人"},
+   "deposit_amount": {"value": 135.24, "unit": "亿元", "yoy": "+3.73%"},
+   "withdraw_amount": {"value": 95.88, "unit": "亿元"},
+   "loan_issued": {"value": 37.92, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 83.15, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 52.01, "unit": "亿元"}},
+  "note": "盐城2025年报官网(ycgjj.yancheng.gov.cn)以doc附件发布，已读取人社通收录的官方doc全文：实缴单位21865家（+3.9%）、实缴84.35万人（年报中'年末正常汇缴人数73.2万人，同比增长0.36%'）、缴存135.24亿（+3.73%）、提取95.88亿（-3.94%）、发放贷款0.68万笔37.92亿、年末存款83.15亿。2024年报存款52.01亿（官网+官方公众号）。"
+ },
+ {
+  "city": "泰州",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "泰州市住房公积金2025年年度报告",
+   "url": "https://www.sohu.com/a/1004524235_121106832",
+   "publish_date": "2026-04-02"
+  },
+  "report_2024": {
+   "title": "泰州市住房公积金2024年年度报告",
+   "url": "https://gjj.taizhou.gov.cn/xwzx/tzgg/art/2025/art_119a2cc72cb849219a4e9ff8f6827237.html",
+   "publish_date": "2025-03-28"
+  },
+  "stats_2025": {
+   "new_units": {"value": 1453, "unit": "家"},
+   "active_units": {"value": 1.1134, "unit": "万家", "yoy": "+20.33%"},
+   "new_employees": {"value": 5.45, "unit": "万人"},
+   "active_employees": {"value": 50.96, "unit": "万人"},
+   "deposit_amount": {"value": 91.11, "unit": "亿元", "yoy": "+7.12%"},
+   "withdraw_amount": {"value": 64.81, "unit": "亿元"},
+   "loan_issued": {"value": 31.36, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 100.12, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 86.03, "unit": "亿元"}},
+  "note": "泰州2025年报为搜狐号转载的年报全文（来源泰州市住房公积金管理中心，2026-04-02）。缴存额91.11亿元含年度结息3.73亿元；实缴人数50.96万人同比+13.55%。2024年报为官网原文，存款86.03亿元。"
+ },
+ {
+  "city": "连云港",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "连云港市住房公积金2025年年度报告",
+   "url": "http://zfgjj.lyg.gov.cn/lygszfgjjglzx/zxgg/content/5624052a-2867-4cab-89b6-2aa6c879950a.shtml",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "连云港市住房公积金2024年年度报告",
+   "url": "http://zfgjj.lyg.gov.cn/lygszfgjjglzx/zxgg/content/c795ca89-4492-46f2-9c94-2b8877cdd5d4.html",
+   "publish_date": "2025-03-27"
+  },
+  "stats_2025": {
+   "new_units": {"value": 2047, "unit": "家"},
+   "active_units": {"value": 1.48, "unit": "万家", "yoy": "+2.95%"},
+   "new_employees": {"value": 5.67, "unit": "万人"},
+   "active_employees": {"value": 47.41, "unit": "万人"},
+   "deposit_amount": {"value": 96.58, "unit": "亿元", "yoy": "+3.37%"},
+   "withdraw_amount": {"value": 70.21, "unit": "亿元"},
+   "loan_issued": {"value": 51.01, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 31.19, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 32.16, "unit": "亿元"}},
+  "note": "连云港2025年报（官网）：实缴单位约1.48万家（+2.95%）、实缴47.41万人（-0.64%）、缴存96.58亿（+3.37%）、提取70.21亿、发放贷款51.01亿、年末存款31.19亿。2024年报官网原文，存款32.16亿。"
+ },
+ {
+  "city": "镇江",
+  "province": "江苏省",
+  "report_2025": {
+   "title": "镇江市住房公积金2025年年度报告",
+   "url": "https://gjj.zhenjiang.gov.cn/jgzn/ndbg/202603/879d68bd332a4aa381c04af40ce29d10.html",
+   "publish_date": "2026-03-27"
+  },
+  "report_2024": {
+   "title": "镇江市住房公积金2024年年度报告",
+   "url": "https://gjj.zhenjiang.gov.cn/jgzn/ndbg/202503/864d4b60afce42c99450e973f0c3f692.html",
+   "publish_date": "2025-03-28"
+  },
+  "stats_2025": {
+   "new_units": {"value": 1450, "unit": "家"},
+   "active_units": {"value": 1.3389, "unit": "万家", "yoy": "+1.22%"},
+   "new_employees": {"value": 3.63, "unit": "万人"},
+   "active_employees": {"value": 43.43, "unit": "万人"},
+   "deposit_amount": {"value": 88.35, "unit": "亿元", "yoy": "+4.52%"},
+   "withdraw_amount": {"value": 61.20, "unit": "亿元"},
+   "loan_issued": {"value": 17.34, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 123.69, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 96.25, "unit": "亿元"}},
+  "note": "镇江2025、2024年报均为市公积金中心官网'年度报告'栏目原文。2025年实缴43.43万人同比-3.77%。"
+ },
+ {
+  "city": "绍兴",
+  "province": "浙江省",
+  "report_2025": {
+   "title": "绍兴市住房公积金2025年年度报告",
+   "url": "https://m12333.cn/policy/sprek.html",
+   "publish_date": "2026-03-30"
+  },
+  "report_2024": {
+   "title": "绍兴市住房公积金2024年年度报告",
+   "url": "http://www.shaoxing.com.cn/p/3305067.html",
+   "publish_date": "2025-03-18"
+  },
+  "stats_2025": {
+   "new_units": {"value": 27028, "unit": "家"},
+   "active_units": {"value": 2.2516, "unit": "万家", "yoy": "+3.30%"},
+   "new_employees": {"value": 11.15, "unit": "万人"},
+   "active_employees": {"value": 70.59, "unit": "万人"},
+   "deposit_amount": {"value": 144.32, "unit": "亿元", "yoy": "-0.62%"},
+   "withdraw_amount": {"value": 116.28, "unit": "亿元"},
+   "loan_issued": {"value": 49.69, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 112.04, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 88.83, "unit": "亿元"}},
+  "note": "绍兴2025年报采用人社通(m12333)转载全文（2026-03-30收录）：实缴70.59万人（+0.25%）、发放个人住房贷款0.66万笔49.69亿元、年末存款112.04亿元。2024年报为绍兴网全文刊载，存款88.83亿元。"
+ },
+ {
+  "city": "嘉兴",
+  "province": "浙江省",
+  "report_2025": {
+   "title": "嘉兴市住房公积金2025年年度报告",
+   "url": "https://gjj.jiaxing.gov.cn/col/col1229354688/art/2026/art_e1ffaf4b3dfa40f591b117f4a535cf9c.html",
+   "publish_date": "2026-03-27"
+  },
+  "report_2024": {
+   "title": "嘉兴市住房公积金2024年年度报告",
+   "url": "https://gjj.jiaxing.gov.cn/art/2025/3/27/art_1229354688_5484539.html",
+   "publish_date": "2025-03-27"
+  },
+  "stats_2025": {
+   "new_units": {"value": 3159, "unit": "家"},
+   "active_units": {"value": 3.5042, "unit": "万家", "yoy": "+1.68%"},
+   "new_employees": {"value": 12.34, "unit": "万人"},
+   "active_employees": {"value": 101.58, "unit": "万人"},
+   "deposit_amount": {"value": 177.85, "unit": "亿元", "yoy": "-0.82%"},
+   "withdraw_amount": {"value": 138.51, "unit": "亿元"},
+   "loan_issued": {"value": 65.7, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 49.45, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 33.88, "unit": "亿元"}},
+  "note": "嘉兴2025、2024年报均为市公积金中心官网原文。2025年实缴职工101.58万人（+0.95%）。"
+ },
+ {
+  "city": "金华",
+  "province": "浙江省",
+  "report_2025": {
+   "title": "金华市住房公积金2025年年度报告",
+   "url": "https://jh.news.fang.com/open/54501691.html",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "金华市住房公积金2024年年度报告",
+   "url": "https://m12333.cn/policy/pysum.html",
+   "publish_date": "2025-04-01"
+  },
+  "stats_2025": {
+   "new_units": {"value": 2152, "unit": "家"},
+   "active_units": {"value": 2.3956, "unit": "万家", "yoy": "+8.16%"},
+   "new_employees": {"value": 14.07, "unit": "万人"},
+   "active_employees": {"value": 75.79, "unit": "万人"},
+   "deposit_amount": {"value": 147.31, "unit": "亿元", "yoy": "+4.08%"},
+   "withdraw_amount": {"value": 111.85, "unit": "亿元"},
+   "loan_issued": {"value": 50.30, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 110.86, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 81.83, "unit": "亿元"}},
+  "note": "金华2025年报全文经房天下转载（2026-03-31，标注'部分公布'但含全部业务数据，与人社通收录一致）：实缴75.79万人（+3.14%）、发放贷款6493笔50.30亿元（-6.59%）、年末存款110.86亿元。金华中心口径含义乌市（义乌中心独立管理但纳入全市统计）。2024年报人社通转载，存款81.83亿元。"
+ },
+ {
+  "city": "台州",
+  "province": "浙江省",
+  "report_2025": {
+   "title": "台州市住房公积金2025年年度报告",
+   "url": "https://m12333.cn/policy/sprda.html",
+   "publish_date": "2026-03-30"
+  },
+  "report_2024": {
+   "title": "台州市住房公积金2024年年度报告",
+   "url": "https://gjj.zjtz.gov.cn/art/2025/3/27/art_1229045868_4030762.html",
+   "publish_date": "2025-03-27"
+  },
+  "stats_2025": {
+   "new_units": {"value": 3331, "unit": "家"},
+   "active_units": {"value": 3.489, "unit": "万家", "yoy": "+5.02%"},
+   "new_employees": {"value": 15.11, "unit": "万人"},
+   "active_employees": {"value": 73.34, "unit": "万人"},
+   "deposit_amount": {"value": 146.79, "unit": "亿元", "yoy": "+3.38%"},
+   "withdraw_amount": {"value": 116.64, "unit": "亿元"},
+   "loan_issued": {"value": 47.83, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 129.39, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 104.43, "unit": "亿元"}},
+  "note": "台州2025年报采用人社通(m12333)转载全文（2026-03-30收录）：实缴73.34万人（+1.30%）、提取116.64亿、年末存款129.39亿；发放个人住房贷款47.83亿（潮新闻报道引年报数据，同比+28.67%）。2024年报为市公积金中心官网原文，存款104.43亿。"
+ }
+]

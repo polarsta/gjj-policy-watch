@@ -1,0 +1,1028 @@
+[
+  {
+    "city": "成都",
+    "province": "四川",
+    "report_2025": {
+      "title": "成都住房公积金2025年年度报告",
+      "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156350/2026-03/30/content_6a7a103ad62748039e61b9cfbd88dad4.shtml",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": "成都住房公积金2024年年度报告",
+      "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156350/2025-03/27/content_aa0f47693e924f87afe8af36b5587aae.shtml",
+      "publish_date": "2025-03-27"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 21681,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 13.6249,
+        "unit": "万家",
+        "yoy": "+6.01%"
+      },
+      "new_employees": {
+        "value": 47.33,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 469.86,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 896.52,
+        "unit": "亿元",
+        "yoy": "+4.74%"
+      },
+      "withdraw_amount": {
+        "value": 709.68,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 411.84,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 448.02,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 443.11,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报取自成都市公积金中心官网；当年发放个人住房贷款411.84亿元另经成都日报/人民网报道印证。2025年末缴存余额约1798亿元（年报口径）。"
+  },
+  {
+    "city": "绵阳",
+    "province": "四川",
+    "report_2025": {
+      "title": "绵阳市住房公积金2025年年度报告",
+      "url": "https://www.my.gov.cn/mysrmzf/c100004/202603/97bfbde3a2e641eba0662a589849d54c.shtml",
+      "publish_date": "2026-06-16"
+    },
+    "report_2024": {
+      "title": "绵阳市住房公积金2024年年度报告",
+      "url": "http://epaper.myrb.net/html/2025-03/28/content_77621.htm",
+      "publish_date": "2025-03-28"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 913,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.7918,
+        "unit": "万家",
+        "yoy": "+4.97%"
+      },
+      "new_employees": {
+        "value": 4.09,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 39.53,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 83.89,
+        "unit": "亿元",
+        "yoy": "+5.23%"
+      },
+      "withdraw_amount": {
+        "value": 62.35,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 31.35,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 98.79,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 80.44,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为绵阳市政府网站转载（年报经管委会审议通过后公布，绵阳日报2026年3月首发）；2024年报为绵阳日报数字报全文。2025年末缴存余额282.01亿元。"
+  },
+  {
+    "city": "泸州",
+    "province": "四川",
+    "report_2025": {
+      "title": "泸州市住房公积金2025年年度报告",
+      "url": "https://m12333.cn/qa/swscr.html",
+      "publish_date": "2026-03-23"
+    },
+    "report_2024": {
+      "title": "泸州市住房公积金2024年年度报告",
+      "url": null,
+      "publish_date": null
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 488,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.5263,
+        "unit": "万家",
+        "yoy": "+5.37%"
+      },
+      "new_employees": {
+        "value": 2.56,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 29.28,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 56.52,
+        "unit": "亿元",
+        "yoy": "+4.83%"
+      },
+      "withdraw_amount": {
+        "value": 40.32,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 15.59,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 68.24,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为人社通(m12333)转载（官网zfgjj.luzhou.cn/sclzgjj.com未能正常访问）；当年发放个人住房贷款15.59亿元(0.38万笔)。2024年报全文未检索到，2024年末存款余额缺失；2024年末缴存余额170.87亿元（四川省2024年年度报告分城市表）。"
+  },
+  {
+    "city": "乐山",
+    "province": "四川",
+    "report_2025": {
+      "title": "乐山市住房公积金2025年年度报告",
+      "url": "https://www.leshan.gov.cn/lsswszf/zzzqgsgg/783029808590917.html",
+      "publish_date": "2026-03-12"
+    },
+    "report_2024": {
+      "title": "乐山市住房公积金2024年年度报告",
+      "url": "https://m12333.cn/policy/pyuck.html",
+      "publish_date": null
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 395,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.5025,
+        "unit": "万家",
+        "yoy": "+1.43%"
+      },
+      "new_employees": {
+        "value": 1.73,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 22.14,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 44.35,
+        "unit": "亿元",
+        "yoy": "+2.66%"
+      },
+      "withdraw_amount": {
+        "value": 34.45,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 13.92,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 48.63,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 36.43,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报取自乐山市政府官网；2024年报为人社通转载。2025年实缴人数同比下降4.16%。"
+  },
+  {
+    "city": "西安",
+    "province": "陕西",
+    "report_2025": {
+      "title": "西安住房公积金2025年年度报告",
+      "url": "https://www.sohu.com/a/1003640857_121106869",
+      "publish_date": null
+    },
+    "report_2024": {
+      "title": "西安住房公积金2024年年度报告",
+      "url": "https://m12333.cn/policy/pypew.html",
+      "publish_date": "2025-03-31"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 14237,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 7.3781,
+        "unit": "万家",
+        "yoy": "+12.66%"
+      },
+      "new_employees": {
+        "value": 33.15,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 292.62,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 571.42,
+        "unit": "亿元",
+        "yoy": "+7.16%"
+      },
+      "withdraw_amount": {
+        "value": 384.69,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 272.48,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 289.78,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 234.69,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为搜狐号全文转载官方年报（西安中心官网原文链接未检索到）；2024年报为人社通转载。"
+  },
+  {
+    "city": "榆林",
+    "province": "陕西",
+    "report_2025": {
+      "title": "榆林市住房公积金2025年年度报告",
+      "url": "http://szb.ylrb.com/html/2026/20260330/20260330_002/20260330_002_02_2664.html",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": "榆林市住房公积金2024年年度报告",
+      "url": "https://m12333.cn/policy/pympf.html",
+      "publish_date": "2025-03-26"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 980,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.9277,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": 3.41,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 43.11,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 112.65,
+        "unit": "亿元",
+        "yoy": "+5.06%"
+      },
+      "withdraw_amount": {
+        "value": 73.62,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 32.86,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 122.62,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 85.45,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为榆林日报数字报全文（官方党报）；该报仅披露缴存额同比+5.06%，实缴单位/实缴职工同比未披露。2025年末缴存余额323.11亿元。"
+  },
+  {
+    "city": "咸阳",
+    "province": "陕西",
+    "report_2025": {
+      "title": "咸阳市住房公积金2025年年度报告",
+      "url": "https://m12333.cn/policy/spzkm.html",
+      "publish_date": null
+    },
+    "report_2024": {
+      "title": "咸阳市住房公积金2024年年度报告",
+      "url": "https://m12333.cn/policy/pypfy.html",
+      "publish_date": "2025-04-01"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 318,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.5013,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": 2.01,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 30.54,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 51.35,
+        "unit": "亿元",
+        "yoy": "+10.21%"
+      },
+      "withdraw_amount": {
+        "value": 32.41,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 14.71,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 58.01,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 36.2,
+        "unit": "亿元"
+      }
+    },
+    "note": "均为人社通(m12333)转载官方年报。2025年报披露缴存额同比+10.21%、提取额32.41亿元(+4.69%)，实缴单位同比未披露。2025年末缴存余额200.96亿元。"
+  },
+  {
+    "city": "宝鸡",
+    "province": "陕西",
+    "report_2025": {
+      "title": "宝鸡市住房公积金2025年年度报告",
+      "url": "https://www.baoji.gov.cn/col9816/col9817/col9856/col9863/202603/t20260327_1258176.html",
+      "publish_date": "2026-03-27"
+    },
+    "report_2024": {
+      "title": "宝鸡市住房公积金2024年年度报告",
+      "url": "https://www.baoji.gov.cn/col9816/col9818/col9856/col9863/202503/t20250324_1131247.html",
+      "publish_date": "2025-03-24"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 786,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.5969,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": 2.8985,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 28.35,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 46.68,
+        "unit": "亿元",
+        "yoy": "+4.20%"
+      },
+      "withdraw_amount": {
+        "value": 30.57,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 15.14,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 66.03,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 50.29,
+        "unit": "亿元"
+      }
+    },
+    "note": "均取自宝鸡市政府官网。2025年报仅披露缴存额同比+4.20%，实缴单位/实缴职工同比未披露。2025年末缴存余额181.32亿元。"
+  },
+  {
+    "city": "昆明",
+    "province": "云南",
+    "report_2025": {
+      "title": "昆明市住房公积金2025年年度报告",
+      "url": "https://zfgjj.km.gov.cn/c/2026-03-30/5067681.shtml",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": "昆明市住房公积金2024年年度报告",
+      "url": "https://zfgjj.km.gov.cn/c/2025-03-28/4989090.shtml",
+      "publish_date": "2025-03-28"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 3637,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 2.749,
+        "unit": "万家",
+        "yoy": "+3.44%"
+      },
+      "new_employees": {
+        "value": 15.35,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 121.34,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 292.73,
+        "unit": "亿元",
+        "yoy": "+4.81%"
+      },
+      "withdraw_amount": {
+        "value": 242.05,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 81.54,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 158.94,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 126.99,
+        "unit": "亿元"
+      }
+    },
+    "note": "均取自昆明市住房公积金管理中心官网（含省直分中心、铁路分中心合并口径）。"
+  },
+  {
+    "city": "曲靖",
+    "province": "云南",
+    "report_2025": {
+      "title": "曲靖市住房公积金2025年年度报告",
+      "url": "https://www.sohu.com/a/1002850734_121106902",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": "曲靖市住房公积金2024年年度报告",
+      "url": "https://www.sohu.com/a/876904731_121123789",
+      "publish_date": "2025-03-28"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 296,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.38,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": 1.62,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 26.29,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 65.77,
+        "unit": "亿元",
+        "yoy": "+3.39%"
+      },
+      "withdraw_amount": {
+        "value": 53.03,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 22.67,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 78.04,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 66.64,
+        "unit": "亿元"
+      }
+    },
+    "note": "均为搜狐转载官方年报全文（曲靖中心官网原文未检索到）。2025年报披露缴存额同比+3.39%，实缴单位同比未披露。2025年末缴存余额210.83亿元。"
+  },
+  {
+    "city": "丽江",
+    "province": "云南",
+    "report_2025": {
+      "title": "丽江市住房公积金2025年年度报告（搜狐为图片版；数据取自云南省住房公积金2025年年度报告分城市表）",
+      "url": "https://file.m12333.cn/upfile/download/96721f6f-d667-8e21-d585-a52131a638f4.pdf",
+      "publish_date": "2026-03-31"
+    },
+    "report_2024": {
+      "title": "丽江市住房公积金2024年年度报告",
+      "url": null,
+      "publish_date": null
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": null,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.2,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": null,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 7.17,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 18.21,
+        "unit": "亿元",
+        "yoy": null
+      },
+      "withdraw_amount": {
+        "value": 14.87,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 9.4,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "note": "丽江市2025年报仅以图片形式发布（搜狐2026-03-31），无法提取文本；实缴单位0.20万家、实缴人数7.17万人、缴存额18.21亿元、提取额14.87亿元、贷款发放9.40亿元取自《云南省住房公积金2025年年度报告》分城市表。新开户单位/新开户职工、2025年末存款余额及2024年存款余额未获取（2024年末缴存余额48.99亿元，云南省2024年报）。"
+  },
+  {
+    "city": "红河（州）",
+    "province": "云南",
+    "report_2025": {
+      "title": "红河州住房公积金2025年年度报告（全文未检索到；数据取自云南省2025年年度报告分城市表及红河州2025年度住房公积金绩效评价报告）",
+      "url": "https://file.m12333.cn/upfile/download/96721f6f-d667-8e21-d585-a52131a638f4.pdf",
+      "publish_date": null
+    },
+    "report_2024": {
+      "title": "红河州住房公积金2024年年度报告",
+      "url": null,
+      "publish_date": null
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 637,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.58,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": 1.89,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 23.42,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 55.05,
+        "unit": "亿元",
+        "yoy": "+7.14%"
+      },
+      "withdraw_amount": {
+        "value": 42.94,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 25.41,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "note": "红河州2025/2024年报全文均未检索到。实缴单位0.58万家、实缴职工23.42万人、缴存额55.05亿元、提取42.94亿元、贷款发放25.41亿元取自《云南省住房公积金2025年年度报告》；新开户单位637家、新开户职工1.89万人为州绩效评价报告“新增缴存单位/职工”口径（缴存额同比+7.14%同源）。2025年末归集余额175.89亿元；2024年末缴存余额163.78亿元（省2024年报）。两年存款余额均未获取。"
+  },
+  {
+    "city": "贵阳",
+    "province": "贵州",
+    "report_2025": {
+      "title": "贵阳住房公积金2025年年度报告",
+      "url": "https://www.sohu.com/a/1003608997_121106902",
+      "publish_date": "2026-03-31"
+    },
+    "report_2024": {
+      "title": "贵阳住房公积金2024年年度报告",
+      "url": "https://m12333.cn/policy/pyumr.html",
+      "publish_date": "2025-03-25"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 6240,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 3.5756,
+        "unit": "万家",
+        "yoy": "-0.61%"
+      },
+      "new_employees": {
+        "value": 11.48,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 112.07,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 201.86,
+        "unit": "亿元",
+        "yoy": "+4.12%"
+      },
+      "withdraw_amount": {
+        "value": 164.13,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 93.83,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 20.97,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 25.17,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为搜狐转载官方年报全文（贵阳市公积金中心+贵州省住房资金管理中心合并口径）；2024年报为人社通转载。2025年末缴存余额553.35亿元。"
+  },
+  {
+    "city": "遵义",
+    "province": "贵州",
+    "report_2025": {
+      "title": "遵义市住房公积金2025年年度报告",
+      "url": "https://m12333.cn/policy/spidk.html",
+      "publish_date": "2026-03-27"
+    },
+    "report_2024": {
+      "title": "遵义市住房公积金2024年年度报告",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzUzODgzMDY1Nw==&mid=2247517652&idx=2&sn=7f9a8868a3349594e1a49a8c5a361e39",
+      "publish_date": "2025-03-26"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 1102,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.8652,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": 3.41,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 48.49,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 115.69,
+        "unit": "亿元",
+        "yoy": null
+      },
+      "withdraw_amount": {
+        "value": 84.81,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 44.3,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 77.36,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 54.38,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为人社通转载；当年发放个人住房贷款9699笔44.30亿元（+4.51%）、提取额84.81亿元（+4.77%）。实缴单位及缴存额同比未在所获文本中披露（缴存额按省年报2024年109.51亿元计算约+5.6%）。2024年报为微信公众号全文。"
+  },
+  {
+    "city": "六盘水",
+    "province": "贵州",
+    "report_2025": {
+      "title": "六盘水市住房公积金2025年年度报告",
+      "url": "https://m12333.cn/policy/spsyz.html",
+      "publish_date": "2026-03-24"
+    },
+    "report_2024": {
+      "title": "六盘水市住房公积金2024年年度报告",
+      "url": "http://gjj.gzlps.gov.cn/bmxxgk/zfxxgk_5816274/fdzdgknr/gjjndbg/202503/t20250325_87262304.html",
+      "publish_date": "2025-03-25"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 435,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.3476,
+        "unit": "万家",
+        "yoy": "+6.86%"
+      },
+      "new_employees": {
+        "value": 2.29,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 21.81,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 40.7,
+        "unit": "亿元",
+        "yoy": "+6.13%"
+      },
+      "withdraw_amount": {
+        "value": 30.53,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 17.44,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 22.2,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 15.61,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为人社通转载（实缴职工同比+3.96%、提取额+2.62%）；2024年报取自六盘水市公积金中心官网。2025年末缴存余额133.68亿元。"
+  },
+  {
+    "city": "兰州",
+    "province": "甘肃",
+    "report_2025": {
+      "title": "兰州市住房公积金2025年年度报告",
+      "url": "https://m.sohu.com/a/1003371917_121106869",
+      "publish_date": null
+    },
+    "report_2024": {
+      "title": "兰州市住房公积金2024年年度报告",
+      "url": "https://gjj.lanzhou.gov.cn/art/2025/3/28/art_275_1474931.html",
+      "publish_date": "2025-03-28"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 2244,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 1.6671,
+        "unit": "万家",
+        "yoy": "+9.09%"
+      },
+      "new_employees": {
+        "value": 5.81,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 73.45,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 178.44,
+        "unit": "亿元",
+        "yoy": "+6.37%"
+      },
+      "withdraw_amount": {
+        "value": 144.82,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 63.69,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 172.54,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 142.01,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为搜狐转载（兰州中心+甘肃省住房资金管理中心合并口径，实缴职工同比-1.21%）；2024年报取自兰州公积金中心官网。"
+  },
+  {
+    "city": "银川",
+    "province": "宁夏",
+    "report_2025": {
+      "title": "银川市住房公积金2025年年度报告",
+      "url": "https://m12333.cn/policy/sssmf.html",
+      "publish_date": null
+    },
+    "report_2024": {
+      "title": "银川市住房公积金2024年年度报告",
+      "url": "https://www.yinchuan.gov.cn/xxgk/bmxxgkml/zfgjjglzx/xxgkml_2829/zfgjjndbg_7701/202503/t20250324_4863389.html",
+      "publish_date": "2025-03-24"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 1784,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 1.0422,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": 7.42,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 50.57,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 117.89,
+        "unit": "亿元",
+        "yoy": null
+      },
+      "withdraw_amount": {
+        "value": 84.78,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 38.78,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 141.01,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 110.16,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为人社通转载（提取额84.78亿元、贷款发放38.78亿元经《宁夏回族自治区住房公积金2025年年度报告》分城市表印证）；实缴单位/缴存额同比未在所获文本中完整披露。2024年报取自银川市政府官网。"
+  },
+  {
+    "city": "西宁",
+    "province": "青海",
+    "report_2025": {
+      "title": "西宁住房公积金2025年年度报告",
+      "url": "https://www.sohu.com/a/1004528230_121106869",
+      "publish_date": "2026-04-02"
+    },
+    "report_2024": {
+      "title": "西宁住房公积金2024年年度报告",
+      "url": "https://zc.51shebao.com/detail/835616",
+      "publish_date": "2025-04-11"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 968,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.7994,
+        "unit": "万家",
+        "yoy": "+2.62%"
+      },
+      "new_employees": {
+        "value": 3.27,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 36.8,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 101.7,
+        "unit": "亿元",
+        "yoy": "+6.08%"
+      },
+      "withdraw_amount": {
+        "value": 74.07,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 31.31,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 79.37,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 50.8,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为搜狐全文转载（西宁中心+省直分中心合并口径，实缴人数同比-2.67%）；2024年报为51社保网转载（2025-04-11发布），2024年末存款50.8亿元。"
+  }
+]

@@ -1,0 +1,800 @@
+[
+  {
+    "city": "哈尔滨",
+    "province": "黑龙江",
+    "report_2025": {
+      "title": null,
+      "url": null,
+      "publish_date": null
+    },
+    "report_2024": {
+      "title": "哈尔滨市住房公积金2024年年度报告",
+      "url": "https://zc.51shebao.com/detail/835586",
+      "publish_date": "2025-03-19"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": null,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 2.06,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": null,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 115.53,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 284.15,
+        "unit": "亿元",
+        "yoy": null
+      },
+      "withdraw_amount": {
+        "value": 197.57,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 68.39,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 398.05,
+        "unit": "亿元"
+      }
+    },
+    "note": "未检索到哈尔滨市2025年年度报告原文（官网/搜索引擎均未收录，截至2026-08）。stats_2025中实缴单位2.06万家、实缴职工115.53万人、缴存额284.15亿元、提取额197.57亿元、发放贷款68.39亿元（1.31万笔）取自《黑龙江省住房公积金2025年年度报告》分城市表（https://www.hlj.gov.cn/hlj/c108459/202605/31941971/files/ 黑龙江省住房公积金2025年年度报告.pdf），口径含省直、农垦、电力、森工分中心；新开户单位、新开户职工、存款余额未获取。2024年报为51shebao转载全文，2024年末住房公积金存款398.05亿元；2024年缴存额286.71亿元(+10.09%)、提取258.6亿元、放贷72.32亿元。"
+  },
+  {
+    "city": "大庆",
+    "province": "黑龙江",
+    "report_2025": {
+      "title": null,
+      "url": null,
+      "publish_date": null
+    },
+    "report_2024": {
+      "title": "大庆市住房公积金2024年年报解读（图说版，原文未检索到）",
+      "url": "https://si12333.cn/qa/pamiz.html",
+      "publish_date": "2025-06-06"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": null,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.39,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": null,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 38.78,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 98.26,
+        "unit": "亿元",
+        "yoy": null
+      },
+      "withdraw_amount": {
+        "value": 71.31,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 20.25,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "note": "大庆市2025年、2024年年度报告全文均未检索到（市管委会2026-03-25会议审议通过2025年报，但未公开全文）。stats_2025取自《黑龙江省住房公积金2025年年度报告》分城市表（实缴0.39万家/38.78万人/缴存98.26亿/提取71.31亿/放贷0.60万笔20.25亿），新开户、存款余额缺失。2024年数据仅有官方图说版年报解读：缴存98.92亿(+6.01%)、提取78.99亿(-3.93%)、放贷0.65万笔21.16亿、实缴单位3895家、实缴职工40.37万人，未披露存款余额，故stats_2024存款为null。"
+  },
+  {
+    "city": "营口",
+    "province": "辽宁",
+    "report_2025": {
+      "title": "营口市住房公积金2025年年度报告",
+      "url": "http://gjj.yingkou.gov.cn/zcfg/5730.jhtml",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": "营口市住房公积金2024年年度报告",
+      "url": "http://gjj.yingkou.gov.cn/czyjs/5160.jhtml",
+      "publish_date": "2025-03-31"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 303,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.3026,
+        "unit": "万家",
+        "yoy": "+3.03%"
+      },
+      "new_employees": {
+        "value": 1.04,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 16.44,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 29.92,
+        "unit": "亿元",
+        "yoy": "+2.64%"
+      },
+      "withdraw_amount": {
+        "value": 21.73,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 4.71,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 61.97,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 46.36,
+        "unit": "亿元"
+      }
+    },
+    "note": "均为官网原文。2025年实缴单位3026家(+3.03%)、实缴职工16.44万人(-2.31%)；2025年末住房公积金存款61.97亿元。2024年报为图片形式发布，2024年末住房公积金存款46.36亿元。"
+  },
+  {
+    "city": "锦州",
+    "province": "辽宁",
+    "report_2025": {
+      "title": "锦州市住房公积金2025年年度报告",
+      "url": "https://m12333.cn/policy/spica.html",
+      "publish_date": "2026-03-27"
+    },
+    "report_2024": {
+      "title": "锦州市住房公积金2024年年度报告",
+      "url": "https://si12333.cn/policy/pyure.html",
+      "publish_date": "2025-03-26"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 311,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.35,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": 1.22,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 18.28,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 32.03,
+        "unit": "亿元",
+        "yoy": null
+      },
+      "withdraw_amount": {
+        "value": 24.09,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 7.32,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 55.5,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 42.17,
+        "unit": "亿元"
+      }
+    },
+    "note": "年报全文官网未直接获取，采用人社通(m12333/si12333)转载的官方年报全文。2025年新开户单位311家、新开户人数1.22万人、提取额24.09亿元(-2.39%)、2025年末存款55.50亿元来自年报原文；实缴单位0.35万家、实缴人数18.28万人、缴存额32.03亿元、放贷7.32亿元与《辽宁省住房公积金2025年年度报告》分城市表一致。实缴单位/缴存额同比增速未获取。2024年末住房公积金存款42.17亿元（si12333全文）。"
+  },
+  {
+    "city": "盘锦",
+    "province": "辽宁",
+    "report_2025": {
+      "title": "盘锦市住房公积金2025年年度报告",
+      "url": "http://www.pjzfgjj.cn/2026_03/31_16/content-557331.html",
+      "publish_date": "2026-03-31"
+    },
+    "report_2024": {
+      "title": "盘锦市住房公积金2024年年度报告",
+      "url": "https://www.pjzfgjj.cn/2025_03/19_09/content-513192.html",
+      "publish_date": "2025-03-19"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 413,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.272,
+        "unit": "万家",
+        "yoy": "+10.03%"
+      },
+      "new_employees": {
+        "value": 1.15,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 22.84,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 53.4,
+        "unit": "亿元",
+        "yoy": "+4.03%"
+      },
+      "withdraw_amount": {
+        "value": 41.33,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 5.42,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 157.82,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 142.09,
+        "unit": "亿元"
+      }
+    },
+    "note": "均为市公积金中心官网原文。2025年实缴单位2720家(+10.03%)、实缴职工22.84万人(-1.59%)、缴存额53.40亿(+4.03%)、提取41.33亿、放贷5.42亿、年末存款157.82亿。2024年末存款142.09亿元。"
+  },
+  {
+    "city": "鞍山",
+    "province": "辽宁",
+    "report_2025": {
+      "title": "鞍山市住房公积金2025年年度报告",
+      "url": "https://www.sohu.com/a/1003025610_121106822",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": "鞍山市住房公积金2024年年度报告",
+      "url": "https://asgjj.anshan.gov.cn:1433/czyjs/1253.jhtml",
+      "publish_date": "2025-03-29"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 256,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.3728,
+        "unit": "万家",
+        "yoy": "+0.03%"
+      },
+      "new_employees": {
+        "value": 1.44,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 24.36,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 47.76,
+        "unit": "亿元",
+        "yoy": "+0.38%"
+      },
+      "withdraw_amount": {
+        "value": 38.72,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 7.26,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 113.37,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 96.79,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为搜狐号转载的鞍山市住房公积金管理中心官方全文（含鞍山中心+鞍钢分中心合并口径）：实缴3728家(+0.03%)、实缴24.36万(-3.52%)、缴存47.76亿(+0.38%)、提取38.72亿(+2.84%)、放贷0.20万笔7.26亿、年末存款113.37亿。2024年报为官网doc附件，2024年末存款96.79亿元。"
+  },
+  {
+    "city": "丹东",
+    "province": "辽宁",
+    "report_2025": {
+      "title": "丹东市住房公积金2025年年度报告",
+      "url": "https://www.sohu.com/a/1002814998_121106822",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": null,
+      "url": null,
+      "publish_date": null
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 218,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.3269,
+        "unit": "万家",
+        "yoy": "+0.86%"
+      },
+      "new_employees": {
+        "value": 1.14,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 15.3,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 29.59,
+        "unit": "亿元",
+        "yoy": "+9.27%"
+      },
+      "withdraw_amount": {
+        "value": 20.6,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 6.07,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 43.74,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为搜狐转载的丹东市公积金中心官方全文：实缴3269家(+0.86%)、实缴15.30万人(+0.01%)、缴存29.59亿(+9.27%)、提取20.60亿、放贷6.07亿、2025年末存款43.74亿。未检索到丹东市2024年年度报告全文，2024年存款余额缺失（参考：《辽宁省2024年年度报告》分城市表丹东2024年缴存额27.08亿、缴存余额98.24亿，非存款口径）。"
+  },
+  {
+    "city": "抚顺",
+    "province": "辽宁",
+    "report_2025": {
+      "title": "抚顺市住房公积金2025年年度报告",
+      "url": "http://fsgjj.org.cn/zdxxgk/4424.jhtml",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": "抚顺市住房公积金2024年年度报告（媒体转载全文）",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzAwOTg1ODEyMw==&mid=2651196420&idx=2&sn=8f442b03bad5a650dafa3109d9c04b78",
+      "publish_date": "2025-03-28"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 171,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.2007,
+        "unit": "万家",
+        "yoy": "-0.59%"
+      },
+      "new_employees": {
+        "value": 0.62,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 15.84,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 32.37,
+        "unit": "亿元",
+        "yoy": "+0.28%"
+      },
+      "withdraw_amount": {
+        "value": 24.64,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 5.82,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 62.58,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 50.99,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报为中心官网原文：新开户171家、实缴2007家(-0.59%)、新开户0.62万人、实缴15.84万(-4.23%)、缴存32.37亿(+0.28%)、提取24.64亿(-7.61%)、放贷0.16万笔5.82亿、年末存款62.58亿。2024年报为微信公众号媒体转载全文，2024年末存款50.99亿元。"
+  },
+  {
+    "city": "济南",
+    "province": "山东",
+    "report_2025": {
+      "title": "济南住房公积金2025年年度报告",
+      "url": "https://gjj.jinan.gov.cn/col/col24486/art/2026/art_79a918d34c0b466986367b09ba0442e1.html",
+      "publish_date": "2026-03-31"
+    },
+    "report_2024": {
+      "title": "济南住房公积金2024年年度报告",
+      "url": "http://gjj.jinan.gov.cn/col65566/art/2025/art_65566_4756183.html",
+      "publish_date": "2025-04-25"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 12950,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 7.047,
+        "unit": "万家",
+        "yoy": "+6.95%"
+      },
+      "new_employees": {
+        "value": 25.62,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 214.05,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 495.43,
+        "unit": "亿元",
+        "yoy": "+8.75%"
+      },
+      "withdraw_amount": {
+        "value": 438.84,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 188.9,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 466.13,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 458.73,
+        "unit": "亿元"
+      }
+    },
+    "note": "均为济南公积金中心官网原文。2025年新开户单位12950家、实缴70470家(+6.95%)、新开户25.62万人、实缴214.05万(+3.21%)、缴存495.43亿(+8.75%)、提取438.84亿、放贷188.90亿、年末存款466.13亿。2024年末存款458.73亿元。"
+  },
+  {
+    "city": "青岛",
+    "province": "山东",
+    "report_2025": {
+      "title": "青岛市住房公积金2025年年度报告",
+      "url": "http://www.qingdao.gov.cn/zwgk/xxgk/gjjgl/gkml/ghjh/202603/t20260330_10549589.shtml",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": "青岛市住房公积金2024年年度报告",
+      "url": "http://www.qingdao.gov.cn/zwgk/xxgk/gjjgl/gkml/ghjh/202503/t20250327_9191478.shtml",
+      "publish_date": "2025-03-27"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 12087,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 9.5133,
+        "unit": "万家",
+        "yoy": "+3.16%"
+      },
+      "new_employees": {
+        "value": 19.45,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 214.52,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 403.67,
+        "unit": "亿元",
+        "yoy": "+5.31%"
+      },
+      "withdraw_amount": {
+        "value": 295.11,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 133.66,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 350.54,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 278.76,
+        "unit": "亿元"
+      }
+    },
+    "note": "均为青岛市政府官网原文。2025年新开户12087家、实缴95133家(+3.16%)、新开户19.45万人、实缴214.52万(-0.01%)、缴存403.67亿(+5.31%)、提取295.11亿、放贷133.66亿、年末存款350.54亿。2024年末存款278.76亿元。"
+  },
+  {
+    "city": "烟台",
+    "province": "山东",
+    "report_2025": {
+      "title": "烟台市住房公积金2025年年度报告",
+      "url": "https://gjj.yantai.gov.cn/col/col4103/art/2026/art_7e199eecbdbe44a4967cb8a6b04e1ac6.html",
+      "publish_date": "2026-03-31"
+    },
+    "report_2024": {
+      "title": "烟台市住房公积金2024年年度报告",
+      "url": "https://gjj.yantai.gov.cn/art/2025/3/28/art_4103_2880334.html",
+      "publish_date": "2025-03-28"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 2467,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 1.7837,
+        "unit": "万家",
+        "yoy": "+6.21%"
+      },
+      "new_employees": {
+        "value": 11.17,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 101.28,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 182.66,
+        "unit": "亿元",
+        "yoy": "+10.16%"
+      },
+      "withdraw_amount": {
+        "value": 115.28,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 59.68,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 181.42,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 111.87,
+        "unit": "亿元"
+      }
+    },
+    "note": "均为烟台公积金中心官网原文（2025年报落款2026年3月31日）。2025年新开户2467家、实缴17837家(+6.21%)、新开户11.17万人、实缴101.28万(+3.53%)、缴存182.66亿(+10.16%)、提取115.28亿(+0.31%)、放贷1.20万笔59.68亿、年末存款181.42亿。2024年末存款111.87亿元。"
+  },
+  {
+    "city": "潍坊",
+    "province": "山东",
+    "report_2025": {
+      "title": "潍坊市住房公积金2025年年度报告",
+      "url": "https://m12333.cn/policy/sprfw.html",
+      "publish_date": "2026-03-30"
+    },
+    "report_2024": {
+      "title": "潍坊市住房公积金2024年年度报告（安丘市政府转发）",
+      "url": "http://www.anqiu.gov.cn/xxgk/szfgjjglzx/202504/t20250403_246422.html",
+      "publish_date": "2025-04-03"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 2090,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 1.4733,
+        "unit": "万家",
+        "yoy": "+3.06%"
+      },
+      "new_employees": {
+        "value": 7.81,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 86.02,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 124.58,
+        "unit": "亿元",
+        "yoy": "+13.8%"
+      },
+      "withdraw_amount": {
+        "value": 80.52,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 53.16,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 124.52,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 92.85,
+        "unit": "亿元"
+      }
+    },
+    "note": "2025年报采用人社通转载的官方年报全文：新开户2090家、新开户7.81万人、实缴14733家(+3.06%)、实缴86.02万(+0.79%)、缴存124.58亿(+13.8%)、提取80.52亿、放贷1.20万笔53.16亿、2025年末存款124.52亿。2024年报（安丘市政府站转发/人社通全文）2024年末存款92.85亿元。"
+  },
+  {
+    "city": "日照",
+    "province": "山东",
+    "report_2025": {
+      "title": "“数说”日照市住房公积金2025年年度报告（官方图说版，速豹新闻转载，来源：日照住房公积金）",
+      "url": "http://rizhao.subaoxw.com/fcqc/2026/0411/261669.html",
+      "publish_date": "2026-04-11"
+    },
+    "report_2024": {
+      "title": "日照市住房公积金2024年年度报告",
+      "url": "https://www.rizhaozfgjj.cn/art/2025/3/31/art_182486_10282356.html",
+      "publish_date": "2025-03-31"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 1124,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 0.7432,
+        "unit": "万家",
+        "yoy": null
+      },
+      "new_employees": {
+        "value": 3.73,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 30.28,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 62.03,
+        "unit": "亿元",
+        "yoy": "+9.8%"
+      },
+      "withdraw_amount": {
+        "value": 41.94,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 22.51,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": null,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 38.79,
+        "unit": "亿元"
+      }
+    },
+    "note": "日照2025年报仅见官方“数说”图说版（市公积金中心官网截至2026-08未挂出文字版全文）：新开户单位1124家、新开户3.73万人、实缴单位7432家、实缴30.28万人、缴存62.03亿（同比+9.8%来自中心“2025年度十大关键词”）、提取13.94万人41.94亿(+1.87%)、放贷0.44万笔22.51亿；图说版未披露存款余额，故为null，2025年末缴存余额189.52亿元（+11.86%）。2024年报为官网原文，2024年末存款38.79亿元。"
+  },
+  {
+    "city": "威海",
+    "province": "山东",
+    "report_2025": {
+      "title": "威海市住房公积金2025年年度报告",
+      "url": "http://www.weihai.gov.cn/art/2026/3/31/art_63729_6228528.html",
+      "publish_date": "2026-03-31"
+    },
+    "report_2024": {
+      "title": "威海市住房公积金2024年年度报告",
+      "url": "https://www.weihai.gov.cn/art/2025/3/31/art_63729_5372186.html",
+      "publish_date": "2025-03-31"
+    },
+    "stats_2025": {
+      "new_units": {
+        "value": 1175,
+        "unit": "家"
+      },
+      "active_units": {
+        "value": 1.0055,
+        "unit": "万家",
+        "yoy": "+4.15%"
+      },
+      "new_employees": {
+        "value": 3.84,
+        "unit": "万人"
+      },
+      "active_employees": {
+        "value": 45.05,
+        "unit": "万人"
+      },
+      "deposit_amount": {
+        "value": 62.88,
+        "unit": "亿元",
+        "yoy": "+9.60%"
+      },
+      "withdraw_amount": {
+        "value": 42.18,
+        "unit": "亿元"
+      },
+      "loan_issued": {
+        "value": 20.01,
+        "unit": "亿元"
+      },
+      "fund_deposit_balance": {
+        "value": 113.18,
+        "unit": "亿元"
+      }
+    },
+    "stats_2024": {
+      "fund_deposit_balance": {
+        "value": 89.17,
+        "unit": "亿元"
+      }
+    },
+    "note": "均为威海市政府官网原文。2025年新开户1175家、实缴10055家(+4.15%)、新开户3.84万人、实缴45.05万(+2.78%)、缴存62.88亿(+9.60%)、提取42.18亿、放贷20.01亿、年末存款113.18亿。2024年末存款89.17亿元。"
+  }
+]

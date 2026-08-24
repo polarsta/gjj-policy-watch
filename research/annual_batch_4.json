@@ -1,0 +1,1028 @@
+[
+ {
+  "city": "武汉",
+  "province": "湖北",
+  "report_2025": {
+   "title": "武汉住房公积金2025年年度报告",
+   "url": "https://gjj.wuhan.gov.cn/zwgk/ndbg/202603/t20260326_2745342.html",
+   "publish_date": "2026-03-26"
+  },
+  "report_2024": {
+   "title": "武汉住房公积金2024年年度报告",
+   "url": "https://gjj.wuhan.gov.cn/zwgk/ndbg/202602/t20260210_2727052.html",
+   "publish_date": "2025-03-31"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 12345,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 8.2677,
+    "unit": "万家",
+    "yoy": "+5.94%"
+   },
+   "new_employees": {
+    "value": 27.72,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 292.26,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 686.47,
+    "unit": "亿元",
+    "yoy": "+3.19%"
+   },
+   "withdraw_amount": {
+    "value": 503.68,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 385.6,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 240.22,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 147.44,
+    "unit": "亿元"
+   }
+  },
+  "note": "官方年报全文（武汉公积金中心官网，另长江日报2026-03-30全文刊登一致）。2025年实缴单位82677家、净增4635家；提取额同比下降0.53%。2025年末缴存余额2375.05亿元（注意区分：存款余额240.22亿≠缴存余额）。"
+ },
+ {
+  "city": "宜昌",
+  "province": "湖北",
+  "report_2025": {
+   "title": "宜昌住房公积金2025年年度报告",
+   "url": "http://gjj.yichang.gov.cn/content-55762-6421-1.html",
+   "publish_date": "2026-03-20"
+  },
+  "report_2024": {
+   "title": "宜昌住房公积金2024年年度报告",
+   "url": "http://gjj.yichang.gov.cn/content-55762-6185-1.html",
+   "publish_date": "2025-03-28"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 1674,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 1.2987,
+    "unit": "万家",
+    "yoy": "+3.54%"
+   },
+   "new_employees": {
+    "value": 9.22,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 56.41,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 118.37,
+    "unit": "亿元",
+    "yoy": "+8.25%"
+   },
+   "withdraw_amount": {
+    "value": 86.04,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 47.01,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 102.93,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 82.07,
+    "unit": "亿元"
+   }
+  },
+  "note": "官方年报全文（宜昌公积金中心官网）。2025年实缴单位12987家、净增444家；实缴职工56.41万人同比+8.49%。2025年末缴存总额994.33亿元。"
+ },
+ {
+  "city": "黄石",
+  "province": "湖北",
+  "report_2025": {
+   "title": "黄石市住房公积金2025年年度报告",
+   "url": "https://gjj.huangshi.gov.cn/zwgk/zfxxgknb/202603/t20260324_1316468.html",
+   "publish_date": "2026-03-24"
+  },
+  "report_2024": {
+   "title": "黄石市住房公积金2024年年度报告",
+   "url": "https://gjj.huangshi.gov.cn/zwgk/zfxxgknb/202503/t20250331_1209148.html",
+   "publish_date": "2025-03-31"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 534,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.534,
+    "unit": "万家",
+    "yoy": "+4.46%"
+   },
+   "new_employees": {
+    "value": 2.43,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 24.35,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 49.21,
+    "unit": "亿元",
+    "yoy": "+0.67%"
+   },
+   "withdraw_amount": {
+    "value": 37.92,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 14.24,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 52.58,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 37.76,
+    "unit": "亿元"
+   }
+  },
+  "note": "官方年报全文（黄石公积金中心官网）。2024年末缴存余额154.14亿元。"
+ },
+ {
+  "city": "十堰",
+  "province": "湖北",
+  "report_2025": {
+   "title": "十堰市住房公积金2025年年度报告",
+   "url": "http://gjj.shiyan.gov.cn/szfgjjglzx/sfgwgkml/qtzdgknr/zczxjlsqk/202603/t20260330_4916256.shtml",
+   "publish_date": "2026-03-30"
+  },
+  "report_2024": {
+   "title": "十堰市住房公积金2024年年度报告",
+   "url": "http://gjj.shiyan.gov.cn/szfgjjglzx/sfgwgkml/tjxx/202506/t20250626_4761278.shtml",
+   "publish_date": "2025-06-26"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 532,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.525,
+    "unit": "万家",
+    "yoy": "+0.52%"
+   },
+   "new_employees": {
+    "value": 1.8,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 24.57,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 56.05,
+    "unit": "亿元",
+    "yoy": "+1.19%"
+   },
+   "withdraw_amount": {
+    "value": 42.73,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 15.36,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 151.43,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 137.09,
+    "unit": "亿元"
+   }
+  },
+  "note": "官方年报全文（十堰公积金中心官网）。2025年实缴单位5250家。2024年报发布较晚（2025-06-26）。"
+ },
+ {
+  "city": "襄阳",
+  "province": "湖北",
+  "report_2025": {
+   "title": "襄阳市住房公积金2025年年度报告",
+   "url": "https://m12333.cn/policy/sprzy.html",
+   "publish_date": "2026-03-28"
+  },
+  "report_2024": {
+   "title": "襄阳市住房公积金2024年年度报告",
+   "url": "http://gjj.xiangyang.gov.cn/zwgk/gkml/ghjh/202505/t20250512_3808613.shtml",
+   "publish_date": "2025-05-12"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 691,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.7663,
+    "unit": "万家",
+    "yoy": "+3%"
+   },
+   "new_employees": {
+    "value": 4.59,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 37.61,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 83.77,
+    "unit": "亿元",
+    "yoy": "+7.61%"
+   },
+   "withdraw_amount": {
+    "value": 59.76,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 31.18,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 93.94,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 68.9,
+    "unit": "亿元"
+   }
+  },
+  "note": "2025年报官网（gjj.xiangyang.gov.cn）未检索到全文，数据取自人社通转载年报全文（缴存段、资金存储93.94亿）；提取额59.76亿、贷款发放31.18亿取自《湖北省住房公积金2025年年度报告》分市表（zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202604/t20260428_5924360.shtml）。新开户人数45915人、实缴人数376077人同比-0.46%；2025年末缴存余额293.06亿。"
+ },
+ {
+  "city": "黄冈",
+  "province": "湖北",
+  "report_2025": {
+   "title": "黄冈市2025年数据（市级年报全文未检索到；取自省年报及官方通报）",
+   "url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202604/t20260428_5924360.shtml",
+   "publish_date": "2026-04-24"
+  },
+  "report_2024": {
+   "title": "黄冈市2024年数据（市级年报全文未检索到；取自湖北省2024年年度报告）",
+   "url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202504/t20250428_5633714.shtml",
+   "publish_date": "2025-04-28"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 711,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.57,
+    "unit": "万家",
+    "yoy": null
+   },
+   "new_employees": {
+    "value": 2.16,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 25.7,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 57.04,
+    "unit": "亿元",
+    "yoy": null
+   },
+   "withdraw_amount": {
+    "value": 42.14,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 15.59,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": null,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": null,
+    "unit": "亿元"
+   }
+  },
+  "note": "黄冈市2025/2024年报全文未在官网（gjj.hg.gov.cn）检索到。实缴单位0.57万家、实缴25.70万人、缴存57.04亿、提取42.14亿、贷款15.59亿取自《湖北省住房公积金2025年年度报告》分市表；新开户单位711家、新增缴存21603人（≈2.16万）取自湖北日报客户端/荆楚网2026-01-14报道（黄冈中心通报）。存款余额未披露：2025年末缴存余额235.75亿（同上报道）；2024年末缴存余额220.85亿（湖北省2024年年度报告）。"
+ },
+ {
+  "city": "孝感",
+  "province": "湖北",
+  "report_2025": {
+   "title": "孝感市2025年数据（市级年报全文未检索到；取自省年报）",
+   "url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202604/t20260428_5924360.shtml",
+   "publish_date": "2026-04-24"
+  },
+  "report_2024": {
+   "title": "孝感市住房公积金2024年年度报告",
+   "url": "http://xggjj.xiaogan.gov.cn/zwgk/2007125.jhtml",
+   "publish_date": "2025-03-26"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": null,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.47,
+    "unit": "万家",
+    "yoy": null
+   },
+   "new_employees": {
+    "value": null,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 23.94,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 46.77,
+    "unit": "亿元",
+    "yoy": "+8.58%"
+   },
+   "withdraw_amount": {
+    "value": 40.62,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 11.6,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": null,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 70.81,
+    "unit": "亿元"
+   }
+  },
+  "note": "2025年报全文未检索到（孝感公积金官网访问失败）。实缴单位0.47万家、实缴23.94万人、缴存46.77亿、提取40.62亿、贷款11.60亿取自《湖北省住房公积金2025年年度报告》分市表；缴存额同比+8.58%据中华建设网2026-03-12报道引孝感中心数据。2025年存款余额未披露；2024年末缴存余额150.71亿（2024年报原文，存款余额70.81亿来自该年报资金存储）。"
+ },
+ {
+  "city": "荆州",
+  "province": "湖北",
+  "report_2025": {
+   "title": "荆州市2025年数据（市级年报全文未检索到；取自省年报）",
+   "url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202604/t20260428_5924360.shtml",
+   "publish_date": "2026-04-24"
+  },
+  "report_2024": {
+   "title": "荆州住房公积金2024年年度报告",
+   "url": "http://news.cnchu.com/jzrb/pc/html/2025-03/27/nw.D421000jzrb_20250327_1-A004.htm",
+   "publish_date": "2025-03-27"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": null,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.6,
+    "unit": "万家",
+    "yoy": null
+   },
+   "new_employees": {
+    "value": null,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 28.79,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 60.21,
+    "unit": "亿元",
+    "yoy": null
+   },
+   "withdraw_amount": {
+    "value": 45.3,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 15.11,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": null,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 72.47,
+    "unit": "亿元"
+   }
+  },
+  "note": "2025年报全文未检索到（荆州2025年数据取自《湖北省住房公积金2025年年度报告》分市表，存款余额未披露）。2024年报由荆州日报数字报全文刊登（权威媒体）：2024年末存款余额72.47亿、缴存余额185.92亿。"
+ },
+ {
+  "city": "长沙",
+  "province": "湖南",
+  "report_2025": {
+   "title": "长沙市住房公积金2025年年度报告",
+   "url": "https://www.icswb.com/h/151/20260330/971500.html",
+   "publish_date": "2026-03-30"
+  },
+  "report_2024": {
+   "title": "长沙住房公积金2024年年度报告",
+   "url": "https://www.icswb.com/default.php?a=detail&mod=newspaper_article&newspaper_article_id=1821619",
+   "publish_date": "2025-03-28"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 9024,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 5.4324,
+    "unit": "万家",
+    "yoy": "+9.57%"
+   },
+   "new_employees": {
+    "value": 31.68,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 229.41,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 416.57,
+    "unit": "亿元",
+    "yoy": "+2.64%"
+   },
+   "withdraw_amount": {
+    "value": 307.93,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 174.95,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 307.33,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 221.7,
+    "unit": "亿元"
+   }
+  },
+  "note": "年报全文由长沙晚报网刊登（权威媒体，与长沙市公积金中心同步发布）。2025年实缴单位54324家；实缴人数同比-0.77%。《湖南省2025年年度报告》中长沙缴存额416.56亿（四舍五入差异）。"
+ },
+ {
+  "city": "株洲",
+  "province": "湖南",
+  "report_2025": {
+   "title": "株洲市住房公积金2025年年度报告",
+   "url": "https://www.sohu.com/a/1002071302_121106908",
+   "publish_date": "2026-03-27"
+  },
+  "report_2024": {
+   "title": "株洲市住房公积金2024年年度报告",
+   "url": "http://gjj.zhuzhou.gov.cn/c5361/20250327/i2337423.html",
+   "publish_date": "2025-03-27"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 471,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.4655,
+    "unit": "万家",
+    "yoy": "+3.61%"
+   },
+   "new_employees": {
+    "value": 3.03,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 32.05,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 68.41,
+    "unit": "亿元",
+    "yoy": "+4.69%"
+   },
+   "withdraw_amount": {
+    "value": 48.65,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 25.42,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 106.74,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 90.28,
+    "unit": "亿元"
+   }
+  },
+  "note": "2025年报官方发布于株洲公积金官网（2026-03-27），全文经'株洲发布'搜狐号（一图读懂文字版）及人社通m12333.cn/policy/sprms.html转载。省年报中株洲提取额48.66亿（与市报48.65亿为舍入差异）。2024年报为官网全文。"
+ },
+ {
+  "city": "衡阳",
+  "province": "湖南",
+  "report_2025": {
+   "title": "衡阳市住房公积金2025年年度报告",
+   "url": "https://www.hengyang.gov.cn/hyszfgjj/xxgk/ghjh/20260330/i3879763.html",
+   "publish_date": "2026-03-30"
+  },
+  "report_2024": {
+   "title": "衡阳市住房公积金2024年年度报告",
+   "url": "https://www.hengyang.gov.cn/hyszfgjj/xxgk/ghjh/20250325/i3617553.html",
+   "publish_date": "2025-03-25"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 350,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.4655,
+    "unit": "万家",
+    "yoy": "+0.26%"
+   },
+   "new_employees": {
+    "value": 2.19,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 32.64,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 62.02,
+    "unit": "亿元",
+    "yoy": "+2.56%"
+   },
+   "withdraw_amount": {
+    "value": 37.47,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 12.41,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 158.55,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 128.84,
+    "unit": "亿元"
+   }
+  },
+  "note": "官方年报全文（衡阳市政府网/市公积金中心）。2025年实缴单位4655家；实缴职工同比-9.55%。2025年末缴存余额276.54亿元（存款余额158.55亿）。"
+ },
+ {
+  "city": "湘潭",
+  "province": "湖南",
+  "report_2025": {
+   "title": "湘潭市住房公积金2025年年度报告",
+   "url": "http://www.xiangtan.gov.cn/109/213/215/content_1424230.html",
+   "publish_date": "2026-03-28"
+  },
+  "report_2024": {
+   "title": "湘潭市住房公积金2024年年度报告",
+   "url": "https://www.xtol.cn/2025/03/28/99562706.html",
+   "publish_date": "2025-03-28"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 321,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.3193,
+    "unit": "万家",
+    "yoy": "+4.24%"
+   },
+   "new_employees": {
+    "value": 2.27,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 21.2,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 41.43,
+    "unit": "亿元",
+    "yoy": "+3.03%"
+   },
+   "withdraw_amount": {
+    "value": 29.75,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 15.1,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 52.25,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 41.01,
+    "unit": "亿元"
+   }
+  },
+  "note": "2025年报官方全文（湘潭市政府网）。2024年报全文由湘潭在线（湘潭日报）刊登，存款余额41.01亿。"
+ },
+ {
+  "city": "娄底",
+  "province": "湖南",
+  "report_2025": {
+   "title": "娄底市2025年数据（市级年报全文未检索到；取自省年报）",
+   "url": "http://zjt.hunan.gov.cn/zjt/xxgk/xinxigongkaimulu/tjxx/202604/t20260427_33965308.html",
+   "publish_date": "2026-04-27"
+  },
+  "report_2024": {
+   "title": null,
+   "url": null,
+   "publish_date": null
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": null,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.28,
+    "unit": "万家",
+    "yoy": null
+   },
+   "new_employees": {
+    "value": null,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 19.12,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 38.77,
+    "unit": "亿元",
+    "yoy": "+2.89%"
+   },
+   "withdraw_amount": {
+    "value": 24.37,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 7.26,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": null,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": null,
+    "unit": "亿元"
+   }
+  },
+  "note": "娄底市2025年报全文未检索到（官网gjj.hnloudi.gov.cn无法访问，搜狐'娄底发布'为图片版）。实缴单位0.28万家、实缴19.12万人、缴存38.77亿、提取24.37亿（提取率62.86%）、贷款发放7.26亿取自《湖南省住房公积金2025年年度报告》分市表；缴存同比+2.89%据娄底新闻网/红网报道。2025/2024年存款余额均未披露；2024年归集37.68亿元（新湖南报道）。"
+ },
+ {
+  "city": "郑州",
+  "province": "河南",
+  "report_2025": {
+   "title": "郑州住房公积金2025年年度报告",
+   "url": "https://zzgjj.zhengzhou.gov.cn/zxindt/9958028.jhtml",
+   "publish_date": "2026-03-23"
+  },
+  "report_2024": {
+   "title": "郑州住房公积金2024年年度报告",
+   "url": "https://zzgjj.zhengzhou.gov.cn/gjjd/9192960.jhtml",
+   "publish_date": "2025-03-25"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 8267,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 4.5081,
+    "unit": "万家",
+    "yoy": "+7.15%"
+   },
+   "new_employees": {
+    "value": 27.84,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 210.85,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 450.72,
+    "unit": "亿元",
+    "yoy": "+6.26%"
+   },
+   "withdraw_amount": {
+    "value": 334.65,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 199.64,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 291.02,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 223.54,
+    "unit": "亿元"
+   }
+  },
+  "note": "官方年报全文（郑州公积金中心官网）。口径含省直资金中心：2025年郑州中心缴存334.19亿+省直116.53亿。2025年末缴存余额1447.70亿元。"
+ },
+ {
+  "city": "南阳",
+  "province": "河南",
+  "report_2025": {
+   "title": "南阳市住房公积金2025年年度报告",
+   "url": "http://zfgjj.nanyang.gov.cn/2026/03-31/1394398.html",
+   "publish_date": "2026-03-31"
+  },
+  "report_2024": {
+   "title": "南阳市住房公积金2024年年度报告",
+   "url": "https://mp.weixin.qq.com/s/meAcq_2zhocCnxMN0SZWww",
+   "publish_date": "2025-04-07"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 908,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.8913,
+    "unit": "万家",
+    "yoy": "+4.27%"
+   },
+   "new_employees": {
+    "value": 4.54,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 65.38,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 74.23,
+    "unit": "亿元",
+    "yoy": "+1.84%"
+   },
+   "withdraw_amount": {
+    "value": 48.15,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 23.65,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 194.38,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 163.85,
+    "unit": "亿元"
+   }
+  },
+  "note": "口径含油田、邓州。2025年报为官网全文；2024年报全文见'南阳公积金'官方微信公众号（人社通m12333.cn/policy/pyprw.html亦有转载）。省2025年报中南阳缴存76.25/提取50.16/贷款23.66，与市报（74.23/48.15/23.65）存在口径修正差异，本表采用市年报原文数据。"
+ },
+ {
+  "city": "洛阳",
+  "province": "河南",
+  "report_2025": {
+   "title": "洛阳市2025年数据（市级年报全文未检索到；取自河南省2025年年度报告）",
+   "url": "https://m.sohu.com/a/1019105914_121106991",
+   "publish_date": "2026-05-06"
+  },
+  "report_2024": {
+   "title": "洛阳市2024年数据（市级年报全文未检索到；取自河南省2024年年度报告）",
+   "url": "https://zc.51shebao.com/detail/836321",
+   "publish_date": "2025-04-30"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": null,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 1.01,
+    "unit": "万家",
+    "yoy": null
+   },
+   "new_employees": {
+    "value": null,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 55.4,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 106.85,
+    "unit": "亿元",
+    "yoy": null
+   },
+   "withdraw_amount": {
+    "value": 72.42,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 43.77,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": null,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": null,
+    "unit": "亿元"
+   }
+  },
+  "note": "洛阳市级年报全文未检索到（洛阳公积金官网信息公开目录403，仅有图片版解读）。2025年数据取自《河南省住房公积金2025年年度报告》分市表（搜狐全文转载；提取率67.77%）。2024年：实缴0.98万家、56.94万人、缴存103.79亿、缴存余额337.09亿（河南省2024年年度报告）。两年存款余额均未披露。"
+ },
+ {
+  "city": "安阳",
+  "province": "河南",
+  "report_2025": {
+   "title": "安阳市住房公积金2025年年度报告",
+   "url": "https://www.ayrbs.com/szb/pc/content/202603/26/content_107938.html",
+   "publish_date": "2026-03-26"
+  },
+  "report_2024": {
+   "title": null,
+   "url": null,
+   "publish_date": null
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 260,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.3413,
+    "unit": "万家",
+    "yoy": "-12.87%"
+   },
+   "new_employees": {
+    "value": 2.38,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 25.37,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 40.19,
+    "unit": "亿元",
+    "yoy": "+1.24%"
+   },
+   "withdraw_amount": {
+    "value": 27.57,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 14.11,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 73.06,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": null,
+    "unit": "亿元"
+   }
+  },
+  "note": "2025年报全文由安阳日报数字报全文刊登（权威媒体）。2025年末缴存总额442.99亿（+9.98%）、缴存余额162.72亿。河南省年报口径含滑县（实缴0.39万家/29.13万人/缴存45.77亿），与市报口径不同。2024年报全文未检索到，2024年存款余额缺失；据安阳融媒2025-01报道，2024年缴存39.69亿、提取26.57亿、贷款18.34亿。"
+ },
+ {
+  "city": "许昌",
+  "province": "河南",
+  "report_2025": {
+   "title": "许昌市住房公积金2025年年度报告",
+   "url": "https://zfgjj.xuchang.gov.cn/sjtj/20260330/b86babda-4cd7-4f9d-89c2-178f56197b6f.html",
+   "publish_date": "2026-03-30"
+  },
+  "report_2024": {
+   "title": "许昌市住房公积金2024年年度报告",
+   "url": "https://zfgjj.xuchang.gov.cn/sjtj/20250508/4c7855c6-fb2b-4c26-98e2-eb646e9404ab.html",
+   "publish_date": "2025-03-31"
+  },
+  "stats_2025": {
+   "new_units": {
+    "value": 276,
+    "unit": "家"
+   },
+   "active_units": {
+    "value": 0.3603,
+    "unit": "万家",
+    "yoy": "+0.4%"
+   },
+   "new_employees": {
+    "value": 2.18,
+    "unit": "万人"
+   },
+   "active_employees": {
+    "value": 24.31,
+    "unit": "万人"
+   },
+   "deposit_amount": {
+    "value": 40.68,
+    "unit": "亿元",
+    "yoy": "+2.9%"
+   },
+   "withdraw_amount": {
+    "value": 26.55,
+    "unit": "亿元"
+   },
+   "loan_issued": {
+    "value": 17.69,
+    "unit": "亿元"
+   },
+   "fund_deposit_balance": {
+    "value": 55.75,
+    "unit": "亿元"
+   }
+  },
+  "stats_2024": {
+   "fund_deposit_balance": {
+    "value": 44.98,
+    "unit": "亿元"
+   }
+  },
+  "note": "官方年报全文（许昌公积金中心官网）。2025年实缴单位3603家、实缴职工24.31万人（+2.1%）。与河南省2025年报分市表数据一致。"
+ }
+]

@@ -1,0 +1,326 @@
+[
+ {
+  "city": "东营",
+  "province": "山东",
+  "report_2025": {"title": "东营市住房公积金2025年年度报告", "url": "http://www.o546.cn/news/Info.asp?ID=15873", "publish_date": "2026-03-31"},
+  "report_2024": {"title": "东营市住房公积金2024年年度报告", "url": "https://m12333.cn/policy/pymed.html", "publish_date": "2025-03-28"},
+  "stats_2025": {
+   "new_units": {"value": 869, "unit": "家"},
+   "active_units": {"value": 0.6919, "unit": "万家", "yoy": "+3.73%"},
+   "new_employees": {"value": 2.72, "unit": "万人"},
+   "active_employees": {"value": 42.76, "unit": "万人"},
+   "deposit_amount": {"value": 109.51, "unit": "亿元", "yoy": "+7.06%"},
+   "withdraw_amount": {"value": 81.02, "unit": "亿元"},
+   "loan_issued": {"value": 18.92, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 108.598, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 77.246, "unit": "亿元"}},
+  "note": "2025年报官方原文发布于东营市政府网站(2026-03-31)，此处为'我爱东营'网站转载的市政府通知公告全文；2024年报为人社通转载全文。东营年报为市中心+胜利油田分中心合并口径。"
+ },
+ {
+  "city": "济宁",
+  "province": "山东",
+  "report_2025": {"title": "济宁市住房公积金2025年年度报告", "url": "https://www.jining.gov.cn/art/2026/3/27/art_33479_2924802.html", "publish_date": "2026-03-27"},
+  "report_2024": {"title": "济宁市住房公积金2024年年度报告", "url": "https://www.jining.gov.cn/art/2025/3/20/art_33479_2897416.html", "publish_date": "2025-03-20"},
+  "stats_2025": {
+   "new_units": {"value": 1572, "unit": "家"},
+   "active_units": {"value": 1.2965, "unit": "万家", "yoy": "+2.34%"},
+   "new_employees": {"value": 5.51, "unit": "万人"},
+   "active_employees": {"value": 69.33, "unit": "万人"},
+   "deposit_amount": {"value": 145.91, "unit": "亿元", "yoy": "+12.20%"},
+   "withdraw_amount": {"value": 90.22, "unit": "亿元"},
+   "loan_issued": {"value": 65.64, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 169.92, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 128.56, "unit": "亿元"}},
+  "note": ""
+ },
+ {
+  "city": "淄博",
+  "province": "山东",
+  "report_2025": {"title": "淄博市住房公积金2025年年度报告", "url": "https://zfgjj.zibo.gov.cn/art/2026/3/31/art_457_2993670.html", "publish_date": "2026-03-31"},
+  "report_2024": {"title": "淄博市住房公积金2024年年度报告", "url": "https://zfgjj.zibo.gov.cn/art/2025/3/31/art_457_2904431.html", "publish_date": "2025-03-31"},
+  "stats_2025": {
+   "new_units": {"value": 1860, "unit": "家"},
+   "active_units": {"value": 1.4618, "unit": "万家", "yoy": "+1.4%"},
+   "new_employees": {"value": 7.99, "unit": "万人"},
+   "active_employees": {"value": 68.06, "unit": "万人"},
+   "deposit_amount": {"value": 109.78, "unit": "亿元", "yoy": "+8.44%"},
+   "withdraw_amount": {"value": 78.99, "unit": "亿元"},
+   "loan_issued": {"value": 30.77, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 114.4, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 73.96, "unit": "亿元"}},
+  "note": ""
+ },
+ {
+  "city": "聊城",
+  "province": "山东",
+  "report_2025": {"title": "聊城市住房公积金2025年年度报告", "url": "http://gjj.liaocheng.gov.cn/channel_lc_szfgjjglzxchannel201911221748451985046612/doc_69c4dde674ea2d3a50b2d9fd.html", "publish_date": "2026-03-26"},
+  "report_2024": {"title": "聊城市住房公积金2024年年度报告", "url": "http://gjj.liaocheng.gov.cn/channel_lc_szfgjjglzxchannel201911221748451985046612/doc_67e9e521f27dc752877e088c.html", "publish_date": "2025-03-28"},
+  "stats_2025": {
+   "new_units": {"value": 1511, "unit": "家"},
+   "active_units": {"value": 0.973, "unit": "万家", "yoy": "+9.03%"},
+   "new_employees": {"value": 3.8, "unit": "万人"},
+   "active_employees": {"value": 39.74, "unit": "万人"},
+   "deposit_amount": {"value": 75.7, "unit": "亿元", "yoy": "+20.12%"},
+   "withdraw_amount": {"value": 43.58, "unit": "亿元"},
+   "loan_issued": {"value": 26.59, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 111.53, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 78.47, "unit": "亿元"}},
+  "note": "年报发布在中心官网'年度运行报告'栏目"
+ },
+ {
+  "city": "滨州",
+  "province": "山东",
+  "report_2025": {"title": "滨州市住房公积金2025年年度报告", "url": "https://m12333.cn/policy/sprcr.html", "publish_date": "2026-03-30"},
+  "report_2024": {"title": "滨州市住房公积金2024年年度报告", "url": "http://gjj.binzhou.gov.cn/art/2025/3/28/art_121655_10267065.html", "publish_date": "2025-03-28"},
+  "stats_2025": {
+   "new_units": {"value": 1890, "unit": "家"},
+   "active_units": {"value": 0.9537, "unit": "万家", "yoy": "+14.42%"},
+   "new_employees": {"value": 3.77, "unit": "万人"},
+   "active_employees": {"value": 42.39, "unit": "万人"},
+   "deposit_amount": {"value": 67.17, "unit": "亿元", "yoy": "+12.34%"},
+   "withdraw_amount": {"value": 42.15, "unit": "亿元"},
+   "loan_issued": {"value": 33.57, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 73.61, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 60.69, "unit": "亿元"}},
+  "note": "2025年报为人社通转载官方全文（搜狐号1002880764亦全文转载，2026-03-30）"
+ },
+ {
+  "city": "临沂",
+  "province": "山东",
+  "report_2025": {"title": "临沂市住房公积金2025年年度报告", "url": "https://www.linyi.gov.cn/info/6268/419409.htm", "publish_date": "2026-03-31"},
+  "report_2024": {"title": "临沂市住房公积金2024年年度报告", "url": "https://www.linyi.gov.cn/info/6268/397283.htm", "publish_date": "2025-03-26"},
+  "stats_2025": {
+   "new_units": {"value": 3435, "unit": "家"},
+   "active_units": {"value": 1.8744, "unit": "万家", "yoy": "+8.50%"},
+   "new_employees": {"value": 6.14, "unit": "万人"},
+   "active_employees": {"value": 73.74, "unit": "万人"},
+   "deposit_amount": {"value": 131.33, "unit": "亿元", "yoy": "+8.18%"},
+   "withdraw_amount": {"value": 78.56, "unit": "亿元"},
+   "loan_issued": {"value": 66.36, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 119.15, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 83.28, "unit": "亿元"}},
+  "note": ""
+ },
+ {
+  "city": "厦门",
+  "province": "福建",
+  "report_2025": {"title": "厦门市住房公积金2025年年度报告", "url": "https://www.xmnn.cn/news/xmxw/202603/t20260330_418064.html", "publish_date": "2026-03-30"},
+  "report_2024": {"title": "厦门市住房公积金2024年年度报告", "url": "https://www.xmnn.cn/news/xmxw/202503/t20250326_305524.html", "publish_date": "2025-03-26"},
+  "stats_2025": {
+   "new_units": {"value": 10823, "unit": "家"},
+   "active_units": {"value": 7.1404, "unit": "万家", "yoy": "+2.46%"},
+   "new_employees": {"value": 13.77, "unit": "万人"},
+   "active_employees": {"value": 136.04, "unit": "万人"},
+   "deposit_amount": {"value": 289.05, "unit": "亿元", "yoy": "+4.53%"},
+   "withdraw_amount": {"value": 216.82, "unit": "亿元"},
+   "loan_issued": {"value": 76.17, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 103.59, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 36.37, "unit": "亿元"}},
+  "note": "厦门网（厦门日报）全文转载。loan_issued为发放个人住房贷款（不含公转商贴息贷款）；若含公转商贴息贷款，2025年合计发放157.30亿元。"
+ },
+ {
+  "city": "福州",
+  "province": "福建",
+  "report_2025": {"title": "福州住房公积金2025年年度报告", "url": "https://news.fznews.com.cn/fzyw/20260328/86EBhc9113.shtml", "publish_date": "2026-03-28"},
+  "report_2024": {"title": "福州住房公积金2024年年度报告", "url": "https://zfgjj.fuzhou.gov.cn/zwgk/gzdt/tzgg/202503/t20250328_4996230.htm", "publish_date": "2025-03-28"},
+  "stats_2025": {
+   "new_units": {"value": 6516, "unit": "家"},
+   "active_units": {"value": 4.3458, "unit": "万家", "yoy": "+3.39%"},
+   "new_employees": {"value": 14.99, "unit": "万人"},
+   "active_employees": {"value": 125.84, "unit": "万人"},
+   "deposit_amount": {"value": 311.36, "unit": "亿元", "yoy": "+3.71%"},
+   "withdraw_amount": {"value": 235.84, "unit": "亿元"},
+   "loan_issued": {"value": 67.56, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 267.04, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 186.8, "unit": "亿元"}},
+  "note": "福州年报为福州中心+福建省直中心合并口径；2025年报为福州新闻网（官方媒体）发布全文。"
+ },
+ {
+  "city": "泉州",
+  "province": "福建",
+  "report_2025": {"title": "泉州市住房公积金2025年年度报告", "url": "https://qzgjj.quanzhou.gov.cn/zwgk/gjjndxxpl/202603/t20260330_3279265.htm", "publish_date": "2026-03-30"},
+  "report_2024": {"title": "泉州市住房公积金2024年年度报告", "url": "https://szb.qzwb.com/qzwb/pc/cons/202503/24/content_127418.html", "publish_date": "2025-03-24"},
+  "stats_2025": {
+   "new_units": {"value": 2718, "unit": "家"},
+   "active_units": {"value": 2.8896, "unit": "万家", "yoy": "-0.87%"},
+   "new_employees": {"value": 6.01, "unit": "万人"},
+   "active_employees": {"value": 64.76, "unit": "万人"},
+   "deposit_amount": {"value": 133.92, "unit": "亿元", "yoy": "+3.07%"},
+   "withdraw_amount": {"value": 99.22, "unit": "亿元"},
+   "loan_issued": {"value": 35.53, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 131.48, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 87.39, "unit": "亿元"}},
+  "note": "2024年报为泉州晚报数字报全文"
+ },
+ {
+  "city": "漳州",
+  "province": "福建",
+  "report_2025": {"title": "漳州市住房公积金2025年年度报告", "url": "https://m.sohu.com/a/1001984387_121106994", "publish_date": "2026-03-27"},
+  "report_2024": {"title": "漳州市住房公积金2024年年度报告", "url": "http://gjj.zhangzhou.gov.cn/cms/html/zzszfgjjglzx/2025-03-27/1005104882.html", "publish_date": "2025-03-27"},
+  "stats_2025": {
+   "new_units": {"value": 1039, "unit": "家"},
+   "active_units": {"value": 1.1754, "unit": "万家", "yoy": "-1.46%"},
+   "new_employees": {"value": 4.52, "unit": "万人"},
+   "active_employees": {"value": 38.47, "unit": "万人"},
+   "deposit_amount": {"value": 78.91, "unit": "亿元", "yoy": "+3.83%"},
+   "withdraw_amount": {"value": 59.32, "unit": "亿元"},
+   "loan_issued": {"value": 40.01, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 30.91, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 26.63, "unit": "亿元"}},
+  "note": "2025年报为搜狐全文转载（网易号KP2HL09M053582IC同文）。loan_issued含回购公转商贴息贷款0.68万笔21.78亿元。"
+ },
+ {
+  "city": "莆田",
+  "province": "福建",
+  "report_2025": {"title": "莆田市住房公积金2025年年度报告", "url": "https://www.sohu.com/a/1003013922_121106994", "publish_date": "2026-03-30"},
+  "report_2024": {"title": "莆田市住房公积金2024年年度报告", "url": "https://www.putian.gov.cn/ptgjj/xxgk/zfgjjnb/202503/t20250330_1987966.htm", "publish_date": "2025-03-30"},
+  "stats_2025": {
+   "new_units": {"value": 627, "unit": "家"},
+   "active_units": {"value": 0.7544, "unit": "万家", "yoy": "-0.78%"},
+   "new_employees": {"value": 1.64, "unit": "万人"},
+   "active_employees": {"value": 22.27, "unit": "万人"},
+   "deposit_amount": {"value": 44.53, "unit": "亿元", "yoy": "+4.86%"},
+   "withdraw_amount": {"value": 30.24, "unit": "亿元"},
+   "loan_issued": {"value": 9.09, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 49.15, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 31.02, "unit": "亿元"}},
+  "note": "2025年报为搜狐全文转载（人社通spdkf亦收录，2026-04-16）"
+ },
+ {
+  "city": "宁德",
+  "province": "福建",
+  "report_2025": {"title": "宁德市住房公积金2025年年度报告", "url": "https://www.sohu.com/a/1002758625_121106994", "publish_date": "2026-03-30"},
+  "report_2024": {"title": "宁德市住房公积金2024年年度报告", "url": "https://gjj.ningde.gov.cn/zcfg/ndgb/zfgjjndbg/202503/t20250328_2026714.htm", "publish_date": "2025-03-28"},
+  "stats_2025": {
+   "new_units": {"value": 672, "unit": "家"},
+   "active_units": {"value": 0.7286, "unit": "万家", "yoy": "+1.46%"},
+   "new_employees": {"value": 6.32, "unit": "万人"},
+   "active_employees": {"value": 34.92, "unit": "万人"},
+   "deposit_amount": {"value": 57.67, "unit": "亿元", "yoy": "+6.13%"},
+   "withdraw_amount": {"value": 41.96, "unit": "亿元"},
+   "loan_issued": {"value": 15.8, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 46.95, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 30.41, "unit": "亿元"}},
+  "note": "2025年报官网发布于宁德市公积金中心'年度公报'栏目(2026-03-30)，此处为搜狐全文转载（人社通sprcm同文）"
+ },
+ {
+  "city": "三明",
+  "province": "福建",
+  "report_2025": {"title": "三明市住房公积金2025年年度报告", "url": "http://www.sanming.gov.cn/zw/ztzl/smszfgjjzt/tzgg_21864/202603/t20260326_2196905.htm", "publish_date": "2026-03-26"},
+  "report_2024": {"title": "三明市住房公积金2024年年度报告", "url": "http://www.sanming.gov.cn/zw/ztzl/smszfgjjzt/tzgg_21864/202503/t20250327_2109972.htm", "publish_date": "2025-03-27"},
+  "stats_2025": {
+   "new_units": {"value": 406, "unit": "家"},
+   "active_units": {"value": 0.7811, "unit": "万家", "yoy": "-4.25%"},
+   "new_employees": {"value": 1.3, "unit": "万人"},
+   "active_employees": {"value": 24.55, "unit": "万人"},
+   "deposit_amount": {"value": 51.45, "unit": "亿元", "yoy": "-0.68%"},
+   "withdraw_amount": {"value": 40.71, "unit": "亿元"},
+   "loan_issued": {"value": 24.67, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 26.59, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 23.21, "unit": "亿元"}},
+  "note": "loan_issued含回购存量公转商贴息贷款0.41万笔10.42亿元"
+ },
+ {
+  "city": "龙岩",
+  "province": "福建",
+  "report_2025": {"title": "龙岩市住房公积金2025年年度报告", "url": "https://www.longyan.gov.cn/zt/rdzt/zfgjjzx/tzgg/202603/t20260326_2283426.htm", "publish_date": "2026-03-26"},
+  "report_2024": {"title": "龙岩市住房公积金2024年年度报告", "url": "http://www.mxrb.cn/news.html?aid=263883", "publish_date": "2025-03-26"},
+  "stats_2025": {
+   "new_units": {"value": 514, "unit": "家"},
+   "active_units": {"value": 0.7728, "unit": "万家", "yoy": "-2.34%"},
+   "new_employees": {"value": 1.57, "unit": "万人"},
+   "active_employees": {"value": 23.96, "unit": "万人"},
+   "deposit_amount": {"value": 50.09, "unit": "亿元", "yoy": "+3.30%"},
+   "withdraw_amount": {"value": 36.53, "unit": "亿元"},
+   "loan_issued": {"value": 14.75, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 35.25, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 20.88, "unit": "亿元"}},
+  "note": "2024年报为闽西日报全文"
+ },
+ {
+  "city": "乌鲁木齐",
+  "province": "新疆",
+  "report_2025": {"title": "乌鲁木齐住房公积金2025年年度报告", "url": "https://xjgjj.xjjs.gov.cn/info/1177/24806.htm", "publish_date": "2026-03-27"},
+  "report_2024": {"title": "乌鲁木齐住房公积金2024年年度报告", "url": "https://xjgjj.xjjs.gov.cn/info/1177/20370.htm", "publish_date": "2025-03-24"},
+  "stats_2025": {
+   "new_units": {"value": 2919, "unit": "家"},
+   "active_units": {"value": 1.7663, "unit": "万家", "yoy": "+5.62%"},
+   "new_employees": {"value": 8.81, "unit": "万人"},
+   "active_employees": {"value": 74.52, "unit": "万人"},
+   "deposit_amount": {"value": 214.64, "unit": "亿元", "yoy": "+9.43%"},
+   "withdraw_amount": {"value": 160.07, "unit": "亿元"},
+   "loan_issued": {"value": 87.16, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 87.14, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 47.48, "unit": "亿元"}},
+  "note": "乌鲁木齐年报含市中心、自治区分中心、铁路分中心口径"
+ },
+ {
+  "city": "石河子",
+  "province": "新疆（新疆生产建设兵团第八师）",
+  "report_2025": {"title": "新疆生产建设兵团住房公积金2025年年度报告", "url": "https://m12333.cn/policy/swady.html", "publish_date": "2026-04-29"},
+  "report_2024": {"title": "新疆生产建设兵团住房公积金2024年年度报告", "url": "https://m12333.cn/policy/pyfac.html", "publish_date": "2025-04-27"},
+  "stats_2025": {
+   "new_units": {"value": 810, "unit": "家"},
+   "active_units": {"value": 0.7466, "unit": "万家", "yoy": "+6.04%"},
+   "new_employees": {"value": 3.52, "unit": "万人"},
+   "active_employees": {"value": 32.27, "unit": "万人"},
+   "deposit_amount": {"value": 78.38, "unit": "亿元", "yoy": "+7.15%"},
+   "withdraw_amount": {"value": 57.63, "unit": "亿元"},
+   "loan_issued": {"value": 26.95, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 71.79, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 55.82, "unit": "亿元"}},
+  "note": "石河子市无单独年报；第八师石河子市住房公积金由新疆生产建设兵团住房公积金中心统一管理，兵团的年报为全兵团汇总口径（全兵团仅设1个公积金中心），非石河子单列数据。人社通转载官方全文。"
+ },
+ {
+  "city": "廊坊",
+  "province": "河北",
+  "report_2025": {"title": "廊坊市住房公积金2025年年度报告", "url": "https://www.lfzfgjj.net/website/subject-detail.html?seqno=9005&itemId=0601", "publish_date": "2026-03-31"},
+  "report_2024": {"title": "廊坊市住房公积金2024年年度报告", "url": "https://www.lfzfgjj.net/website/subject-detail.html?seqno=8672&itemId=0601", "publish_date": "2025-03-31"},
+  "stats_2025": {
+   "new_units": {"value": 975, "unit": "家"},
+   "active_units": {"value": 0.8376, "unit": "万家", "yoy": "+6.01%"},
+   "new_employees": {"value": 4.17, "unit": "万人"},
+   "active_employees": {"value": 41.84, "unit": "万人"},
+   "deposit_amount": {"value": 73.16, "unit": "亿元", "yoy": "+2.77%"},
+   "withdraw_amount": {"value": 54.3, "unit": "亿元"},
+   "loan_issued": {"value": 22.9, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 106.89, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 91.23, "unit": "亿元"}},
+  "note": "官网年报为图片版，数据经OCR提取（官网API正文核验）；廊坊口径含管道局分中心。"
+ },
+ {
+  "city": "柳州",
+  "province": "广西",
+  "report_2025": {"title": "柳州市住房公积金2025年年度报告", "url": "http://zfgjj.liuzhou.gov.cn/xwzx/tzgg/202603/t20260330_3736846.shtml", "publish_date": "2026-03-30"},
+  "report_2024": {"title": "柳州市住房公积金2024年年度报告", "url": "http://zfgjj.liuzhou.gov.cn/zwgk/fdzdgknr/sjfb/ndgzzb/202503/t20250328_3605815.shtml", "publish_date": "2025-03-28"},
+  "stats_2025": {
+   "new_units": {"value": 630, "unit": "家"},
+   "active_units": {"value": 0.7316, "unit": "万家", "yoy": "+3.26%"},
+   "new_employees": {"value": 2.82, "unit": "万人"},
+   "active_employees": {"value": 36.94, "unit": "万人"},
+   "deposit_amount": {"value": 72.35, "unit": "亿元", "yoy": "+1.32%"},
+   "withdraw_amount": {"value": 57.1, "unit": "亿元"},
+   "loan_issued": {"value": 15.14, "unit": "亿元"},
+   "fund_deposit_balance": {"value": 64.34, "unit": "亿元"}
+  },
+  "stats_2024": {"fund_deposit_balance": {"value": 46.76, "unit": "亿元"}},
+  "note": ""
+ }
+]
