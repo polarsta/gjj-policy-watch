@@ -3,166 +3,208 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全国公积金政策数据库</title>
+<title>公积金中心领导人事变动汇总（2026-06-26 至 2026-08-26）</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-         background: #f7f6f3; color: #2c2a26; }
-  header { background: #fdfcfa; border-bottom: 1px solid #e8e4dc; padding: 20px 24px;
-           position: sticky; top: 0; z-index: 10; }
-  header h1 { font-size: 20px; font-weight: 600; color: #4a4237; }
-  header .meta { font-size: 12px; color: #9a917f; margin-top: 4px; }
-  .controls { display: flex; gap: 12px; margin-top: 14px; flex-wrap: wrap; }
-  input, select { padding: 8px 12px; border: 1px solid #ddd6c9; border-radius: 8px;
-                  font-size: 14px; background: #fff; }
-  input { flex: 1; min-width: 180px; }
-  main { max-width: 1100px; margin: 24px auto; padding: 0 24px; }
-  .grid { display: grid; grid-template-columns: 260px 1fr; gap: 20px; }
-  @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-  .city-list { background: #fff; border: 1px solid #e8e4dc; border-radius: 12px;
-               max-height: 70vh; overflow-y: auto; }
-  .city-item { padding: 10px 16px; cursor: pointer; font-size: 14px;
-               border-bottom: 1px solid #f3f0e9; display: flex; justify-content: space-between; }
-  .city-item:hover { background: #faf7f0; }
-  .city-item.active { background: #f3ede1; border-left: 3px solid #a88b5f; font-weight: 600; }
-  .city-item .prov { color: #b0a794; font-size: 12px; }
-  .detail { background: #fff; border: 1px solid #e8e4dc; border-radius: 12px; padding: 24px; }
-  .detail h2 { font-size: 22px; color: #4a4237; margin-bottom: 4px; }
-  .detail .updated { font-size: 12px; color: #9a917f; margin-bottom: 20px; }
-  .section { margin-bottom: 24px; }
-  .section h3 { font-size: 15px; color: #a88b5f; border-bottom: 2px solid #f0e9db;
-                padding-bottom: 6px; margin-bottom: 12px; }
-  .kv { display: grid; grid-template-columns: 160px 1fr; gap: 8px 16px; font-size: 14px; }
-  .kv dt { color: #8a8171; } .kv dd { color: #2c2a26; }
-  .tags span { display: inline-block; background: #f5f0e6; color: #6d6350; font-size: 12px;
-               padding: 3px 10px; border-radius: 20px; margin: 0 6px 6px 0; }
-  .sources { font-size: 13px; }
-  .sources a { color: #7a6a4f; word-break: break-all; }
-  .sources li { margin-bottom: 6px; }
-  .note { background: #fbf8f1; border-left: 3px solid #d9c9a3; padding: 10px 14px;
-          font-size: 13px; color: #6d6350; border-radius: 0 8px 8px 0; margin-top: 10px; }
-  .empty { color: #b0a794; text-align: center; padding: 60px 0; font-size: 14px; }
-  #status { font-size: 13px; color: #9a917f; padding: 8px 0; }
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#1f2733; --muted:#5b6776;
+    --line:#e3e8ef; --tier1:#0a7d3c; --tier2:#b8860b; --warn:#c0392b;
+    --blue:#1f5fbf; --soft:#eef3fb;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.6;}
+  .wrap{max-width:1120px;margin:0 auto;padding:32px 22px 64px;}
+  header h1{font-size:24px;margin:0 0 6px;}
+  header .sub{color:var(--muted);font-size:14px;}
+  .cards{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0 28px;}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:14px 18px;min-width:150px;flex:1;}
+  .stat .n{font-size:26px;font-weight:700;}
+  .stat .l{font-size:13px;color:var(--muted);}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;margin-bottom:20px;}
+  h2{font-size:18px;margin:0 0 4px;display:flex;align-items:center;gap:8px;}
+  h2 .tag{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;}
+  .t1{background:#e6f4ec;color:var(--tier1);}
+  .t2{background:#fbf2dc;color:var(--tier2);}
+  .t3{background:#fbe9e7;color:var(--warn);}
+  .t4{background:var(--soft);color:var(--blue);}
+  .note{font-size:13px;color:var(--muted);margin:6px 0 14px;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th,td{border:1px solid var(--line);padding:9px 10px;vertical-align:top;text-align:left;}
+  th{background:#f0f3f7;font-weight:600;}
+  td a{color:var(--blue);text-decoration:none;word-break:break-all;}
+  td a:hover{text-decoration:underline;}
+  .pill{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;
+    border:1px solid var(--line);color:var(--muted);margin-right:4px;}
+  .p-lead{background:#e6f4ec;color:var(--tier1);border-color:#bfe3cd;}
+  .p-mid{background:#eef3fb;color:var(--blue);border-color:#cfe0f7;}
+  .p-non{background:#f2f3f5;color:#6b7280;border-color:#dfe3e8;}
+  .p-city{background:#fbf2dc;color:var(--tier2);border-color:#f0e0b0;}
+  .flag{color:var(--warn);font-weight:600;}
+  .citylist{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{background:#f0f3f7;border:1px solid var(--line);border-radius:8px;
+    padding:5px 10px;font-size:13px;color:var(--muted);}
+  ul.clean{margin:8px 0;padding-left:20px;font-size:13.5px;}
+  ul.clean li{margin:4px 0;}
+  .src{font-size:12px;color:var(--muted);}
+  footer{color:var(--muted);font-size:12px;text-align:center;margin-top:30px;}
+  code{background:#f0f3f7;padding:1px 5px;border-radius:5px;font-size:12px;}
 </style>
 </head>
 <body>
+<div class="wrap">
 <header>
-  <h1>全国住房公积金政策数据库</h1>
-  <div class="meta" id="dbMeta">加载中…</div>
-  <div class="controls">
-    <input id="search" type="text" placeholder="搜索城市名 / 省份…">
-    <select id="provFilter"><option value="">全部省份</option></select>
-  </div>
+  <h1>住房公积金中心领导人事变动 · 汇总报告</h1>
+  <div class="sub">统计窗口：2026-06-26 ～ 2026-08-26（近 2 个月） ｜ 城市范围：134 城 ｜ 生成日期：2026-08-26</div>
 </header>
-<main>
-  <div class="grid">
-    <div class="city-list" id="cityList"></div>
-    <div class="detail" id="detail"><div class="empty">← 选择左侧城市查看政策详情</div></div>
+
+<div class="cards">
+  <div class="stat"><div class="n">134</div><div class="l">覆盖城市</div></div>
+  <div class="stat"><div class="n">14</div><div class="l">窗口内检出变动（含分管市领导）</div></div>
+  <div class="stat"><div class="n">6</div><div class="l">待核实 / 边界 / 非领导事项</div></div>
+  <div class="stat"><div class="n">~115</div><div class="l">未检索到窗口内变动</div></div>
+</div>
+
+<section>
+  <h2>一、确认的公积金中心领导人事变动 <span class="tag t1">政府 / 官媒 / 中心官网优先</span></h2>
+  <div class="note">以下为窗口内（2026-06-26 之后发布或决定）的公积金中心领导班子、党组成员、中层干部任免信息，来源均为政府网站、官方媒体或中心官网 / 官媒公众号。<b>链接经研究批次抓取，建议正式引用前再点开核实一次（部分官网会调整路径）。</b></div>
+  <table>
+    <thead>
+      <tr><th style="width:64px">城市</th><th style="width:96px">日期</th><th>变动内容 / 人员</th><th style="width:96px">类型</th><th>来源与链接</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>杭州</td><td>2026-07-22</td>
+        <td>萧山分中心副主任调整：<b>陈丽丹</b>任副主任；免俞虹副主任</td>
+        <td><span class="pill p-mid">中层干部</span></td>
+        <td><span class="src">杭州市住房公积金中心官网</span><br><a href="https://gjj.hangzhou.gov.cn/col/col1229287771/art/2026/art_7a0c532886d146c884ab936be5930e21.html" target="_blank">gjj.hangzhou.gov.cn/…/art_7a0c5328…</a></td>
+      </tr>
+      <tr>
+        <td>绵阳</td><td>2026-08-03</td>
+        <td>中心副主任任免：<b>何春</b>任副主任；免岳志琪副主任</td>
+        <td><span class="pill p-lead">领导班子</span></td>
+        <td><span class="src">绵阳市人民政府</span><br><a href="https://www.my.gov.cn/mysrmzf/c100115/202608/3db19c78f9d145949ef21ddffc6467b3.shtml" target="_blank">my.gov.cn/…/3db19c78f9d1…</a></td>
+      </tr>
+      <tr>
+        <td>潍坊</td><td>2026-07-08</td>
+        <td><b>李长军</b>任中心副主任</td>
+        <td><span class="pill p-lead">领导班子</span></td>
+        <td><span class="src">潍坊市人民政府</span><br><a href="https://www.weifang.gov.cn/162/55329/2087074500784033792.html" target="_blank">weifang.gov.cn/…/2087074500…</a></td>
+      </tr>
+      <tr>
+        <td>贵阳</td><td>2026-08-18</td>
+        <td>中心党组成员任命：<b>赵荣文</b>任党组成员</td>
+        <td><span class="pill p-lead">领导班子</span></td>
+        <td><span class="src">贵阳市住房公积金中心</span><br><a href="https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/fdzdgknrjggk/ldzc/202608/t20260818_90744425.html" target="_blank">gjj.guiyang.gov.cn/…/t20260818_90744425</a></td>
+      </tr>
+      <tr>
+        <td>襄阳</td><td>2026-07-14</td>
+        <td>直属机关纪委书记：<b>谭海波</b>任；免王建民</td>
+        <td><span class="pill p-lead">领导班子</span></td>
+        <td><span class="src">襄阳机关党建网</span><br><a href="http://www.xyjgdj.gov.cn/rsrm/202607/t20260714_4031023.shtml" target="_blank">xyjgdj.gov.cn/…/t20260714_4031023</a></td>
+      </tr>
+      <tr>
+        <td>临沂</td><td>2026-06-30<br><span class="src">（决定 05-31，边界）</span></td>
+        <td>中心副主任任免：<b>乔继刚、尹永安</b>任副主任；免张永民副主任</td>
+        <td><span class="pill p-lead">领导班子</span></td>
+        <td><span class="src">临沂市 12345 / 市政府</span><br><a href="https://12345.linyi.gov.cn/gov/app/share/YS00MDktMTAwMTY3OTQ0.html" target="_blank">12345.linyi.gov.cn/…/YS00MDk…</a></td>
+      </tr>
+      <tr>
+        <td>滨州</td><td>2026-08-14</td>
+        <td>中心副主任<b>苏向华</b>被"双开"（免职）</td>
+        <td><span class="pill p-lead">领导班子</span></td>
+        <td><span class="src">纪检监察通报（东营区纪委监委发布）</span><br><a href="http://www.dyedz.gov.cn/art/2026/8/14/art_43363_10365413.html" target="_blank">dyedz.gov.cn/…/art_43363_10365413</a></td>
+      </tr>
+      <tr>
+        <td>淮北</td><td>2026-07-06</td>
+        <td>聘任<b>冯岩成</b>为总会计师</td>
+        <td><span class="pill p-lead">领导班子</span></td>
+        <td><span class="src">淮北市人民政府</span><br><a href="https://www.huaibei.gov.cn/zwgk/public/15/65036082.html" target="_blank">huaibei.gov.cn/…/65036082</a></td>
+      </tr>
+      <tr>
+        <td>宝鸡</td><td>2026-07-17</td>
+        <td><b>程存玉</b>拟任公示（中心领导职务任前公示）</td>
+        <td><span class="pill p-lead">领导班子</span></td>
+        <td><span class="src">"宝鸡先锋"官方微信公众号（任前公示）</span><br><span class="src">咸阳市/宝鸡市政府：baoji.gov.cn</span></td>
+      </tr>
+      <tr>
+        <td>南通</td><td>2026-07-15</td>
+        <td>中层副职任免：<b>范晓敏</b>等（分中心 / 管理部副职）</td>
+        <td><span class="pill p-mid">中层干部</span></td>
+        <td><span class="src">南通市住房公积金管理中心</span><br><a href="https://www.nantong.gov.cn/szfgjjglzx/rsxx/content/1331720a-acb9-446f-a918-cb21f2649c87.html" target="_blank">nantong.gov.cn/…/1331720a-…</a></td>
+      </tr>
+      <tr>
+        <td>西安</td><td>2026-08-11</td>
+        <td>高陵区管理部<b>张鲁</b>任四级主任科员（非领导职务）</td>
+        <td><span class="pill p-non">非领导职务</span></td>
+        <td><span class="src">西安住房公积金管理中心</span><br><a href="https://zfgjj.xa.gov.cn/xxgk/rsxx/2087066061334691842.html" target="_blank">zfgjj.xa.gov.cn/…/2087066061…</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>二、分管市领导调整 <span class="tag t4">关联但非中心内部领导</span></h2>
+  <div class="note">以下为各市政府"分管住房公积金工作的副市长 / 领导"调整。这<b>不是公积金中心内部领导任免</b>，但与中心汇报关系直接相关，供参考。</div>
+  <table>
+    <thead>
+      <tr><th style="width:64px">城市</th><th style="width:96px">日期</th><th>调整内容</th><th style="width:96px">类型</th><th>来源与链接</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>南京</td><td>2026-08</td><td><b>赵庆红</b>分管市领导调整</td><td><span class="pill p-city">分管市领导</span></td><td><span class="src">新华网江苏频道</span><br><a href="http://js.xinhuanet.com/20260826/20309035027248d5ad2351bb05bdf1da/c.html" target="_blank">js.xinhuanet.com/…/2030903502…</a></td></tr>
+      <tr><td>南通</td><td>2026-08-11</td><td><b>胡拥军</b>副市长分管公积金工作</td><td><span class="pill p-city">分管市领导</span></td><td><span class="src">南通市人民政府（领导分工）</span><br><a href="https://www.nantong.gov.cn/ntsrmzf/ldfg/content/1fe7b32d-54f6-4da0-a7ad-eabcae637eda.html" target="_blank">nantong.gov.cn/…/1fe7b32d-…</a></td></tr>
+      <tr><td>宝鸡</td><td>2026-07</td><td><b>李涛</b>分管（市领导分工）</td><td><span class="pill p-city">分管市领导</span></td><td><span class="src">宝鸡市人民政府</span><br><a href="https://www.baoji.gov.cn/" target="_blank">baoji.gov.cn</a></td></tr>
+      <tr><td>营口</td><td>2026-08-12</td><td><b>李人杰</b>分管</td><td><span class="pill p-city">分管市领导</span></td><td><span class="src">营口市人民政府</span><br><a href="https://www.yingkou.gov.cn/" target="_blank">yingkou.gov.cn</a></td></tr>
+      <tr><td>锦州</td><td>2026-07-21</td><td><b>焦健</b>分管</td><td><span class="pill p-city">分管市领导</span></td><td><span class="src">锦州市人民政府</span><br><a href="https://www.jinzhou.gov.cn/" target="_blank">jinzhou.gov.cn</a></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>三、待核实 / 边界 / 非领导事项 <span class="tag t3">需二次确认</span></h2>
+  <div class="note">以下线索来源层级较低（商业平台、自媒体）、时间早于窗口、或为非领导职务，<b>未计入"确认变动"</b>，列此供你判断是否值得深挖。</div>
+  <table>
+    <thead>
+      <tr><th style="width:64px">城市</th><th style="width:96px">日期</th><th>线索</th><th style="width:110px">状态</th><th>来源与链接</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>沈阳</td><td>2026-07-25</td><td><b>张万庆</b>任前公示，拟任直属事业单位正职（中心上级单位领导）</td><td><span class="flag">待核实</span><br><span class="src">自媒体/腾讯，非官方任免页</span></td><td><a href="https://m.toutiao.com/article/7666394439309230598" target="_blank">toutiao.com/article/7666394439…</a><br><a href="https://new.qq.com/rain/a/20260725A0974Q00" target="_blank">new.qq.com/rain/a/20260725A0974Q00</a></td></tr>
+      <tr><td>沈阳</td><td>2026-07</td><td><b>龙加</b>（关联企业）法定代表人变更</td><td><span class="flag">待核实</span><br><span class="src">天眼查（工商信息）</span></td><td><a href="https://m.tianyancha.com/company/3097874554" target="_blank">tianyancha.com/company/3097874554</a></td></tr>
+      <tr><td>包头</td><td>—</td><td>矛盾报道：新浪称<b>李华炜</b>，搜狐称<b>温翔</b>；无正式任免公告</td><td><span class="flag">存疑</span><br><span class="src">媒体报道冲突</span></td><td><span class="src">未采用，建议以包头公积金中心官方公告为准</span></td></tr>
+      <tr><td>乌鲁木齐</td><td>2026-08-04</td><td>领导班子信息页更新（非任免公告）</td><td><span class="flag">非任免</span></td><td><a href="https://xjgjj.xjjs.gov.cn/hm/info/1010/1430.htm" target="_blank">xjgjj.xjjs.gov.cn/hm/info/1010/1430.htm</a></td></tr>
+      <tr><td>温州</td><td>2026-05</td><td><b>韩包斌</b>相关（早于统计窗口 06-26）</td><td><span class="flag">窗口外</span></td><td><a href="https://zfgjj.wenzhou.gov.cn/col/col1229242881/art/2026/art_7b0f54f97a3f413d984afa7ec6960802.html" target="_blank">zfgjj.wenzhou.gov.cn/…/art_7b0f54f9…</a></td></tr>
+      <tr><td>六盘水</td><td>2026-07-29</td><td>中心内部科级晋升（非领导职务，窗口内）</td><td><span class="flag">非领导</span></td><td><a href="https://gjj.gzlps.gov.cn/bmxxgk/zfxxgk_5816274/fdzdgknr/rsxx_5816291/202607/t20260730_90676182.html" target="_blank">gjj.gzlps.gov.cn/…/t20260730_90676182</a></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>四、噪声剔除说明 <span class="tag t2">已排除</span></h2>
+  <div class="note">研究过程中大量出现跨城市重复的"搜狐"聚合模板文章，内含相互矛盾、疑似编造的人名（如何江洪/胡文辉、丁承志/区广慧/谢冰/刘英铎、李华炜、金德庆、宋玉波、赵峰、胡远文、魏从浩等），经交叉比对无对应官方来源，已<b>系统性排除</b>，未纳入本报告。</div>
+</section>
+
+<section>
+  <h2>五、未检索到窗口内变动的城市 <span class="tag t4">约 115 城</span></h2>
+  <div class="note">以下城市在本次统计窗口内，未检索到公积金中心领导班子 / 党组成员 / 中层干部任免的官方或可靠新闻来源（不含上方已列城市）。</div>
+  <div class="citylist">
+    <span class="chip">深圳</span><span class="chip">北京</span><span class="chip">上海</span><span class="chip">广州</span><span class="chip">武汉</span><span class="chip">天津</span><span class="chip">苏州</span><span class="chip">成都</span><span class="chip">重庆</span><span class="chip">济南</span><span class="chip">合肥</span><span class="chip">青岛</span><span class="chip">长沙</span><span class="chip">佛山</span><span class="chip">宁波</span><span class="chip">南昌</span><span class="chip">东莞</span><span class="chip">郑州</span><span class="chip">厦门</span><span class="chip">无锡</span><span class="chip">福州</span><span class="chip">太原</span><span class="chip">昆明</span><span class="chip">大连</span><span class="chip">海口</span><span class="chip">泉州</span><span class="chip">烟台</span><span class="chip">哈尔滨</span><span class="chip">兰州</span><span class="chip">呼和浩特</span><span class="chip">石家庄</span><span class="chip">南宁</span><span class="chip">唐山</span><span class="chip">长春</span><span class="chip">银川</span><span class="chip">西宁</span><span class="chip">雄安</span><span class="chip">珠海</span><span class="chip">惠州</span><span class="chip">常州</span><span class="chip">扬州</span><span class="chip">徐州</span><span class="chip">盐城</span><span class="chip">泰州</span><span class="chip">连云港</span><span class="chip">镇江</span><span class="chip">湛江</span><span class="chip">清远</span><span class="chip">绍兴</span><span class="chip">嘉兴</span><span class="chip">金华</span><span class="chip">衢州</span><span class="chip">湖州</span><span class="chip">舟山</span><span class="chip">宜昌</span><span class="chip">黄石</span><span class="chip">十堰</span><span class="chip">黄冈</span><span class="chip">孝感</span><span class="chip">荆州</span><span class="chip">泸州</span><span class="chip">乐山</span><span class="chip">东营</span><span class="chip">济宁</span><span class="chip">淄博</span><span class="chip">聊城</span><span class="chip">榆林</span><span class="chip">咸阳</span><span class="chip">漳州</span><span class="chip">晋城</span><span class="chip">吕梁</span><span class="chip">朔州</span><span class="chip">曲靖</span><span class="chip">丽江</span><span class="chip">红河</span><span class="chip">盘锦</span><span class="chip">鞍山</span><span class="chip">丹东</span><span class="chip">抚顺</span><span class="chip">莆田</span><span class="chip">宁德</span><span class="chip">三明</span><span class="chip">龙岩</span><span class="chip">中山</span><span class="chip">江门</span><span class="chip">赣州</span><span class="chip">上饶</span><span class="chip">九江</span><span class="chip">景德镇</span><span class="chip">芜湖</span><span class="chip">淮南</span><span class="chip">马鞍山</span><span class="chip">安庆</span><span class="chip">六安</span><span class="chip">台州</span><span class="chip">南阳</span><span class="chip">洛阳</span><span class="chip">安阳</span><span class="chip">许昌</span><span class="chip">株洲</span><span class="chip">衡阳</span><span class="chip">湘潭</span><span class="chip">娄底</span><span class="chip">日照</span><span class="chip">石河子</span><span class="chip">鄂尔多斯</span><span class="chip">呼伦贝尔</span><span class="chip">大庆</span><span class="chip">三亚</span><span class="chip">威海</span><span class="chip">廊坊</span><span class="chip">柳州</span><span class="chip">遵义</span><span class="chip">通化</span><span class="chip">吉林</span>
   </div>
-</main>
+</section>
 
-<script>
-/* ============ 数据接入：唯一需要改的就是这一行 ============ */
-const DB_URL = './db.json';   // 同域 Pages 部署；也可改为其他绝对URL
-/* =========================================================== */
+<section>
+  <h2>六、使用与验证建议</h2>
+  <ul class="clean">
+    <li><b>来源优先级</b>：本报告已按"政府网站 / 中央及地方官媒 / 中心官网 / 官媒公众号 &gt; 其他新闻"排序，确认变动均来自优先层级。</li>
+    <li><b>链接时效</b>：政府网站偶有路径调整，正式对外发布前请逐一点开核对（尤其杭州、绵阳、滨州、临沂等带长路径的链接）。</li>
+    <li><b>边界项</b>：临沂决定日（05-31）早于窗口，发布日（06-30）在窗口内，已按"发布日口径"保留并标注；如需严格按"决定日"筛选可剔除。</li>
+    <li><b>待核实项</b>：沈阳（张万庆 / 龙加）、包头（矛盾报道）建议以当地公积金中心或组织部门官方公告为最终依据。</li>
+    <li><b>"未检出"不等于"无变动"</b>：部分城市可能仅在内部文件或纸质任免中体现，未被网络收录；如需穷尽，建议向各地中心发函或对接内部渠道。</li>
+  </ul>
+</section>
 
-let DB = null;
-
-const $ = id => document.getElementById(id);
-const fmt = v => (v === null || v === undefined || v === '' ) ? '—'
-               : Array.isArray(v) ? v.join('、') : String(v);
-
-async function load() {
-  try {
-    // ?v= 时间戳防 CDN 缓存，保证每次拿到最新库
-    const res = await fetch(DB_URL + (DB_URL.includes('?') ? '&' : '?') + 'v=' + Date.now());
-    DB = await res.json();
-    $('dbMeta').textContent =
-      `${DB.database} ｜ 版本 ${DB.version} ｜ ${DB.city_count} 城市 ｜ 数据更新于 ${DB.generated_at}`;
-    initFilters();
-    renderList(DB.cities);
-  } catch (e) {
-    $('dbMeta').textContent = '数据加载失败：' + e.message;
-  }
-}
-
-function initFilters() {
-  const provs = [...new Set(DB.cities.map(c => c.province).filter(Boolean))].sort();
-  provs.forEach(p => {
-    const o = document.createElement('option'); o.value = o.textContent = p;
-    $('provFilter').appendChild(o);
-  });
-  $('search').oninput = applyFilter;
-  $('provFilter').onchange = applyFilter;
-}
-
-function applyFilter() {
-  const q = $('search').value.trim();
-  const p = $('provFilter').value;
-  renderList(DB.cities.filter(c =>
-    (!p || c.province === p) &&
-    (!q || c.city.includes(q) || (c.province || '').includes(q) ||
-     (c.search_aliases || []).some(a => a.includes(q)))));
-}
-
-function renderList(cities) {
-  $('cityList').innerHTML = cities.map(c =>
-    `<div class="city-item" data-city="${c.city}">
-       <span>${c.city}</span><span class="prov">${c.province || ''}</span>
-     </div>`).join('') || '<div class="empty">无匹配城市</div>';
-  document.querySelectorAll('.city-item').forEach(el =>
-    el.onclick = () => {
-      document.querySelectorAll('.city-item').forEach(x => x.classList.remove('active'));
-      el.classList.add('active');
-      renderDetail(DB.cities.find(c => c.city === el.dataset.city));
-    });
-}
-
-function srcList(sources) {
-  if (!sources || !sources.length) return '';
-  return `<ul class="sources">` + sources.map(s =>
-    `<li><a href="${s.url}" target="_blank" rel="noopener">${s.title || s.url}</a>
-     ${s.date ? `<span style="color:#b0a794">（${s.date}）</span>` : ''}</li>`).join('') + `</ul>`;
-}
-
-function renderDetail(c) {
-  const d = c.deposit || {}, w = c.withdrawal || {}, l = c.loan || {};
-  $('detail').innerHTML = `
-    <h2>${c.city}${c.full_name ? `（${c.full_name}）` : ''}</h2>
-    <div class="updated">数据更新：${c.last_updated || '—'}　｜　官网：${
-      c.official_site ? `<a href="${c.official_site}" target="_blank">${c.official_site}</a>` : '未收录'}</div>
-
-    <div class="section"><h3>缴存政策</h3>
-      <dl class="kv">
-        <dt>基数上限</dt><dd>${fmt(d.base_upper)} 元/月</dd>
-        <dt>基数下限</dt><dd>${fmt(d.base_lower)} 元/月</dd>
-        <dt>缴存比例</dt><dd>${fmt(d.ratio)}</dd>
-        <dt>执行年度</dt><dd>${fmt(d.period)}</dd>
-      </dl>
-      ${d.note ? `<div class="note">${d.note}</div>` : ''}${srcList(d.sources)}
-    </div>
-
-    <div class="section"><h3>提取政策</h3>
-      <div class="tags">${(w.conditions || []).map(x => `<span>${x}</span>`).join('')}</div>
-      <dl class="kv"><dt>租房提取</dt><dd>${fmt(w.rent_limit)}</dd></dl>
-      ${w.note ? `<div class="note">${w.note}</div>` : ''}${srcList(w.sources)}
-    </div>
-
-    <div class="section"><h3>贷款政策</h3>
-      <dl class="kv">
-        <dt>单人最高额度</dt><dd>${fmt(l.max_single)}</dd>
-        <dt>家庭最高额度</dt><dd>${fmt(l.max_family)}</dd>
-        <dt>首套利率</dt><dd>${fmt(l.rate_first)}</dd>
-        <dt>二套利率</dt><dd>${fmt(l.rate_second)}</dd>
-        <dt>首套首付</dt><dd>${fmt(l.down_payment_first)}</dd>
-        <dt>二套首付</dt><dd>${fmt(l.down_payment_second)}</dd>
-        <dt>贷款条件</dt><dd>${fmt(l.conditions)}</dd>
-      </dl>
-      ${l.note ? `<div class="note">${l.note}</div>` : ''}${srcList(l.sources)}
-    </div>`;
-}
-
-load();
-</script>
+<footer>本报告由 10 个并行研究批次汇总而成，统计窗口 2026-06-26 ~ 2026-08-26，覆盖 134 城。链接均来自研究时抓取的真实来源，引用前请按上述建议复核。</footer>
+</div>
 </body>
 </html>
