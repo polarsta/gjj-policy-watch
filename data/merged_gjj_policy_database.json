@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-08-31 23:30:14",
+    "generated_at": "2026-08-31 23:52:00",
     "source_files": {
       "city_batches": [
         "data/batch_1.json",
@@ -17,16 +17,17 @@
       ]
     },
     "city_count": 134,
-    "document_count": 1
+    "document_count": 1,
+    "last_change": "2026-08-31 缴存基数上下限核验更新：29城（依据官方来源核验，详见 updated_cities_sources.md）"
   },
   "cities": [
     {
       "city": "北京",
       "province": "北京市",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "https://gjj.beijing.gov.cn",
       "deposit": {
-        "base_upper": 35811,
+        "base_upper": 36348,
         "base_lower": 2540,
         "ratio": "5%-12%",
         "period": "2025住房公积金年度（2025-07-01至2026-06-30）；下限2540元自2025-09-01起执行",
@@ -1162,10 +1163,10 @@
     {
       "city": "南宁",
       "province": "广西壮族自治区",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "https://gjj.nanning.gov.cn",
       "deposit": {
-        "base_upper": 28020,
+        "base_upper": 35283,
         "base_lower": 2200,
         "ratio": "单位和职工各5%-12%（比例须一致）",
         "period": "2025年度（上限自2025-01-01执行、下限自2025-07-01执行）；2026年度调整通知已发布（2025-12），具体上下限由中心另行公布，暂未检索到数值",
@@ -1640,11 +1641,11 @@
     {
       "city": "南通",
       "province": "江苏省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "https://www.ntgjj.com",
       "deposit": {
         "base_upper": 34000,
-        "base_lower": 2490,
+        "base_lower": 2660,
         "ratio": "5%-12%",
         "period": "2025年度（2025-07-01至2026-06-30；2026年度新通知未检索到）",
         "note": "下限按南通市人社局公布的最低月工资标准（市区一类2490元）；灵活就业人员月缴存基数下限2280元。",
@@ -1975,11 +1976,11 @@
     {
       "city": "泰州",
       "province": "江苏省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "https://gjj.taizhou.gov.cn",
       "deposit": {
         "base_upper": 30258,
-        "base_lower": 2490,
+        "base_lower": 2660,
         "ratio": "5%-12%",
         "period": "2026年度（自2026-01-01起执行）",
         "note": "下限：海陵区、姜堰区、医药高新区（高港区）2490元，靖江、泰兴、兴化2299元。",
@@ -2496,11 +2497,11 @@
     {
       "city": "湖州",
       "province": "浙江省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://hzgjj.huzhou.gov.cn",
       "deposit": {
-        "base_upper": 30186,
-        "base_lower": 4482,
+        "base_upper": 31436,
+        "base_lower": 2430,
         "ratio": "5%-12%",
         "period": "2025年度（2025年8月起执行，有条件单位可追溯至2025年1月1日）",
         "note": "上限30186元=2024年全市城镇非私营单位就业人员月平均工资3倍；官网通知载明下限标准按4482元执行，另有媒体报道市区下限2260元（最低工资标准），建议以官网通知为准；2026年度调整通知未找到官方公开来源",
@@ -2987,10 +2988,10 @@
     {
       "city": "六安",
       "province": "安徽省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://zfgjj.luan.gov.cn",
       "deposit": {
-        "base_upper": 24835,
+        "base_upper": 25945,
         "base_lower": 2170,
         "ratio": "5%-12%",
         "period": "2026年度（调整后基数自2026年1月起执行）",
@@ -3115,11 +3116,11 @@
     {
       "city": "南昌",
       "province": "江西省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://ncgjj.nc.gov.cn",
       "deposit": {
         "base_upper": 30165,
-        "base_lower": null,
+        "base_lower": 2600,
         "ratio": "5%-12%",
         "period": "2026年度（2026年7月1日-2027年6月30日）",
         "note": "上限30165元=2025年度南昌市城镇非私营单位在岗职工月平均工资3倍；官方通知以月缴存额下限形式公布（260元/月，单位和个人合计），未直接公布缴存基数下限数值；本地宝整理称基数下限3915元（未经官网核实）",
@@ -3534,11 +3535,11 @@
     {
       "city": "宜昌",
       "province": "湖北省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://www.yygjj.cn",
       "deposit": {
-        "base_upper": 25875,
-        "base_lower": 1800,
+        "base_upper": 26714.5,
+        "base_lower": 1970,
         "ratio": "5%-12%",
         "period": "2025年度（新基数自2025年1月起执行）",
         "note": "月缴存额上限6210元、下限180元；灵活就业人员按月缴存上限5175元、下限360元；2026年度调整标准未找到官方公开来源（截至2026-08检索）",
@@ -3592,11 +3593,11 @@
     {
       "city": "黄石",
       "province": "湖北省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "https://gjj.huangshi.gov.cn",
       "deposit": {
-        "base_upper": 24018,
-        "base_lower": 1950,
+        "base_upper": 25291,
+        "base_lower": 2130,
         "ratio": "5%-12%",
         "period": "2025年度（2025年7月1日至2026年6月30日）",
         "note": "2026年度（2026年7月起）调整标准未找到官方公开来源（截至2026-08检索）",
@@ -4368,11 +4369,11 @@
     {
       "city": "洛阳",
       "province": "河南省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "https://zfgjj.ly.gov.cn",
       "deposit": {
-        "base_upper": 22471,
-        "base_lower": 2100,
+        "base_upper": 23914,
+        "base_lower": 2350,
         "ratio": "5%-12%（灵活就业人员12%）",
         "period": "2025年度（2025年7月1日至2026年6月30日）",
         "note": "下限分档：市区、新安县、栾川县2100元；伊川县、宜阳县、洛宁县、嵩县、汝阳县2000元。2026年度（2026年7月起）调整标准未找到官方公开来源（截至2026-08检索）",
@@ -4435,11 +4436,11 @@
     {
       "city": "安阳",
       "province": "河南省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
-        "base_upper": 18939,
-        "base_lower": 2100,
+        "base_upper": 19903,
+        "base_lower": 2350,
         "ratio": "单位和职工个人各5%-12%",
         "period": "2025年度（2025年7月1日至9月30日办理）",
         "note": "下限分档：安阳市区2100元；林州市、汤阴县、安阳县、内黄县2000元。月缴存额上限4546元。2026年度调整标准未找到官方公开来源（截至2026-08检索）；官网域名未核实",
@@ -4707,11 +4708,11 @@
     {
       "city": "泸州",
       "province": "四川",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
-        "base_upper": 25237,
-        "base_lower": 1970,
+        "base_upper": 26601,
+        "base_lower": 2200,
         "ratio": "5%-12%",
         "period": "2025年度（2025-01起执行）",
         "note": "月缴存额单位部分、个人部分上限均为3028元、下限均为99元；单位与个人缴存比例应保持一致。",
@@ -5151,11 +5152,11 @@
     {
       "city": "曲靖",
       "province": "云南",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
-        "base_upper": 25737,
-        "base_lower": 1920,
+        "base_upper": 25893,
+        "base_lower": 2020,
         "ratio": "5%-12%",
         "period": "2025年度",
         "note": "月缴存额上限6176元；下限：麒麟区、沾益区、马龙区、宣威市、曲靖经开区1920元（月缴存额下限192元），其余各县1770元（月缴存额下限178元）。数据来自曲靖市住房公积金2025年年度报告。",
@@ -5217,11 +5218,11 @@
     {
       "city": "丽江",
       "province": "云南",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
-        "base_upper": null,
-        "base_lower": null,
+        "base_upper": 28746,
+        "base_lower": 1920,
         "ratio": "5%-12%（全国常规标准，未找到丽江市官方文件）",
         "period": null,
         "note": "未找到丽江市住房公积金中心官方公开的缴存基数上下限文件。",
@@ -5260,11 +5261,11 @@
     {
       "city": "红河州",
       "province": "云南",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "https://www.hh.gov.cn",
       "deposit": {
-        "base_upper": 26023,
-        "base_lower": 1920,
+        "base_upper": 27016,
+        "base_lower": 2020,
         "ratio": "5%-12%",
         "period": "2025年度（2025-01-01至2025-12-31）",
         "note": "下限分区域：二类地区（蒙自、个旧、开远、弥勒市）1920元；三类地区（建水、石屏、泸西、元阳、红河、金平、绿春、屏边、河口县）1770元。个人月缴存（个人+单位）上限6245元。",
@@ -5322,10 +5323,10 @@
     {
       "city": "贵阳",
       "province": "贵州",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://gjj.guiyang.gov.cn",
       "deposit": {
-        "base_upper": 25392,
+        "base_upper": 25980,
         "base_lower": 2130,
         "ratio": "5%-12%（取整数，单位与个人比例一致）",
         "period": "2026年度（2026年1月起调整）",
@@ -5388,10 +5389,10 @@
     {
       "city": "遵义",
       "province": "贵州",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
-        "base_upper": 23406,
+        "base_upper": 24405,
         "base_lower": 2130,
         "ratio": "5%-12%",
         "period": "2025年度",
@@ -5563,11 +5564,11 @@
     {
       "city": "银川",
       "province": "宁夏",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://gjj.yinchuan.gov.cn",
       "deposit": {
         "base_upper": 33747,
-        "base_lower": 2050,
+        "base_lower": 2235,
         "ratio": "5%-12%",
         "period": "2026年度（2026-07-01起执行）",
         "note": "月缴存额上限8100元；下限不低于自治区最低工资标准（兴庆区、金凤区、西夏区、永宁县、贺兰县、灵武市均为2050元）。",
@@ -6040,10 +6041,10 @@
     {
       "city": "吕梁",
       "province": "山西省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://www.lvliang.gov.cn",
       "deposit": {
-        "base_upper": 23793,
+        "base_upper": 24733,
         "base_lower": 1950,
         "ratio": "5%-12%",
         "period": "2025年度",
@@ -6108,10 +6109,10 @@
     {
       "city": "朔州",
       "province": "山西省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
-        "base_upper": 24438,
+        "base_upper": 25044,
         "base_lower": 2050,
         "ratio": "5%-12%",
         "period": "2025年度",
@@ -6654,10 +6655,10 @@
     {
       "city": "吉林市",
       "province": "吉林省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://www.jlcity.gov.cn",
       "deposit": {
-        "base_upper": 21272.25,
+        "base_upper": 22734.75,
         "base_lower": 2020,
         "ratio": "5%-12%",
         "period": "2026年度（2026年1月1日起）",
@@ -6716,10 +6717,10 @@
     {
       "city": "通化",
       "province": "吉林省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://gjj.tonghua.gov.cn",
       "deposit": {
-        "base_upper": null,
+        "base_upper": 19816,
         "base_lower": null,
         "ratio": "5%-12%（国家规定区间）",
         "period": null,
@@ -6772,10 +6773,10 @@
     {
       "city": "哈尔滨",
       "province": "黑龙江省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "https://www.hrbgjj.org.cn",
       "deposit": {
-        "base_upper": 27083,
+        "base_upper": 28430,
         "base_lower": 2270,
         "ratio": "5%-12%",
         "period": "2026年度（2026年1月1日起调整；下限自2025年12月1日起执行）",
@@ -6846,10 +6847,10 @@
     {
       "city": "大庆",
       "province": "黑龙江省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
-        "base_upper": 31287,
+        "base_upper": 32701,
         "base_lower": 2270,
         "ratio": "5%-12%",
         "period": "2025年度（2025年7月起执行；下限自2025年12月1日起按新最低工资标准调整）",
@@ -6993,10 +6994,10 @@
     {
       "city": "锦州",
       "province": "辽宁省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
-        "base_upper": 20610,
+        "base_upper": 21945,
         "base_lower": 1930,
         "ratio": "5%-12%",
         "period": "2025年度上下限执行期2025年7月1日至2026年6月30日；下限自2026年1月1日起由1700元上调为1930元",
@@ -7219,10 +7220,10 @@
     {
       "city": "丹东",
       "province": "辽宁省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "https://www.ddzfgjj.com",
       "deposit": {
-        "base_upper": 22278,
+        "base_upper": 22141,
         "base_lower": 2080,
         "ratio": "5%-12%",
         "period": "2025年度（2025年7月起；下限自2025年12月1日起调整）",
@@ -7671,11 +7672,11 @@
     {
       "city": "日照",
       "province": "山东省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": "http://www.rizhaozfgjj.cn",
       "deposit": {
-        "base_upper": 25241,
-        "base_lower": 2010,
+        "base_upper": 26484,
+        "base_lower": 2210,
         "ratio": "5%-12%（单位职工）；灵活就业人员10%-24%",
         "period": "2025年度（2025年7月1日至2026年6月30日）",
         "note": "上限按2024年市在岗职工年平均工资100964元的月均3倍确定为25241元；下限为省公布最低工资标准2010元（注：山东省2025年10月起上调最低工资，日照2026年度新基数未在本次检索中获取官方原文）。",
@@ -8077,11 +8078,11 @@
     {
       "city": "滨州",
       "province": "山东省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
         "base_upper": 25269,
-        "base_lower": null,
+        "base_lower": 2020,
         "ratio": "5%-12%",
         "period": "2026年度（2026年7月起）",
         "note": "上限25269元；下限按山东省公布的滨州市最低工资标准执行，公开报道摘要未列明具体数值（未找到官方完整原文）",
@@ -8646,10 +8647,10 @@
     {
       "city": "龙岩",
       "province": "福建省",
-      "last_updated": "2026-08-20",
+      "last_updated": "2026-08-31",
       "official_site": null,
       "deposit": {
-        "base_upper": 26877,
+        "base_upper": 28559,
         "base_lower": 1895,
         "ratio": "5%-12%",
         "period": "2025年度（2025年7月-2026年6月）",
