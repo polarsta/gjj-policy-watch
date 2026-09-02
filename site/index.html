@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="AsWVdlhyz0QAFQXpGypYU0">
+<head data-page-node-id="zDb0xpiloG6bI35nW9DC7f">
+<meta charset="UTF-8" data-page-node-id="hsp7GbzBHBFwPmssczkDY7">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="CCLJPG53j87V2DXOohOURN">
+<title>公积金政策监控台 · 中国住房公积金政策可视化监测</title>
+<meta name="description" content="银行内部 · 中国公积金领域政策可视化监控界面：总行总览 + 分行专属业务视图，134城真实政策数据库每日联网更新" data-page-node-id="FwgWcw9hkJnfZUdKdMm0Va">
+<style>
+:root{
+  --blue:#0e5f9e; --blue2:#1578c4; --blue3:#e8f3fb; --ink:#1a2b3c; --sub:#5b7186;
+  --line:#dbe6f0; --bg:#f2f6fa; --card:#ffffff;
+  --dep:#1a7fc1; --wit:#0d9e8f; --loan:#e07b2a;
+  --good:#0d9e5c; --warn:#e08a00; --risk:#d84343; --mute:#93a5b5;
+  --shadow:0 1px 3px rgba(16,66,110,.08),0 4px 14px rgba(16,66,110,.06);
+  --r:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.6}
+a{color:var(--blue2);text-decoration:none}
+a:hover{text-decoration:underline}
+button{font-family:inherit;cursor:pointer}
+/* ============ 头部 ============ */
+.hd{background:linear-gradient(120deg,#0b4f86 0%,#0e5f9e 55%,#1a7fc1 100%);color:#fff;padding:0 18px}
+.hd-in{max-width:1460px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:14px 0}
+.hd h1{font-size:21px;font-weight:700;letter-spacing:1px;display:flex;align-items:center;gap:9px;white-space:nowrap}
+.hd h1 .logo{width:30px;height:30px;border-radius:8px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;font-size:16px}
+.hd .sub{font-size:12px;opacity:.85;margin-top:2px}
+.hd-l{min-width:260px}
+.hd-r{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hd-search{position:relative}
+.hd-search input{width:min(340px,52vw);padding:8px 12px 8px 34px;border:none;border-radius:20px;font-size:13px;outline:none;background:rgba(255,255,255,.96)}
+.hd-search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;fill:#7b93a8}
+.src-pill{display:flex;align-items:center;gap:6px;font-size:12px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:6px 11px;border-radius:18px;color:#fff;white-space:nowrap}
+.src-pill .dot{width:8px;height:8px;border-radius:50%;background:#ffd75e;flex:none}
+.src-pill.ok .dot{background:#3ddc84}
+.src-pill.bad .dot{background:#ff6b6b}
+.src-pill:hover{background:rgba(255,255,255,.22);text-decoration:none}
+/* 搜索建议 */
+.suggest{position:absolute;top:110%;left:0;right:0;background:#fff;border-radius:10px;box-shadow:0 8px 30px rgba(10,50,90,.18);z-index:90;overflow:hidden;display:none;color:var(--ink)}
+.suggest.on{display:block;max-height:330px;overflow:auto}
+.suggest .si{padding:8px 13px;font-size:13px;cursor:pointer;display:flex;gap:8px;align-items:center;border-bottom:1px solid #f0f4f8}
+.suggest .si:hover{background:var(--blue3)}
+.suggest .si .tag{font-size:11px;color:#fff;background:var(--blue2);border-radius:4px;padding:1px 6px;flex:none}
+.suggest .si.case .tag{background:var(--loan)}
+/* ============ 主导航 ============ */
+.nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:80;box-shadow:0 2px 8px rgba(16,66,110,.05)}
+.nav-in{max-width:1460px;margin:0 auto;display:flex;gap:4px;padding:0 14px;overflow-x:auto}
+.nav button{border:none;background:none;padding:13px 20px;font-size:15px;font-weight:600;color:var(--sub);border-bottom:3px solid transparent;white-space:nowrap}
+.nav button.on{color:var(--blue);border-bottom-color:var(--blue)}
+.nav button:hover{color:var(--blue)}
+/* ============ 政策变化速览看板 ============ */
+.board{display:grid;grid-template-columns:3fr 1fr;gap:14px;margin-bottom:14px;align-items:start}
+.board-col{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;min-height:400px}
+.board-col h3{font-size:15.5px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.board-col .h-sub{font-size:12.5px;color:var(--sub);margin-bottom:12px}
+/* 顶部统计条 */
+.topbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:14px}
+.topbar .stat{background:var(--card);border-radius:var(--r);padding:13px 16px;box-shadow:var(--shadow);border-top:3px solid var(--blue2)}
+.topbar .stat .n{font-size:25px;font-weight:700;color:var(--blue);line-height:1.2}
+.topbar .stat .n small{font-size:13px;font-weight:400;color:var(--sub)}
+.topbar .stat .t{font-size:12.5px;color:var(--sub);margin-top:2px}
+.topbar .stat.g{border-top-color:var(--good)}.topbar .stat.g .n{color:var(--good)}
+.topbar .stat.o{border-top-color:var(--loan)}.topbar .stat.o .n{color:var(--loan)}
+.topbar .stat.t{border-top-color:var(--wit)}.topbar .stat.t .n{color:var(--wit)}
+.topbar .stat.r{border-top-color:var(--risk)}.topbar .stat.r .n{color:var(--risk)}
+/* 城市模块卡片（参照需求图） */
+.city-mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:1200px){.city-mod-grid{grid-template-columns:repeat(2,1fr)}}
+.cmod{border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;box-shadow:var(--shadow)}
+.cmod.nat{border-color:#c5bce8;background:linear-gradient(180deg,#f6f4fd,#fff)}
+.cmod-h{display:flex;align-items:center;gap:8px;padding:10px 13px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,#f4f9fd,#eef5fb)}
+.cmod.nat .cmod-h{background:linear-gradient(90deg,#f0edfb,#ece9fa)}
+.cmod-h .nm{font-size:16px;font-weight:700;color:var(--blue)}
+.cmod.nat .cmod-h .nm{color:#6554c0}
+.cmod-h .upd{font-size:10.5px;background:#ff5b4d;color:#fff;padding:2px 8px;border-radius:9px;font-weight:600}
+.cmod-h .acts{margin-left:auto;display:flex;gap:6px;align-items:center}
+.cmod-h .acts a,.cmod-h .acts button{font-size:11.5px;border:1px solid var(--line);background:#fff;color:var(--sub);border-radius:6px;padding:3px 9px;white-space:nowrap;cursor:pointer;text-decoration:none}
+.cmod-h .acts a:hover,.cmod-h .acts button:hover{border-color:var(--blue2);color:var(--blue2)}
+.cmod-h .acts .full{background:var(--blue2);border-color:var(--blue2);color:#fff}
+.cmod-h .acts .full:hover{background:var(--blue)}
+.cmod-row{display:flex;gap:10px;padding:11px 13px;border-bottom:1px solid #f0f4f8}
+.cmod-row:last-child{border-bottom:none}
+.cmod-tag{flex:none;width:34px;border-radius:8px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;writing-mode:vertical-lr;letter-spacing:2px;padding:8px 0}
+.cmod-tag.dep{background:var(--dep)}.cmod-tag.wit{background:var(--wit)}.cmod-tag.loan{background:var(--loan)}
+.cmod-bd{flex:1;min-width:0}
+.cmod-bd .txt{font-size:12.8px;line-height:1.6;color:var(--ink)}
+.cmod-bd .txt.none{color:var(--mute);font-style:italic}
+.cmod-bd .mt{font-size:11.5px;color:var(--mute);margin-top:5px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+/* 双行表头（运行数据表） */
+.tb thead tr.grp th{font-size:12px;letter-spacing:1px;text-align:center;color:#fff;border-bottom:1px solid rgba(255,255,255,.35);padding:6px 10px}
+.tb thead tr.grp th.g-dep{background:var(--dep)}
+.tb thead tr.grp th.g-wit{background:var(--wit)}
+.tb thead tr.grp th.g-loan{background:var(--loan)}
+.tb thead tr.grp th.g-fund{background:#0e9594}
+.tb thead tr.grp th.g-plain{background:#eaf3fb;color:#164e7e;text-align:left;letter-spacing:0}
+.tb thead tr:not(.grp) th{top:32px}
+/* 分行资格矩阵紧凑表 */
+.qmx-tb{min-width:100%;table-layout:auto}
+.qmx-tb th{white-space:normal;min-width:62px;font-size:11.5px;padding:6px 5px;text-align:center;line-height:1.35}
+.qmx-tb td{padding:7px 5px;border-bottom:none}
+/* 同比增减标识 + 资格矩阵分节 */
+.yoy{font-size:11px;font-weight:700;white-space:nowrap}
+.yoy-up{color:#d93025}
+.yoy-dn{color:#0f8a4d}
+.qmx-sec{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.qmx-sec:last-child{margin-bottom:0}
+.qmx-tag{flex:none;width:34px;min-height:64px;border-radius:8px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;writing-mode:vertical-lr;letter-spacing:2px;padding:8px 0}
+/* 全国性法规详情卡（住房公积金管理条例） */
+.reg-card{border:1px solid #d9d2f7;background:linear-gradient(135deg,#f7f5ff,#fbfaff);border-radius:12px;margin:10px 0 14px;overflow:hidden}
+.reg-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 14px;background:linear-gradient(90deg,#6554c0,#7a68d6);color:#fff}
+.reg-tt{font-weight:700;font-size:14.5px}
+.reg-no{font-size:11.5px;background:rgba(255,255,255,.2);padding:2px 9px;border-radius:10px}
+.reg-eff{font-size:11.5px;background:#ffd54d;color:#5d4037;padding:2px 9px;border-radius:10px;font-weight:700}
+.reg-toggle{font-size:11.5px;cursor:pointer;opacity:.88;user-select:none}
+.reg-toggle:hover{opacity:1;text-decoration:underline}
+.reg-meta{padding:7px 14px;font-size:11.5px;color:var(--sub);border-bottom:1px dashed #e3defa}
+.reg-body{padding:4px 14px 12px}
+.reg-card.fold .reg-body,.reg-card.fold .reg-meta{display:none}
+.reg-sub{font-size:12px;font-weight:700;color:#6554c0;margin:9px 0 6px}
+.reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}
+@media(max-width:900px){.reg-grid{grid-template-columns:1fr}}
+.reg-kc{font-size:12.2px;line-height:1.6;display:flex;gap:7px;align-items:flex-start;color:var(--ink)}
+.reg-cat{flex:none;background:#6554c0;color:#fff;font-size:10.5px;padding:1px 8px;border-radius:9px;margin-top:2px;font-weight:600}
+.reg-imp{margin:0;padding-left:18px;font-size:12.2px;color:var(--sub);line-height:1.75}
+.reg-watch{display:inline-block;background:#fff;border:1px solid #d9d2f7;color:#6554c0;font-size:11px;padding:2px 10px;border-radius:11px;margin:0 6px 6px 0}
+.reg-srcs{margin-top:9px;display:flex;gap:7px;flex-wrap:wrap}
+/* 负面舆情栏 */
+.risk-col{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;border-top:3px solid var(--risk)}
+.risk-item{border-left:3px solid #f0c8c8;background:#fdf8f8;padding:9px 11px;margin-bottom:8px;border-radius:0 8px 8px 0}
+.risk-item:hover{border-left-color:var(--risk)}
+.risk-item .rk-head{display:flex;gap:6px;align-items:center;margin-bottom:4px;flex-wrap:wrap}
+.risk-item .rk-cat{font-size:10.5px;font-weight:700;padding:1.5px 8px;border-radius:9px;color:#fff}
+.rk-case{background:#b03a3a}.rk-cheat{background:#d84343}.rk-viol{background:#e0742a}.rk-warn{background:#e08a00}.rk-mid{background:#8a5fb0}
+.risk-item .rk-city{font-size:11px;color:var(--blue);font-weight:700}
+.risk-item .rk-title{font-size:12.5px;line-height:1.55;color:var(--ink)}
+.risk-item .rk-sum{font-size:11.5px;line-height:1.6;color:var(--sub);margin-top:3px}
+.risk-item .rk-sev{font-size:10.5px;font-weight:700;padding:1.5px 8px;border-radius:9px}
+.risk-item .rk-sev-高{background:#fde3e3;color:var(--risk)}
+.risk-item .rk-sev-中{background:#fdf0da;color:#8a6116}
+.risk-item .rk-sev-低{background:#e8f0fe;color:#3457a8}
+.risk-item .rk-foot{font-size:11px;color:var(--mute);margin-top:4px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.risk-live{font-size:11px;padding:2px 8px;border-radius:9px;background:#eef2f6;color:var(--sub)}
+.risk-live.ok{background:#dcf5e8;color:var(--good)}
+#risk-sort button.on{background:var(--risk) !important;color:#fff !important}
+.risk-item .rk-date{font-size:11px;color:var(--warn);font-weight:600}
+.board-empty{text-align:center;color:var(--mute);padding:40px 20px;font-size:13px}
+.board-tools{display:flex;gap:8px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+.board-tools .seg{display:flex;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.board-tools .seg button{border:none;background:none;padding:7px 14px;font-size:12.5px;color:var(--sub);font-weight:600}
+.board-tools .seg button.on{background:var(--blue);color:#fff}
+.board-tools .btn{border:1px solid var(--line);background:#fff;color:var(--blue);padding:7px 14px;border-radius:20px;font-size:12.5px;font-weight:600;display:flex;align-items:center;gap:5px}
+.board-tools .btn:hover{background:var(--blue3);border-color:var(--blue2)}
+.board-tools .btn.ghost{border-color:var(--blue2);color:var(--blue2)}
+.board-tools .btn .icon{font-size:14px}
+.board-search{flex:1;min-width:200px;position:relative}
+.board-search input{width:100%;padding:8px 12px 8px 34px;border:1px solid var(--line);border-radius:20px;font-size:13px;outline:none;background:#fff}
+.board-search input:focus{border-color:var(--blue2)}
+.board-search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;fill:#7b93a8}
+.board-summary{background:linear-gradient(120deg,#e8f3fb,#f0f6fb);border-left:4px solid var(--blue2);padding:12px 14px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:13px;color:var(--ink)}
+.board-summary b{color:var(--blue)}
+.refresh-spin{animation:spin 0.8s linear infinite}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(max-width:968px){.board{grid-template-columns:1fr}.city-mod-grid{grid-template-columns:1fr}}
+/* ============ 主体 ============ */
+.main{max-width:1460px;margin:0 auto;padding:16px 14px 60px}
+.view{display:none}.view.on{display:block;animation:fade .25s}
+@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1}}
+/* 统计卡 */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.stat{background:var(--card);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow);border-top:3px solid var(--blue2)}
+.stat .n{font-size:26px;font-weight:700;color:var(--blue);line-height:1.2}
+.stat .n small{font-size:13px;font-weight:400;color:var(--sub)}
+.stat .t{font-size:12.5px;color:var(--sub);margin-top:2px}
+.stat.g{border-top-color:var(--good)}.stat.g .n{color:var(--good)}
+.stat.o{border-top-color:var(--loan)}.stat.o .n{color:var(--loan)}
+.stat.t{border-top-color:var(--wit)}.stat.t .n{color:var(--wit)}
+.stat.r{border-top-color:var(--risk)}.stat.r .n{color:var(--risk)}
+/* 子标签 */
+.tabs{display:flex;gap:8px;margin:6px 0 14px;flex-wrap:wrap;align-items:center}
+.tabs button{border:1px solid var(--line);background:#fff;color:var(--sub);padding:7px 16px;border-radius:20px;font-size:13.5px;font-weight:600}
+.tabs button.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.tabs .sp{flex:1}
+/* 面板卡片 */
+.panel{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:16px;margin-bottom:14px}
+.panel h3{font-size:15.5px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.panel .h-sub{font-size:12.5px;color:var(--sub);margin-bottom:10px}
+.badge{display:inline-flex;align-items:center;font-size:11px;font-weight:600;padding:1.5px 8px;border-radius:10px;white-space:nowrap}
+.b-dep{background:#e3f0fa;color:var(--dep)}.b-wit{background:#ddf5f2;color:var(--wit)}.b-loan{background:#fdeedd;color:var(--loan)}
+.b-nat{background:#e8e4fb;color:#6554c0}.b-city{background:#e3f0fa;color:var(--blue2)}
+.b-good{background:#dcf5e8;color:var(--good)}.b-mid{background:#eef2f6;color:var(--sub)}.b-risk{background:#fde3e3;color:var(--risk)}
+.b-src{background:#f0f4f8;color:var(--sub);border:1px solid var(--line)}
+/* 时间筛选 */
+.seg{display:inline-flex;background:#eef3f8;border-radius:9px;padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{border:none;background:none;padding:5px 13px;border-radius:7px;font-size:12.5px;color:var(--sub);font-weight:600}
+.seg button.on{background:#fff;color:var(--blue);box-shadow:0 1px 4px rgba(16,66,110,.15)}
+/* 速览总结条 */
+.sumbar{background:linear-gradient(90deg,#fff8e8,#fffdf5);border:1px solid #f0e3bb;border-radius:10px;padding:11px 14px;font-size:13px;color:#6b5a22;margin-bottom:14px;line-height:1.7}
+.sumbar b{color:#8a6d1a}
+/* 变化三栏 */
+.ch-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ch-col{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fcfdfe}
+.ch-col-h{padding:9px 13px;font-weight:700;font-size:13.5px;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.ch-col-h .cnt{font-size:11px;font-weight:600;background:rgba(255,255,255,.25);padding:1px 8px;border-radius:9px}
+.ch-col.h-dep .ch-col-h{background:var(--dep)}.ch-col.h-wit .ch-col-h{background:var(--wit)}.ch-col.h-loan .ch-col-h{background:var(--loan)}
+.ch-item{padding:10px 13px;border-bottom:1px solid #eef3f8}
+.ch-item:last-child{border-bottom:none}
+.ch-item .tt{font-size:13px;font-weight:600;margin-bottom:3px}
+.ch-item .ds{font-size:12.5px;color:var(--sub)}
+.ch-item .mt{font-size:11.5px;color:var(--mute);margin-top:4px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.more-link{display:block;text-align:center;padding:8px;font-size:12.5px;color:var(--blue2);background:#f5f9fc;cursor:pointer}
+.more-link:hover{background:var(--blue3)}
+.empty{padding:22px;text-align:center;color:var(--mute);font-size:13px}
+/* 全国动态卡 */
+.nat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:11px}
+.nat-card{border:1px solid var(--line);border-left:4px solid #6554c0;border-radius:9px;padding:11px 13px;background:#fbfaff}
+.nat-card .tt{font-size:13.5px;font-weight:700;margin-bottom:3px}
+.nat-card .ds{font-size:12.5px;color:var(--sub)}
+.nat-card .mt{font-size:11.5px;color:var(--mute);margin-top:5px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+/* 城市政策卡（政策总览） */
+.city-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.city-card{border:1px solid var(--line);border-radius:11px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.cc-h{display:flex;align-items:center;gap:8px;padding:10px 13px;background:linear-gradient(90deg,#f4f9fd,#eef5fb);border-bottom:1px solid var(--line)}
+.cc-h .nm{font-size:15.5px;font-weight:700;color:var(--blue)}
+.cc-h .pv{font-size:11.5px;color:var(--sub)}
+.cc-h .links{margin-left:auto;display:flex;gap:6px}
+.mini-btn{font-size:11.5px;border:1px solid var(--line);background:#fff;color:var(--sub);border-radius:6px;padding:2.5px 9px;white-space:nowrap}
+.mini-btn:hover{border-color:var(--blue2);color:var(--blue2)}
+.cc-row{display:flex;gap:10px;padding:10px 13px;border-bottom:1px solid #f0f4f8}
+.cc-row:last-child{border-bottom:none}
+.cc-ic{flex:none;width:40px;height:40px;border-radius:9px;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.i-dep{background:var(--dep)}.i-wit{background:var(--wit)}.i-loan{background:var(--loan)}
+.cc-bd{flex:1;min-width:0}
+.cc-bd .one{font-size:12.8px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.cc-bd .mt{font-size:11.5px;color:var(--mute);margin-top:4px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+/* 筛选条 */
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.filters input[type=text],.filters select{padding:7px 11px;border:1px solid var(--line);border-radius:8px;font-size:13px;outline:none;background:#fff;color:var(--ink)}
+.filters input:focus,.filters select:focus{border-color:var(--blue2)}
+.btn{border:1px solid var(--blue2);background:var(--blue2);color:#fff;border-radius:8px;padding:7px 14px;font-size:13px;font-weight:600}
+.btn:hover{background:var(--blue)}
+.btn.ghost{background:#fff;color:var(--blue2)}
+.btn.ghost:hover{background:var(--blue3)}
+.btn.gray{border-color:var(--line);background:#fff;color:var(--sub)}
+.btn.gray:hover{background:#f2f6fa}
+/* 表格 */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:#fff}
+table.tb{border-collapse:collapse;width:100%;font-size:12.5px;min-width:900px}
+.tb th{position:sticky;top:0;background:#eaf3fb;color:#164e7e;font-weight:700;padding:9px 10px;text-align:left;border-bottom:2px solid #c9ddee;white-space:nowrap;z-index:2}
+.tb td{padding:9px 10px;border-bottom:1px solid #eef3f8;vertical-align:top;line-height:1.55}
+.tb tr:hover td{background:#f6fafd}
+.tb td.city{font-weight:700;color:var(--blue);white-space:nowrap;cursor:pointer}
+.tb td .cl{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.tb .num{white-space:nowrap}
+.prov-row td{background:#f0f6fb !important;font-weight:700;color:#2c5f8a;font-size:12.5px;padding:6px 10px}
+.sum-row td{background:#eaf6f6 !important;font-weight:700;color:#0b5c5b;border-top:2px solid #0e9594;border-bottom:none;white-space:nowrap}
+/* 全国政策及数据总览 · 紧凑显示（减少留白，尽量一屏看全） */
+#hq-tables .tb{min-width:0;font-size:12px}
+#hq-tables .tb th{padding:6px 8px;font-size:12px}
+#hq-tables .tb td{padding:5px 8px;line-height:1.45}
+#hq-tables .tb td .cl{-webkit-line-clamp:6}
+#hq-tables .prov-row td{padding:3px 8px;font-size:11.5px}
+#hq-tables h4{margin:10px 0 6px !important;font-size:13.5px !important}
+#hq-tables .h-sub{font-size:11.5px;margin:-2px 0 6px !important}
+/* 矩阵 */
+.mx-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px;max-height:70vh;background:#fff}
+table.mx{border-collapse:separate;border-spacing:0;font-size:12.5px}
+.mx th{position:sticky;top:0;background:#eaf3fb;color:#164e7e;padding:9px 8px;font-weight:700;white-space:nowrap;border-bottom:2px solid #c9ddee;z-index:3;font-size:12px}
+.mx th:first-child,.mx td:first-child{position:sticky;left:0;background:#fff;z-index:2;box-shadow:2px 0 5px rgba(16,66,110,.06)}
+.mx th:first-child{z-index:4;background:#eaf3fb}
+.mx td{padding:7px 8px;border-bottom:1px solid #eef3f8;text-align:center;white-space:nowrap}
+.mx td.city{text-align:left;font-weight:600;color:var(--blue);cursor:pointer}
+.mx tr:hover td{background:#f6fafd}
+.mx tr:hover td:first-child{background:#f6fafd}
+.mx .prov td{background:#f0f6fb;font-weight:700;color:#2c5f8a;text-align:left;position:sticky;left:0}
+.mx thead tr.grp th{top:0;color:#fff;font-size:12px;letter-spacing:2px;padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.4)}
+.mx thead tr.grp + tr th{top:32px}
+.st{display:inline-flex;width:22px;height:22px;border-radius:50%;align-items:center;justify-content:center;font-size:12px;font-weight:700;cursor:help}
+.st-y{background:#dcf5e8;color:var(--good)}.st-p{background:#fdf0da;color:var(--warn)}.st-n{background:#fde3e3;color:var(--risk)}.st-u{color:#b6c4d0}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--sub);align-items:center}
+/* 分行布局 */
+.br-top{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.city-pick{position:relative}
+.city-pick input{width:min(300px,70vw);padding:9px 13px 9px 34px;border:1.5px solid var(--blue2);border-radius:10px;font-size:14px;outline:none}
+.city-pick svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;fill:var(--blue2)}
+.br-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;align-items:start}
+.pol-item{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:10px;background:#fff}
+.pol-item .hd2{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:5px}
+.pol-item .tt{font-size:14px;font-weight:700}
+.pol-item .ds{font-size:12.8px;color:var(--sub);margin:4px 0}
+.pol-item .mt{font-size:11.5px;color:var(--mute);display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:5px}
+.adv-card{border:1px solid #f0e3bb;background:#fffdf4;border-radius:10px;padding:11px 13px;margin-bottom:9px}
+.adv-card .tt{font-size:13.5px;font-weight:700;color:#8a6d1a;display:flex;gap:7px;align-items:center}
+.adv-card .ds{font-size:12.8px;color:#5d5426;margin-top:3px}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
+.feat-grid .fr{display:flex;justify-content:space-between;align-items:center;font-size:12.8px;padding:6px 9px;background:#f7fafc;border-radius:7px;gap:6px}
+.case-card{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:10px;background:#fff}
+.case-card .tt{font-size:13.8px;font-weight:700;color:var(--blue)}
+.case-card .ds{font-size:12.6px;color:var(--sub);margin:5px 0}
+.case-card .pr{background:#f5f9f0;border-radius:8px;padding:8px 11px;font-size:12.4px;margin-top:6px}
+.case-card .pr b{color:#4a7a2a}
+.case-card .pr ol{margin:4px 0 0 18px}
+.case-card .mt{font-size:11.5px;color:var(--mute);margin-top:7px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chip{display:inline-block;background:var(--blue3);color:var(--blue);border-radius:14px;padding:3px 11px;font-size:12px;margin:0 6px 6px 0;cursor:pointer;font-weight:600}
+.chip:hover{background:#d5e9f8}
+/* 弹层 */
+.modal-mask{position:fixed;inset:0;background:rgba(15,40,65,.45);z-index:200;display:none;align-items:center;justify-content:center;padding:16px}
+.modal-mask.on{display:flex}
+.modal{background:#fff;border-radius:14px;max-width:560px;width:100%;max-height:88vh;overflow:auto;padding:20px;box-shadow:0 18px 60px rgba(10,40,80,.3)}
+.modal h3{font-size:16px;margin-bottom:12px}
+.modal .f-row{margin-bottom:11px}
+.modal label{display:block;font-size:12.5px;color:var(--sub);margin-bottom:3px;font-weight:600}
+.modal input,.modal select,.modal textarea{width:100%;padding:8px 11px;border:1px solid var(--line);border-radius:8px;font-size:13px;outline:none;font-family:inherit}
+.modal textarea{resize:vertical;min-height:70px}
+.modal .f-foot{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+/* toast */
+.toast{position:fixed;left:50%;bottom:36px;transform:translateX(-50%) translateY(20px);background:#223c55;color:#fff;padding:10px 20px;border-radius:10px;font-size:13.5px;z-index:300;opacity:0;transition:.3s;pointer-events:none;max-width:88vw}
+.toast.on{opacity:1;transform:translateX(-50%)}
+/* 加载 */
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:90px 20px;color:var(--sub);gap:14px}
+.spin{width:38px;height:38px;border:4px solid var(--blue3);border-top-color:var(--blue2);border-radius:50%;animation:sp 0.9s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.err-box{background:#fdeeee;border:1px solid #f2c6c6;color:#93341f;border-radius:10px;padding:16px;margin:30px auto;max-width:640px;font-size:13.5px;line-height:1.8}
+.foot{max-width:1460px;margin:0 auto;padding:0 14px 26px;font-size:12px;color:var(--mute);line-height:1.9}
+/* 响应式 */
+@media (max-width:980px){
+  .br-grid{grid-template-columns:1fr}
+  .ch-cols{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .hd h1{font-size:17px}
+  .hd .sub{font-size:11px}
+  .hd-r{width:100%}
+  .hd-search{flex:1}
+  .hd-search input{width:100%}
+  .nav button{padding:11px 13px;font-size:14px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .city-grid,.nat-grid{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .panel{padding:12px}
+}
+/* 打印（城市简报） */
+#print-sheet{display:none}
+/* ============ 政策明细弹层（地区分类矩阵 / 分行资格矩阵） ============ */
+td.mx-cell{cursor:default;transition:box-shadow .12s}
+td.mx-cell.has-src{cursor:pointer}
+td.mx-cell:hover{box-shadow:inset 0 0 0 2px var(--blue2)}
+#mx-tip{position:fixed;z-index:999;display:none;max-width:330px;background:#1b2634;color:#e8eef5;border-radius:10px;padding:12px 14px;font-size:12.5px;line-height:1.7;box-shadow:0 10px 34px rgba(8,28,48,.45);border:1px solid rgba(255,255,255,.08)}
+#mx-tip .tp-st{font-size:13.5px;font-weight:700;margin-bottom:3px}
+#mx-tip .tp-st.tp-y{color:#4ade80}
+#mx-tip .tp-st.tp-p{color:#fbbf24}
+#mx-tip .tp-st.tp-n{color:#f87171}
+#mx-tip .tp-st.tp-u{color:#9ca3af}
+#mx-tip .tp-dim{color:#fff;font-weight:700;margin-bottom:6px}
+#mx-tip .tp-txt{color:#cfdae6;margin-bottom:8px;word-break:break-word}
+#mx-tip .tp-src{border-top:1px solid rgba(255,255,255,.14);padding-top:7px;color:#9fb0c0;font-size:12px}
+#mx-tip .tp-src a{color:#7db8f0;font-weight:600;text-decoration:none}
+#mx-tip .tp-src a:hover{text-decoration:underline}
+@media print{
+  body>*{display:none !important}
+  #print-sheet{display:block !important;font-size:12px;color:#000}
+  #print-sheet h1{font-size:19px;margin-bottom:2px}
+  #print-sheet h2{font-size:14.5px;margin:13px 0 5px;border-left:4px solid #0e5f9e;padding-left:8px}
+  #print-sheet .p-sub{color:#444;font-size:11.5px;margin-bottom:8px}
+  #print-sheet table{border-collapse:collapse;width:100%;font-size:11px}
+  #print-sheet th,#print-sheet td{border:1px solid #999;padding:4px 6px;text-align:left;vertical-align:top}
+  #print-sheet th{background:#e8f0f7}
+  #print-sheet ul{margin:2px 0 2px 18px}
+  #print-sheet .p-sec{margin-bottom:8px}
+</style>
+</head>
+<body data-page-node-id="jN8BuPiy5rHX2H042VNMe0">
+<header class="hd" data-page-node-id="fBVbQ1qFQUeTcy6TIHxHBr">
+  <div class="hd-in" data-page-node-id="LUactR7uYA7fmbCwt9BHgE">
+    <div class="hd-l" data-page-node-id="U4yYyIND9Wq2l3F4GgoxV1">
+      <h1 data-page-node-id="7DvTRYGeMuUYtlPWBElUGE"><span class="logo" data-page-node-id="QDZLa3iJi5JuM1zX7qX2C0">🏛️</span>公积金政策监控台</h1>
+      <div class="sub" id="hd-sub" data-page-node-id="qneP5HbzxOitFDPOjRx3Zp">机构客户部 · 公积金中心客群赋能工具 · 数据每日自动联网更新</div>
+    </div>
+    <div class="hd-r" data-page-node-id="w2jicdPmclSAwKUaZnzd24">
+      <div class="hd-search" data-page-node-id="ar3baqBmduC5ItDgSBEOt5">
+        <svg viewBox="0 0 24 24" data-page-node-id="xbbIGy5DnuOdm1GbDkpf80"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" data-page-node-id="O0zRLC1jGQ1Wie8TKJVrJE"/></svg>
+        <input id="q" type="text" placeholder="搜城市 / 关键词，如「北京 公积金 贷款额度」" autocomplete="off" data-page-node-id="2ofXnG1OO3kWR8vGpzobu1">
+        <div class="suggest" id="suggest" data-page-node-id="s5gpSnflgHxATZibwd1FY9"></div>
+      </div>
+      <button class="src-pill" id="web-search" title="用百度联网检索当前输入关键词" data-page-node-id="vWR291QsJIGjV08q58z0Rt">🔎 联网检索</button>
+      <a class="src-pill" id="src-pill" href="https://github.com/polarsta/gjj-policy-watch" target="_blank" rel="noopener" title="数据源：GitHub gjj-policy-watch 仓库（网页版数据，自动更新）" data-page-node-id="gZHaUf5nsGcS59W4UtYFEe"><span class="dot" data-page-node-id="2XeO8FkIyX55PMXKMqshcP"></span><span id="src-txt" data-page-node-id="CpwRpZm64k52UGedMmlUhA">连接数据源…</span></a>
+    </div>
+  </div>
+</header>
+<nav class="nav" data-page-node-id="XxBiPq1lJcEhbPjte3QqnB"><div class="nav-in" data-page-node-id="0IjoFOAmpghudRjQHRoao2">
+  <button class="on" data-view="board" data-page-node-id="055mCqpOnoefmmCu0xGqvK">📊 政策变化速览</button>
+  <!-- 总行总览：折叠隐藏（不删除，恢复时取消下行注释即可）
+  <button data-view="hq">🏦 总行总览</button>
+  -->
+  <button data-view="tables" data-page-node-id="d8PgHLdXPzYYZ3DDWapyIi">🌐 全国政策及数据总览</button>
+  <button data-view="matrix" data-page-node-id="FG07JWcJI9gT8n2c4TGSli">🧭 地区分类矩阵</button>
+  <button data-view="branch" data-page-node-id="zuivsbUOE6mwi6ndGvzxHb">📍 分行专属视图</button>
+</div></nav>
+<main class="main" data-page-node-id="CwHqa4Q8XxLCiDT6U6aVKe">
+  <div id="loading" class="loading" data-page-node-id="kgv00cxt4VpylhA8GCSHuv"><div class="spin" data-page-node-id="WLmMbj9C2xYH4ij2IkKamG"></div><div data-page-node-id="b2jEikRV7z3JejLwVEOwLb">正在连接政策数据库（GitHub 网页版实时数据）…</div></div>
+  <div id="err" style="display:none" data-page-node-id="jwzBhYF1mnGFDlhfJVHfpE"></div>
+
+  <!-- ================= 政策变化速览看板（新增，置顶） ================= -->
+  <section class="view on" id="view-board" data-page-node-id="RQrHKQRuY2iVComenQEXNk">
+    <!-- 顶部统计条 -->
+    <div class="topbar" id="board-topbar" data-page-node-id="W8gIRIKrA99F5ccCsmT6zg"></div>
+    <!-- 工具栏 -->
+    <div class="board-tools" data-page-node-id="YgDaG6yEOOcY0paaiytHyF">
+      <div class="seg" id="board-range" data-page-node-id="VnWUugkKDvhEuZCpS9eMUG">
+        <button data-d="1" data-page-node-id="3fTImKduBYRCgesH068mmX">最近一天</button>
+        <button data-d="7" data-page-node-id="ud5RfdE6iEQGQxEd0iYCHO">一周</button>
+        <button class="on" data-d="30" data-page-node-id="i1gGnSoVEEZPVvKNMJwJ88">一个月</button>
+        <button data-d="90" data-page-node-id="gMMrvldmn6ybVYXzwormzS">一个季度</button>
+        <button data-d="365" data-page-node-id="tknJZyVasnjP7gBlsCnGXi">一年</button>
+      </div>
+      <button class="btn ghost" id="board-refresh" title="重新从 GitHub 拉取最新数据库与舆情" data-page-node-id="V3QBIf1bBqoXL3eYf45FaI">
+        <span class="icon" data-page-node-id="BGQfvHVbrEzT76EFE3Xums">🔄</span><span data-page-node-id="K8iryEiwNRc7A1t8k0UvbO">手动更新</span>
+      </button>
+      <span style="flex:1" data-page-node-id="gICCjFgdeIZYYJPQjSFaoi"></span>
+      <div class="board-search" data-page-node-id="5QG739RN892y1uahH5zsD3">
+        <svg viewBox="0 0 24 24" data-page-node-id="88Bp90oBCk9WdcYwrKlOVJ"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" data-page-node-id="Ku74Wk71Dtg8U7mD6KklTg"/></svg>
+        <input id="board-q" type="text" placeholder="搜索城市，如「杭州」" autocomplete="off" data-page-node-id="tVAFsCheTNULWQtSDKijZv">
+      </div>
+    </div>
+    <div class="board-summary" id="board-summary" data-page-node-id="fsudZS5H8Zrqv6a1PoI4Mi"></div>
+    <!-- 3:1 双栏 -->
+    <div class="board" data-page-node-id="KCqCjc2hzU08hQEntvesi6">
+      <div class="board-col" style="padding:14px" data-page-node-id="SHY4n7B1fxTESN7Owz5460">
+        <h3 data-page-node-id="x690fM8m6w0rGVBiYM6gMb">📋 城市政策模块 <span class="badge b-dep" id="board-mod-cnt" data-page-node-id="CuAACFHvWpxtLwvyvYACC6">0 城</span> <span class="badge b-nat" data-page-node-id="Paa4iuoezq3yQHZpARzY6W">含全国性政策</span></h3>
+        <div class="h-sub" data-page-node-id="qYA4Z12VDQIlF3bABGrT2K">全国政策固定置顶 · 城市政策按最新生效时间倒序 · 均按所选时间跨度过滤 · 点击「完整政策」进入该市分行视图</div>
+        <div class="city-mod-grid" id="board-modules" data-page-node-id="N9QqU54jD6T0A0vMzkpJCN"></div>
+      </div>
+      <div class="risk-col" data-page-node-id="yW4ATfSj4S2xeWRYnIcWKu">
+        <h3 data-page-node-id="AKyrDSgGKOh2ENg9bYrujm">⚠️ 风险舆情 <span class="badge b-risk" id="board-risk-cnt" data-page-node-id="br9LsEKuW4rlGCXL7KZnHz">0 条</span></h3>
+        <div class="h-sub" data-page-node-id="HwiOoR5WLaxw2BAFDj1MWE">负面社会新闻 / 案件通报 / 违规查处 / 风险警示（<span id="risk-src-label" data-page-node-id="espb8HJUPtvEN4aF5mt3Da">快照</span>）</div>
+        <div class="seg" id="risk-sort" style="display:flex;background:#f4f7fb;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:10px" data-page-node-id="CpV1FraMijZjMT5btVl46A">
+          <button data-s="heat" class="on" style="flex:1;border:none;background:none;padding:5px 8px;font-size:12px;color:var(--sub);font-weight:600" data-page-node-id="zHtdEycvKgMzVPqi0dvly0">🔥 按热度</button>
+          <button data-s="time" style="flex:1;border:none;background:none;padding:5px 8px;font-size:12px;color:var(--sub);font-weight:600" data-page-node-id="Q2wleRmIulP2X9SljQmBEW">🕐 按时间</button>
+        </div>
+        <div id="board-risk" data-page-node-id="cIVGLI2Fey9b0lEnnwLc6c"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 总行总览 ================= -->
+  <section class="view" id="view-hq" data-page-node-id="HAB5eWZGfLNSvb4O7X98kB">
+    <div class="stats" id="hq-stats" data-page-node-id="WUaxeClMmTFK73XuoN1U3O"></div>
+    <div class="tabs" id="hq-tabs" data-page-node-id="3zZN1RzJwTxhFNgAebRjMU">
+      <button class="on" data-tab="news" data-page-node-id="FG5Pl6Llf1y2LgDjNqkwwA">⚡ 政策变化速览</button>
+      <button data-tab="cards" data-page-node-id="PS6ccFm05kxArpJyUTa5bs">📋 政策总览（缴存/提取/贷款）</button>
+    </div>
+    <div id="hq-news" data-page-node-id="Wagk7tOvEUHByItNzUFAZL"></div>
+    <div id="hq-cards" style="display:none" data-page-node-id="wecNiwmHvDVSeDrkZzVAU1"></div>
+  </section>
+
+  <!-- ================= 政策文本梳理（顶级看板） ================= -->
+  <section class="view" id="view-tables" data-page-node-id="urGOG8njbKr02I34RZn8HR">
+    <div id="hq-tables" data-page-node-id="Zs12szFckZn8CUVoqSIdKS"></div>
+  </section>
+
+  <!-- ================= 地区分类矩阵（顶级看板） ================= -->
+  <section class="view" id="view-matrix" data-page-node-id="PbdVCQHQJ1BVBHdyGTzdPV">
+    <div id="hq-matrix" data-page-node-id="iyC7hWGzlG9O1TJEjXsAGi"></div>
+  </section>
+
+  <!-- ================= 分行视图 ================= -->
+  <section class="view" id="view-branch" data-page-node-id="oM2FGaNYqOLEhFHQUfpcJv">
+    <div class="br-top" data-page-node-id="npOSPueGfC0GXfuePJOTo2">
+      <div class="city-pick" data-page-node-id="DpLRIHDXfCM1o03GYykdjY">
+        <svg viewBox="0 0 24 24" data-page-node-id="CyEU3Oa3eDFko48vaDE60s"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5z" data-page-node-id="kXR30pskzW2uHs1JXAGkQb"/></svg>
+        <input id="br-city" list="city-list" placeholder="选择分行所在城市（如：深圳）" data-page-node-id="AKQhCdDpkOa0kRaW8iqOmX">
+        <datalist id="city-list" data-page-node-id="YfcmB8ZeOtdrFlvk27JM8J"></datalist>
+      </div>
+      <div class="seg" id="br-range" data-page-node-id="EMkO9IBZDKfCiDORtBCXTP">
+        <button data-d="7" data-page-node-id="LgU70Q8gGdZ1hcAxrsB2Ki">近7天</button><button data-d="30" data-page-node-id="9iMLt7DBd1a1zk31g9UlWJ">近1个月</button><button data-d="180" data-page-node-id="mdMgwHtp3QtAxFYcXNuVvl">近6个月</button><button data-d="730" data-page-node-id="pOSCftGVbm1m9A5QKSbvYM">近2年</button><button class="on" data-d="0" data-page-node-id="c1sq2oODmjWIzYQvKUxUbz">全部</button>
+      </div>
+      <button class="btn" id="br-export" data-page-node-id="aZlVUrARDMwdA6ZRV7FI4M">🖨️ 一键导出城市简报</button>
+    </div>
+    <!-- 资格矩阵：置于分行视图最前（整宽） -->
+    <div class="panel" data-page-node-id="0x0mDZxWeoP0SgByK5Larg"><h3 data-page-node-id="Fhu4p3ihH2A3hwTTLdxjHv">📋 资格矩阵 · 政策一览</h3><div class="h-sub" data-page-node-id="m01RlvzW6126OjfixvEFax">缴存 / 提取 / 贷款三维度（结构化政策矩阵）：✓ 支持　◐ 部分支持/有条件　✗ 不支持　— 待核实（悬停查看政策明细，点击色块跳转政策原文）</div><div id="br-feat" data-page-node-id="j6O1usCbEhiflnUvyfUkID"></div></div>
+    <div class="br-grid" data-page-node-id="rZuoAlRFbBZzAIELxykreL">
+      <div data-page-node-id="GxBHgPNcqJQwOD9DQnqsUD">
+        <div class="panel" data-page-node-id="qDSN1cJ8to5PQpSXYcY6yo"><h3 data-page-node-id="8Cx3P8T1bd5euCscekCznA">政策追踪 · 当地政策 <span class="badge b-city" id="br-pol-cnt" data-page-node-id="8JHEyZCQA6H9nPLCTCTYN0"></span></h3><div class="h-sub" data-page-node-id="aWXcbfEPBW46gRsgAQd6Oz">该市缴存 / 提取 / 贷款现行政策与近期更新，附信号与来源类型标注</div><div id="br-local" data-page-node-id="N5hi8dBl7rj9ljgtQCq6aY"></div></div>
+        <div class="panel" data-page-node-id="0TnElhdbi2YgMdKUVMKr7N"><h3 data-page-node-id="2SDqfuv0BAWzPUJT4FQXs3">上位政策 · 全国性 / 中央参照</h3><div class="h-sub" data-page-node-id="MAYCxqxDMRRVtWE9gqoaju">国务院、住建部、人民银行等全国性动态（自动从数据库挖掘，链接真实可点击）</div><div id="br-nat" data-page-node-id="u4TNNDewA3hGm7A5QnulmB"></div></div>
+      </div>
+      <div data-page-node-id="Ga5vL8X2YiFL6s0kEg7OSa">
+        <div class="panel" data-page-node-id="A4bCnkWCA3ofle8cwhys6j"><h3 data-page-node-id="9rtnj1xWHFXfBLxSPTXBcB">💡 营销建议</h3><div class="h-sub" data-page-node-id="EnFMkXCLTwsmMfydsXGQwL">基于当地政策特征自动生成</div><div id="br-advice" data-page-node-id="vT28hCzOaLTr6SgnmUWJhO"></div></div>
+        <div class="panel" data-page-node-id="l1SdgB5GZfhlcpX28bsung"><h3 data-page-node-id="onQo5vFmN5hbHTdbhd105r">商机追踪 · 类似政策地区案例</h3><div class="h-sub" id="br-case-sub" data-page-node-id="Que05GFLMQmjwAFqCJjuHa"></div><div id="br-sim" data-page-node-id="PeqCFNOUu0Pl5cX4IwLKeM"></div><div id="br-cases" data-page-node-id="ksTYmD1vgyOrfuEWRgBLjZ"></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="foot" id="foot" data-page-node-id="JK4HmC1Fb6G4xaLEWRVLGU"></footer>
+
+<!-- 新增记录弹窗 -->
+<div class="modal-mask" id="modal-mask" data-page-node-id="hol5ET3DMDgYrGGOcUzWzc">
+  <div class="modal" data-page-node-id="MQp1NCjUzOEqNuazdyRVPX">
+    <h3 data-page-node-id="7z30JQJE5IWFBISL6a5i8S">➕ 本地新增政策记录</h3>
+    <div class="f-row" data-page-node-id="OLX50IGDMHKAWXdQzYUH2h"><label data-page-node-id="WQf97cTPA9lzpvac8keMRv">城市（留空则为全国性记录）</label><input id="f-city" list="city-list" placeholder="如：深圳" data-page-node-id="eXkJWIpAREcfcSAvLpjS2C"></div>
+    <div class="f-row" data-page-node-id="faYyAEStTirhV1PIhXWtOh"><label data-page-node-id="Fj3vrgerIQVRL5mwZElJeB">板块</label><select id="f-sec" data-page-node-id="IWVDmrWw6gnNxWbOkvvlQF"><option value="deposit" data-page-node-id="hZMf4xd8OPkDBONaUQHdPk">缴存</option><option value="withdrawal" data-page-node-id="XyHUcB31Q78UHjXSkhWvBD">提取</option><option value="loan" data-page-node-id="lpGUBJxSLehD8HbFk7ZyFo">贷款</option><option value="general" data-page-node-id="GBC0sdwHSS66cTpmyzpBpx">综合/其他</option></select></div>
+    <div class="f-row" data-page-node-id="2wTutFxg7dUR1sgGlG3690"><label data-page-node-id="DaBCdHIvZOND4aLsfvP3XX">标题 *</label><input id="f-title" placeholder="政策标题" data-page-node-id="ENyIHRl3P49BRpt7fOv9wz"></div>
+    <div class="f-row" data-page-node-id="he4Tn8EsWqkHFZA2G7fLxb"><label data-page-node-id="eRkg2kuIVogzs3PQR9Z1A4">一句话变化说明（≤40字）</label><input id="f-note" placeholder="【板块】什么变了：从 X 变为 Y，影响 Z" maxlength="80" data-page-node-id="3weslTV3mq4ETMszUojnyA"></div>
+    <div class="f-row" data-page-node-id="BF2gvfEyeoLzbfo7bfd21F"><label data-page-node-id="tHzH3EHdrqm8UPshfKzfYv">生效/发布日期</label><input id="f-date" type="date" data-page-node-id="0gEkEkTBahhQppreIF3jgF"></div>
+    <div class="f-row" data-page-node-id="zeYka3fEQnB2IMktandLmz"><label data-page-node-id="Cvoe4boGOddmUiUCqG4wxi">官方链接</label><input id="f-url" type="url" placeholder="https://…（政府官网/官方媒体链接）" data-page-node-id="1HHGeadc6SjROtkSq4zcuz"></div>
+    <div class="f-foot" data-page-node-id="CsnGawYl2VkPC8LNsA3Ztn"><button class="btn gray" id="f-cancel" data-page-node-id="5ta90yC9DCeB4psTClc7TV">取消</button><button class="btn" id="f-save" data-page-node-id="vMd6ZA3Krr3kiwPEd9pNxc">保存到本地</button></div>
+  </div>
+</div>
+<div class="toast" id="toast" data-page-node-id="X58KP0LDM4OlysuMuCUJju"></div>
+<div id="print-sheet" data-page-node-id="8o25JfnLgfsOelfh4i6tqz"></div>
+<script src="app.js"></script>
+</body>
+</html>
