@@ -1,0 +1,227 @@
+[
+  {
+    "city": "上海",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pypdw.html"
+  },
+  {
+    "city": "深圳",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://zjj.sz.gov.cn/xxgk/tjsj/content/post_12099420.html"
+  },
+  {
+    "city": "重庆",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://cqgjj.cn/zwgk/gsgg/3198.htm"
+  },
+  {
+    "city": "佛山",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pzfdm.html"
+  },
+  {
+    "city": "中山",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pyuke.html"
+  },
+  {
+    "city": "清远",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pzypz.html"
+  },
+  {
+    "city": "海口",
+    "reason": "无2024年报链接",
+    "url": null
+  },
+  {
+    "city": "三亚",
+    "reason": "无2024年报链接",
+    "url": null
+  },
+  {
+    "city": "南通",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://si12333.cn/policy/pypku.html"
+  },
+  {
+    "city": "徐州",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "https://gjj.xz.gov.cn/govxxgk/466543007/2025-03-31/35decb69-0a87-4485-bba2-74a9383f7623.html"
+  },
+  {
+    "city": "盐城",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "https://ycgjj.yancheng.gov.cn/art/2025/3/30/art_6592_4308265.html"
+  },
+  {
+    "city": "金华",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pysum.html"
+  },
+  {
+    "city": "衢州",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://www.qz.gov.cn/art/2025/3/28/art_1229040195_5485679.html"
+  },
+  {
+    "city": "舟山",
+    "reason": "无2024年报链接",
+    "url": null
+  },
+  {
+    "city": "合肥",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "https://www.msn.cn/zh-cn/news/other/%E5%90%88%E8%82%A5%E5%B8%82%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%912024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A/ar-AA1BMNO8"
+  },
+  {
+    "city": "南昌",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pyszm.html"
+  },
+  {
+    "city": "九江",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pyuis.html"
+  },
+  {
+    "city": "襄阳",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "http://gjj.xiangyang.gov.cn/zwgk/gkml/ghjh/202505/t20250512_3808613.shtml"
+  },
+  {
+    "city": "黄冈",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202504/t20250428_5633714.shtml"
+  },
+  {
+    "city": "衡阳",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://www.hengyang.gov.cn/hyszfgjj/xxgk/ghjh/20250325/i3617553.html"
+  },
+  {
+    "city": "娄底",
+    "reason": "无2024年报链接",
+    "url": null
+  },
+  {
+    "city": "安阳",
+    "reason": "无2024年报链接",
+    "url": null
+  },
+  {
+    "city": "成都",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://cdzfgjj.chengdu.gov.cn/cdgjj/c1156350/2025-03/27/content_aa0f47693e924f87afe8af36b5587aae.shtml"
+  },
+  {
+    "city": "泸州",
+    "reason": "无2024年报链接",
+    "url": null
+  },
+  {
+    "city": "乐山",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pyuck.html"
+  },
+  {
+    "city": "西安",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pypew.html"
+  },
+  {
+    "city": "榆林",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pympf.html"
+  },
+  {
+    "city": "咸阳",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pypfy.html"
+  },
+  {
+    "city": "丽江",
+    "reason": "无2024年报链接",
+    "url": null
+  },
+  {
+    "city": "红河",
+    "reason": "无2024年报链接",
+    "url": null
+  },
+  {
+    "city": "贵阳",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pyumr.html"
+  },
+  {
+    "city": "遵义",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "http://mp.weixin.qq.com/s?__biz=MzUzODgzMDY1Nw==&mid=2247517652&idx=2&sn=7f9a8868a3349594e1a49a8c5a361e39"
+  },
+  {
+    "city": "唐山",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "http://60.2.168.122/website/announcement-detail.html?seqno=1290&itemId=0102"
+  },
+  {
+    "city": "朔州",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pypfz.html"
+  },
+  {
+    "city": "大庆",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://si12333.cn/qa/pamiz.html"
+  },
+  {
+    "city": "营口",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "http://gjj.yingkou.gov.cn/czyjs/5160.jhtml"
+  },
+  {
+    "city": "锦州",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://si12333.cn/policy/pyure.html"
+  },
+  {
+    "city": "鞍山",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "https://asgjj.anshan.gov.cn:1433/czyjs/1253.jhtml"
+  },
+  {
+    "city": "丹东",
+    "reason": "无2024年报链接",
+    "url": null
+  },
+  {
+    "city": "抚顺",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "http://mp.weixin.qq.com/s?__biz=MzAwOTg1ODEyMw==&mid=2651196420&idx=2&sn=8f442b03bad5a650dafa3109d9c04b78"
+  },
+  {
+    "city": "东营",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pymed.html"
+  },
+  {
+    "city": "福州",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "https://zfgjj.fuzhou.gov.cn/zwgk/gzdt/tzgg/202503/t20250328_4996230.htm"
+  },
+  {
+    "city": "龙岩",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "http://www.mxrb.cn/news.html?aid=263883"
+  },
+  {
+    "city": "石河子",
+    "reason": "年报链接失效或WAF拦截，未能取到原文",
+    "url": "https://m12333.cn/policy/pyfac.html"
+  },
+  {
+    "city": "廊坊",
+    "reason": "年报正文未匹配到该指标表述",
+    "url": "https://www.lfzfgjj.net/website/subject-detail.html?seqno=8672&itemId=0601"
+  }
+]
