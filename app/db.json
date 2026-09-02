@@ -15076,7 +15076,7 @@
   "annual_reports": {
     "description": "134城住房公积金年度报告静态数据库：2025年报+2024年报原文链接及年度统计数据（缴存/提取/贷款/资金存款）。2024年提取额与发放贷款字段为2026-09-02补录，取自各市2024年年度报告原文（或省级年报分市表），用于计算同比增幅与增减量；未取到的城市留空，前端显示「—」待补。本模块为历史统计数据，不随每周任务自动更新。",
     "static": true,
-    "updated_at": "2026-09-02",
+    "updated_at": "2026-09-02（补录45城2024年提取额/发放贷款，来源均为官方年报）",
     "field_units": {
       "new_units": "家",
       "active_units": "万家",
@@ -15218,6 +15218,20 @@
           "fund_deposit_balance": {
             "value": 2543.08,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 1693.9,
+            "unit": "亿元",
+            "source_url": "https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html",
+            "source_name": "上海市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 951.23,
+            "unit": "亿元",
+            "source_url": "https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html",
+            "source_name": "上海市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "年报全文未在搜索引擎检索到官网直链，采用人社通(m12333.cn)全文转载；上海市住建委官网发布页：https://zjw.sh.gov.cn/gzdt/20260402/1dd38e8f87434e25ab58ee01fe3f4c72.html。new_units原文6.84万家。2024年报发布日期未核实（约2025年3-4月）。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -15280,6 +15294,20 @@
           "fund_deposit_balance": {
             "value": 926.89,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 1036.0,
+            "unit": "亿元",
+            "source_url": "https://house.cnr.cn/kcb/20250403/t20250403_527122075.shtml",
+            "source_name": "深圳：2024年发放个人住房公积金贷款4.49万笔、382.34亿元（央广网）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 382.34,
+            "unit": "亿元",
+            "source_url": "https://house.cnr.cn/kcb/20250403/t20250403_527122075.shtml",
+            "source_name": "深圳：2024年发放个人住房公积金贷款4.49万笔、382.34亿元（央广网）",
+            "extract_method": "年报正文"
           }
         },
         "note": "官方年报。new_units原文4.43万家；2024年存款926.89亿元=活期66.14+1年以下定期100.00+1年以上定期760.75亿元（媒体援引2024年报）。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -15494,6 +15522,20 @@
           "fund_deposit_balance": {
             "value": 77.07,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 465.22,
+            "unit": "亿元",
+            "source_url": "https://www.cqgjj.cn/zwgk/gsgg/3198.htm",
+            "source_name": "重庆市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 354.73,
+            "unit": "亿元",
+            "source_url": "https://www.cqgjj.cn/zwgk/gsgg/3198.htm",
+            "source_name": "重庆市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "重庆市公积金中心官网年报（搜索快照核对，cqgjj.cn对curl有反爬，建议浏览器复核URL可访问性）。new_units原文1.12万家。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -15556,6 +15598,20 @@
           "fund_deposit_balance": {
             "value": 179.89,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 181.91,
+            "unit": "亿元",
+            "source_url": "https://fsgjj.foshan.gov.cn/xxgk/gzdt/content/post_6344659.html",
+            "source_name": "佛山市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 28.41,
+            "unit": "亿元",
+            "source_url": "https://fsgjj.foshan.gov.cn/xxgk/gzdt/content/post_6344659.html",
+            "source_name": "佛山市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "采用人社通(m12333.cn)全文转载（来源：佛山市住房公积金管理中心，官网fsgjj.foshan.gov.cn）；贷款发放额44.57亿元经南方+核实（同比+56.88%）。active_units原文34249家。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -15846,6 +15902,20 @@
           "fund_deposit_balance": {
             "value": 63.65,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 75.84,
+            "unit": "亿元",
+            "source_url": "https://zszfgjj.zs.gov.cn/zwgk/ndbg/content/post_2499969.html",
+            "source_name": "中山市住房公积金管理中心2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 15.63,
+            "unit": "亿元",
+            "source_url": "https://zszfgjj.zs.gov.cn/zwgk/ndbg/content/post_2499969.html",
+            "source_name": "中山市住房公积金管理中心2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为中山市公积金中心官网原文（active_units原文14977家）。2024年报采用人社通全文转载（官方发布于2025-03-26，官网zszfgjj.zs.gov.cn）。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -16060,6 +16130,20 @@
           "fund_deposit_balance": {
             "value": 48.5,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 47.71,
+            "unit": "亿元",
+            "source_url": "https://ep.ycwb.com/epaper/gdjs/html/2025-03/14/content_1163_695512.htm",
+            "source_name": "清远政策减负提升职工置业热情（羊城晚报·广东建设报）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 5.78,
+            "unit": "亿元",
+            "source_url": "https://ep.ycwb.com/epaper/gdjs/html/2025-03/14/content_1163_695512.htm",
+            "source_name": "清远政策减负提升职工置业热情（羊城晚报·广东建设报）",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报采用搜狐全文转载（来源：清远市住房公积金管理中心，2026-03-13发布；南方+亦有全文）。2024年报采用人社通全文转载。原文单位万元：缴存额617,438.69万、提取额461,369.21万、贷款73,725.20万、2025存款679,343.39万、2024存款485,000.84万。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -16770,6 +16854,20 @@
           "fund_deposit_balance": {
             "value": 131.34,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 181.11,
+            "unit": "亿元",
+            "source_url": "https://www.ntgjj.com/NewsDetail.aspx?DetailId=20857458",
+            "source_name": "南通市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 68.04,
+            "unit": "亿元",
+            "source_url": "https://www.ntgjj.com/NewsDetail.aspx?DetailId=20857458",
+            "source_name": "南通市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "南通2025年报为市公积金中心官网(ntgjj.com)全文。缴存额同比未在获取片段中显示。2024年报存款131.34亿元（人社通转载全文核对）。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -16984,6 +17082,20 @@
           "fund_deposit_balance": {
             "value": 146.88,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 128.76,
+            "unit": "亿元",
+            "source_url": "https://jsszfhcxjst.jiangsu.gov.cn/module/download/downfile.jsp?classid=0&filename=7875cc286e6146d594c247c931e5e861.pdf",
+            "source_name": "江苏省住房公积金2024年年度报告（分市表·徐州行）",
+            "extract_method": "省级年报分市表"
+          },
+          "loan_issued": {
+            "value": 76.43,
+            "unit": "亿元",
+            "source_url": "https://jsszfhcxjst.jiangsu.gov.cn/module/download/downfile.jsp?classid=0&filename=7875cc286e6146d594c247c931e5e861.pdf",
+            "source_name": "江苏省住房公积金2024年年度报告（分市表·徐州行）",
+            "extract_method": "省级年报分市表"
           }
         },
         "note": "徐州2025年报为官网PDF全文（已读取）：实缴单位13741家（+5.74%）、实缴76.83万人（+4.63%）、缴存192.65亿（+7.96%）、提取137.86亿、发放贷款15672笔76.51亿、年末存款196.03亿。2024年报官网PDF：存款146.88亿。2025年徐矿集团中心并入徐州市中心管理。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -17046,6 +17158,20 @@
           "fund_deposit_balance": {
             "value": 52.01,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 99.82,
+            "unit": "亿元",
+            "source_url": "https://jsszfhcxjst.jiangsu.gov.cn/module/download/downfile.jsp?classid=0&filename=7875cc286e6146d594c247c931e5e861.pdf",
+            "source_name": "江苏省住房公积金2024年年度报告（分市表·盐城行）",
+            "extract_method": "省级年报分市表"
+          },
+          "loan_issued": {
+            "value": 51.51,
+            "unit": "亿元",
+            "source_url": "https://jsszfhcxjst.jiangsu.gov.cn/module/download/downfile.jsp?classid=0&filename=7875cc286e6146d594c247c931e5e861.pdf",
+            "source_name": "江苏省住房公积金2024年年度报告（分市表·盐城行）",
+            "extract_method": "省级年报分市表"
           }
         },
         "note": "盐城2025年报官网(ycgjj.yancheng.gov.cn)以doc附件发布，已读取人社通收录的官方doc全文：实缴单位21865家（+3.9%）、实缴84.35万人（年报中'年末正常汇缴人数73.2万人，同比增长0.36%'）、缴存135.24亿（+3.73%）、提取95.88亿（-3.94%）、发放贷款0.68万笔37.92亿、年末存款83.15亿。2024年报存款52.01亿（官网+官方公众号）。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -17488,6 +17614,20 @@
           "fund_deposit_balance": {
             "value": 81.83,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 107.16,
+            "unit": "亿元",
+            "source_url": "http://zfgjj.jinhua.gov.cn/col/col1229168257/art/2025/art_1229168257_58719287.html",
+            "source_name": "金华市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 53.85,
+            "unit": "亿元",
+            "source_url": "http://zfgjj.jinhua.gov.cn/col/col1229168257/art/2025/art_1229168257_58719287.html",
+            "source_name": "金华市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "金华2025年报全文经房天下转载（2026-03-31，标注'部分公布'但含全部业务数据，与人社通收录一致）：实缴75.79万人（+3.14%）、发放贷款6493笔50.30亿元（-6.59%）、年末存款110.86亿元。金华中心口径含义乌市（义乌中心独立管理但纳入全市统计）。2024年报人社通转载，存款81.83亿元。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -17626,6 +17766,20 @@
           "fund_deposit_balance": {
             "value": 17.07,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 54.09,
+            "unit": "亿元",
+            "source_url": "https://finance.sina.cn/2025-03-27/detail-ineqzhay5675266.d.html",
+            "source_name": "衢州市住房公积金2024年年度报告（全文，转自衢州日报）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 32.99,
+            "unit": "亿元",
+            "source_url": "https://finance.sina.cn/2025-03-27/detail-ineqzhay5675266.d.html",
+            "source_name": "衢州市住房公积金2024年年度报告（全文，转自衢州日报）",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报URL为新浪财经转载衢州日报全文（官网qz.gov.cn同栏目发布，转载文本与官网一致）。原文实缴单位8785家（+2.63%）、实缴职工33.95万人（+0.83%）。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -17764,6 +17918,20 @@
           "fund_deposit_balance": {
             "value": null,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 35.09,
+            "unit": "亿元",
+            "source_url": "https://epaper.wifizs.cn/zsrb/2025-03/25/content_998708.html",
+            "source_name": "舟山市住房公积金2024年年度报告（舟山日报数字报）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 7.84,
+            "unit": "亿元",
+            "source_url": "https://epaper.wifizs.cn/zsrb/2025-03/25/content_998708.html",
+            "source_name": "舟山市住房公积金2024年年度报告（舟山日报数字报）",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为人社通转载全文（中心官网zsgjj.zhoushan.gov.cn同发）。原文实缴单位5326家、实缴职工20.35万人（+3.46%）。2024年报未检索到含'资金存储'数据的文字版（舟山中心主要通过微信公众号图文形式发布），2024年存款余额填null；参考口径：2024年末缴存余额133.80亿元（浙江省2024年年报表1）。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
@@ -17822,6 +17990,20 @@
           "fund_deposit_balance": {
             "value": 126.61,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 293.7,
+            "unit": "亿元",
+            "source_url": "https://newspaper.hf365.com/hfrb/pc/content/202503/28/content_503151.html",
+            "source_name": "合肥市住房公积金2024年年度报告（合肥日报数字报）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 111.76,
+            "unit": "亿元",
+            "source_url": "https://newspaper.hf365.com/hfrb/pc/content/202503/28/content_503151.html",
+            "source_name": "合肥市住房公积金2024年年度报告（合肥日报数字报）",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为安徽省机关事务管理局官网（sgj.ah.gov.cn，省直公积金专题，含市中心+省直分中心合并口径）官方发布，报告落款2026-03-27。原文实缴单位38054家、实缴职工189.39万人（+1.23%）；提取额291.98亿元同比-0.59%。2024年报URL为MSN全文转载（官方2025-03-27发布）。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -18340,6 +18522,20 @@
           "fund_deposit_balance": {
             "value": 211.09,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 165.19,
+            "unit": "亿元",
+            "source_url": "https://mp.weixin.qq.com/s/WU9U6IK-veDkqwMMNc8isw",
+            "source_name": "南昌市住房公积金2024年年度报告（南昌公积金官方公众号）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 96.63,
+            "unit": "亿元",
+            "source_url": "https://mp.weixin.qq.com/s/WU9U6IK-veDkqwMMNc8isw",
+            "source_name": "南昌市住房公积金2024年年度报告（南昌公积金官方公众号）",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为搜狐转载'南昌公积金'官方微信公众号全文。原文实缴单位22936家、实缴职工102.05万人（-0.39%）。2024年报为人社通转载全文（南昌日报2025-03-30刊发）。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -18554,6 +18750,20 @@
           "fund_deposit_balance": {
             "value": 47.19,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 45.78,
+            "unit": "亿元",
+            "source_url": "https://www.jjszfgjj.cn/ztzl_108401/ndbg/202503/t20250326_6880121.html",
+            "source_name": "九江市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 22.68,
+            "unit": "亿元",
+            "source_url": "https://www.jjszfgjj.cn/ztzl_108401/ndbg/202503/t20250326_6880121.html",
+            "source_name": "九江市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为九江市住房公积金管理中心官网。原文实缴单位7907家、实缴职工33.66万人（+0.18%）。2024年报为人社通转载全文，原始发布日期未确认。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -18996,6 +19206,20 @@
           "fund_deposit_balance": {
             "value": 68.9,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 53.44,
+            "unit": "亿元",
+            "source_url": "http://gjj.xiangyang.gov.cn/zwgk/gknb/202503/t20250321_3781562.shtml",
+            "source_name": "襄阳市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 29.77,
+            "unit": "亿元",
+            "source_url": "http://gjj.xiangyang.gov.cn/zwgk/gknb/202503/t20250321_3781562.shtml",
+            "source_name": "襄阳市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报官网（gjj.xiangyang.gov.cn）未检索到全文，数据取自人社通转载年报全文（缴存段、资金存储93.94亿）；提取额59.76亿、贷款发放31.18亿取自《湖北省住房公积金2025年年度报告》分市表（zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202604/t20260428_5924360.shtml）。新开户人数45915人、实缴人数376077人同比-0.46%；2025年末缴存余额293.06亿。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -19058,6 +19282,20 @@
           "fund_deposit_balance": {
             "value": null,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 40.55,
+            "unit": "亿元",
+            "source_url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202504/P020251215373936334296.pdf",
+            "source_name": "湖北省住房公积金2024年年度报告（分市表·黄冈行）",
+            "extract_method": "省级年报分市表"
+          },
+          "loan_issued": {
+            "value": 22.01,
+            "unit": "亿元",
+            "source_url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202504/P020251215373936334296.pdf",
+            "source_name": "湖北省住房公积金2024年年度报告（分市表·黄冈行）",
+            "extract_method": "省级年报分市表"
           }
         },
         "note": "黄冈市2025/2024年报全文未在官网（gjj.hg.gov.cn）检索到。实缴单位0.57万家、实缴25.70万人、缴存57.04亿、提取42.14亿、贷款15.59亿取自《湖北省住房公积金2025年年度报告》分市表；新开户单位711家、新增缴存21603人（≈2.16万）取自湖北日报客户端/荆楚网2026-01-14报道（黄冈中心通报）。存款余额未披露：2025年末缴存余额235.75亿（同上报道）；2024年末缴存余额220.85亿（湖北省2024年年度报告）。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -19412,6 +19650,20 @@
           "fund_deposit_balance": {
             "value": 128.84,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 40.1,
+            "unit": "亿元",
+            "source_url": "https://zjt.hunan.gov.cn/zjt/xxgk/xinxigongkaimulu/tjxx/202504/t20250430_33659761.html",
+            "source_name": "湖南省住房公积金2024年年度报告（分市表·衡阳行）",
+            "extract_method": "省级年报分市表"
+          },
+          "loan_issued": {
+            "value": 11.11,
+            "unit": "亿元",
+            "source_url": "https://zjt.hunan.gov.cn/zjt/xxgk/xinxigongkaimulu/tjxx/202504/t20250430_33659761.html",
+            "source_name": "湖南省住房公积金2024年年度报告（分市表·衡阳行）",
+            "extract_method": "省级年报分市表"
           }
         },
         "note": "官方年报全文（衡阳市政府网/市公积金中心）。2025年实缴单位4655家；实缴职工同比-9.55%。2025年末缴存余额276.54亿元（存款余额158.55亿）。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -19550,6 +19802,20 @@
           "fund_deposit_balance": {
             "value": null,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 26.61,
+            "unit": "亿元",
+            "source_url": "https://ldrb.ldnews.cn/2025/05/10/646402.html",
+            "source_name": "百亿公积金筑安居梦（娄底日报）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 7.57,
+            "unit": "亿元",
+            "source_url": "https://ldrb.ldnews.cn/2025/05/10/646402.html",
+            "source_name": "百亿公积金筑安居梦（娄底日报）",
+            "extract_method": "年报正文"
           }
         },
         "note": "娄底市2025年报全文未检索到（官网gjj.hnloudi.gov.cn无法访问，搜狐'娄底发布'为图片版）。实缴单位0.28万家、实缴19.12万人、缴存38.77亿、提取24.37亿（提取率62.86%）、贷款发放7.26亿取自《湖南省住房公积金2025年年度报告》分市表；缴存同比+2.89%据娄底新闻网/红网报道。2025/2024年存款余额均未披露；2024年归集37.68亿元（新湖南报道）。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
@@ -19832,6 +20098,20 @@
           "fund_deposit_balance": {
             "value": null,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 26.57,
+            "unit": "亿元",
+            "source_url": "https://www.ayrbs.com/szb/pc/attachment/202503/28/1e1edb5b-c390-40c2-b6f8-b32bdfd54b2f.pdf",
+            "source_name": "安阳市住房公积金2024年年度报告（安阳日报数字报PDF）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 18.34,
+            "unit": "亿元",
+            "source_url": "https://www.ayrbs.com/szb/pc/attachment/202503/28/1e1edb5b-c390-40c2-b6f8-b32bdfd54b2f.pdf",
+            "source_name": "安阳市住房公积金2024年年度报告（安阳日报数字报PDF）",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报全文由安阳日报数字报全文刊登（权威媒体）。2025年末缴存总额442.99亿（+9.98%）、缴存余额162.72亿。河南省年报口径含滑县（实缴0.39万家/29.13万人/缴存45.77亿），与市报口径不同。2024年报全文未检索到，2024年存款余额缺失；据安阳融媒2025-01报道，2024年缴存39.69亿、提取26.57亿、贷款18.34亿。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
@@ -19966,6 +20246,20 @@
           "fund_deposit_balance": {
             "value": 443.11,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 693.19,
+            "unit": "亿元",
+            "source_url": "http://www.chinajsb.cn/html/202503/28/47659.html",
+            "source_name": "成都住房公积金2024年年度报告（中国建设新闻网）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 256.5,
+            "unit": "亿元",
+            "source_url": "http://www.chinajsb.cn/html/202503/28/47659.html",
+            "source_name": "成都住房公积金2024年年度报告（中国建设新闻网）",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报取自成都市公积金中心官网；当年发放个人住房贷款411.84亿元另经成都日报/人民网报道印证。2025年末缴存余额约1798亿元（年报口径）。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -20104,6 +20398,20 @@
           "fund_deposit_balance": {
             "value": null,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 39.32,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.luzhou.cn/zwgk/xxgknb/content_25206",
+            "source_name": "泸州市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 17.15,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.luzhou.cn/zwgk/xxgknb/content_25206",
+            "source_name": "泸州市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为人社通(m12333)转载（官网zfgjj.luzhou.cn/sclzgjj.com未能正常访问）；当年发放个人住房贷款15.59亿元(0.38万笔)。2024年报全文未检索到，2024年末存款余额缺失；2024年末缴存余额170.87亿元（四川省2024年年度报告分城市表）。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
@@ -20162,6 +20470,20 @@
           "fund_deposit_balance": {
             "value": 36.43,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 36.85,
+            "unit": "亿元",
+            "source_url": "https://jst.sc.gov.cn/scjst/otherDocument/2025/4/29/a155ebc537c2496c9172c25b21eaede1/files/%E5%9B%9B%E5%B7%9D%E7%9C%81%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%912024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+            "source_name": "四川省住房公积金2024年年度报告（分市表·乐山行）",
+            "extract_method": "省级年报分市表"
+          },
+          "loan_issued": {
+            "value": 15.47,
+            "unit": "亿元",
+            "source_url": "https://jst.sc.gov.cn/scjst/otherDocument/2025/4/29/a155ebc537c2496c9172c25b21eaede1/files/%E5%9B%9B%E5%B7%9D%E7%9C%81%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%912024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+            "source_name": "四川省住房公积金2024年年度报告（分市表·乐山行）",
+            "extract_method": "省级年报分市表"
           }
         },
         "note": "2025年报取自乐山市政府官网；2024年报为人社通转载。2025年实缴人数同比下降4.16%。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -20224,6 +20546,20 @@
           "fund_deposit_balance": {
             "value": 234.69,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 369.59,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.xa.gov.cn/xxgk/gkzd/xxgknb/1906621995329007618.html",
+            "source_name": "西安住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 289.4,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.xa.gov.cn/xxgk/gkzd/xxgknb/1906621995329007618.html",
+            "source_name": "西安住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为搜狐号全文转载官方年报（西安中心官网原文链接未检索到）；2024年报为人社通转载。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -20286,6 +20622,20 @@
           "fund_deposit_balance": {
             "value": 85.45,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 72.72,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.yl.gov.cn/zfxxgk/fdzdgknr/ndbg/202503/t20250327_1983108.html",
+            "source_name": "榆林市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 40.52,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.yl.gov.cn/zfxxgk/fdzdgknr/ndbg/202503/t20250327_1983108.html",
+            "source_name": "榆林市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为榆林日报数字报全文（官方党报）；该报仅披露缴存额同比+5.06%，实缴单位/实缴职工同比未披露。2025年末缴存余额323.11亿元。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -20348,6 +20698,20 @@
           "fund_deposit_balance": {
             "value": 36.2,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 30.96,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.xianyang.gov.cn/zwgk/zfxxgknb/zfgjjndbg/202503/t20250331_1937667.html",
+            "source_name": "咸阳市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 18.5,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.xianyang.gov.cn/zwgk/zfxxgknb/zfgjjndbg/202503/t20250331_1937667.html",
+            "source_name": "咸阳市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "均为人社通(m12333)转载官方年报。2025年报披露缴存额同比+10.21%、提取额32.41亿元(+4.69%)，实缴单位同比未披露。2025年末缴存余额200.96亿元。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -20638,6 +21002,20 @@
           "fund_deposit_balance": {
             "value": null,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 15.74,
+            "unit": "亿元",
+            "source_url": "https://szb.lijiang.cn/pc/concent/202503/31/c86563.html",
+            "source_name": "丽江市住房公积金2024年年度报告（丽江日报数字报）",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 9.38,
+            "unit": "亿元",
+            "source_url": "https://szb.lijiang.cn/pc/concent/202503/31/c86563.html",
+            "source_name": "丽江市住房公积金2024年年度报告（丽江日报数字报）",
+            "extract_method": "年报正文"
           }
         },
         "note": "丽江市2025年报仅以图片形式发布（搜狐2026-03-31），无法提取文本；实缴单位0.20万家、实缴人数7.17万人、缴存额18.21亿元、提取额14.87亿元、贷款发放9.40亿元取自《云南省住房公积金2025年年度报告》分城市表。新开户单位/新开户职工、2025年末存款余额及2024年存款余额未获取（2024年末缴存余额48.99亿元，云南省2024年报）。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
@@ -20696,6 +21074,20 @@
           "fund_deposit_balance": {
             "value": null,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 47.33,
+            "unit": "亿元",
+            "source_url": "https://www.hhgjj.com/website/annualReport-detail.html?seqno=536",
+            "source_name": "红河州住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 23.87,
+            "unit": "亿元",
+            "source_url": "https://www.hhgjj.com/website/annualReport-detail.html?seqno=536",
+            "source_name": "红河州住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "红河州2025/2024年报全文均未检索到。实缴单位0.58万家、实缴职工23.42万人、缴存额55.05亿元、提取42.94亿元、贷款发放25.41亿元取自《云南省住房公积金2025年年度报告》；新开户单位637家、新开户职工1.89万人为州绩效评价报告“新增缴存单位/职工”口径（缴存额同比+7.14%同源）。2025年末归集余额175.89亿元；2024年末缴存余额163.78亿元（省2024年报）。两年存款余额均未获取。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
@@ -20754,6 +21146,20 @@
           "fund_deposit_balance": {
             "value": 25.17,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 163.68,
+            "unit": "亿元",
+            "source_url": "https://www.guiyang.gov.cn/zwgk/zfxxgks/fdzdgknr/qtfdxx/zfgjjnb/202503/t20250325_87265107.html",
+            "source_name": "贵阳住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 66.72,
+            "unit": "亿元",
+            "source_url": "https://www.guiyang.gov.cn/zwgk/zfxxgks/fdzdgknr/qtfdxx/zfgjjnb/202503/t20250325_87265107.html",
+            "source_name": "贵阳住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为搜狐转载官方年报全文（贵阳市公积金中心+贵州省住房资金管理中心合并口径）；2024年报为人社通转载。2025年末缴存余额553.35亿元。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -20816,6 +21222,20 @@
           "fund_deposit_balance": {
             "value": 54.38,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 80.95,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.zunyi.gov.cn/zxdt/tzgg/202503/t20250326_87272519.html",
+            "source_name": "遵义市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 42.39,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.zunyi.gov.cn/zxdt/tzgg/202503/t20250326_87272519.html",
+            "source_name": "遵义市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为人社通转载；当年发放个人住房贷款9699笔44.30亿元（+4.51%）、提取额84.81亿元（+4.77%）。实缴单位及缴存额同比未在所获文本中披露（缴存额按省年报2024年109.51亿元计算约+5.6%）。2024年报为微信公众号全文。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -21258,6 +21678,20 @@
           "fund_deposit_balance": {
             "value": 169.88,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 102.14,
+            "unit": "亿元",
+            "source_url": "https://www.tsgjj.com/website/announcement-detail.html?seqno=1290&itemId=0102",
+            "source_name": "唐山市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 62.26,
+            "unit": "亿元",
+            "source_url": "https://www.tsgjj.com/website/announcement-detail.html?seqno=1290&itemId=0102",
+            "source_name": "唐山市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "口径含开滦分中心。2024年报URL为唐山中心官网(www.tsgjj.com)的镜像IP站点页面。2025年末缴存余额607.69亿元（注意与存款余额210.12亿元区分）。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -21624,6 +22058,20 @@
           "fund_deposit_balance": {
             "value": 58.73,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 18.86,
+            "unit": "亿元",
+            "source_url": "https://zjt.shanxi.gov.cn/zwgk/gsgg/gg/202504/t20250429_9823410.shtml",
+            "source_name": "山西省住房公积金2024年年度报告（分市表·朔州行）",
+            "extract_method": "省级年报分市表"
+          },
+          "loan_issued": {
+            "value": 4.89,
+            "unit": "亿元",
+            "source_url": "https://zjt.shanxi.gov.cn/zwgk/gsgg/gg/202504/t20250429_9823410.shtml",
+            "source_name": "山西省住房公积金2024年年度报告（分市表·朔州行）",
+            "extract_method": "省级年报分市表"
           }
         },
         "note": "2025年报URL为搜狐号全文转载（来源：朔州住房公积金管理中心服务平台），官方发布于朔州中心官网www.zf365.com.cn；2024年报URL为人社通全文收录页。实缴单位1986家(-0.5%)、实缴人数12.25万人(-5.77%)。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -22434,6 +22882,20 @@
           "fund_deposit_balance": {
             "value": null,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 78.99,
+            "unit": "亿元",
+            "source_url": "https://zfcxjst.hlj.gov.cn/zfcxjst/c114789/202504/31832822/files/%E9%BB%91%E9%BE%99%E6%B1%9F%E7%9C%81%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%912024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+            "source_name": "黑龙江省住房公积金2024年年度报告（分市表·大庆行）",
+            "extract_method": "省级年报分市表"
+          },
+          "loan_issued": {
+            "value": 21.16,
+            "unit": "亿元",
+            "source_url": "https://zfcxjst.hlj.gov.cn/zfcxjst/c114789/202504/31832822/files/%E9%BB%91%E9%BE%99%E6%B1%9F%E7%9C%81%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%912024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf",
+            "source_name": "黑龙江省住房公积金2024年年度报告（分市表·大庆行）",
+            "extract_method": "省级年报分市表"
           }
         },
         "note": "大庆市2025年、2024年年度报告全文均未检索到（市管委会2026-03-25会议审议通过2025年报，但未公开全文）。stats_2025取自《黑龙江省住房公积金2025年年度报告》分城市表（实缴0.39万家/38.78万人/缴存98.26亿/提取71.31亿/放贷0.60万笔20.25亿），新开户、存款余额缺失。2024年数据仅有官方图说版年报解读：缴存98.92亿(+6.01%)、提取78.99亿(-3.93%)、放贷0.65万笔21.16亿、实缴单位3895家、实缴职工40.37万人，未披露存款余额，故stats_2024存款为null。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -22492,6 +22954,20 @@
           "fund_deposit_balance": {
             "value": 46.36,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 23.77,
+            "unit": "亿元",
+            "source_url": "http://gjj.yingkou.gov.cn/zcfg/5515.jhtml",
+            "source_name": "营口市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 5.6,
+            "unit": "亿元",
+            "source_url": "http://gjj.yingkou.gov.cn/zcfg/5515.jhtml",
+            "source_name": "营口市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "均为官网原文。2025年实缴单位3026家(+3.03%)、实缴职工16.44万人(-2.31%)；2025年末住房公积金存款61.97亿元。2024年报为图片形式发布，2024年末住房公积金存款46.36亿元。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -22554,6 +23030,20 @@
           "fund_deposit_balance": {
             "value": 42.17,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 24.68,
+            "unit": "亿元",
+            "source_url": "https://zjt.ln.gov.cn/zjt/tfwj/lzj/2025042916110273852/index.shtml",
+            "source_name": "辽宁省住房公积金2024年年度报告（分市表·锦州行）",
+            "extract_method": "省级年报分市表"
+          },
+          "loan_issued": {
+            "value": 6.84,
+            "unit": "亿元",
+            "source_url": "https://zjt.ln.gov.cn/zjt/tfwj/lzj/2025042916110273852/index.shtml",
+            "source_name": "辽宁省住房公积金2024年年度报告（分市表·锦州行）",
+            "extract_method": "省级年报分市表"
           }
         },
         "note": "年报全文官网未直接获取，采用人社通(m12333/si12333)转载的官方年报全文。2025年新开户单位311家、新开户人数1.22万人、提取额24.09亿元(-2.39%)、2025年末存款55.50亿元来自年报原文；实缴单位0.35万家、实缴人数18.28万人、缴存额32.03亿元、放贷7.32亿元与《辽宁省住房公积金2025年年度报告》分城市表一致。实缴单位/缴存额同比增速未获取。2024年末住房公积金存款42.17亿元（si12333全文）。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -22692,6 +23182,20 @@
           "fund_deposit_balance": {
             "value": 96.79,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 37.65,
+            "unit": "亿元",
+            "source_url": "http://asgjj.anshan.gov.cn/czyjs/1253.jhtml",
+            "source_name": "鞍山市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 7.87,
+            "unit": "亿元",
+            "source_url": "http://asgjj.anshan.gov.cn/czyjs/1253.jhtml",
+            "source_name": "鞍山市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为搜狐号转载的鞍山市住房公积金管理中心官方全文（含鞍山中心+鞍钢分中心合并口径）：实缴3728家(+0.03%)、实缴24.36万(-3.52%)、缴存47.76亿(+0.38%)、提取38.72亿(+2.84%)、放贷0.20万笔7.26亿、年末存款113.37亿。2024年报为官网doc附件，2024年末存款96.79亿元。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -22754,6 +23258,20 @@
           "fund_deposit_balance": {
             "value": null,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 22.02,
+            "unit": "亿元",
+            "source_url": "https://www.ddzfgjj.com/tzgg/38081.jhtml",
+            "source_name": "丹东市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 6.21,
+            "unit": "亿元",
+            "source_url": "https://www.ddzfgjj.com/tzgg/38081.jhtml",
+            "source_name": "丹东市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为搜狐转载的丹东市公积金中心官方全文：实缴3269家(+0.86%)、实缴15.30万人(+0.01%)、缴存29.59亿(+9.27%)、提取20.60亿、放贷6.07亿、2025年末存款43.74亿。未检索到丹东市2024年年度报告全文，2024年存款余额缺失（参考：《辽宁省2024年年度报告》分城市表丹东2024年缴存额27.08亿、缴存余额98.24亿，非存款口径）。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
@@ -22812,6 +23330,20 @@
           "fund_deposit_balance": {
             "value": 50.99,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 26.67,
+            "unit": "亿元",
+            "source_url": "https://fsgjj.org.cn/zdxxgk/3944.jhtml",
+            "source_name": "抚顺市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 5.24,
+            "unit": "亿元",
+            "source_url": "https://fsgjj.org.cn/zdxxgk/3944.jhtml",
+            "source_name": "抚顺市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报为中心官网原文：新开户171家、实缴2007家(-0.59%)、新开户0.62万人、实缴15.84万(-4.23%)、缴存32.37亿(+0.28%)、提取24.64亿(-7.61%)、放贷0.16万笔5.82亿、年末存款62.58亿。2024年报为微信公众号媒体转载全文，2024年末存款50.99亿元。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -23326,6 +23858,20 @@
           "fund_deposit_balance": {
             "value": 77.246,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 80.58,
+            "unit": "亿元",
+            "source_url": "http://dygjj.dongying.gov.cn/art/2025/3/28/art_39491_10299988.html",
+            "source_name": "东营市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 22.44,
+            "unit": "亿元",
+            "source_url": "http://dygjj.dongying.gov.cn/art/2025/3/28/art_39491_10299988.html",
+            "source_name": "东营市住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2025年报官方原文发布于东营市政府网站(2026-03-31)，此处为'我爱东营'网站转载的市政府通知公告全文；2024年报为人社通转载全文。东营年报为市中心+胜利油田分中心合并口径。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -23844,6 +24390,20 @@
           "fund_deposit_balance": {
             "value": 186.8,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 233.4,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.fuzhou.gov.cn/zwgk/gzdt/tzgg/202503/t20250328_4996230.htm",
+            "source_name": "福州住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 89.7,
+            "unit": "亿元",
+            "source_url": "https://zfgjj.fuzhou.gov.cn/zwgk/gzdt/tzgg/202503/t20250328_4996230.htm",
+            "source_name": "福州住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "福州年报为福州中心+福建省直中心合并口径；2025年报为福州新闻网（官方媒体）发布全文。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -24286,6 +24846,20 @@
           "fund_deposit_balance": {
             "value": 20.88,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 37.87,
+            "unit": "亿元",
+            "source_url": "https://www.longyan.gov.cn/zt/rdzt/zfgjjzx/zxgz/202503/t20250326_2208060.htm",
+            "source_name": "龙岩住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 19.47,
+            "unit": "亿元",
+            "source_url": "https://www.longyan.gov.cn/zt/rdzt/zfgjjzx/zxgz/202503/t20250326_2208060.htm",
+            "source_name": "龙岩住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "2024年报为闽西日报全文2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",
@@ -24424,6 +24998,20 @@
           "fund_deposit_balance": {
             "value": 55.82,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 57.11,
+            "unit": "亿元",
+            "source_url": "https://www.xjbtgjj.com/xxgk/tzgg/content_787",
+            "source_name": "新疆生产建设兵团住房公积金2024年年度报告",
+            "extract_method": "年报正文"
+          },
+          "loan_issued": {
+            "value": 27.63,
+            "unit": "亿元",
+            "source_url": "https://www.xjbtgjj.com/xxgk/tzgg/content_787",
+            "source_name": "新疆生产建设兵团住房公积金2024年年度报告",
+            "extract_method": "年报正文"
           }
         },
         "note": "石河子市无单独年报；第八师石河子市住房公积金由新疆生产建设兵团住房公积金中心统一管理，兵团的年报为全兵团汇总口径（全兵团仅设1个公积金中心），非石河子单列数据。人社通转载官方全文。2024年提取额/发放贷款未取到（年报链接失效或WAF拦截，未能取到原文），待补。",
@@ -24486,6 +25074,20 @@
           "fund_deposit_balance": {
             "value": 91.23,
             "unit": "亿元"
+          },
+          "withdraw_amount": {
+            "value": 52.2,
+            "unit": "亿元",
+            "source_url": "https://bdgjj.baoding.gov.cn/gjbwsjwj/16620183.jhtml",
+            "source_name": "河北省住房公积金2024年年度报告（分市表·廊坊行）",
+            "extract_method": "省级年报分市表"
+          },
+          "loan_issued": {
+            "value": 15.33,
+            "unit": "亿元",
+            "source_url": "https://bdgjj.baoding.gov.cn/gjbwsjwj/16620183.jhtml",
+            "source_name": "河北省住房公积金2024年年度报告（分市表·廊坊行）",
+            "extract_method": "省级年报分市表"
           }
         },
         "note": "官网年报为图片版，数据经OCR提取（官网API正文核验）；廊坊口径含管道局分中心。2024年提取额/发放贷款未取到（年报正文未匹配到该指标表述），待补。",

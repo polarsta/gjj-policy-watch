@@ -1,0 +1,150 @@
+{
+  "_note": "2024年度住房公积金年度报告官方源。priority 越小越优先。type: 政府网站/官方媒体/政务新媒体/其他媒体。kind: html/pdf/doc/list/provincial",
+  "上海": [
+    {"url": "https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html", "title": "上海市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "深圳": [
+    {"url": "https://www.sz.gov.cn/cn/xxgk/zfxxgj/zwdt/content/mpost_12099998.html", "title": "深圳发布2024年住房公积金年报", "type": "政府网站", "kind": "html", "priority": 1},
+    {"url": "https://house.cnr.cn/kcb/20250403/t20250403_527122075.shtml", "title": "深圳：2024年发放个人住房公积金贷款4.49万笔、382.34亿元", "type": "其他媒体", "kind": "html", "priority": 2}
+  ],
+  "重庆": [
+    {"url": "https://www.cqgjj.cn/zwgk/gsgg/3198.htm", "title": "重庆市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1},
+    {"url": "https://zfcxjw.cq.gov.cn/zwxx_166/bmdt/bmdt_23631/202504/t20250401_14471410.html", "title": "缴存金额首次突破600亿元", "type": "政府网站", "kind": "html", "priority": 2}
+  ],
+  "佛山": [
+    {"url": "https://fsgjj.foshan.gov.cn/xxgk/gzdt/content/post_6344659.html", "title": "佛山市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1},
+    {"url": "https://static.nfnews.com/content/202503/26/c11122955.html", "title": "佛山公积金去年发放个人房贷28.41亿元", "type": "官方媒体", "kind": "html", "priority": 2}
+  ],
+  "中山": [
+    {"url": "https://zszfgjj.zs.gov.cn/zwgk/ndbg/content/post_2499969.html", "title": "中山市住房公积金管理中心2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "清远": [
+    {"url": "https://www.gdqy.gov.cn/gjjzx/gkmlpt/content/1/1986/post_1986452.html", "title": "一图读懂清远市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1},
+    {"url": "https://ep.ycwb.com/epaper/gdjs/html/2025-03/14/content_1163_695512.htm", "title": "清远政策减负提升职工置业热情", "type": "其他媒体", "kind": "html", "priority": 2}
+  ],
+  "海口": [
+    {"url": "https://gjj.hainan.gov.cn/hngjj/0400/202503/f523d2bcca6d43cda1fe376216681373.shtml", "title": "海南省住房公积金2024年年度报告（全省口径）", "type": "政府网站", "kind": "provincial", "priority": 1}
+  ],
+  "三亚": [
+    {"url": "https://gjj.hainan.gov.cn/hngjj/0400/202503/f523d2bcca6d43cda1fe376216681373.shtml", "title": "海南省住房公积金2024年年度报告（全省口径）", "type": "政府网站", "kind": "provincial", "priority": 1}
+  ],
+  "南通": [
+    {"url": "https://www.ntgjj.com/NewsDetail.aspx?DetailId=20857458", "title": "南通市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1},
+    {"url": "https://www.nantong.gov.cn/szfgjjglzx/tjxx/content/d4adfa52-2619-475f-9f46-baf89daab868.html", "title": "2024年年鉴", "type": "政府网站", "kind": "html", "priority": 2}
+  ],
+  "徐州": [
+    {"url": "https://gjj.xz.gov.cn/bszn/005008/20250421/31b054a7-6390-4b57-8d98-772ed859652a.html", "title": "一图速览徐州市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "盐城": [
+    {"url": "https://ycgjj.yancheng.gov.cn/art/2025/3/30/art_6592_4308265.html", "title": "盐城市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1},
+    {"url": "https://www.ycnews.cn/shms/2025/03-31/PDAKpvv1.html", "title": "积金惠民助安居", "type": "官方媒体", "kind": "html", "priority": 2}
+  ],
+  "金华": [
+    {"url": "http://zfgjj.jinhua.gov.cn/col/col1229168257/art/2025/art_1229168257_58719287.html", "title": "金华市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "衢州": [
+    {"url": "https://finance.sina.cn/2025-03-27/detail-ineqzhay5675266.d.html", "title": "衢州市住房公积金2024年年度报告（转自衢州日报）", "type": "其他媒体", "kind": "html", "priority": 1}
+  ],
+  "舟山": [
+    {"url": "https://epaper.wifizs.cn/zsrb/2025-03/25/content_998708.html", "title": "舟山市住房公积金2024年年度报告（舟山日报）", "type": "官方媒体", "kind": "html", "priority": 1},
+    {"url": "https://zsgjj.zhoushan.gov.cn/art/2025/3/27/art_1570144_58901497.html", "title": "一图看懂舟山市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 2}
+  ],
+  "合肥": [
+    {"url": "https://newspaper.hf365.com/hfrb/pc/content/202503/28/content_503151.html", "title": "合肥市住房公积金2024年年度报告（合肥日报）", "type": "官方媒体", "kind": "html", "priority": 1},
+    {"url": "https://dohurd.ah.gov.cn/public/6991/57752111.html", "title": "合肥市住房公积金2024年年度报告（省住建厅，含doc附件）", "type": "政府网站", "kind": "html", "priority": 2}
+  ],
+  "南昌": [
+    {"url": "https://mp.weixin.qq.com/s/WU9U6IK-veDkqwMMNc8isw", "title": "南昌市住房公积金2024年年度报告（官微）", "type": "政务新媒体", "kind": "html", "priority": 1},
+    {"url": "https://wz.jxnews.com.cn/system/2025/04/01/020828499.shtml", "title": "南昌市住房公积金2024年年度报告出炉", "type": "其他媒体", "kind": "html", "priority": 2}
+  ],
+  "九江": [
+    {"url": "https://www.jjszfgjj.cn/ztzl_108401/ndbg/202503/t20250326_6880121.html", "title": "九江市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "襄阳": [
+    {"url": "http://gjj.xiangyang.gov.cn/zwgk/gknb/202503/t20250321_3781562.shtml", "title": "襄阳市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "黄冈": [
+    {"url": "https://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202504/t20250428_5633714.shtml", "title": "湖北省住房公积金2024年年度报告（含分市表）", "type": "政府网站", "kind": "provincial", "priority": 1}
+  ],
+  "衡阳": [
+    {"url": "https://www.hengyang.gov.cn/hyszfgjj/xxgk/ghjh/20250325/i3617553.html", "title": "衡阳市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "娄底": [
+    {"url": "https://www.ldgjj.com/details.html?ContentId=1751&id=1717995050341&linkUrl=detailsList/1751.html", "title": "娄底市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1},
+    {"url": "https://ldrb.ldnews.cn/2025/05/10/646402.html", "title": "百亿公积金筑安居梦（娄底日报）", "type": "官方媒体", "kind": "html", "priority": 2}
+  ],
+  "安阳": [
+    {"url": "https://www.ayrbs.com/szb/pc/attachment/202503/28/1e1edb5b-c390-40c2-b6f8-b32bdfd54b2f.pdf", "title": "安阳市住房公积金2024年年度报告（安阳日报PDF）", "type": "官方媒体", "kind": "pdf", "priority": 1},
+    {"url": "https://www.anyang.gov.cn/2025/01-03/2459548.html", "title": "安阳市2024年住房公积金增值收益创历史新高", "type": "政府网站", "kind": "html", "priority": 2}
+  ],
+  "成都": [
+    {"url": "http://www.chinajsb.cn/html/202503/28/47659.html", "title": "成都住房公积金2024年年度报告", "type": "官方媒体", "kind": "html", "priority": 1},
+    {"url": "https://cbgc.scol.com.cn/news/6124793", "title": "成都住房公积金2024年年度报告出炉", "type": "官方媒体", "kind": "html", "priority": 2}
+  ],
+  "泸州": [
+    {"url": "https://zfgjj.luzhou.cn/zwgk/xxgknb/content_25206", "title": "泸州市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "乐山": [
+    {"url": "https://jst.sc.gov.cn/scjst/otherDocument/2025/4/29/a155ebc537c2496c9172c25b21eaede1/files/%E5%9B%9B%E5%B7%9D%E7%9C%81%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%912024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf", "title": "四川省住房公积金2024年年度报告（含乐山分市表）", "type": "政府网站", "kind": "provincial", "priority": 1}
+  ],
+  "西安": [
+    {"url": "https://zfgjj.xa.gov.cn/xxgk/gkzd/xxgknb/1906621995329007618.html", "title": "西安住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "榆林": [
+    {"url": "https://zfgjj.yl.gov.cn/zfxxgk/fdzdgknr/ndbg/202503/t20250327_1983108.html", "title": "榆林市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "咸阳": [
+    {"url": "https://zfgjj.xianyang.gov.cn/zwgk/zfxxgknb/zfgjjndbg/202503/t20250331_1937667.html", "title": "咸阳市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "丽江": [
+    {"url": "https://szb.lijiang.cn/pc/concent/202503/31/c86563.html", "title": "丽江市住房公积金2024年年度报告（丽江日报）", "type": "官方媒体", "kind": "html", "priority": 1}
+  ],
+  "红河": [
+    {"url": "https://www.hhgjj.com/website/annualReport-detail.html?seqno=536", "title": "红河州住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "贵阳": [
+    {"url": "https://www.guiyang.gov.cn/zwgk/zfxxgks/fdzdgknr/qtfdxx/zfgjjnb/202503/t20250325_87265107.html", "title": "贵阳住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "遵义": [
+    {"url": "https://zfgjj.zunyi.gov.cn/zxdt/tzgg/202503/t20250326_87272519.html", "title": "遵义市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "唐山": [
+    {"url": "https://www.tsgjj.com/website/announcement-detail.html?seqno=1290&itemId=0102", "title": "唐山市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "朔州": [
+    {"url": "https://zjt.shanxi.gov.cn/zwgk/gsgg/gg/202504/t20250429_9823410.shtml", "title": "山西省住房公积金2024年年度报告（含朔州分市表）", "type": "政府网站", "kind": "provincial", "priority": 1}
+  ],
+  "大庆": [
+    {"url": "https://zfcxjst.hlj.gov.cn/zfcxjst/c114789/202504/31832822/files/%E9%BB%91%E9%BE%99%E6%B1%9F%E7%9C%81%E4%BD%8F%E6%88%BF%E5%85%AC%E7%A7%AF%E9%87%912024%E5%B9%B4%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf", "title": "黑龙江省住房公积金2024年年度报告（PDF，含分市表）", "type": "政府网站", "kind": "provincial", "priority": 1}
+  ],
+  "营口": [
+    {"url": "http://gjj.yingkou.gov.cn/zcfg/5515.jhtml", "title": "营口市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "锦州": [
+    {"url": "http://jzsgjj.cn/newsDetailsnew.jsp?newsid=31983&navid=3", "title": "锦州市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "鞍山": [
+    {"url": "http://asgjj.anshan.gov.cn/czyjs/1253.jhtml", "title": "鞍山市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "丹东": [
+    {"url": "https://www.ddzfgjj.com/tzgg/38081.jhtml", "title": "丹东市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "抚顺": [
+    {"url": "https://fsgjj.org.cn/zdxxgk/3944.jhtml", "title": "抚顺市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "东营": [
+    {"url": "http://dygjj.dongying.gov.cn/art/2025/3/28/art_39491_10299988.html", "title": "东营市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "福州": [
+    {"url": "https://zfgjj.fuzhou.gov.cn/zwgk/gzdt/tzgg/202503/t20250328_4996230.htm", "title": "福州住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "龙岩": [
+    {"url": "https://www.longyan.gov.cn/zt/rdzt/zfgjjzx/zxgz/202503/t20250326_2208060.htm", "title": "龙岩住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "石河子": [
+    {"url": "https://www.xjbtgjj.com/xxgk/tzgg/content_787", "title": "新疆生产建设兵团住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ],
+  "廊坊": [
+    {"url": "https://lfzfgjj.net/website/subject-detail.html?seqno=8672&itemId=0601", "title": "廊坊市住房公积金2024年年度报告", "type": "政府网站", "kind": "html", "priority": 1}
+  ]
+}
