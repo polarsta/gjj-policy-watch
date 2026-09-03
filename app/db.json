@@ -15074,9 +15074,9 @@
     ]
   },
   "annual_reports": {
-    "description": "134城住房公积金年度报告静态数据库：2025年报+2024年报原文链接及年度统计数据（缴存/提取/贷款/资金存款）。2024年提取额与发放贷款字段为2026-09-02补录，取自各市2024年年度报告原文（或省级年报分市表），用于计算同比增幅与增减量；未取到的城市留空，前端显示「—」待补。本模块为历史统计数据，不随每周任务自动更新。",
+    "description": "134城住房公积金年度报告静态数据库：2025年报+2024年报原文链接及年度统计数据（缴存/提取/贷款/资金存款）。2024年提取额与发放贷款字段为2026-09-02补录，取自各市2024年年度报告原文（或省级年报分市表），用于计算同比增幅与增减量；未取到的城市留空，前端显示「—」待补。2026-09-03 补录 21 城 2025 年报的实缴单位/缴存额同比、新开户、资金存款及较 2024 增减值，并将 18 条年报链接替换为官方来源。本模块为历史统计数据，不随每周任务自动更新。",
     "static": true,
-    "updated_at": "2026-09-02（补录45城2024年提取额/发放贷款，来源均为官方年报）",
+    "updated_at": "2026-09-03（补录21城2025年报实缴单位/缴存额同比、新开户、资金存款及增减，并替换18条年报链接为官方来源）",
     "field_units": {
       "new_units": "家",
       "active_units": "万家",
@@ -16730,7 +16730,7 @@
         "province": "浙江省",
         "report_2025": {
           "title": "温州市住房公积金2025年年度报告",
-          "url": "https://m12333.cn/policy/spzyp.html",
+          "url": "https://zfgjj.wenzhou.gov.cn/col/col1229322000/art/2026/art_3dac019ecb6a456b821687aa7f74ecc5.html",
           "publish_date": "2026-03-31"
         },
         "report_2024": {
@@ -16746,7 +16746,7 @@
           "active_units": {
             "value": 4.3823,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+3.16%"
           },
           "new_employees": {
             "value": 16.36,
@@ -16759,7 +16759,7 @@
           "deposit_amount": {
             "value": 210.09,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "+3.41%"
           },
           "withdraw_amount": {
             "value": 154.52,
@@ -16811,7 +16811,7 @@
         },
         "report_2024": {
           "title": "南通市住房公积金2024年年度报告",
-          "url": "https://si12333.cn/policy/pypku.html",
+          "url": "https://www.ntgjj.com/NewsDetail.aspx?DetailId=20857458",
           "publish_date": "2025-03-31"
         },
         "stats_2025": {
@@ -16835,7 +16835,7 @@
           "deposit_amount": {
             "value": 219.84,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "-8.07%"
           },
           "withdraw_amount": {
             "value": 165.05,
@@ -17875,7 +17875,7 @@
         },
         "report_2024": {
           "title": "舟山市住房公积金2024年年度报告",
-          "url": null,
+          "url": "https://mp.weixin.qq.com/s?__biz=MzI4MTY2MjAxMA==&mid=2247893458&idx=2&sn=cddbb12a7814a25a52d6212650defe31&chksm=ea3021f1cf47ca2ab82fb234a5c653d8333dc4b6558403480359890e447b85bf9d919fe9f500&scene=27",
           "publish_date": null
         },
         "stats_2025": {
@@ -17916,8 +17916,9 @@
         },
         "stats_2024": {
           "fund_deposit_balance": {
-            "value": null,
-            "unit": "亿元"
+            "value": 48.59,
+            "unit": "亿元",
+            "note": "由2025年报资金存款与较2024增减值反算"
           },
           "withdraw_amount": {
             "value": 35.09,
@@ -17935,7 +17936,11 @@
           }
         },
         "note": "2025年报为人社通转载全文（中心官网zsgjj.zhoushan.gov.cn同发）。原文实缴单位5326家、实缴职工20.35万人（+3.46%）。2024年报未检索到含'资金存储'数据的文字版（舟山中心主要通过微信公众号图文形式发布），2024年存款余额填null；参考口径：2024年末缴存余额133.80亿元（浙江省2024年年报表1）。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
-        "fund_deposit_change": null
+        "fund_deposit_change": {
+          "value_yi": 18.21,
+          "direction": "增加",
+          "text": "增加18.21亿元"
+        }
       },
       {
         "city": "合肥",
@@ -19250,7 +19255,7 @@
           "active_units": {
             "value": 0.57,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+1.79%"
           },
           "new_employees": {
             "value": 2.16,
@@ -19263,7 +19268,7 @@
           "deposit_amount": {
             "value": 57.04,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "-0.04%"
           },
           "withdraw_amount": {
             "value": 42.14,
@@ -19388,16 +19393,16 @@
         },
         "stats_2025": {
           "new_units": {
-            "value": null,
+            "value": 517,
             "unit": "家"
           },
           "active_units": {
             "value": 0.6,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+7.30%"
           },
           "new_employees": {
-            "value": null,
+            "value": 3.13,
             "unit": "万人"
           },
           "active_employees": {
@@ -19407,7 +19412,7 @@
           "deposit_amount": {
             "value": 60.21,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "+3.21%"
           },
           "withdraw_amount": {
             "value": 45.3,
@@ -19418,7 +19423,7 @@
             "unit": "亿元"
           },
           "fund_deposit_balance": {
-            "value": null,
+            "value": 88.44,
             "unit": "亿元"
           }
         },
@@ -19443,7 +19448,11 @@
           }
         },
         "note": "2025年报全文未检索到（荆州2025年数据取自《湖北省住房公积金2025年年度报告》分市表，存款余额未披露）。2024年报由荆州日报数字报全文刊登（权威媒体）：2024年末存款余额72.47亿、缴存余额185.92亿。2024年提取额、发放贷款取自2024年报（年报正文），同比与增减量由2025/2024绝对值计算。",
-        "fund_deposit_change": null
+        "fund_deposit_change": {
+          "value_yi": 15.97,
+          "direction": "增加",
+          "text": "增加15.97亿元"
+        }
       },
       {
         "city": "长沙",
@@ -19983,7 +19992,7 @@
         },
         "report_2024": {
           "title": "洛阳市2024年数据（市级年报全文未检索到；取自河南省2024年年度报告）",
-          "url": "https://zc.51shebao.com/detail/836321",
+          "url": "https://hnjs.henan.gov.cn/2025/04-30/3154030.html",
           "publish_date": "2025-04-30"
         },
         "stats_2025": {
@@ -19994,7 +20003,7 @@
           "active_units": {
             "value": 1.01,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+3.06%"
           },
           "new_employees": {
             "value": null,
@@ -20007,7 +20016,7 @@
           "deposit_amount": {
             "value": 106.85,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "+2.95%"
           },
           "withdraw_amount": {
             "value": 72.42,
@@ -20054,9 +20063,9 @@
           "publish_date": "2026-03-26"
         },
         "report_2024": {
-          "title": null,
-          "url": null,
-          "publish_date": null
+          "title": "安阳市2024年数据（市级年报全文未检索到；取自河南省2024年年度报告）",
+          "url": "https://hnjs.henan.gov.cn/2025/04-30/3154030.html",
+          "publish_date": "2025-04-30"
         },
         "stats_2025": {
           "new_units": {
@@ -20355,8 +20364,8 @@
         },
         "report_2024": {
           "title": "泸州市住房公积金2024年年度报告",
-          "url": null,
-          "publish_date": null
+          "url": "https://zfgjj.luzhou.cn/zwgk/xxgknb/content_25206",
+          "publish_date": "2025-03-24"
         },
         "stats_2025": {
           "new_units": {
@@ -20396,8 +20405,9 @@
         },
         "stats_2024": {
           "fund_deposit_balance": {
-            "value": null,
-            "unit": "亿元"
+            "value": 53.27,
+            "unit": "亿元",
+            "note": "由2025年报资金存款与较2024增减值反算"
           },
           "withdraw_amount": {
             "value": 39.32,
@@ -20415,7 +20425,11 @@
           }
         },
         "note": "2025年报为人社通(m12333)转载（官网zfgjj.luzhou.cn/sclzgjj.com未能正常访问）；当年发放个人住房贷款15.59亿元(0.38万笔)。2024年报全文未检索到，2024年末存款余额缺失；2024年末缴存余额170.87亿元（四川省2024年年度报告分城市表）。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
-        "fund_deposit_change": null
+        "fund_deposit_change": {
+          "value_yi": 14.97,
+          "direction": "增加",
+          "text": "增加14.97亿元"
+        }
       },
       {
         "city": "乐山",
@@ -20503,7 +20517,7 @@
         },
         "report_2024": {
           "title": "西安住房公积金2024年年度报告",
-          "url": "https://m12333.cn/policy/pypew.html",
+          "url": "https://czt.shaanxi.gov.cn/xxgk/zdgk/lvyj/qywj/202504/t20250430_3510725.html",
           "publish_date": "2025-03-31"
         },
         "stats_2025": {
@@ -20579,7 +20593,7 @@
         },
         "report_2024": {
           "title": "榆林市住房公积金2024年年度报告",
-          "url": "https://m12333.cn/policy/pympf.html",
+          "url": "https://czt.shaanxi.gov.cn/xxgk/zdgk/lvyj/qywj/202504/t20250430_3510725.html",
           "publish_date": "2025-03-26"
         },
         "stats_2025": {
@@ -20590,7 +20604,7 @@
           "active_units": {
             "value": 0.9277,
             "unit": "万家",
-            "yoy": null
+            "yoy": "-2.96%"
           },
           "new_employees": {
             "value": 3.41,
@@ -20655,7 +20669,7 @@
         },
         "report_2024": {
           "title": "咸阳市住房公积金2024年年度报告",
-          "url": "https://m12333.cn/policy/pypfy.html",
+          "url": "https://czt.shaanxi.gov.cn/xxgk/zdgk/lvyj/qywj/202504/t20250430_3510725.html",
           "publish_date": "2025-04-01"
         },
         "stats_2025": {
@@ -20666,7 +20680,7 @@
           "active_units": {
             "value": 0.5013,
             "unit": "万家",
-            "yoy": null
+            "yoy": "-34.33%"
           },
           "new_employees": {
             "value": 2.01,
@@ -20742,7 +20756,7 @@
           "active_units": {
             "value": 0.5969,
             "unit": "万家",
-            "yoy": null
+            "yoy": "-11.04%"
           },
           "new_employees": {
             "value": 2.8985,
@@ -20894,7 +20908,7 @@
           "active_units": {
             "value": 0.38,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+2.45%"
           },
           "new_employees": {
             "value": 1.62,
@@ -21026,12 +21040,12 @@
         "province": "云南",
         "report_2025": {
           "title": "红河州住房公积金2025年年度报告（全文未检索到；数据取自云南省2025年年度报告分城市表及红河州2025年度住房公积金绩效评价报告）",
-          "url": "https://file.m12333.cn/upfile/download/96721f6f-d667-8e21-d585-a52131a638f4.pdf",
+          "url": "https://www.hhgjj.com/website/annualReport-detail.html?seqno=610&itemId=0109",
           "publish_date": null
         },
         "report_2024": {
           "title": "红河州住房公积金2024年年度报告",
-          "url": null,
+          "url": "https://www.hhgjj.com/website/annualReport-detail.html?seqno=536&itemId=0109",
           "publish_date": null
         },
         "stats_2025": {
@@ -21042,7 +21056,7 @@
           "active_units": {
             "value": 0.58,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+1.89%"
           },
           "new_employees": {
             "value": 1.89,
@@ -21174,12 +21188,12 @@
         "province": "贵州",
         "report_2025": {
           "title": "遵义市住房公积金2025年年度报告",
-          "url": "https://m12333.cn/policy/spidk.html",
+          "url": "https://zfgjj.zunyi.gov.cn/zxdt/tzgg/202603/t20260327_89916027.html",
           "publish_date": "2026-03-27"
         },
         "report_2024": {
           "title": "遵义市住房公积金2024年年度报告",
-          "url": "http://mp.weixin.qq.com/s?__biz=MzUzODgzMDY1Nw==&mid=2247517652&idx=2&sn=7f9a8868a3349594e1a49a8c5a361e39",
+          "url": "https://zfgjj.zunyi.gov.cn/zxdt/tzgg/202503/t20250326_87272519.html",
           "publish_date": "2025-03-26"
         },
         "stats_2025": {
@@ -21190,7 +21204,7 @@
           "active_units": {
             "value": 0.8652,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+1.09%"
           },
           "new_employees": {
             "value": 3.41,
@@ -21203,7 +21217,7 @@
           "deposit_amount": {
             "value": 115.69,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "+5.64%"
           },
           "withdraw_amount": {
             "value": 84.81,
@@ -21418,7 +21432,7 @@
           "active_units": {
             "value": 1.0422,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+8.07%"
           },
           "new_employees": {
             "value": 7.42,
@@ -21431,7 +21445,7 @@
           "deposit_amount": {
             "value": 117.89,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "+7.74%"
           },
           "withdraw_amount": {
             "value": 84.78,
@@ -22161,8 +22175,8 @@
         "city": "包头",
         "province": "内蒙古",
         "report_2025": {
-          "title": null,
-          "url": null,
+          "title": "包头市住房公积金2025年年度报告",
+          "url": "https://www.btgjj.cn/?#/website/article/2918",
           "publish_date": null
         },
         "report_2024": {
@@ -22178,7 +22192,7 @@
           "active_units": {
             "value": 0.58,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+3.02%"
           },
           "new_employees": {
             "value": null,
@@ -22191,7 +22205,7 @@
           "deposit_amount": {
             "value": 75.82,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "+6.35%"
           },
           "withdraw_amount": {
             "value": 59.27,
@@ -22461,8 +22475,8 @@
         "city": "大连",
         "province": "辽宁",
         "report_2025": {
-          "title": "大连市住房公积金2025年年度报告（原文未公开可访问，附解读页）",
-          "url": "https://m12333.cn/qa/spyww.html",
+          "title": "大连市住房公积金2025年年度报告",
+          "url": "https://gjj.dl.gov.cn/art/2026/3/31/art_5566_2505635.html",
           "publish_date": "2026-03-31"
         },
         "report_2024": {
@@ -22472,16 +22486,16 @@
         },
         "stats_2025": {
           "new_units": {
-            "value": null,
+            "value": 5935,
             "unit": "家"
           },
           "active_units": {
             "value": 5.63,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+1.02%"
           },
           "new_employees": {
-            "value": null,
+            "value": 7.93,
             "unit": "万人"
           },
           "active_employees": {
@@ -22491,7 +22505,7 @@
           "deposit_amount": {
             "value": 283.4,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "+4.01%"
           },
           "withdraw_amount": {
             "value": 217.4,
@@ -22982,12 +22996,12 @@
         "province": "辽宁",
         "report_2025": {
           "title": "锦州市住房公积金2025年年度报告",
-          "url": "https://m12333.cn/policy/spica.html",
+          "url": "https://jzsgjj.cn/newsDetailsnew.jsp?newsid=31994&navid=3",
           "publish_date": "2026-03-27"
         },
         "report_2024": {
           "title": "锦州市住房公积金2024年年度报告",
-          "url": "https://si12333.cn/policy/pyure.html",
+          "url": "https://jzsgjj.cn/newsDetailsnew.jsp?newsid=31983&navid=3",
           "publish_date": "2025-03-26"
         },
         "stats_2025": {
@@ -22998,7 +23012,7 @@
           "active_units": {
             "value": 0.35,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+4.31%"
           },
           "new_employees": {
             "value": 1.22,
@@ -23011,7 +23025,7 @@
           "deposit_amount": {
             "value": 32.03,
             "unit": "亿元",
-            "yoy": null
+            "yoy": "+6.66%"
           },
           "withdraw_amount": {
             "value": 24.09,
@@ -23210,13 +23224,13 @@
         "province": "辽宁",
         "report_2025": {
           "title": "丹东市住房公积金2025年年度报告",
-          "url": "https://www.sohu.com/a/1002814998_121106822",
+          "url": "https://www.ddzfgjj.com/gjjgb/38263.jhtml",
           "publish_date": "2026-03-30"
         },
         "report_2024": {
-          "title": null,
-          "url": null,
-          "publish_date": null
+          "title": "丹东市住房公积金2024年年度报告",
+          "url": "https://www.ddzfgjj.com/gjjgb/38081.jhtml",
+          "publish_date": "2025-03-28"
         },
         "stats_2025": {
           "new_units": {
@@ -23256,8 +23270,9 @@
         },
         "stats_2024": {
           "fund_deposit_balance": {
-            "value": null,
-            "unit": "亿元"
+            "value": 30.2,
+            "unit": "亿元",
+            "note": "由2025年报资金存款与较2024增减值反算"
           },
           "withdraw_amount": {
             "value": 22.02,
@@ -23275,7 +23290,11 @@
           }
         },
         "note": "2025年报为搜狐转载的丹东市公积金中心官方全文：实缴3269家(+0.86%)、实缴15.30万人(+0.01%)、缴存29.59亿(+9.27%)、提取20.60亿、放贷6.07亿、2025年末存款43.74亿。未检索到丹东市2024年年度报告全文，2024年存款余额缺失（参考：《辽宁省2024年年度报告》分城市表丹东2024年缴存额27.08亿、缴存余额98.24亿，非存款口径）。2024年提取额/发放贷款未取到（无2024年报链接），待补。",
-        "fund_deposit_change": null
+        "fund_deposit_change": {
+          "value_yi": 13.54,
+          "direction": "增加",
+          "text": "增加13.54亿元"
+        }
       },
       {
         "city": "抚顺",
@@ -23678,7 +23697,7 @@
           "active_units": {
             "value": 0.7432,
             "unit": "万家",
-            "yoy": null
+            "yoy": "+2.40%"
           },
           "new_employees": {
             "value": 3.73,
@@ -23702,7 +23721,7 @@
             "unit": "亿元"
           },
           "fund_deposit_balance": {
-            "value": null,
+            "value": 57.55,
             "unit": "亿元"
           }
         },
@@ -23727,7 +23746,11 @@
           }
         },
         "note": "日照2025年报仅见官方“数说”图说版（市公积金中心官网截至2026-08未挂出文字版全文）：新开户单位1124家、新开户3.73万人、实缴单位7432家、实缴30.28万人、缴存62.03亿（同比+9.8%来自中心“2025年度十大关键词”）、提取13.94万人41.94亿(+1.87%)、放贷0.44万笔22.51亿；图说版未披露存款余额，故为null，2025年末缴存余额189.52亿元（+11.86%）。2024年报为官网原文，2024年末存款38.79亿元。2024年提取额、发放贷款取自2024年报（年报正文），同比与增减量由2025/2024绝对值计算。",
-        "fund_deposit_change": null
+        "fund_deposit_change": {
+          "value_yi": 18.76,
+          "direction": "增加",
+          "text": "增加18.76亿元"
+        }
       },
       {
         "city": "威海",
