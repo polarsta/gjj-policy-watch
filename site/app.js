@@ -590,6 +590,9 @@ function renderCards() {
 let OV_KW = '';
 let OV_CITY = '';
 let OV_SEC = '';  // ''=全部 deposit/withdrawal/loan
+// 运行数据同比展示模式：'pct'=同比% / 'diff'=较2024增减值（二选一，localStorage 持久化）
+let OV_CMP = 'pct';
+try { const _m = localStorage.getItem('ov_cmp'); if (_m === 'pct' || _m === 'diff') OV_CMP = _m; } catch (e) { }
 function pick(text, kws, len) {
   text = String(text || '');
   for (const k of kws) {
@@ -615,6 +618,12 @@ function deferPeriod(mp) {
 function srcBadges(srcs) {
   if (!srcs || !srcs.length) return '<span style="color:var(--mute)">待补</span>';
   return srcs.slice(0, 2).map(s => `<a class="badge ${srcType(s.url).c}" href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.title)}">${srcType(s.url).t} ↗</a>`).join(' ') + (srcs.length > 2 ? `<span style="color:var(--mute);font-size:11px">+${srcs.length - 2}</span>` : '');
+}
+/* ---- 运行数据同比展示模式切换（同比% / 增减值 二选一） ---- */
+function setOvCmp(m) {
+  OV_CMP = m;
+  try { localStorage.setItem('ov_cmp', m); } catch (e) { }
+  renderTables();
 }
 /* ---- 运行数据一键导出（CSV，含合计行，Excel 可直接打开） ---- */
 function exportOvData() {
@@ -794,11 +803,13 @@ function renderTables() {
     /* ======== ④ 运行数据表（各市 2025 年报统计，来自 annual_reports 年报库） ======== */
     const ARC = (DB.annual_reports && DB.annual_reports.cities) || [];
     const rowSet = new Set(rows.map(c => c.city));
-    let arRows = ARC.filter(x => rowSet.has(x.city));
+    // 海南省为省级统一管理机构（全省仅1个独立法人机构，无市级年报），与海口/三亚同组单列一行省级数据；海口/三亚保持放空
+    const includeHN = rowSet.has('海口') || rowSet.has('三亚');
+    let arRows = ARC.filter(x => rowSet.has(x.city) || (includeHN && x.city === '海南省'));
     if (kw) arRows = arRows.filter(x => (x.city + x.province + (x.note || '')).includes(kw));
     const av = (o, unit) => (o && o.value != null) ? `${fmtNum(o.value)} <small style="color:var(--mute)">${unit || o.unit || ''}</small>` : '<span style="color:var(--mute)">—</span>';
     const yoy = o => (o && o.yoy) ? ` <span class="yoy ${String(o.yoy).startsWith('-') ? 'yoy-dn' : 'yoy-up'}">${String(o.yoy).startsWith('-') ? '▼' : '▲'}${esc(String(o.yoy).replace(/^[+\-]/, ''))}</span>` : '';
-    // 与上年度比较值：同比百分比 + 增减量（均以 2025 与 2024 年报绝对值为口径自行计算）
+    // 与上年度比较值：按 OV_CMP 二选一展示「同比%」或「较2024增减值」（均以 2025 与 2024 年报绝对值为口径自行计算，悬停可见两年绝对值）
     const cmp = (cur, prev) => {
       const c = cur && cur.value, p = prev && prev.value;
       if (c == null || p == null || !p) return '';
@@ -806,8 +817,9 @@ function renderTables() {
       const pct = Math.round((c - p) / p * 1000) / 10;
       if (Math.abs(d) < 0.005) return ' <span class="yoy" style="color:var(--mute)">— 持平</span>';
       const cls = d < 0 ? 'yoy-dn' : 'yoy-up';
-      const sign = pct > 0 ? '+' : '';
-      return ` <span class="yoy ${cls}" title="较2024年报：上年 ${fmtNum(p)} 亿元 → 本年 ${fmtNum(c)} 亿元">同比${sign}${pct}% ${d < 0 ? '▼ 减少' : '▲ 增加'}${fmtNum(Math.abs(d))}亿元</span>`;
+      const tip = `较2024年报：上年 ${fmtNum(p)} 亿元 → 本年 ${fmtNum(c)} 亿元`;
+      if (OV_CMP === 'diff') return ` <span class="yoy ${cls}" title="${tip}">${d < 0 ? '▼' : '▲'} ${fmtNum(Math.abs(d))}亿元</span>`;
+      return ` <span class="yoy ${cls}" title="${tip}">${d < 0 ? '▼' : '▲'} ${Math.abs(pct)}%</span>`;
     };
     // 数据加总（与导出共用）：2025 各指标合计 + 2024 可比口径合计
     const ovTotals = rows2 => {
@@ -827,8 +839,8 @@ function renderTables() {
       }
       return t;
     };
-    html += `<div id="ov-sec-data"><h4 style="margin:14px 0 8px;font-size:14.5px;color:#0e9594">④ 运行数据 · 各市 2025 年度运行统计 <span class="badge b-nat">年报库</span> <button onclick="exportOvData()" style="margin-left:8px;border:1px solid #0e9594;background:#0e9594;color:#fff;border-radius:16px;padding:4px 14px;font-size:12px;font-weight:600;cursor:pointer;vertical-align:2px">⬇ 一键导出</button></h4>
-    <div class="h-sub" style="margin:-2px 0 8px">来源：各市《住房公积金 2025 年年度报告》；资金存款为公积金中心存款余额（变化量较 2024 年报）；提取额 / 发放贷款的「同比±X%」与「▲增加 / ▼减少 X 亿元」均以 2025 与 2024 年报绝对值口径自行计算（红涨绿跌）；「—」为 2024 年报未披露或原文链接失效，待补</div>
+    html += `<div id="ov-sec-data"><h4 style="margin:14px 0 8px;font-size:14.5px;color:#0e9594">④ 运行数据 · 各市 2025 年度运行统计 <span class="badge b-nat">年报库</span> <button onclick="exportOvData()" style="margin-left:8px;border:1px solid #0e9594;background:#0e9594;color:#fff;border-radius:16px;padding:4px 14px;font-size:12px;font-weight:600;cursor:pointer;vertical-align:2px">⬇ 一键导出</button><span style="display:inline-flex;margin-left:8px;vertical-align:2px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff"><span style="font-size:12px;color:var(--mute);padding:4px 6px 4px 10px;background:#fff">提取额、贷款额同比展示</span><button onclick="setOvCmp('pct')" style="border:none;background:${OV_CMP==='pct'?'#0e9594':'none'};color:${OV_CMP==='pct'?'#fff':'var(--sub)'};padding:4px 12px;font-size:12px;font-weight:600;cursor:pointer">同比%</button><button onclick="setOvCmp('diff')" style="border:none;background:${OV_CMP==='diff'?'#0e9594':'none'};color:${OV_CMP==='diff'?'#fff':'var(--sub)'};padding:4px 12px;font-size:12px;font-weight:600;cursor:pointer">增减值</button></span></h4>
+    <div class="h-sub" style="margin:-2px 0 8px">来源：各市《住房公积金 2025 年年度报告》；资金存款为公积金中心存款余额（变化量较 2024 年报）；提取额 / 发放贷款的同比变化可按上表头右侧按钮在「同比%（▲/▼X%）」与「增减值（▲/▼X亿元）」间切换（二选一，▲红涨 ▼绿跌，悬停可查看两年绝对值），均以 2025 与 2024 年报绝对值口径自行计算；「—」为未披露</div>
     <div class="tbl-wrap"><table class="tb"><thead>
       <tr class="grp">
         <th rowspan="2" class="g-plain">城市</th>
@@ -849,7 +861,10 @@ function renderTables() {
       const s = x.stats_2025 || {};
       const s24 = x.stats_2024 || {};
       const chg = x.fund_deposit_change;
-      html += `<tr><td class="city" onclick="gotoBranch('${x.city}')">${x.city}</td>
+      const cityCell = x.city === '海南省'
+        ? `<td class="city" style="cursor:default">${x.city}<div style="font-size:10.5px;font-weight:400;color:var(--mute);line-height:1.5;margin-top:2px">全省共设1个独立法人机构即海南省住房公积金管理局，无独立设置的分支机构，仅提供全省数据</div></td>`
+        : `<td class="city" onclick="gotoBranch('${x.city}')">${x.city}</td>`;
+      html += `<tr>${cityCell}
         <td class="num">${av(s.new_units, '家')}</td>
         <td class="num">${av(s.active_units, '万家')}${yoy(s.active_units)}</td>
         <td class="num">${av(s.new_employees, '万人')}</td>
@@ -858,7 +873,7 @@ function renderTables() {
         <td class="num">${av(s.withdraw_amount, '亿元')}${cmp(s.withdraw_amount, s24.withdraw_amount)}</td>
         <td class="num">${av(s.loan_issued, '亿元')}${cmp(s.loan_issued, s24.loan_issued)}</td>
         <td class="num">${av(s.fund_deposit_balance, '亿元')}</td>
-        <td>${chg && chg.text ? `<span class="yoy ${chg.direction === '减少' ? 'yoy-dn' : 'yoy-up'}">${chg.direction === '减少' ? '▼' : '▲'} ${esc(chg.text)}</span>` : '<span style="color:var(--mute)">—</span>'}</td>
+        <td>${chg && chg.text ? `<span class="yoy ${chg.direction === '减少' ? 'yoy-dn' : 'yoy-up'}">${chg.direction === '减少' ? '▼' : '▲'} ${esc(chg.text.replace(/^(增加|减少)/, ''))}</span>` : '<span style="color:var(--mute)">—</span>'}</td>
         <td style="white-space:nowrap">${x.report_2025 && x.report_2025.url ? `<a class="badge b-dep" href="${esc(x.report_2025.url)}" target="_blank" rel="noopener" title="${esc(x.report_2025.title)}">2025年报 ↗</a>` : ''}${x.report_2024 && x.report_2024.url ? ` <a class="badge b-src" href="${esc(x.report_2024.url)}" target="_blank" rel="noopener" title="${esc(x.report_2024.title)}">2024 ↗</a>` : ''}</td></tr>`;
     }
     /* ======== 数据加总行（合计当前筛选范围内各城规模） ======== */
@@ -870,10 +885,11 @@ function renderTables() {
       const pct = Math.round((c - p) / p * 1000) / 10;
       if (Math.abs(d) < 0.005) return ' <span class="yoy" style="color:var(--mute)">— 持平</span>';
       const cls = d < 0 ? 'yoy-dn' : 'yoy-up';
-      const sign = pct > 0 ? '+' : '';
-      return ` <span class="yoy ${cls}" title="${n} 城可比口径合计：2024年 ${fmtNum(p)} 亿元 → 2025年 ${fmtNum(c)} 亿元">同比${sign}${pct}% ${d < 0 ? '▼ 减少' : '▲ 增加'}${fmtNum(Math.abs(d))}亿元</span>`;
+      const tip = `${n} 城可比口径合计：2024年 ${fmtNum(p)} 亿元 → 2025年 ${fmtNum(c)} 亿元`;
+      if (OV_CMP === 'diff') return ` <span class="yoy ${cls}" title="${tip}">${d < 0 ? '▼' : '▲'} ${fmtNum(Math.abs(d))}亿元</span>`;
+      return ` <span class="yoy ${cls}" title="${tip}">${d < 0 ? '▼' : '▲'} ${Math.abs(pct)}%</span>`;
     };
-    html += `<tr class="sum-row"><td class="city" style="cursor:default">📊 合计 <small style="font-weight:400;color:var(--mute)">${arRows.length} 城</small></td>
+    html += `<tr class="sum-row"><td class="city" style="cursor:default">📊 合计 <small style="font-weight:400;color:var(--mute)">${arRows.length} 行</small></td>
       <td class="num">${avN(T.new_units.s, '家', T.new_units.n)}</td>
       <td class="num">${avN(T.active_units.s, '万家', T.active_units.n)}</td>
       <td class="num">${avN(T.new_employees.s, '万人', T.new_employees.n)}</td>
