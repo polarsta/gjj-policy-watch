@@ -1,0 +1,170 @@
+[
+  {
+    "city": "盐城",
+    "year": 2025,
+    "url": "https://ycgjj.yancheng.gov.cn/art/2026/3/29/art_6592_4413194.html",
+    "status_code": 200,
+    "size_bytes": 6692,
+    "page_title": "盐城市住房公积金管理中心 通知公告 盐城市住房公积金2025年年度报告",
+    "note": "官方通知公告页，正文为标题+.doc 附件（盐城市住房公积金2025年年度报告.doc）",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "泸州",
+    "year": 2025,
+    "url": "https://zfgjj.luzhou.cn/zwgk/xxgknb/content_28792",
+    "status_code": 200,
+    "size_bytes": 47169,
+    "page_title": "泸州市住房公积金2025年年度报告_政府信息公开年报_信息公开_泸州市住房公积金管理中心",
+    "note": "正文含提取额×3、发放个人住房贷款×2",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "丽江",
+    "year": 2025,
+    "url": "https://www.sohu.com/a/1003302687_121106902",
+    "status_code": 200,
+    "size_bytes": 17814,
+    "page_title": "丽江市住房公积金2025年年度报告",
+    "note": "图片版；缴存额18.21亿与云南省分市表一致",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "丽江",
+    "year": 2024,
+    "url": "https://szb.lijiang.cn/pc/concent/202503/31/c86563.html",
+    "status_code": 200,
+    "size_bytes": 29731,
+    "page_title": "丽江市住房公积金2024年年度报告",
+    "note": "丽江日报数字报；正文含提取额×3、发放个人住房贷款×2",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "石河子",
+    "year": 2025,
+    "url": "https://www.xjbtgjj.com/xxgk/tzgg/content_789",
+    "status_code": 200,
+    "size_bytes": 72450,
+    "page_title": "新疆生产建设兵团住房公积金 2025年年度报告_通知公告_信息公开",
+    "note": "正文含提取额×6、发放个人住房贷款×4",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "石河子",
+    "year": 2024,
+    "url": "https://www.xjbtgjj.com/xxgk/tzgg/content_787",
+    "status_code": 200,
+    "size_bytes": 80202,
+    "page_title": "新疆生产建设兵团住房公积金 2024年年度报告_通知公告_信息公开",
+    "note": "正文含提取额×6、发放个人住房贷款×4",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "九江",
+    "year": 2024,
+    "url": "https://www.jjszfgjj.cn/ztzl_108401/ndbg/202503/t20250326_6880121.html",
+    "status_code": 200,
+    "size_bytes": 36100,
+    "page_title": "九江市住房公积金管理中心",
+    "note": "正文含提取额×3、发放个人住房贷款×15",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "乐山",
+    "year": 2024,
+    "url": "https://www.leshan.gov.cn/lsswszf/bmdt/90053490/f50c9ee24ca24b88b9c52c564f9a41a7.html",
+    "status_code": 200,
+    "size_bytes": 83299,
+    "page_title": "乐山市住房公积金2024年度报告",
+    "note": "正文含提取额×4、发放个人住房贷款×2",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "朔州",
+    "year": 2025,
+    "url": "http://www.zf365.com.cn/tzgg2/1667.jhtml",
+    "status_code": 200,
+    "size_bytes": 513130,
+    "page_title": "通知公告 - 朔州市住房公积金管理中心门户网站",
+    "note": "zf365.com.cn 经确认为朔州公积金官网；正文含提取额×3、发放个人住房贷款×2",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "朔州",
+    "year": 2024,
+    "url": "http://www.zf365.com.cn/tzgg2/1658.jhtml",
+    "status_code": 200,
+    "size_bytes": 97239,
+    "page_title": "通知公告 - 朔州市住房公积金管理中心门户网站",
+    "note": "正文含提取额×6、发放个人住房贷款×2",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "泰州",
+    "year": 2025,
+    "url": "https://qianfan.weijj.cn/wap/thread/view-thread/tid/1958325",
+    "status_code": 200,
+    "size_bytes": 113561,
+    "page_title": "泰州市住房公积金2025年年度报告",
+    "note": "微靖江（地方自媒体）；提取额64.81亿与江苏省分市表一致",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  },
+  {
+    "city": "株洲",
+    "year": 2024,
+    "url": "https://gjj.zhuzhou.gov.cn/c5361/20250327/i2337423.html",
+    "status_code": 200,
+    "size_bytes": 40484,
+    "page_title": "株洲市住房公积金网 - 株洲市住房公积金2024年年度报告",
+    "note": "http→https 升级；正文含提取额×4、发放个人住房贷款×2",
+    "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03",
+      "method": "curl+browser-headers"
+    }
+  }
+]
