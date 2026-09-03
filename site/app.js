@@ -668,11 +668,10 @@ function exportOvData() {
   document.body.appendChild(a); a.click(); a.remove();
   toast(`已导出 ${rows.length} 城运行数据（含合计）`);
 }
-function featCell(f, k) {
-  /** 特征单元格：✓/◐/✗/— + 依据提示 */
-  const ft = (f || {})[k] || { st: 'u', txt: '' };
-  const basis = ft.txt && ft.txt !== '待采集' ? ` title="依据：${esc(ft.txt)}"` : '';
-  return `<td${basis}>${stHtml(ft.st)}</td>`;
+function mxFeatCell(city, f, k, label) {
+  /** 矩阵同款特征单元格（地区分类矩阵的数据与样式）：mx-cell 色块 + 悬停明细弹层 + 点击直达政策原文 */
+  const ft = (f || {})[k] || { st: 'u' };
+  return `<td class="mx-cell${ft.url ? ' has-src' : ''}" data-city="${esc(city)}" data-dim="${k}" data-label="${esc(label)}"><span class="st st-${ft.st}">${ST_TXT[ft.st]}</span></td>`;
 }
 /* ---- 全国性法规详情卡（住房公积金管理条例等，来自数据库 national_regulations 字段） ---- */
 function natRegCardHtml() {
@@ -774,7 +773,7 @@ function renderTables() {
         <td><div class="cl" title="${esc((w.conditions || []).join('；'))}">${esc(clip((w.conditions || []).join('、'), 90))}</div></td>
         <td><div class="cl" title="${esc(w.rent_limit || '')}">${esc(clip(w.rent_limit, 60))}</div></td>
         <td><div class="cl">${esc(multi)}</div></td>
-        ${featCell(f, 'first_pay')}
+        ${mxFeatCell(c.city, f, 'first_pay', '首付直付')}
         <td>${srcBadges(w.sources)}</td></tr>`;
     }
     html += '</tbody></table></div></div>';
@@ -789,14 +788,13 @@ function renderTables() {
       const l = c.loan || {}; const f = FEAT[c.city] || {};
       const lText = [l.conditions, l.note, l.max_single, l.max_family].filter(Boolean).join(' ');
       const mult = pick(lText, ['倍', '余额'], 60) || '待核实';
-      const upCell = k => { const ft = f[k] || { st: 'u', txt: '' }; return `<td${ft.txt && ft.txt !== '待采集' ? ` title="依据：${esc(ft.txt)}"` : ''}>${stHtml(ft.st)}</td>`; };
       const amtTip = v => esc((v || '') + (l.note ? ' ｜ 备注：' + l.note : ''));
       html += `<tr><td class="city" onclick="gotoBranch('${c.city}')">${c.city}</td>
         <td><div class="cl" title="${amtTip(l.max_single)}">${esc(clip(l.max_single, 60))}</div></td>
         <td><div class="cl" title="${amtTip(l.max_family)}">${esc(clip(l.max_family, 60))}</div></td>
         <td><div class="cl">首套 ${esc(l.rate_first || '—')}<br>二套 ${esc(l.rate_second || '—')}</div></td>
         <td><div class="cl" title="${esc(l.conditions || '')}">${esc(mult)}</div></td>
-        ${upCell('green')}${upCell('kid2')}
+        ${mxFeatCell(c.city, f, 'green', '绿色建筑上浮')}${mxFeatCell(c.city, f, 'kid2', '二孩家庭上浮')}
         <td>${srcBadges(l.sources)}</td></tr>`;
     }
     html += '</tbody></table></div></div>';
