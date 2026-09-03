@@ -1,6 +1,6 @@
 ﻿{
  "database": "中国主要城市住房公积金政策数据库",
- "version": "1.5.1",
+ "version": "1.5.2",
  "generated_at": "2026-09-03",
  "city_count": 134,
  "schema_note": "每城含 deposit(缴存)/withdrawal(提取)/loan(贷款) 三类政策，各字段附 sources(来源标题+URL+日期)；null 表示未找到官方公开来源，详见 note 字段；case_library 为商机案例库（title/city/theme/parties/summary/practices/sources）；national_regulations 为全国性法规库（key_changes/impact_on_cities/watch_items/sources）；annual_reports 为年报静态数据库（年度更新，不参与每周自动更新）；各城市 deferral 字段为缓缴政策（supported/legal_basis/conditions/max_period/procedure/employee_rights/sources）",
@@ -48750,7 +48750,7 @@
  "annual_reports": {
   "description": "134城住房公积金年度报告静态数据库：2025年报+2024年报原文链接及年度统计数据（缴存/提取/贷款/资金存款）。2024年提取额与发放贷款字段为2026-09-02补录，取自各市2024年年度报告原文（或省级年报分市表），用于计算同比增幅与增减量；未取到的城市留空，前端显示「—」待补。2026-09-03 补录 21 城 2025 年报的实缴单位/缴存额同比、新开户、资金存款及较 2024 增减值，并将 18 条年报链接替换为官方来源。本模块为历史统计数据，不随每周任务自动更新。",
   "static": true,
-  "updated_at": "2026-09-03（补录21城2025年报实缴单位/缴存额同比、新开户、资金存款及增减，并替换18条年报链接为官方来源）",
+  "updated_at": "2026-09-03（40城年报链接核验并替换为官方来源，共更新47条）",
   "field_units": {
    "new_units": "家",
    "active_units": "万家",
@@ -48844,13 +48844,21 @@
     "province": "上海",
     "report_2025": {
      "title": "上海市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/spypy.html",
-     "publish_date": "2026-04-02"
+     "url": "https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html",
+     "publish_date": "2026-04-02",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "上海市住房公积金2024年年度报告",
-     "url": "https://m12333.cn/policy/pypdw.html",
-     "publish_date": null
+     "url": "https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html",
+     "publish_date": null,
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -49224,13 +49232,21 @@
     "province": "广东",
     "report_2025": {
      "title": "佛山市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/spizf.html",
-     "publish_date": "2026-03-26"
+     "url": "https://fsgjj.foshan.gov.cn/gkmlpt/content/7/7124/mpost_7124559.html#607",
+     "publish_date": "2026-03-26",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "佛山市住房公积金2024年年度报告",
-     "url": "https://m12333.cn/policy/pzfdm.html",
-     "publish_date": "2025-03-25"
+     "url": "https://fsgjj.foshan.gov.cn/gkmlpt/content/6/6344/post_6344656.html#607",
+     "publish_date": "2025-03-25",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -49533,8 +49549,12 @@
     },
     "report_2024": {
      "title": "中山市住房公积金2024年年度报告",
-     "url": "https://m12333.cn/policy/pyuke.html",
-     "publish_date": "2025-03-26"
+     "url": "https://zszfgjj.zs.gov.cn/zwgk/ndbg/content/post_2499969.html",
+     "publish_date": "2025-03-26",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -49756,13 +49776,23 @@
     "province": "广东",
     "report_2025": {
      "title": "清远市住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/996182259_121106875",
-     "publish_date": "2026-03-13"
+     "url": "https://www.gdqy.gov.cn/channel/qysgjj/xxgk/gjjnb/content/post_2127959.html",
+     "publish_date": "2026-03-13",
+     "verify": {
+      "status": "WAF_CHALLENGE",
+      "checked_at": "2026-09-03",
+      "note": "清远市政府站（www.gdqy.gov.cn）启用 JS 挑战，自动化核验返回 412，需浏览器人工确认。"
+     }
     },
     "report_2024": {
      "title": "清远市住房公积金2024年年度报告",
-     "url": "https://m12333.cn/policy/pzypz.html",
-     "publish_date": "2025-03-10"
+     "url": "https://www.gdqy.gov.cn/channel/qysgjj/zcfg/zcjd/content/post_1986451.html",
+     "publish_date": "2025-03-10",
+     "verify": {
+      "status": "WAF_CHALLENGE",
+      "checked_at": "2026-09-03",
+      "note": "清远市政府站（www.gdqy.gov.cn）启用 JS 挑战，自动化核验返回 405，需浏览器人工确认。"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -50693,8 +50723,12 @@
     "province": "江苏省",
     "report_2025": {
      "title": "扬州市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/spypd.html",
-     "publish_date": "2026-03-31"
+     "url": "https://gjjzx.yangzhou.gov.cn/zfxxgk/fdzdgk/tzgg/art/2026/art_4477690161244c37af94aa8afccb6fd4.html",
+     "publish_date": "2026-03-31",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "扬州市住房公积金2024年年度报告",
@@ -51149,8 +51183,12 @@
     "province": "浙江省",
     "report_2025": {
      "title": "绍兴市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/sprek.html",
-     "publish_date": "2026-03-30"
+     "url": "https://gjj.sx.gov.cn/col/col1229319231/art/2026/art_7b0e348b2a8d43448c04455669a02320.html",
+     "publish_date": "2026-03-30",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "绍兴市住房公积金2024年年度报告",
@@ -51301,13 +51339,21 @@
     "province": "浙江省",
     "report_2025": {
      "title": "金华市住房公积金2025年年度报告",
-     "url": "https://jh.news.fang.com/open/54501691.html",
-     "publish_date": "2026-03-31"
+     "url": "http://zfgjj.jinhua.gov.cn/col/col1229168257/art/2026/art_bd1dd434d2b94bcb9f96d011891147ef.html",
+     "publish_date": "2026-03-31",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "金华市住房公积金2024年年度报告",
-     "url": "https://m12333.cn/policy/pysum.html",
-     "publish_date": "2025-04-01"
+     "url": "http://zfgjj.jinhua.gov.cn/col/col1229168257/art/2025/art_1229168257_58719287.html",
+     "publish_date": "2025-04-01",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -51377,8 +51423,12 @@
     "province": "浙江省",
     "report_2025": {
      "title": "台州市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/sprda.html",
-     "publish_date": "2026-03-30"
+     "url": "https://gjj.zjtz.gov.cn/col/col1229567285/art/2026/art_8443ddb32f0fa046f506e04d9d7edb7e.html",
+     "publish_date": "2026-03-30",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "台州市住房公积金2024年年度报告",
@@ -51605,13 +51655,21 @@
     "province": "浙江省",
     "report_2025": {
      "title": "舟山市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/spiak.html",
-     "publish_date": "2026-03-27"
+     "url": "https://zsgjj.zhoushan.gov.cn/col/col1570144/art/2026/art_d138d95727e545748770a951ca5d4561.html",
+     "publish_date": "2026-03-27",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "舟山市住房公积金2024年年度报告",
-     "url": "https://mp.weixin.qq.com/s?__biz=MzI4MTY2MjAxMA==&mid=2247893458&idx=2&sn=cddbb12a7814a25a52d6212650defe31&chksm=ea3021f1cf47ca2ab82fb234a5c653d8333dc4b6558403480359890e447b85bf9d919fe9f500&scene=27",
-     "publish_date": null
+     "url": "https://zsgjj.zhoushan.gov.cn/art/2025/3/27/art_1570144_58901497.html",
+     "publish_date": null,
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -51910,8 +51968,12 @@
     "province": "安徽省",
     "report_2025": {
      "title": "马鞍山市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/spzrd.html",
-     "publish_date": "2026-03-29"
+     "url": "https://masgjj.mas.gov.cn/xxgk/openness/detail/content/69c9bf3588668823158b456e.html",
+     "publish_date": "2026-03-29",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "马鞍山市住房公积金2024年年度报告",
@@ -51986,8 +52048,12 @@
     "province": "安徽省",
     "report_2025": {
      "title": "安庆市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/spmcd.html",
-     "publish_date": "2026-03-19"
+     "url": "https://gjj.anqing.gov.cn/gjjgb/2004187495.html",
+     "publish_date": "2026-03-19",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "安庆市住房公积金2024年年度报告",
@@ -52214,13 +52280,21 @@
     "province": "江西省",
     "report_2025": {
      "title": "南昌市住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/1001792185_121106832",
-     "publish_date": "2026-03-27"
+     "url": "https://mp.weixin.qq.com/s?__biz=MzI5MDA3ODg1MA==&mid=2649426930&idx=1&sn=192cbab5a367848b4902ec42ba6065d4&chksm=f50e518083e3555f4a8ff31b76f6b708c37f3494eb476dfbff2d41aa6cef9a7b8e11bdc0da9d&scene=27",
+     "publish_date": "2026-03-27",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "南昌市住房公积金2024年年度报告",
-     "url": "https://m12333.cn/policy/pyszm.html",
-     "publish_date": "2025-03-30"
+     "url": "https://mp.weixin.qq.com/s?__biz=MzI5MDA3ODg1MA==&mid=2649418818&idx=1&sn=9750401571304b66d599357d12e98708&chksm=f5f20e66df9ac3d7cc0d59423f0ed6bb9d7ec362e92a209cbc187e99174b0fb706ea3efece54&scene=27",
+     "publish_date": "2025-03-30",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -52366,8 +52440,12 @@
     "province": "江西省",
     "report_2025": {
      "title": "上饶市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/qa/sppfc.html",
-     "publish_date": "2026-03-23"
+     "url": "https://gjj.zgsr.gov.cn/gjj/gsgg/202603/44e40ce1708c47a7add793c701bbe593.shtml",
+     "publish_date": "2026-03-23",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "上饶市住房公积金2024年年度报告",
@@ -52898,13 +52976,21 @@
     "province": "湖北",
     "report_2025": {
      "title": "襄阳市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/sprzy.html",
-     "publish_date": "2026-03-28"
+     "url": "http://gjj.xiangyang.gov.cn/zwgk/gknb/t_3979503.shtml",
+     "publish_date": "2026-03-28",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "襄阳市住房公积金2024年年度报告",
-     "url": "http://gjj.xiangyang.gov.cn/zwgk/gkml/ghjh/202505/t20250512_3808613.shtml",
-     "publish_date": "2025-05-12"
+     "url": "http://gjj.xiangyang.gov.cn/zwgk/gknb/202503/t20250321_3781562.shtml",
+     "publish_date": "2025-05-12",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -53270,8 +53356,12 @@
     "province": "湖南",
     "report_2025": {
      "title": "株洲市住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/1002071302_121106908",
-     "publish_date": "2026-03-27"
+     "url": "https://zjt.hunan.gov.cn/zjt/xxgk/xinxigongkaimulu/tjxx/202604/t20260427_33965308.html",
+     "publish_date": "2026-03-27",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "株洲市住房公积金2024年年度报告",
@@ -53722,8 +53812,12 @@
     "province": "河南",
     "report_2025": {
      "title": "洛阳市2025年数据（市级年报全文未检索到；取自河南省2025年年度报告）",
-     "url": "https://m.sohu.com/a/1019105914_121106991",
-     "publish_date": "2026-05-06"
+     "url": "https://hnjs.henan.gov.cn/2026/04-30/3347933.html",
+     "publish_date": "2026-05-06",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "洛阳市2024年数据（市级年报全文未检索到；取自河南省2024年年度报告）",
@@ -54247,13 +54341,21 @@
     "province": "陕西",
     "report_2025": {
      "title": "西安住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/1003640857_121106869",
-     "publish_date": null
+     "url": "https://zfgjj.xa.gov.cn/xxgk/gkzd/xxgknb/2038802040179187714.html",
+     "publish_date": null,
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "西安住房公积金2024年年度报告",
-     "url": "https://czt.shaanxi.gov.cn/xxgk/zdgk/lvyj/qywj/202504/t20250430_3510725.html",
-     "publish_date": "2025-03-31"
+     "url": "https://zfgjj.xa.gov.cn/xxgk/gkzd/xxgknb/1906621995329007618.html",
+     "publish_date": "2025-03-31",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -54399,13 +54501,21 @@
     "province": "陕西",
     "report_2025": {
      "title": "咸阳市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/spzkm.html",
-     "publish_date": null
+     "url": "https://zfgjj.xianyang.gov.cn/zwgk/zfxxgknb/zfgjjndbg/202603/t20260330_2072256.html",
+     "publish_date": null,
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "咸阳市住房公积金2024年年度报告",
-     "url": "https://czt.shaanxi.gov.cn/xxgk/zdgk/lvyj/qywj/202504/t20250430_3510725.html",
-     "publish_date": "2025-04-01"
+     "url": "https://zfgjj.xianyang.gov.cn/zwgk/zfxxgknb/zfgjjndbg/202503/t20250331_1937667.html",
+     "publish_date": "2025-04-01",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -54627,13 +54737,21 @@
     "province": "云南",
     "report_2025": {
      "title": "曲靖市住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/1002850734_121106902",
-     "publish_date": "2026-03-30"
+     "url": "https://www.qjzfgjj.com/cms/gzdt/5384.jhtml",
+     "publish_date": "2026-03-30",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "曲靖市住房公积金2024年年度报告",
-     "url": "https://www.sohu.com/a/876904731_121123789",
-     "publish_date": "2025-03-28"
+     "url": "https://www.qjzfgjj.com/cms/fdzdgknr/4246.jhtml",
+     "publish_date": "2025-03-28",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -54679,14 +54797,14 @@
      "withdraw_amount": {
       "value": 58.36,
       "unit": "亿元",
-      "source_url": "https://www.sohu.com/a/876904731_121123789",
+      "source_url": "https://www.qjzfgjj.com/cms/fdzdgknr/4246.jhtml",
       "source_name": "曲靖市住房公积金2024年年度报告",
       "extract_method": "年报正文"
      },
      "loan_issued": {
       "value": 30.59,
       "unit": "亿元",
-      "source_url": "https://www.sohu.com/a/876904731_121123789",
+      "source_url": "https://www.qjzfgjj.com/cms/fdzdgknr/4246.jhtml",
       "source_name": "曲靖市住房公积金2024年年度报告",
       "extract_method": "年报正文"
      }
@@ -54847,13 +54965,21 @@
     "province": "贵州",
     "report_2025": {
      "title": "贵阳住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/1003608997_121106902",
-     "publish_date": "2026-03-31"
+     "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/gggs/xxgkgsggyxgg/202603/t20260330_89927501.html",
+     "publish_date": "2026-03-31",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "贵阳住房公积金2024年年度报告",
-     "url": "https://m12333.cn/policy/pyumr.html",
-     "publish_date": "2025-03-25"
+     "url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/gggs/xxgkgsggyxgg/202503/t20250325_87264794.html",
+     "publish_date": "2025-03-25",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -54999,8 +55125,12 @@
     "province": "贵州",
     "report_2025": {
      "title": "六盘水市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/spsyz.html",
-     "publish_date": "2026-03-24"
+     "url": "https://gjj.gzlps.gov.cn/bmxxgk/zfxxgk_5816274/fdzdgknr/gjjndbg/202603/t20260323_89897769.html",
+     "publish_date": "2026-03-24",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "六盘水市住房公积金2024年年度报告",
@@ -55075,8 +55205,12 @@
     "province": "甘肃",
     "report_2025": {
      "title": "兰州市住房公积金2025年年度报告",
-     "url": "https://m.sohu.com/a/1003371917_121106869",
-     "publish_date": null
+     "url": "https://gansu.gscn.com.cn/system/2026/04/01/013478850.shtml",
+     "publish_date": null,
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "兰州市住房公积金2024年年度报告",
@@ -55151,8 +55285,12 @@
     "province": "宁夏",
     "report_2025": {
      "title": "银川市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/sssmf.html",
-     "publish_date": null
+     "url": "https://www.yinchuan.gov.cn/xxgk/bmxxgkml/zfgjjglzx/xxgkml_2829/zfgjjndbg_7701/202603/t20260324_5200909.html",
+     "publish_date": null,
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "银川市住房公积金2024年年度报告",
@@ -55227,13 +55365,21 @@
     "province": "青海",
     "report_2025": {
      "title": "西宁住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/1004528230_121106869",
-     "publish_date": "2026-04-02"
+     "url": "https://www.xnzfgjj.com/gzdt/3456.jhtml",
+     "publish_date": "2026-04-02",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "西宁住房公积金2024年年度报告",
-     "url": "https://zc.51shebao.com/detail/835616",
-     "publish_date": "2025-04-11"
+     "url": "https://mp.weixin.qq.com/s/scV8EOgYzPwrgG4d5_RGlg",
+     "publish_date": "2025-04-11",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -55279,14 +55425,14 @@
      "withdraw_amount": {
       "value": 80.15,
       "unit": "亿元",
-      "source_url": "https://zc.51shebao.com/detail/835616",
+      "source_url": "https://mp.weixin.qq.com/s/scV8EOgYzPwrgG4d5_RGlg",
       "source_name": "西宁住房公积金2024年年度报告",
       "extract_method": "年报正文"
      },
      "loan_issued": {
       "value": 30.92,
       "unit": "亿元",
-      "source_url": "https://zc.51shebao.com/detail/835616",
+      "source_url": "https://mp.weixin.qq.com/s/scV8EOgYzPwrgG4d5_RGlg",
       "source_name": "西宁住房公积金2024年年度报告",
       "extract_method": "年报正文"
      }
@@ -56583,48 +56729,64 @@
     "province": "黑龙江",
     "report_2025": {
      "title": null,
-     "url": null,
-     "publish_date": null
+     "url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml",
+     "publish_date": null,
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "大庆市住房公积金2024年年报解读（图说版，原文未检索到）",
-     "url": "https://si12333.cn/qa/pamiz.html",
-     "publish_date": "2025-06-06"
+     "url": "https://www.hlj.gov.cn/hlj/c108459/202509/c00_31874678.shtml",
+     "publish_date": "2025-06-06",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
       "value": null,
-      "unit": "家"
+      "unit": "家",
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
      },
      "active_units": {
       "value": 0.39,
       "unit": "万家",
-      "yoy": null
+      "yoy": null,
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
      },
      "new_employees": {
       "value": null,
-      "unit": "万人"
+      "unit": "万人",
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
      },
      "active_employees": {
       "value": 38.78,
-      "unit": "万人"
+      "unit": "万人",
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
      },
      "deposit_amount": {
       "value": 98.26,
       "unit": "亿元",
-      "yoy": null
+      "yoy": null,
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
      },
      "withdraw_amount": {
       "value": 71.31,
-      "unit": "亿元"
+      "unit": "亿元",
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
      },
      "loan_issued": {
       "value": 20.25,
-      "unit": "亿元"
+      "unit": "亿元",
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
      },
      "fund_deposit_balance": {
       "value": null,
-      "unit": "亿元"
+      "unit": "亿元",
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
      }
     },
     "stats_2024": {
@@ -56883,8 +57045,12 @@
     "province": "辽宁",
     "report_2025": {
      "title": "鞍山市住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/1003025610_121106822",
-     "publish_date": "2026-03-30"
+     "url": "https://asgjj.anshan.gov.cn:1433/gzdt/1344.jhtml",
+     "publish_date": "2026-03-30",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "鞍山市住房公积金2024年年度报告",
@@ -57340,13 +57506,21 @@
     "province": "山东",
     "report_2025": {
      "title": "潍坊市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/sprfw.html",
-     "publish_date": "2026-03-30"
+     "url": "https://gjj.weifang.gov.cn/55379/1306570283.html",
+     "publish_date": "2026-03-30",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "潍坊市住房公积金2024年年度报告（安丘市政府转发）",
-     "url": "http://www.anqiu.gov.cn/xxgk/szfgjjglzx/202504/t20250403_246422.html",
-     "publish_date": "2025-04-03"
+     "url": "http://www.wfxiashan.gov.cn/XSQXXGK/gjjglzx/202503/t20250328_6489608.html",
+     "publish_date": "2025-04-03",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -57392,14 +57566,14 @@
      "withdraw_amount": {
       "value": 79.62,
       "unit": "亿元",
-      "source_url": "http://www.anqiu.gov.cn/xxgk/szfgjjglzx/202504/t20250403_246422.html",
+      "source_url": "http://www.wfxiashan.gov.cn/XSQXXGK/gjjglzx/202503/t20250328_6489608.html",
       "source_name": "潍坊市住房公积金2024年年度报告（安丘市政府转发）",
       "extract_method": "年报正文"
      },
      "loan_issued": {
       "value": 36.34,
       "unit": "亿元",
-      "source_url": "http://www.anqiu.gov.cn/xxgk/szfgjjglzx/202504/t20250403_246422.html",
+      "source_url": "http://www.wfxiashan.gov.cn/XSQXXGK/gjjglzx/202503/t20250328_6489608.html",
       "source_name": "潍坊市住房公积金2024年年度报告（安丘市政府转发）",
       "extract_method": "年报正文"
      }
@@ -57568,13 +57742,21 @@
     "province": "山东",
     "report_2025": {
      "title": "东营市住房公积金2025年年度报告",
-     "url": "http://www.o546.cn/news/Info.asp?ID=15873",
-     "publish_date": "2026-03-31"
+     "url": "http://www.dongying.gov.cn/art/2026/3/31/art_38799_10467303.html",
+     "publish_date": "2026-03-31",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "东营市住房公积金2024年年度报告",
-     "url": "https://m12333.cn/policy/pymed.html",
-     "publish_date": "2025-03-28"
+     "url": "http://dygjj.dongying.gov.cn/art/2025/3/28/art_39491_10299988.html",
+     "publish_date": "2025-03-28",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "stats_2025": {
      "new_units": {
@@ -57872,8 +58054,12 @@
     "province": "山东",
     "report_2025": {
      "title": "滨州市住房公积金2025年年度报告",
-     "url": "https://m12333.cn/policy/sprcr.html",
-     "publish_date": "2026-03-30"
+     "url": "http://gjj.binzhou.gov.cn/art/2026/3/30/art_121655_10271635.html",
+     "publish_date": "2026-03-30",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "滨州市住房公积金2024年年度报告",
@@ -58252,8 +58438,12 @@
     "province": "福建",
     "report_2025": {
      "title": "漳州市住房公积金2025年年度报告",
-     "url": "https://m.sohu.com/a/1001984387_121106994",
-     "publish_date": "2026-03-27"
+     "url": "http://gjj.zhangzhou.gov.cn/cms/html/zzszfgjjglzx/2026-03-30/1676069296.html",
+     "publish_date": "2026-03-27",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "漳州市住房公积金2024年年度报告",
@@ -58328,8 +58518,12 @@
     "province": "福建",
     "report_2025": {
      "title": "莆田市住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/1003013922_121106994",
-     "publish_date": "2026-03-30"
+     "url": "https://www.putian.gov.cn/zwgk/ptdt/ptyw/202603/t20260330_2209645.htm",
+     "publish_date": "2026-03-30",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "莆田市住房公积金2024年年度报告",
@@ -58404,8 +58598,12 @@
     "province": "福建",
     "report_2025": {
      "title": "宁德市住房公积金2025年年度报告",
-     "url": "https://www.sohu.com/a/1002758625_121106994",
-     "publish_date": "2026-03-30"
+     "url": "https://gjj.ningde.gov.cn/zcfg/ndgb/zfgjjndbg/202603/t20260327_2449354.htm",
+     "publish_date": "2026-03-30",
+     "verify": {
+      "status": "OK",
+      "checked_at": "2026-09-03"
+     }
     },
     "report_2024": {
      "title": "宁德市住房公积金2024年年度报告",
