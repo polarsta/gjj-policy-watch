@@ -6305,7 +6305,7 @@
    "city": "杭州",
    "province": "浙江省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjj.hangzhou.gov.cn/",
    "deposit": {
     "base_upper": 42151,
     "base_lower": 2660,
@@ -8155,7 +8155,7 @@
    "city": "温州",
    "province": "浙江省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://zfgjj.wenzhou.gov.cn/",
    "deposit": {
     "base_upper": 32964,
     "base_lower": 2660,
@@ -9188,7 +9188,7 @@
    "city": "扬州",
    "province": "江苏省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjjzx.yangzhou.gov.cn/",
    "deposit": {
     "base_upper": 31618,
     "base_lower": 2490,
@@ -11375,7 +11375,7 @@
    "city": "绍兴",
    "province": "浙江省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjj.sx.gov.cn/",
    "deposit": {
     "base_upper": 31968,
     "base_lower": 2430,
@@ -11724,7 +11724,7 @@
    "city": "嘉兴",
    "province": "浙江省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjj.jiaxing.gov.cn/",
    "deposit": {
     "base_upper": 34920,
     "base_lower": 2430,
@@ -19715,7 +19715,7 @@
    "city": "黄冈",
    "province": "湖北省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjj.hg.gov.cn/",
    "deposit": {
     "base_upper": 24033,
     "base_lower": 1800,
@@ -22133,7 +22133,7 @@
    "city": "娄底",
    "province": "湖南省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://www.ldgjj.com/",
    "deposit": {
     "base_upper": 21025,
     "base_lower": 1550,
@@ -24134,7 +24134,7 @@
    "city": "成都",
    "province": "四川",
    "last_updated": "2026-08-31",
-   "official_site": null,
+   "official_site": "https://cdzfgjj.chengdu.gov.cn/",
    "deposit": {
     "base_upper": 32969,
     "base_lower": 2330,
@@ -24518,7 +24518,7 @@
    "city": "绵阳",
    "province": "四川",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjj.mianyang.cn/",
    "deposit": {
     "base_upper": 25365,
     "base_lower": 2200,
@@ -24857,7 +24857,7 @@
    "city": "泸州",
    "province": "四川",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://zfgjj.luzhou.cn/",
    "deposit": {
     "base_upper": 26601,
     "base_lower": 2200,
@@ -26246,7 +26246,7 @@
    "city": "咸阳",
    "province": "陕西",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://zfgjj.xianyang.gov.cn/",
    "deposit": {
     "base_upper": 25315,
     "base_lower": 2376,
@@ -26873,7 +26873,7 @@
    "city": "昆明",
    "province": "云南",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://zfgjj.km.gov.cn/",
    "deposit": {
     "base_upper": 32470,
     "base_lower": 2170,
@@ -28582,7 +28582,7 @@
    "city": "遵义",
    "province": "贵州",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://zfgjj.zunyi.gov.cn/",
    "deposit": {
     "base_upper": 24405,
     "base_lower": 2130,
@@ -37098,7 +37098,7 @@
    "city": "锦州",
    "province": "辽宁省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://jzsgjj.cn/",
    "deposit": {
     "base_upper": 21945,
     "base_lower": 1930,
@@ -39900,7 +39900,7 @@
    "city": "潍坊",
    "province": "山东省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjj.weifang.gov.cn/",
    "deposit": {
     "base_upper": 24909,
     "base_lower": 2400,
@@ -40945,7 +40945,7 @@
    "city": "东营",
    "province": "山东省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "http://dygjj.dongying.gov.cn/",
    "deposit": {
     "base_upper": 34431,
     "base_lower": 2400,
@@ -42994,7 +42994,7 @@
    "city": "厦门",
    "province": "福建省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjj.xm.gov.cn/",
    "deposit": {
     "base_upper": 32937,
     "base_lower": 2265,
@@ -44685,7 +44685,7 @@
    "city": "宁德",
    "province": "福建省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjj.ningde.gov.cn/",
    "deposit": {
     "base_upper": 27166,
     "base_lower": 1895,
