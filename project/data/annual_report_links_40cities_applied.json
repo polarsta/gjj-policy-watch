@@ -1,0 +1,514 @@
+{
+  "date": "2026-09-03",
+  "changes": [
+    {
+      "city": "上海",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/spypy.html",
+      "new": "https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html",
+      "status": "OK"
+    },
+    {
+      "city": "上海",
+      "year": 2024,
+      "old": "https://m12333.cn/policy/pypdw.html",
+      "new": "https://www.shzfgjj.cn/html/newxxgk/ndbg/227250.html",
+      "status": "OK"
+    },
+    {
+      "city": "佛山",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/spizf.html",
+      "new": "https://fsgjj.foshan.gov.cn/gkmlpt/content/7/7124/mpost_7124559.html#607",
+      "status": "OK"
+    },
+    {
+      "city": "佛山",
+      "year": 2024,
+      "old": "https://m12333.cn/policy/pzfdm.html",
+      "new": "https://fsgjj.foshan.gov.cn/gkmlpt/content/6/6344/post_6344656.html#607",
+      "status": "OK"
+    },
+    {
+      "city": "扬州",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/spypd.html",
+      "new": "https://gjjzx.yangzhou.gov.cn/zfxxgk/fdzdgk/tzgg/art/2026/art_4477690161244c37af94aa8afccb6fd4.html",
+      "status": "OK"
+    },
+    {
+      "city": "绍兴",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/sprek.html",
+      "new": "https://gjj.sx.gov.cn/col/col1229319231/art/2026/art_7b0e348b2a8d43448c04455669a02320.html",
+      "status": "OK"
+    },
+    {
+      "city": "台州",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/sprda.html",
+      "new": "https://gjj.zjtz.gov.cn/col/col1229567285/art/2026/art_8443ddb32f0fa046f506e04d9d7edb7e.html",
+      "status": "OK"
+    },
+    {
+      "city": "舟山",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/spiak.html",
+      "new": "https://zsgjj.zhoushan.gov.cn/col/col1570144/art/2026/art_d138d95727e545748770a951ca5d4561.html",
+      "status": "OK"
+    },
+    {
+      "city": "舟山",
+      "year": 2024,
+      "old": "https://mp.weixin.qq.com/s?__biz=MzI4MTY2MjAxMA==&mid=2247893458&idx=2&sn=cddbb12a7814a25a52d6212650defe31&chksm=ea3021f1cf47ca2ab82fb234a5c653d8333dc4b6558403480359890e447b85bf9d919fe9f500&scene=27",
+      "new": "https://zsgjj.zhoushan.gov.cn/art/2025/3/27/art_1570144_58901497.html",
+      "status": "OK"
+    },
+    {
+      "city": "马鞍山",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/spzrd.html",
+      "new": "https://masgjj.mas.gov.cn/xxgk/openness/detail/content/69c9bf3588668823158b456e.html",
+      "status": "OK"
+    },
+    {
+      "city": "安庆",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/spmcd.html",
+      "new": "https://gjj.anqing.gov.cn/gjjgb/2004187495.html",
+      "status": "OK"
+    },
+    {
+      "city": "上饶",
+      "year": 2025,
+      "old": "https://m12333.cn/qa/sppfc.html",
+      "new": "https://gjj.zgsr.gov.cn/gjj/gsgg/202603/44e40ce1708c47a7add793c701bbe593.shtml",
+      "status": "OK"
+    },
+    {
+      "city": "襄阳",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/sprzy.html",
+      "new": "http://gjj.xiangyang.gov.cn/zwgk/gknb/t_3979503.shtml",
+      "status": "OK"
+    },
+    {
+      "city": "襄阳",
+      "year": 2024,
+      "old": "http://gjj.xiangyang.gov.cn/zwgk/gkml/ghjh/202505/t20250512_3808613.shtml",
+      "new": "http://gjj.xiangyang.gov.cn/zwgk/gknb/202503/t20250321_3781562.shtml",
+      "status": "OK(已修正)"
+    },
+    {
+      "city": "咸阳",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/spzkm.html",
+      "new": "https://zfgjj.xianyang.gov.cn/zwgk/zfxxgknb/zfgjjndbg/202603/t20260330_2072256.html",
+      "status": "OK"
+    },
+    {
+      "city": "咸阳",
+      "year": 2024,
+      "old": "https://czt.shaanxi.gov.cn/xxgk/zdgk/lvyj/qywj/202504/t20250430_3510725.html",
+      "new": "https://zfgjj.xianyang.gov.cn/zwgk/zfxxgknb/zfgjjndbg/202503/t20250331_1937667.html",
+      "status": "OK"
+    },
+    {
+      "city": "六盘水",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/spsyz.html",
+      "new": "https://gjj.gzlps.gov.cn/bmxxgk/zfxxgk_5816274/fdzdgknr/gjjndbg/202603/t20260323_89897769.html",
+      "status": "OK"
+    },
+    {
+      "city": "银川",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/sssmf.html",
+      "new": "https://www.yinchuan.gov.cn/xxgk/bmxxgkml/zfgjjglzx/xxgkml_2829/zfgjjndbg_7701/202603/t20260324_5200909.html",
+      "status": "OK"
+    },
+    {
+      "city": "潍坊",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/sprfw.html",
+      "new": "https://gjj.weifang.gov.cn/55379/1306570283.html",
+      "status": "OK"
+    },
+    {
+      "city": "潍坊",
+      "year": 2024,
+      "old": "http://www.anqiu.gov.cn/xxgk/szfgjjglzx/202504/t20250403_246422.html",
+      "new": "http://www.wfxiashan.gov.cn/XSQXXGK/gjjglzx/202503/t20250328_6489608.html",
+      "status": "OK"
+    },
+    {
+      "city": "滨州",
+      "year": 2025,
+      "old": "https://m12333.cn/policy/sprcr.html",
+      "new": "http://gjj.binzhou.gov.cn/art/2026/3/30/art_121655_10271635.html",
+      "status": "OK"
+    },
+    {
+      "city": "中山",
+      "year": 2024,
+      "old": "https://m12333.cn/policy/pyuke.html",
+      "new": "https://zszfgjj.zs.gov.cn/zwgk/ndbg/content/post_2499969.html",
+      "status": "OK"
+    },
+    {
+      "city": "清远",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/996182259_121106875",
+      "new": "https://www.gdqy.gov.cn/channel/qysgjj/xxgk/gjjnb/content/post_2127959.html",
+      "status": "MANUAL"
+    },
+    {
+      "city": "清远",
+      "year": 2024,
+      "old": "https://m12333.cn/policy/pzypz.html",
+      "new": "https://www.gdqy.gov.cn/channel/qysgjj/zcfg/zcjd/content/post_1986451.html",
+      "status": "MANUAL"
+    },
+    {
+      "city": "金华",
+      "year": 2025,
+      "old": "https://jh.news.fang.com/open/54501691.html",
+      "new": "http://zfgjj.jinhua.gov.cn/col/col1229168257/art/2026/art_bd1dd434d2b94bcb9f96d011891147ef.html",
+      "status": "OK"
+    },
+    {
+      "city": "金华",
+      "year": 2024,
+      "old": "https://m12333.cn/policy/pysum.html",
+      "new": "http://zfgjj.jinhua.gov.cn/col/col1229168257/art/2025/art_1229168257_58719287.html",
+      "status": "OK"
+    },
+    {
+      "city": "南昌",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/1001792185_121106832",
+      "new": "https://mp.weixin.qq.com/s?__biz=MzI5MDA3ODg1MA==&mid=2649426930&idx=1&sn=192cbab5a367848b4902ec42ba6065d4&chksm=f50e518083e3555f4a8ff31b76f6b708c37f3494eb476dfbff2d41aa6cef9a7b8e11bdc0da9d&scene=27",
+      "status": "OK"
+    },
+    {
+      "city": "南昌",
+      "year": 2024,
+      "old": "https://m12333.cn/policy/pyszm.html",
+      "new": "https://mp.weixin.qq.com/s?__biz=MzI5MDA3ODg1MA==&mid=2649418818&idx=1&sn=9750401571304b66d599357d12e98708&chksm=f5f20e66df9ac3d7cc0d59423f0ed6bb9d7ec362e92a209cbc187e99174b0fb706ea3efece54&scene=27",
+      "status": "OK"
+    },
+    {
+      "city": "曲靖",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/1002850734_121106902",
+      "new": "https://www.qjzfgjj.com/cms/gzdt/5384.jhtml",
+      "status": "OK"
+    },
+    {
+      "city": "曲靖",
+      "year": 2024,
+      "old": "https://www.sohu.com/a/876904731_121123789",
+      "new": "https://www.qjzfgjj.com/cms/fdzdgknr/4246.jhtml",
+      "status": "OK"
+    },
+    {
+      "city": "贵阳",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/1003608997_121106902",
+      "new": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/gggs/xxgkgsggyxgg/202603/t20260330_89927501.html",
+      "status": "OK"
+    },
+    {
+      "city": "贵阳",
+      "year": 2024,
+      "old": "https://m12333.cn/policy/pyumr.html",
+      "new": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/gggs/xxgkgsggyxgg/202503/t20250325_87264794.html",
+      "status": "OK"
+    },
+    {
+      "city": "大庆",
+      "year": 2025,
+      "old": null,
+      "new": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml",
+      "status": "OK"
+    },
+    {
+      "city": "大庆",
+      "year": 2024,
+      "old": "https://si12333.cn/qa/pamiz.html",
+      "new": "https://www.hlj.gov.cn/hlj/c108459/202509/c00_31874678.shtml",
+      "status": "OK"
+    },
+    {
+      "city": "东营",
+      "year": 2025,
+      "old": "http://www.o546.cn/news/Info.asp?ID=15873",
+      "new": "http://www.dongying.gov.cn/art/2026/3/31/art_38799_10467303.html",
+      "status": "OK"
+    },
+    {
+      "city": "东营",
+      "year": 2024,
+      "old": "https://m12333.cn/policy/pymed.html",
+      "new": "http://dygjj.dongying.gov.cn/art/2025/3/28/art_39491_10299988.html",
+      "status": "OK"
+    },
+    {
+      "city": "株洲",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/1002071302_121106908",
+      "new": "https://zjt.hunan.gov.cn/zjt/xxgk/xinxigongkaimulu/tjxx/202604/t20260427_33965308.html",
+      "status": "OK"
+    },
+    {
+      "city": "洛阳",
+      "year": 2025,
+      "old": "https://m.sohu.com/a/1019105914_121106991",
+      "new": "https://hnjs.henan.gov.cn/2026/04-30/3347933.html",
+      "status": "OK"
+    },
+    {
+      "city": "西安",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/1003640857_121106869",
+      "new": "https://zfgjj.xa.gov.cn/xxgk/gkzd/xxgknb/2038802040179187714.html",
+      "status": "OK"
+    },
+    {
+      "city": "西安",
+      "year": 2024,
+      "old": "https://czt.shaanxi.gov.cn/xxgk/zdgk/lvyj/qywj/202504/t20250430_3510725.html",
+      "new": "https://zfgjj.xa.gov.cn/xxgk/gkzd/xxgknb/1906621995329007618.html",
+      "status": "OK"
+    },
+    {
+      "city": "兰州",
+      "year": 2025,
+      "old": "https://m.sohu.com/a/1003371917_121106869",
+      "new": "https://gansu.gscn.com.cn/system/2026/04/01/013478850.shtml",
+      "status": "OK"
+    },
+    {
+      "city": "西宁",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/1004528230_121106869",
+      "new": "https://www.xnzfgjj.com/gzdt/3456.jhtml",
+      "status": "OK"
+    },
+    {
+      "city": "西宁",
+      "year": 2024,
+      "old": "https://zc.51shebao.com/detail/835616",
+      "new": "https://mp.weixin.qq.com/s/scV8EOgYzPwrgG4d5_RGlg",
+      "status": "OK"
+    },
+    {
+      "city": "鞍山",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/1003025610_121106822",
+      "new": "https://asgjj.anshan.gov.cn:1433/gzdt/1344.jhtml",
+      "status": "OK"
+    },
+    {
+      "city": "漳州",
+      "year": 2025,
+      "old": "https://m.sohu.com/a/1001984387_121106994",
+      "new": "http://gjj.zhangzhou.gov.cn/cms/html/zzszfgjjglzx/2026-03-30/1676069296.html",
+      "status": "OK"
+    },
+    {
+      "city": "莆田",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/1003013922_121106994",
+      "new": "https://www.putian.gov.cn/zwgk/ptdt/ptyw/202603/t20260330_2209645.htm",
+      "status": "OK"
+    },
+    {
+      "city": "宁德",
+      "year": 2025,
+      "old": "https://www.sohu.com/a/1002758625_121106994",
+      "new": "https://gjj.ningde.gov.cn/zcfg/ndgb/zfgjjndbg/202603/t20260327_2449354.htm",
+      "status": "OK"
+    }
+  ],
+  "unchanged": [
+    [
+      "扬州",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "盐城",
+      2025,
+      "Excel 未提供链接"
+    ],
+    [
+      "盐城",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "绍兴",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "台州",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "马鞍山",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "安庆",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "上饶",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "泸州",
+      2025,
+      "Excel 未提供链接"
+    ],
+    [
+      "泸州",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "丽江",
+      2025,
+      "Excel 未提供链接"
+    ],
+    [
+      "丽江",
+      2024,
+      "Excel 未提供链接"
+    ],
+    [
+      "六盘水",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "银川",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "滨州",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "石河子",
+      2025,
+      "Excel 未提供链接"
+    ],
+    [
+      "石河子",
+      2024,
+      "Excel 未提供链接"
+    ],
+    [
+      "中山",
+      2025,
+      "与现有链接一致"
+    ],
+    [
+      "九江",
+      2025,
+      "与现有链接一致"
+    ],
+    [
+      "九江",
+      2024,
+      "Excel 未提供链接"
+    ],
+    [
+      "乐山",
+      2025,
+      "与现有链接一致"
+    ],
+    [
+      "乐山",
+      2024,
+      "Excel 未提供链接"
+    ],
+    [
+      "朔州",
+      2025,
+      "Excel 未提供链接"
+    ],
+    [
+      "朔州",
+      2024,
+      "Excel 未提供链接"
+    ],
+    [
+      "泰州",
+      2025,
+      "Excel 未提供链接"
+    ],
+    [
+      "泰州",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "株洲",
+      2024,
+      "Excel 未提供链接"
+    ],
+    [
+      "洛阳",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "兰州",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "鞍山",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "漳州",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "莆田",
+      2024,
+      "与现有链接一致"
+    ],
+    [
+      "宁德",
+      2024,
+      "与现有链接一致"
+    ]
+  ],
+  "skipped": [],
+  "manual": [
+    [
+      "清远",
+      2025,
+      "清远市政府站（www.gdqy.gov.cn）启用 JS 挑战，自动化核验返回 412，需浏览器人工确认。"
+    ],
+    [
+      "清远",
+      2024,
+      "清远市政府站（www.gdqy.gov.cn）启用 JS 挑战，自动化核验返回 405，需浏览器人工确认。"
+    ]
+  ]
+}
