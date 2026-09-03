@@ -23488,7 +23488,7 @@
    "city": "安阳",
    "province": "河南省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://gjj.anyang.gov.cn",
    "deposit": {
     "base_upper": 19903,
     "base_lower": 2350,
@@ -25915,7 +25915,7 @@
    "city": "榆林",
    "province": "陕西",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "http://zfgjj.yl.gov.cn",
    "deposit": {
     "base_upper": 32697,
     "base_lower": 2376,
@@ -27183,7 +27183,7 @@
    "city": "曲靖",
    "province": "云南",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://www.qjzfgjj.com",
    "deposit": {
     "base_upper": 25893,
     "base_lower": 2020,
@@ -28923,7 +28923,7 @@
    "city": "六盘水",
    "province": "贵州",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "http://gjj.gzlps.gov.cn",
    "deposit": {
     "base_upper": 21774,
     "base_lower": 1980,
@@ -29998,7 +29998,7 @@
    "city": "西宁",
    "province": "青海",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "https://www.xnzfgjj.com",
    "deposit": {
     "base_upper": 31995,
     "base_lower": 2080,
@@ -39192,7 +39192,7 @@
    "city": "青岛",
    "province": "山东省",
    "last_updated": "2026-08-25",
-   "official_site": null,
+   "official_site": "http://www.qdgjj.com",
    "deposit": {
     "base_upper": 34342.75,
     "base_lower": 2400,
