@@ -668,11 +668,10 @@ function exportOvData() {
   document.body.appendChild(a); a.click(); a.remove();
   toast(`已导出 ${rows.length} 城运行数据（含合计）`);
 }
-function featCell(f, k) {
-  /** 特征单元格：✓/◐/✗/— + 依据提示 */
+function featCell(f, k, city, label) {
+  /** 特征单元格：✓/◐/✗/— 色块；悬停弹政策明细浮层（状态+一句话描述+官方来源），点击直达政策原文（与地区分类矩阵同款交互，由 bindMatrixTips 统一接管） */
   const ft = (f || {})[k] || { st: 'u', txt: '' };
-  const basis = ft.txt && ft.txt !== '待采集' ? ` title="依据：${esc(ft.txt)}"` : '';
-  return `<td${basis}>${stHtml(ft.st)}</td>`;
+  return `<td class="mx-cell${ft.url ? ' has-src' : ''}" data-city="${esc(city || '')}" data-dim="${k}" data-label="${esc(label || k)}"><span class="st st-${ft.st}">${ST_TXT[ft.st]}</span></td>`;
 }
 /* ---- 全国性法规详情卡（住房公积金管理条例等，来自数据库 national_regulations 字段） ---- */
 function natRegCardHtml() {
@@ -708,7 +707,7 @@ function renderTables() {
   const el = $('#hq-tables');
   el.innerHTML = `<div class="panel">
     <h3>🌐 全国政策及数据总览 · 各地现行政策与年度运行数据横向对照 <span class="badge b-city">${CITIES.length} 城</span></h3>
-    <div class="h-sub">按缴存 / 提取 / 贷款 / 运行数据四模块横向对照各地差异点；点击城市名进入分行视图，「依据」列徽章直达官方原文；数值「待核实」表示官方未公开，以备注与原文为准</div>
+    <div class="h-sub">按缴存 / 提取 / 贷款 / 运行数据四模块横向对照各地差异点；点击城市名进入分行视图，「依据」列徽章直达官方原文；「首付直付 / 绿色建筑上浮 / 二孩上浮」状态色块悬停可见政策明细与官方来源、点击直达政策原文；数值「待核实」表示官方未公开，以备注与原文为准</div>
     ${natRegCardHtml()}
     <div class="filters" style="row-gap:8px">
       <div class="seg" id="ov-seg" style="display:flex;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden">
@@ -774,7 +773,7 @@ function renderTables() {
         <td><div class="cl" title="${esc((w.conditions || []).join('；'))}">${esc(clip((w.conditions || []).join('、'), 90))}</div></td>
         <td><div class="cl" title="${esc(w.rent_limit || '')}">${esc(clip(w.rent_limit, 60))}</div></td>
         <td><div class="cl">${esc(multi)}</div></td>
-        ${featCell(f, 'first_pay')}
+        ${featCell(f, 'first_pay', c.city, '首付直付')}
         <td>${srcBadges(w.sources)}</td></tr>`;
     }
     html += '</tbody></table></div></div>';
@@ -789,7 +788,7 @@ function renderTables() {
       const l = c.loan || {}; const f = FEAT[c.city] || {};
       const lText = [l.conditions, l.note, l.max_single, l.max_family].filter(Boolean).join(' ');
       const mult = pick(lText, ['倍', '余额'], 60) || '待核实';
-      const upCell = k => { const ft = f[k] || { st: 'u', txt: '' }; return `<td${ft.txt && ft.txt !== '待采集' ? ` title="依据：${esc(ft.txt)}"` : ''}>${stHtml(ft.st)}</td>`; };
+      const upCell = k => { const lb = (F_KEYS.loan.find(x => x[0] === k) || [k, k])[1]; return featCell(f, k, c.city, lb); };
       const amtTip = v => esc((v || '') + (l.note ? ' ｜ 备注：' + l.note : ''));
       html += `<tr><td class="city" onclick="gotoBranch('${c.city}')">${c.city}</td>
         <td><div class="cl" title="${amtTip(l.max_single)}">${esc(clip(l.max_single, 60))}</div></td>
