@@ -234,8 +234,8 @@ function extractFeatures(c) {
   const flexM = dText.match(/灵活就业[^；;。]*/);
   r = judge(dText, ['灵活就业'], hasD, flexM ? flexM[0] : '灵活就业人员自愿缴存');
   set('flex_dep', r[0], r[1]);
-  // 缓缴政策（v1.3.1+：读取每城 deferral 结构化字段：supported/legal_basis/max_period/sources）
-  const df = c.deferral || {};
+  // 缓缴政策（v1.5.0+ 权威源 deposit.deferred_payment；旧顶层 c.deferral 仅作回退）
+  const df = (c.deposit && c.deposit.deferred_payment) || c.deferral || {};
   if (df.supported === true) set('defer', 'y', clip((df.legal_basis || '支持缓缴') + (df.max_period ? '｜期限：' + df.max_period : ''), 170));
   else if (df.supported === false) set('defer', 'n', clip(df.legal_basis || '不支持缓缴', 120));
   else set('defer', 'u', '待采集');
@@ -607,9 +607,12 @@ function deferPeriod(mp) {
   if (!t) return { short: '待核实', full: '' };
   const unclear = /未检索到|未明确|未见明文|未注明|未单列|未在检索结果中明确/.test(t) && !/不超过|不得超过|最长/.test(t);
   if (unclear) return { short: '待核实', full: t };
-  if (/两年|24\s*个?月|不得超过2年|不超过2年|最长.{0,4}2年/.test(t)) return { short: '≤2年', full: t };
+  /* 注意：政策年份（2021年 / 2022年）里的数字不是期限。
+   * 「最长至2022年12月31日」曾被旧写法 最长.{0,4}2年 误判成「≤2年」（杭州踩过），
+   * 故用 (?<!\d) 要求「2年/1年」前面不是数字。 */
+  if (/两年|24\s*个?月|(?:不超过|不得超过|最长)[^，。；]{0,4}(?<!\d)2\s*年/.test(t)) return { short: '≤2年', full: t };
   if (/12\s*个月/.test(t) && !/12\s*个?月31日|至.{0,8}12\s*月/.test(t)) return { short: '≤12个月', full: t };
-  if (/一年|1\s*年|一个住房公积金(结算)?年度|一个公积金年度|按缴存年度申请/.test(t)) return { short: '≤1年', full: t };
+  if (/一年|(?<!\d)1\s*年|一个住房公积金(结算)?年度|一个公积金年度|按缴存年度申请/.test(t)) return { short: '≤1年', full: t };
   const m = t.match(/(\d+)\s*个?月/);
   if (m && !/\d{4}\s*年/.test(t.slice(0, t.indexOf(m[0])))) return { short: `≤${m[1]}个月`, full: t };
   if (/半年|6\s*个?月/.test(t) && !/2022年6月/.test(t)) return { short: '≤6个月', full: t };
@@ -668,9 +671,15 @@ function exportOvData() {
   document.body.appendChild(a); a.click(); a.remove();
   toast(`已导出 ${rows.length} 城运行数据（含合计）`);
 }
-function featCell(f, k) {
-  /** 特征单元格：✓/◐/✗/— + 依据提示 */
+/* 特征键 → 中文维度名（由 F_KEYS 反查，供总览表 mx-cell 使用） */
+const F_LABEL = {};
+for (const sec of Object.values(F_KEYS)) for (const [k, label] of sec) F_LABEL[k] = label;
+function featCell(f, k, city) {
+  /** 特征单元格：✓/◐/✗/—；传 city 时输出 mx-cell（与地区分类矩阵同款悬停弹窗+点击跳转） */
   const ft = (f || {})[k] || { st: 'u', txt: '' };
+  if (city) {
+    return `<td class="mx-cell${ft.url ? ' has-src' : ''}" data-city="${esc(city)}" data-dim="${k}" data-label="${esc(F_LABEL[k] || k)}"><span class="st st-${ft.st}">${ST_TXT[ft.st]}</span></td>`;
+  }
   const basis = ft.txt && ft.txt !== '待采集' ? ` title="依据：${esc(ft.txt)}"` : '';
   return `<td${basis}>${stHtml(ft.st)}</td>`;
 }
@@ -746,8 +755,8 @@ function renderTables() {
       let flex = '';
       const rm = ((d.ratio || '') + '；' + (d.note || '')).match(/灵活就业[^；;。]*/);
       if (rm) flex = clip(rm[0], 48);
-      // 允许缓缴年限：来自 deferral 结构化字段（v1.3.1+）
-      const df2 = c.deferral || {};
+      // 允许缓缴年限：来自 deposit.deferred_payment.max_period（v1.5.0+ 权威源；旧 c.deferral 仅回退）
+      const df2 = (c.deposit && c.deposit.deferred_payment) || c.deferral || {};
       const dp = deferPeriod(df2.max_period);
       const dCell = df2.supported === false
         ? '<span style="color:var(--risk)">不支持</span>'
@@ -774,7 +783,7 @@ function renderTables() {
         <td><div class="cl" title="${esc((w.conditions || []).join('；'))}">${esc(clip((w.conditions || []).join('、'), 90))}</div></td>
         <td><div class="cl" title="${esc(w.rent_limit || '')}">${esc(clip(w.rent_limit, 60))}</div></td>
         <td><div class="cl">${esc(multi)}</div></td>
-        ${featCell(f, 'first_pay')}
+        ${featCell(f, 'first_pay', c.city)}
         <td>${srcBadges(w.sources)}</td></tr>`;
     }
     html += '</tbody></table></div></div>';
@@ -789,7 +798,7 @@ function renderTables() {
       const l = c.loan || {}; const f = FEAT[c.city] || {};
       const lText = [l.conditions, l.note, l.max_single, l.max_family].filter(Boolean).join(' ');
       const mult = pick(lText, ['倍', '余额'], 60) || '待核实';
-      const upCell = k => { const ft = f[k] || { st: 'u', txt: '' }; return `<td${ft.txt && ft.txt !== '待采集' ? ` title="依据：${esc(ft.txt)}"` : ''}>${stHtml(ft.st)}</td>`; };
+      const upCell = k => featCell(f, k, c.city);
       const amtTip = v => esc((v || '') + (l.note ? ' ｜ 备注：' + l.note : ''));
       html += `<tr><td class="city" onclick="gotoBranch('${c.city}')">${c.city}</td>
         <td><div class="cl" title="${amtTip(l.max_single)}">${esc(clip(l.max_single, 60))}</div></td>
