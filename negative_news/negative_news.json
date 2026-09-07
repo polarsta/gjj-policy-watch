@@ -2,10 +2,10 @@
   "meta": {
     "title": "住房公积金负面新闻与舆情汇编",
     "dataset": "negative_news",
-    "generated_at": "2026-09-01",
-    "time_range": "2025-09-01 ~ 2026-09-01（近12个月）",
-    "total": 45,
-    "link_verified": "45/45",
+    "generated_at": "2026-09-07",
+    "time_range": "2025-09-01 ~ 2026-09-07（近12个月；2026-09-07 巡检补录 2026-08-31~09-07 新增条目）",
+    "total": 63,
+    "link_verified": "63/63",
     "source_priority": [
       "1. 政府网站公告（含公积金中心通告、审计/巡察/纪检通报、政务信箱）",
       "2. 中央及地方官方媒体（新华社、央视网、工人日报、重庆日报、中国经济网等）",
@@ -52,7 +52,7 @@
       "source_url": "https://www.bijie.gov.cn/bm/bjszfgjjglzx/dt/bmdt/202608/t20260831_90797441.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-002",
@@ -69,7 +69,7 @@
       "source_url": "https://www.wengan.gov.cn/gk/zdlyxx/zfycxjs/zfgjjjg/202606/t20260601_90231452.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-003",
@@ -86,7 +86,7 @@
       "source_url": "https://gjj.anqing.gov.cn/xxfb/tzgg/2004191157.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-004",
@@ -103,7 +103,7 @@
       "source_url": "http://gx.news.cn/20260119/52468b011bef4f1794704088295345f2/c.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-005",
@@ -120,7 +120,7 @@
       "source_url": "http://www.fenyong.gov.cn/gkmlpt/content/2/2180/post_2180883.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-006",
@@ -137,7 +137,7 @@
       "source_url": "https://www.zhanjiang.gov.cn/zjsfw/bmdh/zfgjj/zwgk/zfgg/content/mpost_2197675.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-007",
@@ -154,7 +154,7 @@
       "source_url": "https://www.toutiao.com/article/7654779330710471168",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-008",
@@ -171,7 +171,7 @@
       "source_url": "https://www.changshatx.jcy.gov.cn/tzgg/202604/t20260402_7668300.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-009",
@@ -188,7 +188,7 @@
       "source_url": "https://news.qq.com/rain/a/20260724A0C91V00",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-010",
@@ -205,7 +205,7 @@
       "source_url": "https://big5.cctv.com/gate/big5/news.cctv.com/2026/05/19/ARTIYhBqsRGhTjnBWrpRbca4260519.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-011",
@@ -222,7 +222,7 @@
       "source_url": "https://new.qq.com/rain/a/20260710A061N600?refer=cp_1009",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-012",
@@ -239,7 +239,7 @@
       "source_url": "https://www.jwview.com/jingwei/html/01-18/654793.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-013",
@@ -256,7 +256,7 @@
       "source_url": "https://news.qq.com/rain/a/20260819A0DZQS00",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-014",
@@ -273,7 +273,7 @@
       "source_url": "https://m.thepaper.cn/newsDetail_forward_33337084",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-015",
@@ -290,7 +290,7 @@
       "source_url": "https://big5.cctv.com/gate/big5/news.cctv.cn/2026/06/11/ARTINASBmjhS7q8uq4xIPO5k260611.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-016",
@@ -307,7 +307,7 @@
       "source_url": "https://www.toutiao.com/article/7650014599688847898",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-017",
@@ -324,7 +324,7 @@
       "source_url": "https://news.shufe.edu.cn/f5/10/c13908a259344/page.htm",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-018",
@@ -341,7 +341,7 @@
       "source_url": "https://www.cqrb.cn/caijingzonghe/2026-08-02/2740940_pc.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-019",
@@ -358,7 +358,7 @@
       "source_url": "https://ifnews.com/news.html?aid=819968",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-020",
@@ -375,7 +375,7 @@
       "source_url": "https://www.ce.cn/xwzx/gnsz/gdxw/202604/t20260425_2929473.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-021",
@@ -392,7 +392,7 @@
       "source_url": "http://www.gzdis.gov.cn/scdc/xcjjyxgb/202601/t20260113_89295212.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-022",
@@ -409,7 +409,7 @@
       "source_url": "https://www.jinantimes.com.cn/news-172-5233956.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-023",
@@ -426,7 +426,7 @@
       "source_url": "https://hlwjjd.hunan.gov.cn/portal/portalIndex/content?groupKey=430400000000&newsId=4304001517120250267701249&type=superviseNews",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-024",
@@ -443,7 +443,7 @@
       "source_url": "https://www.chaozhou.gov.cn/czsjj/gkmlpt/content/3/3996/post_3996724.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-025",
@@ -460,7 +460,7 @@
       "source_url": "https://www.nxgy.gov.cn/zwgk/zfxxgkml/czyjsgk_27316/202605/t20260522_5247406.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-026",
@@ -477,7 +477,7 @@
       "source_url": "http://yhlz.yuhuan.gov.cn/col/col1632016/art/2026/art_3cbb7d923be44a1989b5efe8c1a71b21.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-027",
@@ -494,7 +494,7 @@
       "source_url": "https://lysjcj.longyan.gov.cn/xxgk/xcgz/202608/t20260826_2309735.htm",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-028",
@@ -511,7 +511,7 @@
       "source_url": "https://mzj.hlbe.gov.cn/News/show/1423716.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-029",
@@ -528,7 +528,7 @@
       "source_url": "https://www.nanchong.gov.cn/xwdt/gsgg/t_2356521.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-030",
@@ -545,7 +545,7 @@
       "source_url": "https://jyh.huangshi.gov.cn/pub/hszfgjj/xwdt/tzgg/202606/t20260617_1335858.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-031",
@@ -562,7 +562,7 @@
       "source_url": "https://gjj.zhuhai.gov.cn/gkmlpt/content/3/3913/post_3913194.html?jump=true",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-032",
@@ -579,7 +579,7 @@
       "source_url": "https://zfgjj.hanzhong.gov.cn/hzgjj/tzgg/202607/20270224397a426392b1e32a4cc5f149.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-033",
@@ -596,7 +596,7 @@
       "source_url": "http://zfgjj.gxhz.gov.cn/tzgg/t28018932.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-034",
@@ -613,7 +613,7 @@
       "source_url": "https://gjj.gz.gov.cn/gg/tzgg/content/post_10648388.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-035",
@@ -630,7 +630,7 @@
       "source_url": "https://www.jxxz.gov.cn/jxxz/c120610/202605/9b7432a89d6c4d7b9d69e0ff8e5e7308.shtml",
       "link_status": "200（人工核验：江西政务站点对自动化请求返回 412，浏览器可正常打开）",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-036",
@@ -647,7 +647,7 @@
       "source_url": "http://www.baise.gov.cn/ggfw/zfbz/wyk/zfgjj/t27228875.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-037",
@@ -664,7 +664,7 @@
       "source_url": "https://www.piyao.org.cn/20260604/82557f2e5fc747fb880b7c68f8d1c33d/c.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-038",
@@ -681,7 +681,7 @@
       "source_url": "http://hancheng.gov.cn/appeal/view.jsp?model_id=1&sq_id=30184",
       "link_status": "200（人工核验：已抓取页面全文，含“住房公积金”“限号”等原文表述）",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-039",
@@ -698,7 +698,7 @@
       "source_url": "https://www.jnnews.tv/app/politics/content/detail?id=366248",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-040",
@@ -715,7 +715,7 @@
       "source_url": "https://www.nanyang.gov.cn/2026/08-20/1427949.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-041",
@@ -732,7 +732,7 @@
       "source_url": "https://www.foshan.gov.cn/zsk?kCode=AFS00015467&parent=",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-042",
@@ -749,7 +749,7 @@
       "source_url": "http://zfgjj.gxhz.gov.cn/xxgk/fdzdgknr/tjxx/t27907787.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-043",
@@ -766,7 +766,7 @@
       "source_url": "http://zfgjj.gxhz.gov.cn/xxgk/fdzdgknr/tjxx/t27907787.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-044",
@@ -783,7 +783,7 @@
       "source_url": "https://www.zjxc.gov.cn/col/col1229786103/art/2026/art_562442463021493ba4548c70e45f716c.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
     },
     {
       "id": "NEG-045",
@@ -800,7 +800,313 @@
       "source_url": "https://xjgjj.xjjs.gov.cn/info/1115/25811.htm",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-01"
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-046",
+      "category": "骗提骗贷打击与通报",
+      "title": "邢台：冯某某微信群发“代办提取公积金”广告，虚假诉讼套取77万余元被批捕",
+      "date": "2026-09-03",
+      "region": "河北·邢台",
+      "subject": "邢台经济开发区人民检察院",
+      "summary": "2025年至2026年间，冯某某在微信群发布可代办提取住房公积金的广告，针对不符合提取条件却有迫切需求的人员，通过制作虚假借条、收据、伪造转账记录等方式捏造虚假借贷关系，让客户充当被告、自己或安排他人充当原告，先后在邢台市信都区、襄都区、经济开发区人民法院提起诉讼，再凭法院出具的民事调解书申请强制执行划转客户公积金账户余额，事后抽取12%至41%的费用。目前该案已查证6起，涉案金额共计77万余元，冯某某非法获利15万余元，因涉嫌虚假诉讼罪被批准逮捕。",
+      "impact": "公积金套现黑产已从“伪造材料骗提”升级为“借司法程序套现”，检察机关明确提示：即便套取本人名下公积金同样构成刑事犯罪，参与串通的全部人员均须承担刑事责任。贷前审查应关注客户近亲属及关联人之间的短期诉讼与调解书执行划扣记录。",
+      "severity": "高",
+      "source_type": "官方媒体",
+      "source_name": "法治网/法治日报",
+      "source_url": "https://www.legaldaily.com.cn/index_article/content/2026-09/03/content_9451495.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-047",
+      "category": "骗提骗贷打击与通报",
+      "title": "济源：三人虚构4万元债务申请支付令套取公积金，构成虚假诉讼罪被判拘役并处罚金",
+      "date": "2026-09-01",
+      "region": "河南·济源",
+      "subject": "济源市人民法院",
+      "summary": "被告人周某名下公积金账户有资金但不满足法定提取条件，遂与郭某、石某共谋，虚构4万元民间借贷债务、伪造虚假借条，制造周某拖欠石某借款的假象；石某持伪造借条向法院申请支付令，并通过执行程序扣划周某公积金账户资金4万余元，款项到账后按事前约定回流至周某。线索核查后虚假诉讼事实败露，济源市人民法院认定三人恶意串通、以捏造的事实提起民事诉讼构成虚假诉讼罪，依法分别判处拘役三个月至五个月不等并处罚金，套取的公积金资金依法追缴。",
+      "impact": "法院专门回应“套取的是自己账户的公积金、没有损害别人利益就不算犯罪”的认知误区，支付令与强制执行正成为新的套现通道，对银行核验客户涉诉与被执行信息提出更高要求。",
+      "severity": "高",
+      "source_type": "政府网站",
+      "source_name": "济源市人民法院（河南法院网）",
+      "source_url": "https://hnjysfy.hncourt.gov.cn/public/detail.php?id=4101",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-048",
+      "category": "骗提骗贷打击与通报",
+      "title": "广德：现场劝阻骗提6笔95.88万元，稽核回看追回历史违规资金7.43万元",
+      "date": "2026-09-02",
+      "region": "安徽·宣城（广德市）",
+      "subject": "宣城市住房公积金管理中心广德分中心",
+      "summary": "广德分中心通报今年以来风控成效：聚焦虚假材料识别、异常业务甄别开展常态化培训，本年度现场劝阻骗提业务6笔、涉及金额95.88万元；对历年已办提取、贷款业务开展复盘核查，累计发现历史违规业务2笔、追回违规资金7.43万元；完成3660条问题数据整改优化；逾期贷款累计催收409人次、追回逾期资金64万元。",
+      "impact": "在“前端劝阻＋事后稽核＋数据治理＋逾期压降”四线并行的风控体系下，历史存量业务回看已成为常态化动作，早年办理的提取与贷款同样可能被追溯。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "宣城市住房公积金管理中心",
+      "source_url": "https://gjj.xuancheng.gov.cn/News/show/1728021.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-049",
+      "category": "骗提骗贷打击与通报",
+      "title": "镇江丹徒：窗口识破职工串通中介虚构二手房交易骗提，职工撤件终止办理",
+      "date": "2026-09-04",
+      "region": "江苏·镇江（丹徒区）",
+      "subject": "镇江市住房公积金管理中心丹徒管理部",
+      "summary": "一名缴存职工到柜台申请办理二手房购房提取公积金业务，所提交申报材料形式要件齐全、表面符合提取规定；窗口人员审核中发现交易行为存在异常迹象、高度疑似虚构交易，当即依规启动深度核查程序并留置申报材料展开比对与背景核实。核查期间该职工因不具备真实购房事实主动提出撤回材料、放弃提取申请，管理部依据业务规程终止办理。",
+      "impact": "二手房购房提取仍是中介包装骗提的高发场景，中心已将中介代办、虚假交易列为常态化重点盯防对象，窗口“材料齐全即放行”的惯性正在被打破。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "镇江市住房公积金管理中心",
+      "source_url": "https://gjj.zhenjiang.gov.cn/zxxx/xwdt/202609/0fdbaa5af3874bdbb177639fa00e3cd8.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-050",
+      "category": "骗提骗贷打击与通报",
+      "title": "中山二区检：违规套取公积金须全额退回、3年禁提禁贷，情节严重者追究刑责",
+      "date": "2026-09-01",
+      "region": "广东·中山",
+      "subject": "中山市第二市区人民检察院",
+      "summary": "中山市第二市区人民检察院“香山检声”栏目聚焦住房公积金提取背后的各类骗局，结合新修订《住房公积金管理条例》提示：以欺诈、伪造证明材料等手段违法提取住房公积金的，由公积金中心责令限期退回，3年内不得提取或使用公积金贷款；违法获得公积金贷款的，责令限期返还贷款资金，5年内不得提取或贷款；情节严重者还将承担刑事法律责任，并提示群众遭遇骗局第一时间报案、可通过12309检察服务热线反映线索。",
+      "impact": "新条例9月20日施行前后，各地政法机关密集开展“依规取金”普法宣传，骗提骗贷的刑事与失信双重威慑进一步强化。",
+      "severity": "中",
+      "source_type": "政务新媒体",
+      "source_name": "中山二区检（中山市人民检察院官方发布）",
+      "source_url": "https://www.toutiao.com/article/7680553311212274212",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-051",
+      "category": "服务与运营负面事件",
+      "title": "淄博：综合服务平台国产化适配升级，9月4日17:00至9月6日12:00暂停全部线上业务",
+      "date": "2026-09-03",
+      "region": "山东·淄博",
+      "subject": "淄博市住房公积金管理中心",
+      "summary": "中心公告定于9月4日对住房公积金综合服务平台开展国产化适配升级，自2026年9月4日17:00至2026年9月6日12:00，网上服务厅、微信公众号、“爱山东”APP、支付宝等线上服务渠道的业务办理及查询功能临时关闭，9月6日12:00起各项业务逐步恢复正常办理。",
+      "impact": "全国多地公积金系统进入信创改造与基础设施迁移窗口期，线上渠道短时中断将阶段性成为常态，需提前提示客户错峰办理。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "淄博市住房公积金管理中心",
+      "source_url": "https://zfgjj.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13083_n_1605682382.0377/doc_6a98bd5358a37d2c69b798d6.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-052",
+      "category": "服务与运营负面事件",
+      "title": "临汾：系统优化升级暂停柜台及全渠道业务，9月5日零时至9月7日9:00停办",
+      "date": "2026-09-04",
+      "region": "山西·临汾",
+      "subject": "临汾市住房公积金管理中心",
+      "summary": "中心通告因业务系统优化升级，自2026年9月5日零时起暂停柜台、网上服务大厅、“临汾公积金”微信服务号、全国住房公积金小程序等渠道业务办理，2026年9月7日9:00起恢复正常；期间暂停贷款还款批量扣款业务，由此造成的未还款情况不记入个人征信。",
+      "impact": "柜台与线上渠道同步停办影响面更大，中心以“不记入征信”对冲客户顾虑，但仍会造成还款与提取的时间挤压。注：该通告未在官网通知公告栏目同步发布，本条以临汾日报社所属临汾新闻网转载为准。",
+      "severity": "中",
+      "source_type": "其他媒体",
+      "source_name": "临汾新闻网（今日头条转载）",
+      "source_url": "https://www.toutiao.com/article/7681960050210751010",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-053",
+      "category": "服务与运营负面事件",
+      "title": "揭阳：系统基础设施迁移维护，9月5日8:00至9月6日18:00暂停全市线上业务",
+      "date": "2026-09-04",
+      "region": "广东·揭阳",
+      "subject": "揭阳市住房公积金管理中心",
+      "summary": "中心通知因住房公积金系统于2026年9月5日8:00至2026年9月6日18:00进行基础设施迁移维护，期间将暂停受理全市的公积金线上业务办理服务，请缴存单位与缴存人提前做好安排。",
+      "impact": "与淄博、临汾等地同期停办叠加，反映各地中心在9月20日新条例施行前集中进行系统改造，业务连续性风险阶段性上升。",
+      "severity": "中",
+      "source_type": "其他媒体",
+      "source_name": "揭阳市住房公积金管理中心（搜狐转载）",
+      "source_url": "https://www.sohu.com/a/1071935497_121106875",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-054",
+      "category": "服务与运营负面事件",
+      "title": "乐山中心警示：推销“公积金低息贷款”“内部渠道加急办理”均属骗局",
+      "date": "2026-09-04",
+      "region": "四川·乐山",
+      "subject": "乐山市住房公积金管理中心",
+      "summary": "多名群众反映有不明个人及社会机构通过电话、短信频繁推销“公积金低息贷款”“内部渠道加急办理”“专属优惠信贷”等服务。中心严正声明：所有业务从未授权任何第三方机构或个人代为办理，公积金贷款、提取等业务不收取中介费、手续费、服务费等任何费用，仅通过线下服务窗口和官方线上业务平台办理；提醒群众拒接推销、绝不转账、官方核实、及时报警。",
+      "impact": "借公积金之名诱导转办非正规贷款并收取高额代办费的诈骗在多地抬头，相关人员根本无法办理公积金贷款，客户经理需主动向客户提示官方渠道唯一性。",
+      "severity": "中",
+      "source_type": "官方媒体",
+      "source_name": "乐山新闻网",
+      "source_url": "https://www.leshan.cn/html/113D9C4BB2925A7A/2026/09/04/view_BD7FE2D0FD50E02D.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-055",
+      "category": "服务与运营负面事件",
+      "title": "海南州公积金辟谣四条传言：离职不清零、账户照常计息、中介“包提取”全是骗局",
+      "date": "2026-09-03",
+      "region": "青海·海南州（共和）",
+      "subject": "海南州住房公积金管理中心",
+      "summary": "中心针对流传较广的四条传言逐一辟谣：不买房也可办理租房提取、偿还商贷本息提取、物业费提取，二孩三孩家庭还可提高租房提取额度；离职后账户仅转为封存状态，本金利息全部保留，停缴满6个月才可申请销户提取；账户余额每年6月30日统一结息并计入本金；所谓“内部渠道、包提取、不用材料”基本都是诱导伪造租房、购房材料骗提，违规者资金全额退回且3年内禁止办理提取与贷款。",
+      "impact": "新条例新增装修、物业费提取后，缴存人对提取条件的误解增多，官方辟谣与中介“包提取”广告的博弈将成为9月20日新政落地后的常态。",
+      "severity": "低",
+      "source_type": "其他媒体",
+      "source_name": "海南州住房公积金（搜狐转载）",
+      "source_url": "https://m.sohu.com/a/1071472471_121106869",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-056",
+      "category": "服务与运营负面事件",
+      "title": "六盘水：发布9月逾期贷款催收公告（第1期），逾期三期及以上借款人被公开点名",
+      "date": "2026-09-05",
+      "region": "贵州·六盘水",
+      "subject": "六盘水市住房公积金管理中心",
+      "summary": "中心发布2026年9月逾期贷款催收公告（第1期），公告名单所列人员均未按时归还个人住房公积金贷款达三期及以上；要求逾期职工在公告后7日内主动与中心或贷款受委托银行联系，核对和归还所欠贷款本息，规定时间内逾期不还的将通过一切法律手段催收，除对信誉产生不良影响外还由借款人承担一切法律后果。",
+      "impact": "月度公开催收名单已成为部分地市中心处置贷后逾期的常规动作，逾期压力显性化并向受托银行传导。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "六盘水市住房公积金管理中心",
+      "source_url": "https://gjj.gzlps.gov.cn/yqgg/202609/t20260905_90823459.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-057",
+      "category": "违纪违法与监管问责",
+      "title": "杭州：公开责令限期纠正决定书，浙江卓越消防少缴3名职工公积金9.29万元",
+      "date": "2026-09-03",
+      "region": "浙江·杭州",
+      "subject": "杭州住房公积金管理中心",
+      "summary": "中心发布《责令限期纠正违法行为决定书》（杭公积金责〔2026〕011167号）：浙江卓越消防技术有限公司在录用俞施唯等3人后未按月足额缴存住房公积金，少缴合计92910元，违反《住房公积金管理条例》第十六条、第十七条、第二十条规定；经事先告知后该单位在期限内未提出陈述申辩且未履行整改义务，责令自决定书送达之日起30日内补缴，逾期不缴将申请人民法院强制执行，并依法将违法信息向社会公开、纳入杭州市征信系统。",
+      "impact": "杭州中心按决定书逐份公开企业违法信息，形成“公示＋征信＋强制执行”的组合约束，企业补缴完成前的合规状况应纳入授信尽调关注。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "杭州住房公积金管理中心",
+      "source_url": "https://gjj.hangzhou.gov.cn/col/col1229287674/art/2026/art_22f089408f4b49ef86f87ba93217a7bf.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-058",
+      "category": "违纪违法与监管问责",
+      "title": "武汉：向企业公告送达行政执法调查通知书，涉嫌不办缴存登记、逾期不缴或少缴",
+      "date": "2026-09-02",
+      "region": "湖北·武汉",
+      "subject": "武汉住房公积金管理中心",
+      "summary": "中心公告向武汉金驰汽车服务有限公司送达《行政执法调查通知书》，指出据职工投诉举报或中心检查，该公司存在不办理住房公积金缴存登记或不为本单位职工办理账户设立手续、逾期不缴或者少缴住房公积金等违反《住房公积金管理条例》的行为；因其他送达方式均无法送达，依法公告送达，公告自发出之日起经过30日即视为送达，企业可在送达后5个工作日内提出异议。",
+      "impact": "对失联企业采用公告送达，意味着公积金行政执法覆盖面扩大到“找不到人”的中小微企业，欠缴追责的存量风险持续释放。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "武汉住房公积金管理中心",
+      "source_url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zfggsd/202609/t20260902_2842426.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-059",
+      "category": "违纪违法与监管问责",
+      "title": "洛阳：公告送达责令限期缴存通知书，物管公司未为职工缴存近9年公积金1.31万元",
+      "date": "2026-09-07",
+      "region": "河南·洛阳",
+      "subject": "洛阳市住房公积金管理中心",
+      "summary": "中心公告向洛阳丽康物业管理有限公司送达《责令限期缴存通知书》（洛房金责〔2026〕第01-076号）：该公司未按规定为职工沈保英缴存2015年6月至2024年8月期间的住房公积金单位部分13117元，违反《住房公积金管理条例》第二十条第一款，责令自收到通知书之日起15日内补缴，逾期不履行将申请人民法院强制执行。",
+      "impact": "追溯期长达9年的欠缴案件仍被立案追缴，说明公积金补缴不受短期时效限制，企业历史用工合规风险需重新评估。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "洛阳市住房公积金管理中心",
+      "source_url": "https://zfgjj.ly.gov.cn/2026/09-07/1083586.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-060",
+      "category": "违纪违法与监管问责",
+      "title": "昆明：公开责令限期缴存决定书，钢结构企业不为职工缴存14年余公积金3.30万元",
+      "date": "2026-09-02",
+      "region": "云南·昆明",
+      "subject": "昆明市住房公积金管理中心",
+      "summary": "中心通过政府信息公开栏目公开《对昆明三合钢结构制造有限公司的责令限期缴存决定书》（昆房金限缴决字〔2026〕第40号）：该公司不履行法定缴存义务，不按规定为职工李晓琴缴存2010年4月至2024年12月住房公积金32970元，侵害职工合法权益；依据《住房公积金管理条例》第三十八条，责令15日内到安宁市管理部补缴，逾期不申请行政复议、不提起行政诉讼又不履行的将申请人民法院强制执行。",
+      "impact": "昆明中心将行政执法决定书逐份纳入政府信息公开目录，企业欠缴记录的公示透明度提升，可作为对公客户合规筛查的辅助信息源。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "昆明市住房公积金管理中心",
+      "source_url": "https://zfgjj.km.gov.cn/c/2026-09-02/5108880.shtml",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-061",
+      "category": "违纪违法与监管问责",
+      "title": "佛山：对广东建安居集团作出行政处罚预先告知，未为职工缴存公积金拟罚款1万元",
+      "date": "2026-09-04",
+      "region": "广东·佛山",
+      "subject": "佛山市住房公积金管理中心",
+      "summary": "2026年4月中心接投诉反映广东建安居集团有限公司未按《住房公积金管理条例》第十五条规定为职工缴存住房公积金，6月9日作出《责令整改通知书》并于8月5日公告送达；因该单位仍未履行，中心依据条例第二条、第十五条、第三十七条于8月17日作出《行政处罚预先告知书》，拟处罚款1万元，因邮寄、直接送达等方式均无法送达而依法公告送达。",
+      "impact": "新修订条例已将“不办理缴存登记或不为职工设户”的罚款上限由1万—5万元提高至5万—30万元，9月20日后同类案件处罚力度将显著上升。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "佛山市住房公积金管理中心",
+      "source_url": "https://fsgjj.foshan.gov.cn/gkmlpt/content/7/7294/post_7294757.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-062",
+      "category": "制度争议与负面舆情",
+      "title": "琼海：职工投诉单位不缴或少缴公积金的维权路径引关注，行政执法流程被公开",
+      "date": "2026-09-02",
+      "region": "海南·琼海",
+      "subject": "海南省12345政务服务热线（琼海市分平台）",
+      "summary": "海南省12345热线公开工单显示，有职工来电咨询单位不缴纳或少缴纳公积金如何处理。答复明确：建议先与单位沟通，无法协调的可向公积金管理局书面投诉，需提供劳动合同等劳动关系证明、工资流水等工资关系证明及投诉书；管理局受理后进入行政执法流程，限期督促单位办理开户或补缴，对不办理缴存登记、不为职工设户的责令限期办理，逾期不办理的处1万元以上5万元以下罚款，对不缴或少缴的责令限期缴存，逾期仍不缴存的可申请人民法院强制执行。",
+      "impact": "12345工单公开化使“企业少缴欠缴”的维权路径更易传播，叠加新条例提高罚款额度，企业端合规咨询与补缴需求预计上升。",
+      "severity": "低",
+      "source_type": "政府网站",
+      "source_name": "海南省12345政务服务热线",
+      "source_url": "https://12345.hainan.gov.cn/hnwsbsdt/hnwebsite/pages/default/appeal_details?guid=336dcb61-e8d8-4fd3-b466-57768afd5a82",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
+    },
+    {
+      "id": "NEG-063",
+      "category": "制度争议与负面舆情",
+      "title": "新规落地引争议：支持派称盘活“沉睡资金”，反对派担忧提前透支账户余额影响贷款额度",
+      "date": "2026-09-02",
+      "region": "全国",
+      "subject": "网络舆论场（新修订《住房公积金管理条例》9月20日施行）",
+      "summary": "新修订《住房公积金管理条例》将于9月20日施行，新增装修自住住房、支付自住住房物业费两类提取情形，租房提取取消“房租超出家庭工资收入规定比例”门槛，贷款审批时限由15日缩短至10日。舆论迅速分化为两派：支持者认为长期沉睡的账户资金被盘活，可减轻租房、装修与物业费支出压力；反对者担忧提取便利化诱导年轻人提前透支账户余额，而部分城市按账户余额倍数核定可贷额度，未来真正购房时可贷额度反而下降。",
+      "impact": "客户经理在宣导新政红利的同时，应同步提示“提取额度与贷款额度此消彼长”的权衡，对按账户余额倍数核定可贷额度的城市客户做好测算。",
+      "severity": "中",
+      "source_type": "其他媒体",
+      "source_name": "今日头条（自媒体评论，仅引述其观点与争议）",
+      "source_url": "https://www.toutiao.com/article/7680866177559675431",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-07"
     }
   ]
 }
