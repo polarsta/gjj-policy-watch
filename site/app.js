@@ -974,7 +974,7 @@ function renderMatrix() {
     $('#mx-box').innerHTML = html + '</tbody></table>';
   };
   draw();
-  $$('#hq-matrix [data-dim]').forEach(b => b.onclick = () => { MX_DIM = b.dataset.dim; renderMatrix(); });
+  $$('#hq-matrix .seg [data-dim]').forEach(b => b.onclick = () => { MX_DIM = b.dataset.dim; renderMatrix(); });
   $('#mx-kw').oninput = draw;
 }
 /* ================= 分行公积金合作资格库（行内数据 2026-08） =================
