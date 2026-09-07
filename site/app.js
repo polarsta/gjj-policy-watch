@@ -1588,13 +1588,15 @@ function normalizeNeg(j) {
 async function loadNegNews() {
   const sources = [
     { name: 'jsDelivr CDN', url: 'https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
+    { name: 'jsDelivr Fastly', url: 'https://fastly.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
+    { name: 'jsDelivr Gcore', url: 'https://gcore.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
     { name: 'GitHub Raw', url: 'https://raw.githubusercontent.com/polarsta/gjj-policy-watch/main/negative_news/negative_news.json' },
     { name: '本地镜像', url: 'negative_news.json' }
   ];
   for (const src of sources) {
     try {
       const ctrl = new AbortController();
-      const tm = setTimeout(() => ctrl.abort(), 15000);
+      const tm = setTimeout(() => ctrl.abort(), 10000);
       const r = await fetch(src.url + (src.url.includes('?') ? '&' : '?') + '_t=' + Date.now(), { signal: ctrl.signal, cache: 'no-store' });
       clearTimeout(tm);
       if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -1604,7 +1606,12 @@ async function loadNegNews() {
       NEG_NEWS = items;
       NEG_META = (j && !Array.isArray(j) && j.meta) || null;
       const lbl = $('#risk-src-label');
-      if (lbl) lbl.textContent = src.name === '本地镜像' ? '本地快照' : `后台更新 ${NEG_META && NEG_META.generated_at ? NEG_META.generated_at : ''}·${src.name}`;
+      if (lbl) {
+        const gen = NEG_META && NEG_META.generated_at ? NEG_META.generated_at : '';
+        lbl.textContent = src.name === '本地镜像'
+          ? (gen ? `本地快照 ${gen}` : '本地快照')
+          : (gen ? `后台更新 ${gen}·${src.name}` : `后台更新·${src.name}`);
+      }
       fetchLiveNeg();
       return;
     } catch (e) { console.warn('舆情源失败:', src.name, e.message); }
