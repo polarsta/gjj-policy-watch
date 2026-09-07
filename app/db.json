@@ -1,6 +1,6 @@
 {
   "database": "中国主要城市住房公积金政策数据库",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "generated_at": "2026-09-07T09:30:00+08:00",
   "city_count": 134,
   "schema_note": "每城含 deposit(缴存)/withdrawal(提取)/loan(贷款) 三类政策，各字段附 sources(来源标题+URL+日期)；null 表示未找到官方公开来源，详见 note 字段；case_library 为商机案例库（title/city/theme/parties/summary/practices/sources）；national_regulations 为全国性法规库（key_changes/impact_on_cities/watch_items/sources）；annual_reports 为年报静态数据库（年度更新，不参与每周自动更新）；各城市 deferral 字段为缓缴政策（supported/legal_basis/conditions/max_period/procedure/employee_rights/sources）",
@@ -51871,8 +51871,8 @@
         "date": "2026-09-04",
         "sources": [
           {
-            "title": "泸州市 关于新增灵活就业人员住房公积金按月扣缴业务合作银行的通知（人社通转载）",
-            "url": "https://m12333.cn/policy/srswp.html",
+            "title": "泸州市住房公积金管理中心 关于新增灵活就业人员住房公积金按月扣缴业务合作银行的通知",
+            "url": "https://zfgjj.luzhou.cn/tzgg/content_34616",
             "date": "2026-09-04"
           },
           {
