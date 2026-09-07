@@ -1777,7 +1777,9 @@ let RISK_SORT = 'heat';  // heat=按热度 time=按时间
 /* 时间跨度过滤（顶部统计、摘要、右侧列表共用同一口径）：有日期的按日期过滤，无日期的保留 */
 function riskInRange() {
   const since = daysAgo(BOARD_RANGE);
-  return NEG_NEWS.filter(i => !i.date || (i.date >= since && i.date <= today()));
+  // 日期待确认（date 为空：仅年份/未公开具体日期，无法归一化）的条目仅在最宽范围（一年）展示，
+  // 否则一律放行会混入「最近一天/一周/一个月」等窄范围，造成旧闻出现在本期的错觉（2026-09-07 NEG-006 案例）
+  return NEG_NEWS.filter(i => i.date ? (i.date >= since && i.date <= today()) : BOARD_RANGE >= 365);
 }
 function renderBoardRisk() {
   const kw = BOARD_KW.trim();
