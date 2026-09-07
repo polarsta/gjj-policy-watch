@@ -1,6 +1,6 @@
 {
   "database": "中国主要城市住房公积金政策数据库",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "generated_at": "2026-09-07T09:30:00+08:00",
   "city_count": 134,
   "schema_note": "每城含 deposit(缴存)/withdrawal(提取)/loan(贷款) 三类政策，各字段附 sources(来源标题+URL+日期)；null 表示未找到官方公开来源，详见 note 字段；case_library 为商机案例库（title/city/theme/parties/summary/practices/sources）；national_regulations 为全国性法规库（key_changes/impact_on_cities/watch_items/sources）；annual_reports 为年报静态数据库（年度更新，不参与每周自动更新）；各城市 deferral 字段为缓缴政策（supported/legal_basis/conditions/max_period/procedure/employee_rights/sources）",
@@ -51860,7 +51860,7 @@
           "交通银行（已开通）",
           "邮储银行（已开通）"
         ],
-        "policy_background": "新《住房公积金管理条例》（国务院令第844号）2026-09-20施行明确灵活就业人员可自愿缴存，各地公积金中心加速扩展灵活就业人员代扣代缴合作银行范围，破解按月缴存扣款渠道单一问题。",
+        "policy_background": "泸州市灵活就业人员可自愿缴存住房公积金并选择签约银行按月代扣代缴；此前扣缴渠道相对单一，市公积金中心持续扩大代扣代缴合作银行范围，拓宽灵活就业人员缴款渠道。",
         "summary": "2026-09-04泸州市住房公积金管理中心发布通知，自2026-09-07起新增农业银行为灵活就业人员住房公积金按月扣缴业务合作银行，与此前的交通银行、工商银行、邮储银行合计4家签约行可由灵活就业人员选择签约为缴款银行实行代扣代缴。每月扣缴期间为21-25日，缴存人需确保银行账户余额充足以保障按时代扣。",
         "practices": [
           "以分批次接入方式扩大灵活就业代扣合作行，每批先公告后上线，运营风险可控",
@@ -51871,8 +51871,8 @@
         "date": "2026-09-04",
         "sources": [
           {
-            "title": "泸州市 关于新增灵活就业人员住房公积金按月扣缴业务合作银行的通知（人社通转载）",
-            "url": "https://m12333.cn/policy/srswp.html",
+            "title": "泸州市住房公积金管理中心 关于新增灵活就业人员住房公积金按月扣缴业务合作银行的通知",
+            "url": "https://zfgjj.luzhou.cn/tzgg/content_34616",
             "date": "2026-09-04"
           },
           {
