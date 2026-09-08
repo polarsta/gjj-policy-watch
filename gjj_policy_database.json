@@ -1,6 +1,6 @@
 {
  "database": "中国主要城市住房公积金政策数据库",
- "version": "1.5.7",
+ "version": "1.5.8",
  "generated_at": "2026-09-07T09:30:00+08:00",
  "city_count": 134,
  "schema_note": "每城含 deposit(缴存)/withdrawal(提取)/loan(贷款) 三类政策，各字段附 sources(来源标题+URL+日期)；null 表示未找到官方公开来源，详见 note 字段；case_library 为商机案例库（title/city/theme/parties/summary/practices/sources）；national_regulations 为全国性法规库（key_changes/impact_on_cities/watch_items/sources）；annual_reports 为年报静态数据库（年度更新，不参与每周自动更新）；各城市 deferral 字段为缓缴政策（supported/legal_basis/conditions/max_period/procedure/employee_rights/sources）",
@@ -54836,7 +54836,7 @@
       "source_url": "https://gjj.zhenjiang.gov.cn/jgzn/ndbg/202603/879d68bd332a4aa381c04af40ce29d10.html",
       "source_name": "镇江市住房公积金2025年年度报告",
       "extract_method": "年报正文",
-      "note": "年报原文：贷款余额 156.30 亿元，同比下降 6.8%（句中「分别增加 2.14%、3.85%」为累计发放笔数与金额的同比，非余额同比）"
+      "note": "年报原文：贷款余额 156.30 亿元，同比下降 6.8%（句中「分别增加 2.14%、3.85%」为累计发放笔数与金额的同比，非余额同比）；已于 2026-09-08 经用户确认按此口径入库"
      }
     },
     "stats_2024": {
@@ -55273,7 +55273,7 @@
       "source_url": "https://finance.sina.com.cn/jjxw/2026-03-30/doc-inhssscu3305925.shtml",
       "source_name": "衢州市住房公积金2025年年度报告",
       "extract_method": "年报正文",
-      "note": "年报原文：贷款余额 159.43 亿元，比上年末下降 0.86%（句中「分别增加 2.66%、5.67%」为累计发放笔数与金额的同比，非余额同比）"
+      "note": "年报原文：贷款余额 159.43 亿元，比上年末下降 0.86%（句中「分别增加 2.66%、5.67%」为累计发放笔数与金额的同比，非余额同比）；已于 2026-09-08 经用户确认按此口径入库"
      }
     },
     "stats_2024": {
@@ -57835,13 +57835,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": 2964.23,
+      "value": 283.43,
       "unit": "亿元",
-      "yoy": "-0.26%",
+      "yoy": "-0.58%",
       "source_url": "https://hnjs.henan.gov.cn/2026/04-30/3347933.html",
-      "source_name": "洛阳市2025年数据（市级年报全文未检索到；取自河南省2025年年度报告）",
-      "extract_method": "用户核定清单（2026-09-08）",
-      "note": "⚠️ 该值与河南省 2025 年度报告全省口径一致，疑为省级数据而非洛阳市级；市级年报未检索到，待从洛阳中心官方渠道核实"
+      "source_name": "河南省住房公积金2025年年度报告（表3 分城市住房公积金个人住房贷款情况）",
+      "extract_method": "河南省年报分城市表（用户核定 2026-09-08）",
+      "note": "此前 2964.23 亿元为河南省全省口径（误取），已更正为洛阳市级 283.43 亿元；出自《河南省住房公积金2025年年度报告》表3「2025年分城市住房公积金个人住房贷款情况」。洛阳市级年报全文仍待从洛阳中心官方渠道补链"
      }
     },
     "stats_2024": {
@@ -60676,11 +60676,11 @@
      "loan_balance": {
       "value": 746.37,
       "unit": "亿元",
-      "yoy": null,
+      "yoy": "+1.41%",
       "source_url": "https://gjj.dl.gov.cn/art/2026/3/31/art_5566_2505635.html",
       "source_name": "大连市住房公积金2025年年度报告",
-      "extract_method": "年报正文",
-      "note": "年报原文未披露贷款余额同比（按 2024 年末余额 736.00 亿元测算约 +1.41%，仅供参考）"
+      "extract_method": "年报正文 + 按 2024 年报余额计算（用户人工核对 2026-09-08）",
+      "note": "年报原文未披露贷款余额同比；按 2024 年末余额 736.00 亿元计算得 +1.41%，已于 2026-09-08 经人工核对确认"
      }
     },
     "stats_2024": {
