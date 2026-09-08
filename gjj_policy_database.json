@@ -1,6 +1,6 @@
 {
  "database": "中国主要城市住房公积金政策数据库",
- "version": "1.5.5",
+ "version": "1.5.6",
  "generated_at": "2026-09-07T09:30:00+08:00",
  "city_count": 134,
  "schema_note": "每城含 deposit(缴存)/withdrawal(提取)/loan(贷款) 三类政策，各字段附 sources(来源标题+URL+日期)；null 表示未找到官方公开来源，详见 note 字段；case_library 为商机案例库（title/city/theme/parties/summary/practices/sources）；national_regulations 为全国性法规库（key_changes/impact_on_cities/watch_items/sources）；annual_reports 为年报静态数据库（年度更新，不参与每周自动更新）；各城市 deferral 字段为缓缴政策（supported/legal_basis/conditions/max_period/procedure/employee_rights/sources）",
@@ -52180,7 +52180,8 @@
    "deposit_amount": "亿元",
    "withdraw_amount": "亿元",
    "loan_issued": "亿元",
-   "fund_deposit_balance": "亿元"
+   "fund_deposit_balance": "亿元",
+   "loan_balance": "亿元"
   },
   "coverage_note": "fund_deposit_balance（住房公积金存款余额）取自年报'资金存储'章节；海口/三亚为省级统一管理无市级年报；丽江/红河/哈尔滨/大庆/包头/大连等城以省级年报分市表补齐，各城口径详见 note",
   "cities": [
@@ -52231,6 +52232,14 @@
      "fund_deposit_balance": {
       "value": 3897.61,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 5023.4,
+      "unit": "亿元",
+      "yoy": "-1.7%",
+      "source_url": "https://gjj.beijing.gov.cn/web/zwgk61/gjjndbb/743963189/index.html",
+      "source_name": "北京住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -52315,6 +52324,14 @@
      "fund_deposit_balance": {
       "value": 3287.72,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 6197.93,
+      "unit": "亿元",
+      "yoy": "+0.10%",
+      "source_url": "https://www.shzfgjj.cn/html/newxxgk/ndbg/228312.html",
+      "source_name": "上海市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -52391,6 +52408,14 @@
      "fund_deposit_balance": {
       "value": 848.75,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 2561.75,
+      "unit": "亿元",
+      "yoy": "+8.31%",
+      "source_url": "https://zjj.sz.gov.cn/xxgk/tjsj/content/post_12712901.html",
+      "source_name": "深圳市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -52467,6 +52492,14 @@
      "fund_deposit_balance": {
       "value": 893.43,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 2398.76,
+      "unit": "亿元",
+      "yoy": "+7.38%",
+      "source_url": "http://gjj.gz.gov.cn/xxgk/xxgkml/qt/sjfb/content/post_10748284.html",
+      "source_name": "广州住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -52543,6 +52576,14 @@
      "fund_deposit_balance": {
       "value": 462.15,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 1896.5,
+      "unit": "亿元",
+      "yoy": "+3.81%",
+      "source_url": "https://www.zfgjj.cn/tjgjjcms/mainSiteApp/content/app_zwgk/app_fdzdgk/app_zfgb/app_zfgb/377927.html",
+      "source_name": "天津市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -52619,6 +52660,12 @@
      "fund_deposit_balance": {
       "value": 85.13,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "中心官网 cqgjj.cn DNS 解析失败，年报全文待人工获取（待办）"
      }
     },
     "stats_2024": {
@@ -52703,6 +52750,14 @@
      "fund_deposit_balance": {
       "value": 222.19,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 376.27,
+      "unit": "亿元",
+      "yoy": "-1.12%",
+      "source_url": "https://fsgjj.foshan.gov.cn/gkmlpt/content/7/7124/mpost_7124559.html#607",
+      "source_name": "佛山市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -52779,6 +52834,14 @@
      "fund_deposit_balance": {
       "value": 268.27,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 534.17,
+      "unit": "亿元",
+      "yoy": "+0.39%",
+      "source_url": "http://dggjj.dg.gov.cn/zwgk/zfxxgkml/qt/tzgg/content/post_4519678.html",
+      "source_name": "东莞市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -52855,6 +52918,14 @@
      "fund_deposit_balance": {
       "value": 98.09,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 164.79,
+      "unit": "亿元",
+      "yoy": "+2.85%",
+      "source_url": "https://gjj.zhuhai.gov.cn/gkmlpt/content/3/3890/post_3890660.html",
+      "source_name": "珠海市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -52931,6 +53002,14 @@
      "fund_deposit_balance": {
       "value": 145.15,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 245.84,
+      "unit": "亿元",
+      "yoy": "-1.93%",
+      "source_url": "http://hzgjj.huizhou.gov.cn/gkmlpt/content/5/5739/post_5739439.html",
+      "source_name": "惠州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53011,6 +53090,14 @@
      "fund_deposit_balance": {
       "value": 92.08,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 167.49,
+      "unit": "亿元",
+      "yoy": "-4.71%",
+      "source_url": "http://zszfgjj.zs.gov.cn/zwgk/ndbg/content/post_2600133.html",
+      "source_name": "中山市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53087,6 +53174,14 @@
      "fund_deposit_balance": {
       "value": 53.55,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 155.52,
+      "unit": "亿元",
+      "yoy": "-3.40%",
+      "source_url": "http://www.jiangmen.gov.cn/bmpd/jmszfhcxjsj/zfgl/gjjzc/gsgg/content/post_3460171.html",
+      "source_name": "江门市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53163,6 +53258,14 @@
      "fund_deposit_balance": {
       "value": 124.33,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 168.69,
+      "unit": "亿元",
+      "yoy": "+7.20%",
+      "source_url": "https://www.zhanjiang.gov.cn/zjsfw/bmdh/zfgjj/zwgk/tzgg/content/post_2160081.html",
+      "source_name": "湛江市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53249,6 +53352,12 @@
      "fund_deposit_balance": {
       "value": 67.93,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "政府站 WAF 412 拦截，待人工获取（待办）"
      }
     },
     "stats_2024": {
@@ -53325,6 +53434,14 @@
      "fund_deposit_balance": {
       "value": 113.61,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 705.2,
+      "unit": "亿元",
+      "yoy": "+4.02%",
+      "source_url": "https://gjj.hainan.gov.cn/hngjj/0400/202603/dca621d7a6b5408d9410e3669f1533fc.shtml",
+      "source_name": "海南省住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53386,6 +53503,12 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "海南省为全省统一法人（无独立设置的分支机构），不发布市级年报；本条数据由「海南省」条目覆盖"
      }
     },
     "stats_2024": {
@@ -53444,6 +53567,12 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "海南省为全省统一法人（无独立设置的分支机构），不发布市级年报；本条数据由「海南省」条目覆盖"
      }
     },
     "stats_2024": {
@@ -53502,6 +53631,15 @@
      "fund_deposit_balance": {
       "value": 134.54,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 534.95,
+      "unit": "亿元",
+      "yoy": "-0.98%",
+      "source_url": "https://gjj.nanning.gov.cn/xxgk/zdxzjchgfxwj/t6584960.html",
+      "source_name": "南宁住房公积金2025年年度报告",
+      "extract_method": "由2024年余额计算",
+      "note": "市中心+区直分中心合并口径；同比按2024年末余额540.24亿元（2024年报同口径合计）计算，原文分别披露市中心-3.71%"
      }
     },
     "stats_2024": {
@@ -53578,6 +53716,14 @@
      "fund_deposit_balance": {
       "value": 517.4,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 2045.1,
+      "unit": "亿元",
+      "yoy": "+5.9%",
+      "source_url": "https://gjj.hangzhou.gov.cn/col/col1229287769/art/2026/art_de77001aa6054cce9da41d3adc51e164.html",
+      "source_name": "杭州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53654,6 +53800,14 @@
      "fund_deposit_balance": {
       "value": 422.29,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 1845.04,
+      "unit": "亿元",
+      "yoy": "+2.18%",
+      "source_url": "https://gjj.nanjing.gov.cn/zwgk/tzgg/202603/t20260331_5815267.html",
+      "source_name": "南京住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53730,6 +53884,14 @@
      "fund_deposit_balance": {
       "value": 94.11,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 2224.59,
+      "unit": "亿元",
+      "yoy": "+12.08%",
+      "source_url": "https://www.suzhou.gov.cn/szsrmzf/zfgjjndbg/202605/ad2d817f9b3b473b95d9c67f28735fcc.shtml",
+      "source_name": "苏州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53806,6 +53968,14 @@
      "fund_deposit_balance": {
       "value": 356.13,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 811.57,
+      "unit": "亿元",
+      "yoy": "+1.43%",
+      "source_url": "https://www.wuxi.gov.cn/doc/2026/03/31/4752758.shtml",
+      "source_name": "无锡市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53882,6 +54052,14 @@
      "fund_deposit_balance": {
       "value": 130.13,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 936.75,
+      "unit": "亿元",
+      "yoy": "+6.54%",
+      "source_url": "http://epaper.cnnb.com.cn/nbwb/pc/content/202603/31/content_269159.html",
+      "source_name": "宁波市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -53958,6 +54136,14 @@
      "fund_deposit_balance": {
       "value": 162.63,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 490.26,
+      "unit": "亿元",
+      "yoy": "-1.73%",
+      "source_url": "https://zfgjj.wenzhou.gov.cn/col/col1229322000/art/2026/art_3dac019ecb6a456b821687aa7f74ecc5.html",
+      "source_name": "温州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54034,6 +54220,14 @@
      "fund_deposit_balance": {
       "value": 195.64,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 488.78,
+      "unit": "亿元",
+      "yoy": "-2.13%",
+      "source_url": "https://www.ntgjj.com/NewsDetail.aspx?DetailId=24663910&UrlTowClass=61&UrlOneClass=58",
+      "source_name": "南通市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54110,6 +54304,14 @@
      "fund_deposit_balance": {
       "value": 36.0,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 630.11,
+      "unit": "亿元",
+      "yoy": "+6.23%",
+      "source_url": "https://www.jintan.gov.cn/html/czjt/2026/POACAQOP_0413/30607.html",
+      "source_name": "常州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54190,6 +54392,14 @@
      "fund_deposit_balance": {
       "value": 148.23,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 243.16,
+      "unit": "亿元",
+      "yoy": "-2.1%",
+      "source_url": "https://gjjzx.yangzhou.gov.cn/zfxxgk/fdzdgk/tzgg/art/2026/art_4477690161244c37af94aa8afccb6fd4.html",
+      "source_name": "扬州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54266,6 +54476,14 @@
      "fund_deposit_balance": {
       "value": 196.03,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 438.85,
+      "unit": "亿元",
+      "yoy": "+1.34%",
+      "source_url": "https://gjj.xz.gov.cn/govxxgk/466543007/2026-03-31/9e4cdd31-1d89-497b-a9ef-f956760d07f9.html",
+      "source_name": "徐州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54347,6 +54565,14 @@
      "fund_deposit_balance": {
       "value": 83.15,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 260.99,
+      "unit": "亿元",
+      "yoy": "+0.18%",
+      "source_url": "https://ycgjj.yancheng.gov.cn/art/2026/3/29/art_6592_4413194.html",
+      "source_name": "盐城市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54428,6 +54654,14 @@
      "fund_deposit_balance": {
       "value": 100.12,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 186.4,
+      "unit": "亿元",
+      "yoy": "-1.25%",
+      "source_url": "https://qianfan.weijj.cn/wap/thread/view-thread/tid/1958325",
+      "source_name": "泰州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54504,6 +54738,14 @@
      "fund_deposit_balance": {
       "value": 31.19,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 266.03,
+      "unit": "亿元",
+      "yoy": "+3.95%",
+      "source_url": "http://zfgjj.lyg.gov.cn/lygszfgjjglzx/zxgg/content/5624052a-2867-4cab-89b6-2aa6c879950a.shtml",
+      "source_name": "连云港市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54580,6 +54822,14 @@
      "fund_deposit_balance": {
       "value": 123.69,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 156.3,
+      "unit": "亿元",
+      "yoy": "-6.8%",
+      "source_url": "https://gjj.zhenjiang.gov.cn/jgzn/ndbg/202603/879d68bd332a4aa381c04af40ce29d10.html",
+      "source_name": "镇江市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54660,6 +54910,14 @@
      "fund_deposit_balance": {
       "value": 112.04,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 287.96,
+      "unit": "亿元",
+      "yoy": "+2.24%",
+      "source_url": "https://gjj.sx.gov.cn/col/col1229319231/art/2026/art_7b0e348b2a8d43448c04455669a02320.html",
+      "source_name": "绍兴市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54736,6 +54994,14 @@
      "fund_deposit_balance": {
       "value": 49.45,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 431.71,
+      "unit": "亿元",
+      "yoy": "+5.75%",
+      "source_url": "https://gjj.jiaxing.gov.cn/col/col1229354688/art/2026/art_e1ffaf4b3dfa40f591b117f4a535cf9c.html",
+      "source_name": "嘉兴市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54820,6 +55086,14 @@
      "fund_deposit_balance": {
       "value": 110.86,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 304.26,
+      "unit": "亿元",
+      "yoy": "+2.14%",
+      "source_url": "http://zfgjj.jinhua.gov.cn/col/col1229168257/art/2026/art_bd1dd434d2b94bcb9f96d011891147ef.html",
+      "source_name": "金华市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54854,7 +55128,7 @@
     "province": "浙江省",
     "report_2025": {
      "title": "台州市住房公积金2025年年度报告",
-     "url": "https://gjj.zjtz.gov.cn/col/col1229567285/art/2026/art_8443ddb32f0fa046f506e04d9d7edb7e.html",
+     "url": "https://gjj.zjtz.gov.cn/col/col1229045868/art/2026/art_7320f83eabe849af8d05ae05a02f8fe1.html",
      "publish_date": "2026-03-30",
      "verify": {
       "status": "OK",
@@ -54900,6 +55174,14 @@
      "fund_deposit_balance": {
       "value": 129.39,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 294.41,
+      "unit": "亿元",
+      "yoy": "+1.69%",
+      "source_url": "https://gjj.zjtz.gov.cn/col/col1229045868/art/2026/art_7320f83eabe849af8d05ae05a02f8fe1.html",
+      "source_name": "台州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -54976,6 +55258,14 @@
      "fund_deposit_balance": {
       "value": 30.32,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 159.43,
+      "unit": "亿元",
+      "yoy": "-0.86%",
+      "source_url": "https://finance.sina.com.cn/jjxw/2026-03-30/doc-inhssscu3305925.shtml",
+      "source_name": "衢州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55052,6 +55342,14 @@
      "fund_deposit_balance": {
       "value": 73.97,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 263.87,
+      "unit": "亿元",
+      "yoy": "-3.42%",
+      "source_url": "https://finance.sina.com.cn/roll/2026-03-27/doc-inhskrwf8433657.shtml",
+      "source_name": "湖州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55136,6 +55434,14 @@
      "fund_deposit_balance": {
       "value": 66.8,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 93.14,
+      "unit": "亿元",
+      "yoy": "-4.34%",
+      "source_url": "https://zsgjj.zhoushan.gov.cn/col/col1570144/art/2026/art_d138d95727e545748770a951ca5d4561.html",
+      "source_name": "舟山市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55213,6 +55519,15 @@
      "fund_deposit_balance": {
       "value": 153.82,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 832.47,
+      "unit": "亿元",
+      "yoy": null,
+      "source_url": "https://dohurd.ah.gov.cn/wjgk/tzgg/58221441.html",
+      "source_name": "安徽省住房公积金2025年年度报告（分城市表）",
+      "extract_method": "省级年报分城市表",
+      "note": "市级年报原文披露同比+7.69%（分别比上年末增加5.48%、10.68%、7.69%），发布于合肥公积金官方微信，可点击链接待补"
      }
     },
     "stats_2024": {
@@ -55289,6 +55604,14 @@
      "fund_deposit_balance": {
       "value": 77.2,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 176.24,
+      "unit": "亿元",
+      "yoy": "+3.26%",
+      "source_url": "https://gjj.wuhu.gov.cn/xwzx/gzdt/8919553.html",
+      "source_name": "芜湖市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55365,6 +55688,14 @@
      "fund_deposit_balance": {
       "value": 115.59,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 126.53,
+      "unit": "亿元",
+      "yoy": "-6.37%",
+      "source_url": "https://gjj.huainan.gov.cn/xwdt/zxxw/551857235.html",
+      "source_name": "淮南市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55445,6 +55776,14 @@
      "fund_deposit_balance": {
       "value": 71.93,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 94.4,
+      "unit": "亿元",
+      "yoy": "-4.17%",
+      "source_url": "https://masgjj.mas.gov.cn/xxgk/openness/detail/content/69c9bf3588668823158b456e.html",
+      "source_name": "马鞍山市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55525,6 +55864,14 @@
      "fund_deposit_balance": {
       "value": 74.43,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 119.86,
+      "unit": "亿元",
+      "yoy": "-0.34%",
+      "source_url": "https://gjj.anqing.gov.cn/gjjgb/2004187495.html",
+      "source_name": "安庆市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55601,6 +55948,14 @@
      "fund_deposit_balance": {
       "value": 61.1,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 105.97,
+      "unit": "亿元",
+      "yoy": "-6.26%",
+      "source_url": "https://zfgjj.luan.gov.cn/public/6608511/10755016.html",
+      "source_name": "六安市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55677,6 +56032,14 @@
      "fund_deposit_balance": {
       "value": 81.15,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 98.42,
+      "unit": "亿元",
+      "yoy": "-6.41%",
+      "source_url": "https://hbzfgjj.huaibei.gov.cn/xwdt/ggtz/58027261.html",
+      "source_name": "淮北市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55761,6 +56124,14 @@
      "fund_deposit_balance": {
       "value": 258.01,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 545.7,
+      "unit": "亿元",
+      "yoy": "+4.95%",
+      "source_url": "https://mp.weixin.qq.com/s?__biz=MzI5MDA3ODg1MA==&mid=2649426930&idx=1&sn=192cbab5a367848b4902ec42ba6065d4&chksm=f50e518083e3555f4a8ff31b76f6b708c37f3494eb476dfbff2d41aa6cef9a7b8e11bdc0da9d&scene=27",
+      "source_name": "南昌市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55837,6 +56208,14 @@
      "fund_deposit_balance": {
       "value": 50.53,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 328.95,
+      "unit": "亿元",
+      "yoy": "+8.32%",
+      "source_url": "https://zfgjj.ganzhou.gov.cn/gzszfjj/ndbg/202603/273b2c8c6614472bb261bdfd2660f1d6.shtml",
+      "source_name": "赣州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55917,6 +56296,14 @@
      "fund_deposit_balance": {
       "value": 91.83,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 178.93,
+      "unit": "亿元",
+      "yoy": "-1.36%",
+      "source_url": "https://gjj.zgsr.gov.cn/gjj/gsgg/202603/44e40ce1708c47a7add793c701bbe593.shtml",
+      "source_name": "上饶市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -55998,6 +56385,14 @@
      "fund_deposit_balance": {
       "value": 70.29,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 144.51,
+      "unit": "亿元",
+      "yoy": "-2.97%",
+      "source_url": "https://www.jjszfgjj.cn/ztzl_108401/ndbg/202603/t20260324_7206687.html",
+      "source_name": "九江市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -56074,6 +56469,14 @@
      "fund_deposit_balance": {
       "value": 36.18,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 61.85,
+      "unit": "亿元",
+      "yoy": "-3.73%",
+      "source_url": "https://www.jdz.gov.cn/sgjjglzx/fdzdgknr/zdly/zfbz/t1085816.shtml",
+      "source_name": "景德镇市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -56150,6 +56553,14 @@
      "fund_deposit_balance": {
       "value": 240.22,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 2163.84,
+      "unit": "亿元",
+      "yoy": "+4.32%",
+      "source_url": "https://gjj.wuhan.gov.cn/zwgk/ndbg/202603/t20260326_2745342.html",
+      "source_name": "武汉住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -56226,6 +56637,14 @@
      "fund_deposit_balance": {
       "value": 102.93,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 262.58,
+      "unit": "亿元",
+      "yoy": "+4.86%",
+      "source_url": "http://gjj.yichang.gov.cn/content-55762-6421-1.html",
+      "source_name": "宜昌住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -56302,6 +56721,14 @@
      "fund_deposit_balance": {
       "value": 52.58,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 118.74,
+      "unit": "亿元",
+      "yoy": "-4.77%",
+      "source_url": "https://gjj.huangshi.gov.cn/zwgk/zfxxgknb/202603/t20260324_1316468.html",
+      "source_name": "黄石市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -56378,6 +56805,14 @@
      "fund_deposit_balance": {
       "value": 151.43,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 112.46,
+      "unit": "亿元",
+      "yoy": "-2.39%",
+      "source_url": "http://gjj.shiyan.gov.cn/szfgjjglzx/sfgwgkml/qtzdgknr/zczxjlsqk/202603/t20260330_4916256.shtml",
+      "source_name": "十堰市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -56462,6 +56897,14 @@
      "fund_deposit_balance": {
       "value": 93.94,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 200.5,
+      "unit": "亿元",
+      "yoy": "-0.26%",
+      "source_url": "http://gjj.xiangyang.gov.cn/zwgk/gknb/t_3979503.shtml",
+      "source_name": "襄阳市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -56538,6 +56981,12 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "市级2025年报全文未检索到，现有来源为湖北省级汇总，无法拆出市级余额（待办）"
      }
     },
     "stats_2024": {
@@ -56610,6 +57059,12 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "市级2025年报全文未检索到，现有来源为湖北省级汇总（待办）"
      }
     },
     "stats_2024": {
@@ -56682,6 +57137,12 @@
      "fund_deposit_balance": {
       "value": 88.44,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "市级2025年报全文未检索到，现有来源为湖北省级汇总（待办）"
      }
     },
     "stats_2024": {
@@ -56758,6 +57219,14 @@
      "fund_deposit_balance": {
       "value": 307.33,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 1185.14,
+      "unit": "亿元",
+      "yoy": "+1.85%",
+      "source_url": "https://www.icswb.com/h/151/20260330/971500.html",
+      "source_name": "长沙市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -56843,6 +57312,12 @@
      "fund_deposit_balance": {
       "value": 106.74,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "现有链接为湖南省住建厅省级页面，抓取值为全省数据已剔除（待办）"
      }
     },
     "stats_2024": {
@@ -56919,6 +57394,12 @@
      "fund_deposit_balance": {
       "value": 158.55,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "政府站 WAF 412 拦截，待人工获取（待办）"
      }
     },
     "stats_2024": {
@@ -56995,6 +57476,14 @@
      "fund_deposit_balance": {
       "value": 52.25,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 90.91,
+      "unit": "亿元",
+      "yoy": "+0.93%",
+      "source_url": "http://www.xiangtan.gov.cn/109/213/215/content_1424230.html",
+      "source_name": "湘潭市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57071,6 +57560,12 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "市级2025年报全文未检索到，现有来源为湖南省级汇总（待办）"
      }
     },
     "stats_2024": {
@@ -57143,6 +57638,14 @@
      "fund_deposit_balance": {
       "value": 291.02,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 1172.54,
+      "unit": "亿元",
+      "yoy": "+4.31%",
+      "source_url": "https://zzgjj.zhengzhou.gov.cn/zxindt/9958028.jhtml",
+      "source_name": "郑州住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57219,6 +57722,14 @@
      "fund_deposit_balance": {
       "value": 194.38,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 155.33,
+      "unit": "亿元",
+      "yoy": "-2.67%",
+      "source_url": "http://zfgjj.nanyang.gov.cn/2026/03-31/1394398.html",
+      "source_name": "南阳市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57299,6 +57810,12 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "现有来源为河南省2025年年度报告，市级余额待从洛阳中心官方渠道补充（待办）"
      }
     },
     "stats_2024": {
@@ -57371,6 +57888,14 @@
      "fund_deposit_balance": {
       "value": 73.06,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 90.79,
+      "unit": "亿元",
+      "yoy": "+0.71%",
+      "source_url": "https://www.ayrbs.com/szb/pc/content/202603/26/content_107938.html",
+      "source_name": "安阳市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57443,6 +57968,14 @@
      "fund_deposit_balance": {
       "value": 55.75,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 93.08,
+      "unit": "亿元",
+      "yoy": "+2.4%",
+      "source_url": "https://zfgjj.xuchang.gov.cn/sjtj/20260330/b86babda-4cd7-4f9d-89c2-178f56197b6f.html",
+      "source_name": "许昌市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57519,6 +58052,14 @@
      "fund_deposit_balance": {
       "value": 448.02,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 2034.92,
+      "unit": "亿元",
+      "yoy": "+8.35%",
+      "source_url": "http://www.chinajsb.cn/html/202603/30/55798.html",
+      "source_name": "成都住房公积金2025年年度报告（中国建设新闻网转载全文）",
+      "extract_method": "年报正文（CDP渲染）"
      }
     },
     "stats_2024": {
@@ -57595,6 +58136,14 @@
      "fund_deposit_balance": {
       "value": 98.79,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 184.51,
+      "unit": "亿元",
+      "yoy": "+1.55%",
+      "source_url": "https://www.my.gov.cn/mysrmzf/c100004/202603/97bfbde3a2e641eba0662a589849d54c.shtml",
+      "source_name": "绵阳市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57676,6 +58225,14 @@
      "fund_deposit_balance": {
       "value": 68.24,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 120.67,
+      "unit": "亿元",
+      "yoy": "+0.44%",
+      "source_url": "https://zfgjj.luzhou.cn/zwgk/xxgknb/content_28792",
+      "source_name": "泸州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57758,6 +58315,14 @@
      "fund_deposit_balance": {
       "value": 48.63,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 112.55,
+      "unit": "亿元",
+      "yoy": "-1.99%",
+      "source_url": "https://www.leshan.gov.cn/lsswszf/zzzqgsgg/783029808590917.html",
+      "source_name": "乐山市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57842,6 +58407,14 @@
      "fund_deposit_balance": {
       "value": 289.78,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 1548.78,
+      "unit": "亿元",
+      "yoy": "+6.08%",
+      "source_url": "https://zfgjj.xa.gov.cn/xxgk/gkzd/xxgknb/2038802040179187714.html",
+      "source_name": "西安住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57918,6 +58491,14 @@
      "fund_deposit_balance": {
       "value": 122.62,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 204.98,
+      "unit": "亿元",
+      "yoy": "+0.55%",
+      "source_url": "http://szb.ylrb.com/html/2026/20260330/20260330_002/20260330_002_02_2664.html",
+      "source_name": "榆林市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58002,6 +58583,14 @@
      "fund_deposit_balance": {
       "value": 58.01,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 145.23,
+      "unit": "亿元",
+      "yoy": "-3.22%",
+      "source_url": "https://zfgjj.xianyang.gov.cn/zwgk/zfxxgknb/zfgjjndbg/202603/t20260330_2072256.html",
+      "source_name": "咸阳市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58078,6 +58667,14 @@
      "fund_deposit_balance": {
       "value": 66.03,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 113.21,
+      "unit": "亿元",
+      "yoy": "-0.65%",
+      "source_url": "https://www.baoji.gov.cn/col9816/col9817/col9856/col9863/202603/t20260327_1258176.html",
+      "source_name": "宝鸡市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58154,6 +58751,14 @@
      "fund_deposit_balance": {
       "value": 158.94,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 538.65,
+      "unit": "亿元",
+      "yoy": "+3.61%",
+      "source_url": "https://zfgjj.km.gov.cn/c/2026-03-30/5067681.shtml",
+      "source_name": "昆明市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58238,6 +58843,14 @@
      "fund_deposit_balance": {
       "value": 78.04,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 133.51,
+      "unit": "亿元",
+      "yoy": "+0.59%",
+      "source_url": "https://www.qjzfgjj.com/cms/gzdt/5384.jhtml",
+      "source_name": "曲靖市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58324,6 +58937,12 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "现有来源为搜狐转载且正文为图片，待补官方原文（待办）"
      }
     },
     "stats_2024": {
@@ -58396,6 +59015,12 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "市级年报全文未检索到，取自云南省年报分城市表，其中无贷款余额列（待办）"
      }
     },
     "stats_2024": {
@@ -58476,6 +59101,14 @@
      "fund_deposit_balance": {
       "value": 20.97,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 541.67,
+      "unit": "亿元",
+      "yoy": "+8.22%",
+      "source_url": "https://gjj.guiyang.gov.cn/zfxxgk/fdzdgknr/gggs/xxgkgsggyxgg/202603/t20260330_89927501.html",
+      "source_name": "贵阳住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58552,6 +59185,14 @@
      "fund_deposit_balance": {
       "value": 77.36,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 270.8,
+      "unit": "亿元",
+      "yoy": "+2.89%",
+      "source_url": "https://zfgjj.zunyi.gov.cn/zxdt/tzgg/202603/t20260327_89916027.html",
+      "source_name": "遵义市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58632,6 +59273,14 @@
      "fund_deposit_balance": {
       "value": 22.2,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 113.19,
+      "unit": "亿元",
+      "yoy": "+3.62%",
+      "source_url": "https://gjj.gzlps.gov.cn/bmxxgk/zfxxgk_5816274/fdzdgknr/gjjndbg/202603/t20260323_89897769.html",
+      "source_name": "六盘水市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58712,6 +59361,12 @@
      "fund_deposit_balance": {
       "value": 172.54,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "现有来源为媒体转载页且正文加载不全，待补官方原文（待办）"
      }
     },
     "stats_2024": {
@@ -58792,6 +59447,14 @@
      "fund_deposit_balance": {
       "value": 141.01,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 213.7,
+      "unit": "亿元",
+      "yoy": "-0.25%",
+      "source_url": "https://www.yinchuan.gov.cn/xxgk/bmxxgkml/zfgjjglzx/xxgkml_2829/zfgjjndbg_7701/202603/t20260324_5200909.html",
+      "source_name": "银川市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58876,6 +59539,14 @@
      "fund_deposit_balance": {
       "value": 79.37,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 218.99,
+      "unit": "亿元",
+      "yoy": "-0.37%",
+      "source_url": "https://www.xnzfgjj.com/gzdt/3456.jhtml",
+      "source_name": "西宁住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -58952,6 +59623,14 @@
      "fund_deposit_balance": {
       "value": 458.16,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 409.6,
+      "unit": "亿元",
+      "yoy": "-3.12%",
+      "source_url": "https://www.sjzgjj.cn/xxgknb/2447.jhtml",
+      "source_name": "石家庄住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59028,6 +59707,14 @@
      "fund_deposit_balance": {
       "value": 210.12,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 397.86,
+      "unit": "亿元",
+      "yoy": "-0.78%",
+      "source_url": "https://www.tsgjj.com/website/announcement-detail.html?seqno=1414&itemId=0102",
+      "source_name": "唐山市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59104,6 +59791,14 @@
      "fund_deposit_balance": {
       "value": 39.087,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 15.54,
+      "unit": "亿元",
+      "yoy": "+6.26%",
+      "source_url": "https://www.xiongan.gov.cn/20260402/02517b23440c4c1aaa4390168e57cc43/c.html",
+      "source_name": "雄安新区住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59180,6 +59875,14 @@
      "fund_deposit_balance": {
       "value": 315.46,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 588.94,
+      "unit": "亿元",
+      "yoy": "-0.57%",
+      "source_url": "https://zfgjj.taiyuan.gov.cn/ndyxbg/20260330/30290455.html",
+      "source_name": "太原住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59256,6 +59959,14 @@
      "fund_deposit_balance": {
       "value": 60.35,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 121.8,
+      "unit": "亿元",
+      "yoy": "-3.56%",
+      "source_url": "https://www.jcgov.gov.cn/dtxx/gsgg/202603/t20260326_2334605.shtml",
+      "source_name": "晋城市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59332,6 +60043,14 @@
      "fund_deposit_balance": {
       "value": 99.97,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 62.53,
+      "unit": "亿元",
+      "yoy": "+2.6%",
+      "source_url": "http://www.lvliang.gov.cn/zfjgzd/gjjglzx/zcfg/202603/t20260331_2024544.html",
+      "source_name": "吕梁市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59418,6 +60137,14 @@
      "fund_deposit_balance": {
       "value": 67.06,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 35.56,
+      "unit": "亿元",
+      "yoy": "-3.19%",
+      "source_url": "http://www.zf365.com.cn/tzgg2/1667.jhtml",
+      "source_name": "朔州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59494,6 +60221,14 @@
      "fund_deposit_balance": {
       "value": 178.39,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 319.61,
+      "unit": "亿元",
+      "yoy": "-1.62%",
+      "source_url": "https://www.hhhtgjj.org.cn/website/zxfc-detail.html?id=37743",
+      "source_name": "呼和浩特住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59570,6 +60305,12 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "现有页面抓取值为内蒙古区级数据（余额1318.90亿元）已剔除，市级余额待补（待办）"
      }
     },
     "stats_2024": {
@@ -59642,6 +60383,14 @@
      "fund_deposit_balance": {
       "value": 166.97,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 202.29,
+      "unit": "亿元",
+      "yoy": "-0.93%",
+      "source_url": "https://nxw.org.cn/paper/ordosnews/rbpaper/pc/content/202603/26/content_147161.html",
+      "source_name": "鄂尔多斯市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59718,6 +60467,14 @@
      "fund_deposit_balance": {
       "value": 134.05,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 102.17,
+      "unit": "亿元",
+      "yoy": "-3.49%",
+      "source_url": "https://zjj.hlbe.gov.cn/News/show/1418566.html",
+      "source_name": "呼伦贝尔市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59794,6 +60551,14 @@
      "fund_deposit_balance": {
       "value": 340.02,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 940.66,
+      "unit": "亿元",
+      "yoy": "+5.82%",
+      "source_url": "https://sygjj.shenyang.gov.cn/zwgknew/ndbg/202603/t20260331_5009374.html",
+      "source_name": "沈阳市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -59870,6 +60635,15 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 746.37,
+      "unit": "亿元",
+      "yoy": "+1.41%",
+      "source_url": "https://gjj.dl.gov.cn/art/2026/3/31/art_5566_2505635.html",
+      "source_name": "大连市住房公积金2025年年度报告",
+      "extract_method": "由2024年余额计算",
+      "note": "年报原文未披露余额同比；按2024年末余额736.00亿元（2024年报）计算"
      }
     },
     "stats_2024": {
@@ -59942,6 +60716,14 @@
      "fund_deposit_balance": {
       "value": 283.48,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 687.51,
+      "unit": "亿元",
+      "yoy": "-2.96%",
+      "source_url": "http://zfgjj.changchun.gov.cn/xxfb/zwgk/jhzj/202603/t20260318_3474361.html",
+      "source_name": "长春市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60018,6 +60800,14 @@
      "fund_deposit_balance": {
       "value": 108.38,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 144.24,
+      "unit": "亿元",
+      "yoy": "-5.91%",
+      "source_url": "http://xxgk.jlcity.gov.cn/qtdw/gjjglzx_1/xbgkml/202603/t20260316_1310938.html",
+      "source_name": "吉林市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60094,6 +60884,14 @@
      "fund_deposit_balance": {
       "value": 55.63,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 39.41,
+      "unit": "亿元",
+      "yoy": "-9.66%",
+      "source_url": "https://gjj.tonghua.gov.cn/views/CNewsDetail?id=635fb48749ea48d7a1495e8b89d1892e",
+      "source_name": "通化市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60127,8 +60925,8 @@
     "city": "哈尔滨",
     "province": "黑龙江",
     "report_2025": {
-     "title": null,
-     "url": null,
+     "title": "哈尔滨市住房公积金2025年年度报告",
+     "url": "https://www.hrbgjj.org.cn/ndbg/2416.jhtml",
      "publish_date": null
     },
     "report_2024": {
@@ -60170,6 +60968,14 @@
      "fund_deposit_balance": {
       "value": null,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 503.25,
+      "unit": "亿元",
+      "yoy": "-1.85%",
+      "source_url": "https://www.hrbgjj.org.cn/ndbg/2416.jhtml",
+      "source_name": "哈尔滨市住房公积金2025年年度报告（中心官网）",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60258,6 +61064,12 @@
       "value": null,
       "unit": "亿元",
       "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "现有来源为黑龙江省2025年年度报告（PDF 防盗链无法下载），市级余额待补（待办）"
      }
     },
     "stats_2024": {
@@ -60330,6 +61142,14 @@
      "fund_deposit_balance": {
       "value": 61.97,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 70.48,
+      "unit": "亿元",
+      "yoy": "-9.34%",
+      "source_url": "http://gjj.yingkou.gov.cn/zcfg/5730.jhtml",
+      "source_name": "营口市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60406,6 +61226,14 @@
      "fund_deposit_balance": {
       "value": 55.5,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 77.44,
+      "unit": "亿元",
+      "yoy": "-6.71%",
+      "source_url": "https://jzsgjj.cn/newsDetailsnew.jsp?newsid=31994&navid=3",
+      "source_name": "锦州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60482,6 +61310,14 @@
      "fund_deposit_balance": {
       "value": 157.82,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 57.84,
+      "unit": "亿元",
+      "yoy": "-7.75%",
+      "source_url": "http://www.pjzfgjj.cn/2026_03/31_16/content-557331.html",
+      "source_name": "盘锦市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60562,6 +61398,14 @@
      "fund_deposit_balance": {
       "value": 113.37,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 101.03,
+      "unit": "亿元",
+      "yoy": "-7.51%",
+      "source_url": "https://asgjj.anshan.gov.cn:1433/gzdt/1344.jhtml",
+      "source_name": "鞍山市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60638,6 +61482,14 @@
      "fund_deposit_balance": {
       "value": 43.74,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 63.56,
+      "unit": "亿元",
+      "yoy": "-7.75%",
+      "source_url": "https://www.ddzfgjj.com/gjjgb/38263.jhtml",
+      "source_name": "丹东市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60715,6 +61567,14 @@
      "fund_deposit_balance": {
       "value": 62.58,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 67.57,
+      "unit": "亿元",
+      "yoy": "-6.68%",
+      "source_url": "http://fsgjj.org.cn/zdxxgk/4424.jhtml",
+      "source_name": "抚顺市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60791,6 +61651,14 @@
      "fund_deposit_balance": {
       "value": 466.13,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 951.61,
+      "unit": "亿元",
+      "yoy": "+5.95%",
+      "source_url": "https://gjj.jinan.gov.cn/col/col24486/art/2026/art_79a918d34c0b466986367b09ba0442e1.html",
+      "source_name": "济南住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60867,6 +61735,14 @@
      "fund_deposit_balance": {
       "value": 350.54,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 824.27,
+      "unit": "亿元",
+      "yoy": "+5%",
+      "source_url": "http://www.qingdao.gov.cn/zwgk/xxgk/gjjgl/gkml/ghjh/202603/t20260330_10549589.shtml",
+      "source_name": "青岛市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60943,6 +61819,14 @@
      "fund_deposit_balance": {
       "value": 181.42,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 404.63,
+      "unit": "亿元",
+      "yoy": "-0.58%",
+      "source_url": "https://gjj.yantai.gov.cn/col/col4103/art/2026/art_7e199eecbdbe44a4967cb8a6b04e1ac6.html",
+      "source_name": "烟台市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61027,6 +61911,14 @@
      "fund_deposit_balance": {
       "value": 124.52,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 280.47,
+      "unit": "亿元",
+      "yoy": "+4.26%",
+      "source_url": "https://gjj.weifang.gov.cn/55379/1306570283.html",
+      "source_name": "潍坊市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61103,6 +61995,12 @@
      "fund_deposit_balance": {
       "value": 57.55,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "现有来源为媒体「数说」页且正文为图片，待补官方原文（待办）"
      }
     },
     "stats_2024": {
@@ -61179,6 +62077,14 @@
      "fund_deposit_balance": {
       "value": 113.18,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 134.23,
+      "unit": "亿元",
+      "yoy": "-2.56%",
+      "source_url": "http://www.weihai.gov.cn/art/2026/3/31/art_63729_6228528.html",
+      "source_name": "威海市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61263,6 +62169,14 @@
      "fund_deposit_balance": {
       "value": 108.598,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 128.0,
+      "unit": "亿元",
+      "yoy": "-2.59%",
+      "source_url": "http://www.dongying.gov.cn/art/2026/3/31/art_38799_10467303.html",
+      "source_name": "东营市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61339,6 +62253,14 @@
      "fund_deposit_balance": {
       "value": 169.92,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 319.56,
+      "unit": "亿元",
+      "yoy": "+5.34%",
+      "source_url": "https://www.jining.gov.cn/art/2026/3/27/art_33479_2924802.html",
+      "source_name": "济宁市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61415,6 +62337,14 @@
      "fund_deposit_balance": {
       "value": 114.4,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 299.7,
+      "unit": "亿元",
+      "yoy": "-3.54%",
+      "source_url": "https://zfgjj.zibo.gov.cn/art/2026/3/31/art_457_2993670.html",
+      "source_name": "淄博市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61491,6 +62421,14 @@
      "fund_deposit_balance": {
       "value": 111.53,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 158.19,
+      "unit": "亿元",
+      "yoy": "-0.91%",
+      "source_url": "http://gjj.liaocheng.gov.cn/channel_lc_szfgjjglzxchannel201911221748451985046612/doc_69c4dde674ea2d3a50b2d9fd.html",
+      "source_name": "聊城市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61571,6 +62509,14 @@
      "fund_deposit_balance": {
       "value": 73.61,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 141.01,
+      "unit": "亿元",
+      "yoy": "+9.93%",
+      "source_url": "http://gjj.binzhou.gov.cn/art/2026/3/30/art_121655_10271635.html",
+      "source_name": "滨州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61647,6 +62593,14 @@
      "fund_deposit_balance": {
       "value": 119.15,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 356.49,
+      "unit": "亿元",
+      "yoy": "+4.50%",
+      "source_url": "https://www.linyi.gov.cn/info/6268/419409.htm",
+      "source_name": "临沂市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61723,6 +62677,14 @@
      "fund_deposit_balance": {
       "value": 103.59,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 708.16,
+      "unit": "亿元",
+      "yoy": "+0.96%",
+      "source_url": "https://www.xmnn.cn/news/xmxw/202603/t20260330_418064.html",
+      "source_name": "厦门市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61799,6 +62761,14 @@
      "fund_deposit_balance": {
       "value": 267.04,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 644.78,
+      "unit": "亿元",
+      "yoy": "-0.81%",
+      "source_url": "https://news.fznews.com.cn/fzyw/20260328/86EBhc9113.shtml",
+      "source_name": "福州住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61875,6 +62845,14 @@
      "fund_deposit_balance": {
       "value": 131.48,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 282.84,
+      "unit": "亿元",
+      "yoy": "-3.31%",
+      "source_url": "https://qzgjj.quanzhou.gov.cn/zwgk/gjjndxxpl/202603/t20260330_3279265.htm",
+      "source_name": "泉州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -61955,6 +62933,14 @@
      "fund_deposit_balance": {
       "value": 30.91,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 199.46,
+      "unit": "亿元",
+      "yoy": "+8.45%",
+      "source_url": "http://gjj.zhangzhou.gov.cn/cms/html/zzszfgjjglzx/2026-03-30/1676069296.html",
+      "source_name": "漳州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -62035,6 +63021,14 @@
      "fund_deposit_balance": {
       "value": 49.15,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 107.19,
+      "unit": "亿元",
+      "yoy": "-3.80%",
+      "source_url": "https://www.putian.gov.cn/zwgk/ptdt/ptyw/202603/t20260330_2209645.htm",
+      "source_name": "莆田市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -62115,6 +63109,14 @@
      "fund_deposit_balance": {
       "value": 46.95,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 117.9,
+      "unit": "亿元",
+      "yoy": "-0.98%",
+      "source_url": "https://gjj.ningde.gov.cn/zcfg/ndgb/zfgjjndbg/202603/t20260327_2449354.htm",
+      "source_name": "宁德市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -62191,6 +63193,14 @@
      "fund_deposit_balance": {
       "value": 26.59,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 129.03,
+      "unit": "亿元",
+      "yoy": "+5.62%",
+      "source_url": "http://www.sanming.gov.cn/zw/ztzl/smszfgjjzt/tzgg_21864/202603/t20260326_2196905.htm",
+      "source_name": "三明市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -62267,6 +63277,14 @@
      "fund_deposit_balance": {
       "value": 35.25,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 108.74,
+      "unit": "亿元",
+      "yoy": "-1.17%",
+      "source_url": "https://www.longyan.gov.cn/zt/rdzt/zfgjjzx/tzgg/202603/t20260326_2283426.htm",
+      "source_name": "龙岩市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -62343,6 +63361,14 @@
      "fund_deposit_balance": {
       "value": 87.14,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 564.27,
+      "unit": "亿元",
+      "yoy": "+1.19%",
+      "source_url": "https://xjgjj.xjjs.gov.cn/info/1177/24806.htm",
+      "source_name": "乌鲁木齐住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -62429,6 +63455,14 @@
      "fund_deposit_balance": {
       "value": 71.79,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 177.89,
+      "unit": "亿元",
+      "yoy": "+1.44%",
+      "source_url": "https://www.xjbtgjj.com/xxgk/tzgg/content_789",
+      "source_name": "新疆生产建设兵团住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -62505,6 +63539,12 @@
      "fund_deposit_balance": {
       "value": 106.89,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": null,
+      "unit": "亿元",
+      "yoy": null,
+      "note": "中心官网为 JS 渲染且反爬拦截，直连/无头浏览器均未取到正文（待办）"
      }
     },
     "stats_2024": {
@@ -62581,6 +63621,14 @@
      "fund_deposit_balance": {
       "value": 64.34,
       "unit": "亿元"
+     },
+     "loan_balance": {
+      "value": 169.28,
+      "unit": "亿元",
+      "yoy": "-1.77%",
+      "source_url": "http://zfgjj.liuzhou.gov.cn/xwzx/tzgg/202603/t20260330_3736846.shtml",
+      "source_name": "柳州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -62611,6 +63659,6 @@
     }
    }
   ],
-  "yoy_note": "提取额 / 发放贷款的「同比±X%」与「▲增加 / ▼减少 X 亿元」均以 stats_2025 与 stats_2024 的绝对值口径自行计算，非年报原文直接披露值"
+  "yoy_note": "提取额 / 发放贷款的「同比±X%」与「▲增加 / ▼减少 X 亿元」均以 stats_2025 与 stats_2024 的绝对值口径自行计算，非年报原文直接披露值；贷款余额(loan_balance)的 value 与 yoy 优先取 2025 年年报原文披露值（「分别比上年末增长a%、b%、c%」取末位对应余额），仅南宁/大连因原文未披露改按 2024 年报余额计算"
  }
 }
