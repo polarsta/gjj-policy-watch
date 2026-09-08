@@ -638,7 +638,7 @@ function exportOvData() {
   const pctRaw = (c, p) => (c && c.value != null && p && p.value) ? (Math.round((c - p) / p * 1000) / 10) : '';
   const H = ['城市', '省份', '新开户单位(家)', '实缴单位(万家)', '实缴单位同比', '新开户职工(万人)', '实缴职工(万人)',
     '缴存额2025(亿元)', '缴存额同比', '提取额2025(亿元)', '提取额同比(%)', '提取额较2024增减(亿元)',
-    '发放贷款2025(亿元)', '发放贷款同比(%)', '发放贷款较2024增减(亿元)', '资金存款2025(亿元)', '资金存款较2024', '2025年报链接', '2024年报链接'];
+    '发放贷款2025(亿元)', '发放贷款同比(%)', '发放贷款较2024增减(亿元)', '贷款余额2025(亿元)', '贷款余额同比(%)', '资金存款2025(亿元)', '资金存款较2024', '2025年报链接', '2024年报链接'];
   const lines = [H];
   let sum = null;
   for (const x of rows) {
@@ -647,11 +647,12 @@ function exportOvData() {
       num(s.new_employees), num(s.active_employees), num(s.deposit_amount), (s.deposit_amount || {}).yoy || '',
       num(s.withdraw_amount), pctOf(s.withdraw_amount, s24.withdraw_amount), diff(s.withdraw_amount, s24.withdraw_amount),
       num(s.loan_issued), pctOf(s.loan_issued, s24.loan_issued), diff(s.loan_issued, s24.loan_issued),
+      num(s.loan_balance), (s.loan_balance || {}).yoy || '',
       num(s.fund_deposit_balance), chg.text || '',
       (x.report_2025 || {}).url || '', (x.report_2024 || {}).url || '']);
   }
   // 合计行
-  const K = ['new_units', 'active_units', 'new_employees', 'active_employees', 'deposit_amount', 'withdraw_amount', 'loan_issued', 'fund_deposit_balance'];
+  const K = ['new_units', 'active_units', 'new_employees', 'active_employees', 'deposit_amount', 'withdraw_amount', 'loan_issued', 'loan_balance', 'fund_deposit_balance'];
   const t = {}, t24 = {};
   for (const k of K) { let a = 0; for (const x of rows) { const o = (x.stats_2025 || {})[k]; if (o && o.value != null) a += o.value; } t[k] = Math.round(a * 100) / 100; }
   for (const k of ['withdraw_amount', 'loan_issued']) { let a = 0, b = 0; for (const x of rows) { const c = (x.stats_2025 || {})[k] || {}, p = (x.stats_2024 || {})[k] || {}; if (c.value != null && p.value != null) { a += c.value; b += p.value; } } t24[k] = [Math.round(a * 100) / 100, Math.round(b * 100) / 100]; }
@@ -660,6 +661,7 @@ function exportOvData() {
   lines.push(['合计(' + rows.length + '城)', '', t.new_units, t.active_units, '', t.new_employees, t.active_employees,
     t.deposit_amount, '', t.withdraw_amount, pctRaw(dW[0], dW[1]), dW[0] || dW[1] ? Math.round((dW[0] - dW[1]) * 100) / 100 : '',
     t.loan_issued, pctRaw(dL[0], dL[1]), dL[0] || dL[1] ? Math.round((dL[0] - dL[1]) * 100) / 100 : '',
+    t.loan_balance, '',
     t.fund_deposit_balance, (dF[0] || dF[1]) ? ((dF[0] - dF[1]) >= 0 ? '增加' : '减少') + Math.abs(Math.round((dF[0] - dF[1]) * 100) / 100) + '亿元' : '', '', '']);
   const csv = '﻿' + lines.map(r => r.map(v => { const s = String(v == null ? '' : v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }).join(',')).join('\n');
   const a = document.createElement('a');
@@ -808,6 +810,13 @@ function renderTables() {
     if (kw) arRows = arRows.filter(x => (x.city + x.province + (x.note || '')).includes(kw));
     const av = (o, unit) => (o && o.value != null) ? `${fmtNum(o.value)} <small style="color:var(--mute)">${unit || o.unit || ''}</small>` : '<span style="color:var(--mute)">—</span>';
     const yoy = o => (o && o.yoy) ? ` <span class="yoy ${String(o.yoy).startsWith('-') ? 'yoy-dn' : 'yoy-up'}">${String(o.yoy).startsWith('-') ? '▼' : '▲'}${esc(String(o.yoy).replace(/^[+\-]/, ''))}</span>` : '';
+    // 贷款余额同比：年报原文披露口径（或按 2024 年报余额计算/人工核定，悬停见提取方式），固定显示百分比
+    const lbYoy = o => {
+      if (!o || !o.yoy) return '';
+      const dn = String(o.yoy).startsWith('-');
+      const tip = (o.extract_method || '') + (o.source_name ? '｜' + o.source_name : '');
+      return ` <span class="yoy ${dn ? 'yoy-dn' : 'yoy-up'}" title="${esc(tip)}">${dn ? '▼' : '▲'} ${esc(String(o.yoy).replace(/^[+\-]/, ''))}</span>`;
+    };
     // 与上年度比较值：按 OV_CMP 二选一展示「同比%」或「较2024增减值」（均以 2025 与 2024 年报绝对值为口径自行计算，悬停可见两年绝对值）
     const cmp = (cur, prev) => {
       const c = cur && cur.value, p = prev && prev.value;
@@ -823,7 +832,7 @@ function renderTables() {
     // 数据加总（与导出共用）：2025 各指标合计 + 2024 可比口径合计
     const ovTotals = rows2 => {
       const t = {};
-      for (const k of ['new_units', 'active_units', 'new_employees', 'active_employees', 'deposit_amount', 'withdraw_amount', 'loan_issued', 'fund_deposit_balance']) {
+      for (const k of ['new_units', 'active_units', 'new_employees', 'active_employees', 'deposit_amount', 'withdraw_amount', 'loan_issued', 'loan_balance', 'fund_deposit_balance']) {
         let s = 0, n = 0;
         for (const x of rows2) { const o = (x.stats_2025 || {})[k]; if (o && o.value != null) { s += o.value; n++; } }
         t[k] = { s: Math.round(s * 100) / 100, n };
@@ -839,24 +848,24 @@ function renderTables() {
       return t;
     };
     html += `<div id="ov-sec-data"><h4 style="margin:14px 0 8px;font-size:14.5px;color:#0e9594">④ 运行数据 · 各市 2025 年度运行统计 <span class="badge b-nat">年报库</span> <button onclick="exportOvData()" style="margin-left:8px;border:1px solid #0e9594;background:#0e9594;color:#fff;border-radius:16px;padding:4px 14px;font-size:12px;font-weight:600;cursor:pointer;vertical-align:2px">⬇ 一键导出</button><span style="display:inline-flex;margin-left:8px;vertical-align:2px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff"><span style="font-size:12px;color:var(--mute);padding:4px 6px 4px 10px;background:#fff">提取额、贷款额同比展示</span><button onclick="setOvCmp('pct')" style="border:none;background:${OV_CMP==='pct'?'#0e9594':'none'};color:${OV_CMP==='pct'?'#fff':'var(--sub)'};padding:4px 12px;font-size:12px;font-weight:600;cursor:pointer">同比%</button><button onclick="setOvCmp('diff')" style="border:none;background:${OV_CMP==='diff'?'#0e9594':'none'};color:${OV_CMP==='diff'?'#fff':'var(--sub)'};padding:4px 12px;font-size:12px;font-weight:600;cursor:pointer">增减值</button></span></h4>
-    <div class="h-sub" style="margin:-2px 0 8px">来源：各市《住房公积金 2025 年年度报告》；资金存款为公积金中心存款余额（变化量较 2024 年报）；提取额 / 发放贷款的同比变化可按上表头右侧按钮在「同比%（▲/▼X%）」与「增减值（▲/▼X亿元）」间切换（二选一，▲红涨 ▼绿跌，悬停可查看两年绝对值），均以 2025 与 2024 年报绝对值口径自行计算；「—」为未披露</div>
+    <div class="h-sub" style="margin:-2px 0 8px">来源：各市《住房公积金 2025 年年度报告》；资金存款为公积金中心存款余额（变化量较 2024 年报）；提取额 / 发放贷款的同比变化可按上表头右侧按钮在「同比%（▲/▼X%）」与「增减值（▲/▼X亿元）」间切换（二选一，▲红涨 ▼绿跌，悬停可查看两年绝对值），均以 2025 与 2024 年报绝对值口径自行计算；贷款余额的同比为年报原文披露值（部分城市按 2024 年报余额计算或人工核定，悬停可查看提取方式与来源）；「—」为未披露</div>
     <div class="tbl-wrap"><table class="tb"><thead>
       <tr class="grp">
         <th rowspan="2" class="g-plain">城市</th>
         <th colspan="5" class="g-dep">缴存</th>
         <th class="g-wit">提取</th>
-        <th class="g-loan">贷款</th>
+        <th colspan="2" class="g-loan">贷款</th>
         <th colspan="2" class="g-fund">资金存款</th>
         <th rowspan="2" class="g-plain">年报原文</th>
       </tr>
       <tr>
         <th>新开户单位</th><th>实缴单位</th><th>新开户职工</th><th>实缴职工</th><th>缴存额</th>
-        <th>提取额(2025)</th><th>发放贷款(2025)</th><th>资金存款(2025)</th><th>存款较2024</th>
+        <th>提取额(2025)</th><th>发放贷款(2025)</th><th>贷款余额(2025)</th><th>资金存款(2025)</th><th>存款较2024</th>
       </tr>
     </thead><tbody>`;
     lastProv = '';
     for (const x of arRows) {
-      if (x.province !== lastProv) { lastProv = x.province; html += `<tr class="prov-row"><td colspan="11">${esc(x.province)}</td></tr>`; }
+      if (x.province !== lastProv) { lastProv = x.province; html += `<tr class="prov-row"><td colspan="12">${esc(x.province)}</td></tr>`; }
       const s = x.stats_2025 || {};
       const s24 = x.stats_2024 || {};
       const chg = x.fund_deposit_change;
@@ -871,6 +880,7 @@ function renderTables() {
         <td class="num">${av(s.deposit_amount, '亿元')}${yoy(s.deposit_amount)}</td>
         <td class="num">${av(s.withdraw_amount, '亿元')}${cmp(s.withdraw_amount, s24.withdraw_amount)}</td>
         <td class="num">${av(s.loan_issued, '亿元')}${cmp(s.loan_issued, s24.loan_issued)}</td>
+        <td class="num">${av(s.loan_balance, '亿元')}${lbYoy(s.loan_balance)}</td>
         <td class="num">${av(s.fund_deposit_balance, '亿元')}</td>
         <td>${chg && chg.text ? `<span class="yoy ${chg.direction === '减少' ? 'yoy-dn' : 'yoy-up'}">${chg.direction === '减少' ? '▼' : '▲'} ${esc(chg.text.replace(/^(增加|减少)/, ''))}</span>` : '<span style="color:var(--mute)">—</span>'}</td>
         <td style="white-space:nowrap">${x.report_2025 && x.report_2025.url ? `<a class="badge b-dep" href="${esc(x.report_2025.url)}" target="_blank" rel="noopener" title="${esc(x.report_2025.title)}">2025年报 ↗</a>` : ''}${x.report_2024 && x.report_2024.url ? ` <a class="badge b-src" href="${esc(x.report_2024.url)}" target="_blank" rel="noopener" title="${esc(x.report_2024.title)}">2024 ↗</a>` : ''}</td></tr>`;
@@ -896,6 +906,7 @@ function renderTables() {
       <td class="num">${avN(T.deposit_amount.s, '亿元', T.deposit_amount.n)}</td>
       <td class="num">${avN(T.withdraw_amount.s, '亿元', T.withdraw_amount.n)}${cmpN(T.withdraw_amount_24.paired, T.withdraw_amount_24.s, T.withdraw_amount_24.n)}</td>
       <td class="num">${avN(T.loan_issued.s, '亿元', T.loan_issued.n)}${cmpN(T.loan_issued_24.paired, T.loan_issued_24.s, T.loan_issued_24.n)}</td>
+      <td class="num">${avN(T.loan_balance.s, '亿元', T.loan_balance.n)}</td>
       <td class="num">${avN(T.fund_deposit_balance.s, '亿元', T.fund_deposit_balance.n)}</td>
       <td>${cmpN(T.fund_deposit_balance_24.paired, T.fund_deposit_balance_24.s, T.fund_deposit_balance_24.n) || '<span style="color:var(--mute)">—</span>'}</td>
       <td></td></tr>`;
