@@ -106,23 +106,68 @@ def parse_balance(text, issued_2025=None):
                 if i != -1:
                     end = min(end, i)
             last_dot = sent.rfind('。', 0, mb.start())
-            core = sent[last_dot + 1 if last_dot != -1 else 0:end]
+            cstart = last_dot + 1 if last_dot != -1 else 0
+            core = sent[cstart:end]
             yoy = None
             VERB = '|'.join(UP_VERBS + DOWN_VERBS)
-            m_sep = (re.search(r'分别(?:(?:比|较)(?:上年|去年)(?:同期)?末?|同比)', core)
-                     or re.search(r'(?:比|较)(?:上年|去年)(?:同期)?末?分别', core))
-            if m_sep:
-                # 「分别比上年末增长3.9%、6.1%、下降1.7%」/「增加6.71%、9.87%、2.6%」共用电头
-                tail = core[m_sep.start():]
-                pcts = re.findall(r'(' + VERB + r')?\s*(-?[0-9]+(?:\.[0-9]+)?)%', tail)
-                if pcts:
-                    d, p = pcts[-1]
-                    down = (d in DOWN_VERBS) if d else p.startswith('-')
-                    yoy = ('-' if down else '+') + p.lstrip('-') + '%'
-            else:
+            # 百分比（排除「X个百分点」这类非同比用法）
+            PCT = r'(-?[0-9]+(?:\.[0-9]+)?)\s*%(?!\s*个?百分)'
+
+            # A 级（最高优先）：余额数字之后紧跟的显式同比句「(，)同比/比上年末…增长|下降 X%」。
+            # 约束：① 前缀 ≤14 字符且不含「分别」——含「分别」说明它属于前面发放额共用电头的
+            #       并列组，不是余额自己的同比（南通：「累计发放…分别增加2.69%、5.64%，
+            #       贷款余额488.78亿元，比上年末减少2.13%」）；
+            #      ② 前缀不含「占」，避免误吃「占缴存余额的70.46%」；③ 排除「X个百分点」。
+            tail_after = core[max(0, mb.end() - cstart):]
+            CMP = r'(?:同比|(?:比|较)(?:上年|去年)(?:同期)?末?)'
+            # 中间缓冲组：同样禁止出现「分别」——倒装句式「比上年末分别增加3.75%、5.35%、减少1.93%」
+            # 的「分别」落在比较词之后，不挡住会误取首项（惠州/榆林曾因此取错）。
+            MID = r'((?:(?!分别)[^。；%]){0,10}?)'
+            # A2：余额数字后「紧邻」的同比句（re.match 锚定开头，前缀 ≤6 字符）。
+            #     南通/温州/襄阳式：「贷款余额488.78亿元，比上年末减少2.13%」。
+            mA = re.match(
+                r'((?:(?!分别|占)[^。；]){0,6}?)' + CMP + MID +
+                r'(' + VERB + r')' + PCT, tail_after)
+            if mA is None:
+                # A1：句内以「贷款余额」为显式主语的同比句（前缀 ≤14 字符且不含「分别」）。
+                #     衢州/镇江式：「贷款余额159.43亿元，…分别增加2.66%、5.67%，
+                #                  贷款余额比上年末下降0.86%」。
+                mA = re.search(
+                    r'贷款余额((?:(?!分别|占)[^。；]){0,14}?)' + CMP + MID +
+                    r'(' + VERB + r')' + PCT, tail_after)
+            # 注：北京式「贷款余额5023.40亿元，分别比上年末增长3.9%、6.1%、下降1.7%」
+            #     两种形式都会被「分别」挡住，正确落到下面 B 级的共用电头分支取末位 -1.7%。
+            if mA:
+                d, p = mA.group(3), mA.group(4)
+                down = d in DOWN_VERBS or p.startswith('-')
+                yoy = ('-' if down else '+') + p.lstrip('-') + '%'
+
+            if yoy is None:
+                m_sep = (re.search(r'分别(?:(?:比|较)(?:上年|去年)(?:同期)?末?|同比)', core)
+                         or re.search(r'(?:比|较)(?:上年|去年)(?:同期)?末?分别', core))
+                if m_sep:
+                    # 「分别比上年末增长3.9%、6.1%、下降1.7%」/「增加6.71%、9.87%、2.6%」共用电头。
+                    # 只吃「分别」之后由顿号连接的连续百分比序列末位，避免吃掉后面
+                    # 「，个人住房贷款余额占缴存余额的70.46%」这类无关百分比（日照曾因此误抓）。
+                    tail = core[m_sep.start():]
+                    m0 = re.search(r'(' + VERB + r')?\s*' + PCT, tail)
+                    if m0:
+                        d, p = m0.group(1), m0.group(2)
+                        pos = m0.end()
+                        while True:
+                            # 分隔符含「和」：呼伦贝尔「增加2.79%、5.05%和减少3.49%」
+                            m1 = re.match(r'\s*(?:、|和)\s*(' + VERB + r')?\s*' + PCT, tail[pos:])
+                            if not m1:
+                                break
+                            d, p = m1.group(1), m1.group(2)
+                            pos += m1.end()
+                        down = (d in DOWN_VERBS) if d else p.startswith('-')
+                        yoy = ('-' if down else '+') + p.lstrip('-') + '%'
+
+            if yoy is None:
                 # 单值句式：「同比下降3.56%」「比上年末增长X%」
                 m_single = re.search(
-                    r'(?:同比|(?:比|较)(?:上年|去年)(?:同期)?末?)([^。；%,]{0,12}?)(' + VERB + r')(-?[0-9]+(?:\.[0-9]+)?)%',
+                    r'(?:同比|(?:比|较)(?:上年|去年)(?:同期)?末?)([^。；%,]{0,12}?)(' + VERB + r')' + PCT,
                     core)
                 if m_single:
                     d, p = m_single.group(2), m_single.group(3)

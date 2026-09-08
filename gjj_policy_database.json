@@ -1,6 +1,6 @@
 {
  "database": "中国主要城市住房公积金政策数据库",
- "version": "1.5.6",
+ "version": "1.5.7",
  "generated_at": "2026-09-07T09:30:00+08:00",
  "city_count": 134,
  "schema_note": "每城含 deposit(缴存)/withdrawal(提取)/loan(贷款) 三类政策，各字段附 sources(来源标题+URL+日期)；null 表示未找到官方公开来源，详见 note 字段；case_library 为商机案例库（title/city/theme/parties/summary/practices/sources）；national_regulations 为全国性法规库（key_changes/impact_on_cities/watch_items/sources）；annual_reports 为年报静态数据库（年度更新，不参与每周自动更新）；各城市 deferral 字段为缓缴政策（supported/legal_basis/conditions/max_period/procedure/employee_rights/sources）",
@@ -52662,10 +52662,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 2153.99,
       "unit": "亿元",
-      "yoy": null,
-      "note": "中心官网 cqgjj.cn DNS 解析失败，年报全文待人工获取（待办）"
+      "yoy": "+6.44%",
+      "source_url": "https://cqgjj.cn/zwgk/gsgg/3396.htm",
+      "source_name": "重庆市住房公积金2025年年度报告",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "中心官网 cqgjj.cn 域名解析失败，年报全文未能直连获取；数据取自用户核定清单"
      }
     },
     "stats_2024": {
@@ -53354,10 +53357,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 100.8,
       "unit": "亿元",
-      "yoy": null,
-      "note": "政府站 WAF 412 拦截，待人工获取（待办）"
+      "yoy": "-5.26%",
+      "source_url": "https://www.gdqy.gov.cn/channel/qysgjj/xxgk/gjjnb/content/post_2127959.html",
+      "source_name": "清远市住房公积金2025年年度报告",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "政府站 WAF 412 拦截，未能直连取到正文；数据取自用户核定清单"
      }
     },
     "stats_2024": {
@@ -53633,13 +53639,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": 534.95,
+      "value": 323.04,
       "unit": "亿元",
-      "yoy": "-0.98%",
+      "yoy": "-3.71%",
       "source_url": "https://gjj.nanning.gov.cn/xxgk/zdxzjchgfxwj/t6584960.html",
       "source_name": "南宁住房公积金2025年年度报告",
-      "extract_method": "由2024年余额计算",
-      "note": "市中心+区直分中心合并口径；同比按2024年末余额540.24亿元（2024年报同口径合计）计算，原文分别披露市中心-3.71%"
+      "extract_method": "年报正文",
+      "note": "市中心（含铁路分中心）口径；另有区直分中心贷款余额 211.91 亿元（+3.49%），两个中心合计 534.95 亿元"
      }
     },
     "stats_2024": {
@@ -54829,7 +54835,8 @@
       "yoy": "-6.8%",
       "source_url": "https://gjj.zhenjiang.gov.cn/jgzn/ndbg/202603/879d68bd332a4aa381c04af40ce29d10.html",
       "source_name": "镇江市住房公积金2025年年度报告",
-      "extract_method": "年报正文"
+      "extract_method": "年报正文",
+      "note": "年报原文：贷款余额 156.30 亿元，同比下降 6.8%（句中「分别增加 2.14%、3.85%」为累计发放笔数与金额的同比，非余额同比）"
      }
     },
     "stats_2024": {
@@ -55265,7 +55272,8 @@
       "yoy": "-0.86%",
       "source_url": "https://finance.sina.com.cn/jjxw/2026-03-30/doc-inhssscu3305925.shtml",
       "source_name": "衢州市住房公积金2025年年度报告",
-      "extract_method": "年报正文"
+      "extract_method": "年报正文",
+      "note": "年报原文：贷款余额 159.43 亿元，比上年末下降 0.86%（句中「分别增加 2.66%、5.67%」为累计发放笔数与金额的同比，非余额同比）"
      }
     },
     "stats_2024": {
@@ -55477,7 +55485,7 @@
     "province": "安徽省",
     "report_2025": {
      "title": "合肥市住房公积金2025年年度报告",
-     "url": "https://sgj.ah.gov.cn/ztzl/ahsszzfgjjgl/gzdt/xyxx/80786548.html",
+     "url": "https://gjjzx.hefei.gov.cn/public/4311/112577627.html",
      "publish_date": "2026-04-03"
     },
     "report_2024": {
@@ -55523,11 +55531,11 @@
      "loan_balance": {
       "value": 832.47,
       "unit": "亿元",
-      "yoy": null,
-      "source_url": "https://dohurd.ah.gov.cn/wjgk/tzgg/58221441.html",
-      "source_name": "安徽省住房公积金2025年年度报告（分城市表）",
-      "extract_method": "省级年报分城市表",
-      "note": "市级年报原文披露同比+7.69%（分别比上年末增加5.48%、10.68%、7.69%），发布于合肥公积金官方微信，可点击链接待补"
+      "yoy": "+7.69%",
+      "source_url": "https://gjjzx.hefei.gov.cn/public/4311/112577627.html",
+      "source_name": "合肥市住房公积金2025年年度报告",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "中心官网页面返回 521 未能直连核验；余额 832.47 亿元取自安徽省住建厅 2025 年度报告分城市表，同比 +7.69% 为年报原文披露值（分别比上年末增加 5.48%、10.68%、7.69%）"
      }
     },
     "stats_2024": {
@@ -56938,8 +56946,8 @@
     "city": "黄冈",
     "province": "湖北",
     "report_2025": {
-     "title": "黄冈市2025年数据（市级年报全文未检索到；取自省年报及官方通报）",
-     "url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202604/t20260428_5924360.shtml",
+     "title": "黄冈住房公积金2025年年度报告",
+     "url": "https://gjj.hg.gov.cn/zwgk/public/6636168/1707824.html",
      "publish_date": "2026-04-24"
     },
     "report_2024": {
@@ -56983,10 +56991,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 120.81,
       "unit": "亿元",
-      "yoy": null,
-      "note": "市级2025年报全文未检索到，现有来源为湖北省级汇总，无法拆出市级余额（待办）"
+      "yoy": "-4.03%",
+      "source_url": "https://gjj.hg.gov.cn/zwgk/public/6636168/1707824.html",
+      "source_name": "黄冈住房公积金2025年年度报告",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "中心官网为框架页，正文未能直连取到；数据取自用户核定清单（黄冈中心官网年报）"
      }
     },
     "stats_2024": {
@@ -57016,8 +57027,8 @@
     "city": "孝感",
     "province": "湖北",
     "report_2025": {
-     "title": "孝感市2025年数据（市级年报全文未检索到；取自省年报）",
-     "url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202604/t20260428_5924360.shtml",
+     "title": "孝感市住房公积金2025年年度报告",
+     "url": "https://xggjj.xiaogan.gov.cn/zwgk/2116927.jhtml",
      "publish_date": "2026-04-24"
     },
     "report_2024": {
@@ -57061,10 +57072,12 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 75.47,
       "unit": "亿元",
-      "yoy": null,
-      "note": "市级2025年报全文未检索到，现有来源为湖北省级汇总（待办）"
+      "yoy": "-2.91%",
+      "source_url": "https://xggjj.xiaogan.gov.cn/zwgk/2116927.jhtml",
+      "source_name": "孝感市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57094,8 +57107,8 @@
     "city": "荆州",
     "province": "湖北",
     "report_2025": {
-     "title": "荆州市2025年数据（市级年报全文未检索到；取自省年报）",
-     "url": "http://zjt.hubei.gov.cn/zfxxgk/fdzdgknr/qtzdgknr/zdly/zfgjjjg/202604/t20260428_5924360.shtml",
+     "title": "荆州住房公积金2025年年度报告",
+     "url": "http://gjj.zwgk.jingzhou.gov.cn/35035/103220263/t127220263034/681265.shtml",
      "publish_date": "2026-04-24"
     },
     "report_2024": {
@@ -57139,10 +57152,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 111.65,
       "unit": "亿元",
-      "yoy": null,
-      "note": "市级2025年报全文未检索到，现有来源为湖北省级汇总（待办）"
+      "yoy": "-1.93%",
+      "source_url": "http://gjj.zwgk.jingzhou.gov.cn/35035/103220263/t127220263034/681265.shtml",
+      "source_name": "荆州住房公积金2025年年度报告",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "中心官网为框架页，正文未能直连取到；数据取自用户核定清单（荆州中心官网年报）"
      }
     },
     "stats_2024": {
@@ -57261,7 +57277,7 @@
     "province": "湖南",
     "report_2025": {
      "title": "株洲市住房公积金2025年年度报告",
-     "url": "https://zjt.hunan.gov.cn/zjt/xxgk/xinxigongkaimulu/tjxx/202604/t20260427_33965308.html",
+     "url": "https://gjj.zhuzhou.gov.cn/c5361/20260327/i2486539.html",
      "publish_date": "2026-03-27",
      "verify": {
       "status": "OK",
@@ -57314,10 +57330,12 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 178.29,
       "unit": "亿元",
-      "yoy": null,
-      "note": "现有链接为湖南省住建厅省级页面，抓取值为全省数据已剔除（待办）"
+      "yoy": "+1.01%",
+      "source_url": "https://gjj.zhuzhou.gov.cn/c5361/20260327/i2486539.html",
+      "source_name": "株洲市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57396,10 +57414,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 116.86,
       "unit": "亿元",
-      "yoy": null,
-      "note": "政府站 WAF 412 拦截，待人工获取（待办）"
+      "yoy": "-5.22%",
+      "source_url": "https://www.hengyang.gov.cn/hyszfgjj/xxgk/ghjh/20260330/i3879763.html",
+      "source_name": "衡阳市住房公积金2025年年度报告",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "政府站 WAF 412 拦截，未能直连取到正文；数据取自用户核定清单"
      }
     },
     "stats_2024": {
@@ -57517,8 +57538,8 @@
     "city": "娄底",
     "province": "湖南",
     "report_2025": {
-     "title": "娄底市2025年数据（市级年报全文未检索到；取自省年报）",
-     "url": "http://zjt.hunan.gov.cn/zjt/xxgk/xinxigongkaimulu/tjxx/202604/t20260427_33965308.html",
+     "title": "娄底市住房公积金2025年年度报告",
+     "url": "https://www.ldgjj.com/detailsList/1865.html",
      "publish_date": "2026-04-27"
     },
     "report_2024": {
@@ -57562,10 +57583,12 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 82.18,
       "unit": "亿元",
-      "yoy": null,
-      "note": "市级2025年报全文未检索到，现有来源为湖南省级汇总（待办）"
+      "yoy": "-5.92%",
+      "source_url": "https://www.ldgjj.com/detailsList/1865.html",
+      "source_name": "娄底市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -57812,10 +57835,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 2964.23,
       "unit": "亿元",
-      "yoy": null,
-      "note": "现有来源为河南省2025年年度报告，市级余额待从洛阳中心官方渠道补充（待办）"
+      "yoy": "-0.26%",
+      "source_url": "https://hnjs.henan.gov.cn/2026/04-30/3347933.html",
+      "source_name": "洛阳市2025年数据（市级年报全文未检索到；取自河南省2025年年度报告）",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "⚠️ 该值与河南省 2025 年度报告全省口径一致，疑为省级数据而非洛阳市级；市级年报未检索到，待从洛阳中心官方渠道核实"
      }
     },
     "stats_2024": {
@@ -58939,10 +58965,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 46.35,
       "unit": "亿元",
-      "yoy": null,
-      "note": "现有来源为搜狐转载且正文为图片，待补官方原文（待办）"
+      "yoy": "+4.84%",
+      "source_url": "https://www.sohu.com/a/1003302687_121106902",
+      "source_name": "丽江市住房公积金2025年年度报告（搜狐转载，图片版；核心数据已与云南省住房公积金2025年年度报告分城市表交叉核对）",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "现有来源为转载页且正文为图片，未能直连取到；数据取自用户核定清单"
      }
     },
     "stats_2024": {
@@ -59017,10 +59046,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 117.63,
       "unit": "亿元",
-      "yoy": null,
-      "note": "市级年报全文未检索到，取自云南省年报分城市表，其中无贷款余额列（待办）"
+      "yoy": "+0.92%",
+      "source_url": "https://www.hhgjj.com/website/annualReport-detail.html?seqno=610&itemId=0109",
+      "source_name": "红河州住房公积金2025年年度报告（全文未检索到；数据取自云南省2025年年度报告分城市表及红河州2025年度住房公积金绩效评价报告）",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "市级年报未检索到，取自云南省年报分城市表；数据取自用户核定清单"
      }
     },
     "stats_2024": {
@@ -59315,7 +59347,7 @@
     "province": "甘肃",
     "report_2025": {
      "title": "兰州市住房公积金2025年年度报告",
-     "url": "https://gansu.gscn.com.cn/system/2026/04/01/013478850.shtml",
+     "url": "https://gjj.lanzhou.gov.cn/art/2026/3/31/art_412_1691387.html",
      "publish_date": null,
      "verify": {
       "status": "OK",
@@ -59363,10 +59395,12 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 391.09,
       "unit": "亿元",
-      "yoy": null,
-      "note": "现有来源为媒体转载页且正文加载不全，待补官方原文（待办）"
+      "yoy": "+0.91%",
+      "source_url": "https://gjj.lanzhou.gov.cn/art/2026/3/31/art_412_1691387.html",
+      "source_name": "兰州市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -60307,10 +60341,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 174.19,
       "unit": "亿元",
-      "yoy": null,
-      "note": "现有页面抓取值为内蒙古区级数据（余额1318.90亿元）已剔除，市级余额待补（待办）"
+      "yoy": "-3.86%",
+      "source_url": "https://www.btgjj.cn/?#/website/article/2918",
+      "source_name": "包头市住房公积金2025年年度报告",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "此前自动抓取到的 1318.90 亿元为内蒙古区级数据已剔除；数据取自用户核定清单"
      }
     },
     "stats_2024": {
@@ -60639,11 +60676,11 @@
      "loan_balance": {
       "value": 746.37,
       "unit": "亿元",
-      "yoy": "+1.41%",
+      "yoy": null,
       "source_url": "https://gjj.dl.gov.cn/art/2026/3/31/art_5566_2505635.html",
       "source_name": "大连市住房公积金2025年年度报告",
-      "extract_method": "由2024年余额计算",
-      "note": "年报原文未披露余额同比；按2024年末余额736.00亿元（2024年报）计算"
+      "extract_method": "年报正文",
+      "note": "年报原文未披露贷款余额同比（按 2024 年末余额 736.00 亿元测算约 +1.41%，仅供参考）"
      }
     },
     "stats_2024": {
@@ -60974,7 +61011,7 @@
       "unit": "亿元",
       "yoy": "-1.85%",
       "source_url": "https://www.hrbgjj.org.cn/ndbg/2416.jhtml",
-      "source_name": "哈尔滨市住房公积金2025年年度报告（中心官网）",
+      "source_name": "哈尔滨市住房公积金2025年年度报告",
       "extract_method": "年报正文"
      }
     },
@@ -61066,10 +61103,13 @@
       "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
      },
      "loan_balance": {
-      "value": null,
+      "value": 187.72,
       "unit": "亿元",
       "yoy": null,
-      "note": "现有来源为黑龙江省2025年年度报告（PDF 防盗链无法下载），市级余额待补（待办）"
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml",
+      "source_name": "",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "年报原文未披露余额同比；余额取自用户核定清单"
      }
     },
     "stats_2024": {
@@ -61952,8 +61992,8 @@
     "city": "日照",
     "province": "山东",
     "report_2025": {
-     "title": "“数说”日照市住房公积金2025年年度报告（官方图说版，速豹新闻转载，来源：日照住房公积金）",
-     "url": "http://rizhao.subaoxw.com/fcqc/2026/0411/261669.html",
+     "title": "日照市住房公积金2025年年度报告",
+     "url": "https://www.rizhaozfgjj.cn/art/2026/3/26/art_182478_10283356.html",
      "publish_date": "2026-04-11"
     },
     "report_2024": {
@@ -61997,10 +62037,12 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 133.53,
       "unit": "亿元",
-      "yoy": null,
-      "note": "现有来源为媒体「数说」页且正文为图片，待补官方原文（待办）"
+      "yoy": "+1.01%",
+      "source_url": "https://www.rizhaozfgjj.cn/art/2026/3/26/art_182478_10283356.html",
+      "source_name": "日照市住房公积金2025年年度报告",
+      "extract_method": "年报正文"
      }
     },
     "stats_2024": {
@@ -63541,10 +63583,13 @@
       "unit": "亿元"
      },
      "loan_balance": {
-      "value": null,
+      "value": 148.96,
       "unit": "亿元",
-      "yoy": null,
-      "note": "中心官网为 JS 渲染且反爬拦截，直连/无头浏览器均未取到正文（待办）"
+      "yoy": "+1.58%",
+      "source_url": "https://www.lfzfgjj.net/website/subject-detail.html?seqno=9005&itemId=0601",
+      "source_name": "廊坊市住房公积金2025年年度报告",
+      "extract_method": "用户核定清单（2026-09-08）",
+      "note": "中心官网为 JS 渲染且反爬拦截，直连/无头浏览器均未取到正文；数据取自用户核定清单"
      }
     },
     "stats_2024": {
@@ -63659,6 +63704,6 @@
     }
    }
   ],
-  "yoy_note": "提取额 / 发放贷款的「同比±X%」与「▲增加 / ▼减少 X 亿元」均以 stats_2025 与 stats_2024 的绝对值口径自行计算，非年报原文直接披露值；贷款余额(loan_balance)的 value 与 yoy 优先取 2025 年年报原文披露值（「分别比上年末增长a%、b%、c%」取末位对应余额），仅南宁/大连因原文未披露改按 2024 年报余额计算"
+  "yoy_note": "提取额 / 发放贷款的「同比±X%」与「▲增加 / ▼减少 X 亿元」均以 stats_2025 与 stats_2024 的绝对值口径自行计算，非年报原文直接披露值；贷款余额(loan_balance)的 value 与 yoy 优先取 2025 年年报原文披露值（「分别比上年末增长a%、b%、c%」取末位对应余额）；抓取失败城市由用户核定清单补齐并在 note 注明"
  }
 }
