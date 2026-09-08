@@ -1,6 +1,6 @@
 {
  "database": "中国主要城市住房公积金政策数据库",
- "version": "1.5.9",
+ "version": "1.6.0",
  "generated_at": "2026-09-07T09:30:00+08:00",
  "city_count": 134,
  "schema_note": "每城含 deposit(缴存)/withdrawal(提取)/loan(贷款) 三类政策，各字段附 sources(来源标题+URL+日期)；null 表示未找到官方公开来源，详见 note 字段；case_library 为商机案例库（title/city/theme/parties/summary/practices/sources）；national_regulations 为全国性法规库（key_changes/impact_on_cities/watch_items/sources）；annual_reports 为年报静态数据库（年度更新，不参与每周自动更新）；各城市 deferral 字段为缓缴政策（supported/legal_basis/conditions/max_period/procedure/employee_rights/sources）",
@@ -61079,7 +61079,11 @@
      "active_employees": {
       "value": 38.78,
       "unit": "万人",
-      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml"
+      "yoy": "-3.94%",
+      "source_url": "https://www.hlj.gov.cn/hlj/c108459/202605/c00_31941971.shtml",
+      "source_name": "大庆市住房公积金2025年数据（市级年报全文未检索到；取自黑龙江省2025年年度报告）",
+      "extract_method": "用户人工核定（2026-09-08）",
+      "note": "实缴职工人数 38.78 万人；年报原文未单独披露该项同比，-3.94% 由用户人工核定（按此反推 2024 年末实缴职工约 40.37 万人）"
      },
      "deposit_amount": {
       "value": 98.26,
