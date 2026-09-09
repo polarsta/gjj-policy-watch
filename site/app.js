@@ -47,6 +47,7 @@ let FEAT = {};            // city -> 特征对象
 let LOCAL_REC = [];       // 本地新增记录
 let NAT_POLICIES = [];    // 挖掘出的全国性政策
 let CUR_SRC = '';         // 当前数据源名
+let GOT_UPDATE = false;   // 手动刷新时是否真的拉到了更新版本（用于提示文案准确性）
 let BR_CITY = null;       // 分行当前城市
 let BR_RANGE = 0;         // 分行时间筛选（天，0=全部）
 let HQ_RANGE = 365;       // 总行速览时间范围
@@ -72,43 +73,138 @@ function verCompare(a, b) {
   return 0;
 }
 
+/* ================= 本地数据仓（Cache Storage）=================
+ * 用途：支撑「下次打开才生效」——后台静默更新拉到的新版写入此处，本次访问不重绘，
+ *       下次打开时优先读取，实现 0 网络请求秒开。
+ * 选型：localStorage 约 5MB 且按 UTF-16 计量，3.5MB 中文数据易超限；
+ *       Cache Storage 配额通常为数百 MB，更适合存放数据库快照。
+ * 降级：任何异常一律静默返回空值，自动回退到站点本地镜像，不影响主流程。
+ */
+const DB_CACHE = 'gjj-data-v1';
+const KEY_DB = 'db';
+const KEY_NEG = 'neg';
+const KEY_LEADER = 'leader';
+
+async function cacheGet(key) {
+  if (typeof caches === 'undefined') return null;
+  try {
+    const c = await caches.open(DB_CACHE);
+    const r = await c.match(key);
+    return r ? await r.json() : null;
+  } catch (e) { return null; }
+}
+
+async function cachePut(key, data) {
+  if (typeof caches === 'undefined' || !data) return false;
+  try {
+    const c = await caches.open(DB_CACHE);
+    await c.put(key, new Response(JSON.stringify(data), {
+      headers: { 'Content-Type': 'application/json; charset=utf-8' }
+    }));
+    return true;
+  } catch (e) { return false; }
+}
+
+/* ---------------- 双因子版本比较 ----------------
+ * version 与 generated_at 任一更新即判定为新版本。
+ * 只比 version 的风险：某次改数据若忘了 bump 版本号，将永久拿不到更新且不报错。
+ * 兼容各数据集字段位置（顶层 或 meta 内）与命名（generated_at / generated）。
+ */
+function verOf(o) {
+  if (!o || typeof o !== 'object') return { v: null, t: 0 };
+  const m = (o.meta && typeof o.meta === 'object') ? o.meta : {};
+  const t = Date.parse(o.generated_at || o.generated || m.generated_at || m.generated || '') || 0;
+  return { v: o.version || m.version || null, t };
+}
+function isNewer(a, b) {
+  const A = verOf(a), B = verOf(b);
+  if (!A.v && !A.t) return false;   // 新数据无版本信息，不认定为更新
+  if (!B.v && !B.t) return true;
+  const va = verCompare(A.v, B.v);
+  if (va !== 0) return va > 0;      // 版本号可比且不同，以版本号为准
+  return A.t > B.t;                 // 版本号相同或缺失，退化为时间戳比较
+}
+
 /* ---------------- 数据加载 ---------------- */
-async function loadDB(forceRefresh) {
-  const pill = $('#src-pill'), txt = $('#src-txt');
-  let lastErr = null;
-  const sources = await resolveDataSources();
-  for (const src of sources) {
+/* 远程抓取：按 jsDelivr / GitHub Raw 顺序尝试，返回首个可用的完整数据；全部失败返回 null */
+async function fetchRemoteDB(timeout) {
+  for (const src of await resolveDataSources()) {
+    if (src.name === '本地镜像') continue;
     try {
       const ctrl = new AbortController();
-      const tm = setTimeout(() => ctrl.abort(), 20000);
+      const tm = setTimeout(() => ctrl.abort(), timeout || 20000);
+      // 刷新与后台更新必须 no-store + 时间戳，否则命中缓存将永远拿不到新版
       const r = await fetch(src.url + (src.url.includes('?') ? '&' : '?') + '_t=' + Date.now(), { signal: ctrl.signal, cache: 'no-store' });
       clearTimeout(tm);
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+      if (!r.ok) continue;
       const j = await r.json();
-      if (!j || !Array.isArray(j.cities) || !j.cities.length) throw new Error('数据结构不完整');
-      // 防 CDN 缓存回退：若本地镜像版本更新（部署时打包的快照），优先采用较新者
-      if (src.name !== '本地镜像') {
-        try {
-          const lr = await fetch('gjj_policy_database.json?_t=' + Date.now(), { cache: 'no-store' });
-          if (lr.ok) {
-            const lj = await lr.json();
-            if (lj && verCompare(lj.version, j.version) > 0) {
-              CUR_SRC = `本地镜像（较新，${src.name} 缓存为旧版）`;
-              pill.classList.add('ok'); pill.href = REPO_URL;
-              txt.textContent = `已连接·${CUR_SRC} v${lj.version || ''} ${lj.generated_at || ''}`;
-              return lj;
-            }
-          }
-        } catch (le) { /* 本地镜像不可读则用远程 */ }
-      }
-      CUR_SRC = src.name;
-      pill.classList.add('ok'); pill.href = REPO_URL;
-      txt.textContent = `已连接·${src.name} v${j.version || ''} ${j.generated_at || ''}`;
+      if (!j || !Array.isArray(j.cities) || !j.cities.length) continue;
       return j;
-    } catch (e) { lastErr = e; console.warn('数据源失败:', src.name, e.message); }
+    } catch (e) { console.warn('远程源失败:', src.name, e.message); }
   }
-  pill.classList.add('bad'); txt.textContent = '数据源连接失败';
-  throw lastErr || new Error('所有数据源均不可用');
+  return null;
+}
+
+/* 后台静默更新（尽力而为）：仅当远程版本确实更新时才写入数据仓，供下次打开使用。
+ * 不阻塞首屏、不提示、失败完全静默；远程版本更旧时不写入（等价于原有的防 CDN 回退）。 */
+async function revalidateDB(current) {
+  try {
+    const j = await fetchRemoteDB(20000);
+    if (j && isNewer(j, current)) await cachePut(KEY_DB, j);
+  } catch (e) { /* 后台更新整体失败，静默 */ }
+}
+
+async function loadDB(forceRefresh) {
+  const pill = $('#src-pill'), txt = $('#src-txt');
+  GOT_UPDATE = false;
+  let data = null;
+
+  /* ① 本地数据仓：上次后台静默更新写入的新版，0 网络请求，最快 */
+  if (!forceRefresh) {
+    const cached = await cacheGet(KEY_DB);
+    if (cached && Array.isArray(cached.cities) && cached.cities.length) { data = cached; CUR_SRC = '本地缓存'; }
+  }
+
+  /* ② 站点本地镜像：与页面同域，约 0.5 秒。
+   *    不附加时间戳、不禁用缓存，以便命中浏览器 HTTP 缓存（改造点 B）。 */
+  if (!data) {
+    try {
+      const r = await fetch('gjj_policy_database.json');
+      if (r.ok) {
+        const j = await r.json();
+        if (j && Array.isArray(j.cities) && j.cities.length) { data = j; CUR_SRC = '本地镜像'; }
+      }
+    } catch (e) { /* 落到远程兜底 */ }
+  }
+
+  /* ③ 远程兜底：仅当本地来源全部不可用时才阻塞等待 */
+  if (!data) {
+    let lastErr = null;
+    try {
+      const j = await fetchRemoteDB(20000);
+      if (j) { data = j; CUR_SRC = '远程源'; }
+    } catch (e) { lastErr = e; }
+    if (!data) {
+      pill.classList.add('bad'); txt.textContent = '数据源连接失败';
+      throw lastErr || new Error('所有数据源均不可用');
+    }
+  }
+
+  /* 手动刷新：同步走远程（12 秒超时）。拿不到新版就沿用本地数据，不视为失败 */
+  if (forceRefresh) {
+    const fresh = await fetchRemoteDB(12000);
+    if (fresh && isNewer(fresh, data)) {
+      await cachePut(KEY_DB, fresh);
+      data = fresh; CUR_SRC = '远程更新'; GOT_UPDATE = true;
+    }
+  }
+
+  pill.classList.add('ok'); pill.href = REPO_URL;
+  txt.textContent = `已连接·${CUR_SRC} v${data.version || ''} ${data.generated_at || ''}`;
+
+  /* ④ 后台静默更新：本次不重绘，新版留到下次打开生效（用户选定的策略） */
+  if (!forceRefresh) revalidateDB(data);
+  return data;
 }
 
 /* ---------------- 城市口径（任务4：134城，以年报库为准；排除「全国」等非城市条目） ---------------- */
@@ -1177,21 +1273,22 @@ function leaderAct(g) {
   if (/开除党籍|双开/.test(t) || (/免/.test(t) && !/任/.test(t))) return 'removed';
   return 'new';
 }
-async function loadLeaderChanges() {
-  const bases = [];
-  try {
-    const ctrl = new AbortController();
-    const tm = setTimeout(() => ctrl.abort(), 5000);
-    const r = await fetch('https://api.github.com/repos/polarsta/gjj-policy-watch/commits/main', { signal: ctrl.signal, cache: 'no-store' });
-    clearTimeout(tm);
-    if (r.ok) { const j = await r.json(); if (j && j.sha) bases.push(`https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@${j.sha}/research/personnel-changes.json`); }
-  } catch (e) { /* SHA 解析失败走常规源 */ }
-  bases.push(
-    'https://raw.githubusercontent.com/polarsta/gjj-policy-watch/main/research/personnel-changes.json',
-    'https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/research/personnel-changes.json',
-    'research/personnel-changes.json'
-  );
-  for (const u of bases) {
+/* 远程源顺序：jsDelivr@main（有数小时缓存但可达性较好）→ GitHub Raw。
+ * 不再先解析 api.github.com 的提交 SHA：该请求实测不通，且每次白白增加 5 秒等待。 */
+const LEADER_SOURCES = [
+  'https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/research/personnel-changes.json',
+  'https://raw.githubusercontent.com/polarsta/gjj-policy-watch/main/research/personnel-changes.json'
+];
+const LEADER_LOCAL = 'research/personnel-changes.json';
+
+function applyLeader(j) {
+  if (!j || !Array.isArray(j.confirmed_changes)) return false;
+  LEADER_META = j.meta || {};
+  LEADER_CHANGES = convertLeaderChanges(j);
+  return true;
+}
+async function fetchRemoteLeader() {
+  for (const u of LEADER_SOURCES) {
     try {
       const ctrl = new AbortController();
       const tm = setTimeout(() => ctrl.abort(), 12000);
@@ -1200,15 +1297,39 @@ async function loadLeaderChanges() {
       if (!r.ok) continue;
       const j = await r.json();
       if (!j || !Array.isArray(j.confirmed_changes)) continue;
-      LEADER_META = j.meta || {};
-      LEADER_CHANGES = convertLeaderChanges(j);
-      console.log('领导变动数据已加载：', u, '，覆盖', Object.keys(LEADER_CHANGES).length, '城');
-      LEADER_READY = true;
-      return;
+      return j;
     } catch (e) { console.warn('领导变动数据源失败:', u, e.message); }
   }
-  console.warn('领导变动数据不可用，相关卡片不显示');
+  return null;
+}
+async function revalidateLeader(current) {
+  try {
+    const j = await fetchRemoteLeader();
+    if (j && isNewer(j, current)) await cachePut(KEY_LEADER, j);
+  } catch (e) { /* 静默 */ }
+}
+async function loadLeaderChanges() {
+  let data = null;
+  /* ① 本地数据仓（上次后台更新的新版） */
+  const cached = await cacheGet(KEY_LEADER);
+  if (cached && applyLeader(cached)) data = cached;
+  /* ② 站点本地镜像：同域，约 0.1 秒 */
+  if (!data) {
+    try {
+      const r = await fetch(LEADER_LOCAL);
+      if (r.ok) { const j = await r.json(); if (applyLeader(j)) data = j; }
+    } catch (e) { /* 落到远程兜底 */ }
+  }
+  /* ③ 远程兜底：仅本地来源全部不可用时才阻塞 */
+  if (!data) {
+    const j = await fetchRemoteLeader();
+    if (j && applyLeader(j)) data = j;
+  }
+  if (data) console.log('领导变动数据已加载，覆盖', Object.keys(LEADER_CHANGES).length, '城');
+  else console.warn('领导变动数据不可用，相关卡片不显示');
   LEADER_READY = true;
+  /* ④ 后台静默更新：本次不重绘，新版下次打开生效 */
+  revalidateLeader(data);
 }
 /* ================= 分行视图 ================= */
 function cityByName(n) { return CITIES.find(c => c.city === n); }
@@ -1596,39 +1717,69 @@ function normalizeNeg(j) {
     return r;  // 旧版快照结构原样透传
   }).filter(i => i.title);
 }
-async function loadNegNews() {
-  const sources = [
-    { name: 'jsDelivr CDN', url: 'https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
-    { name: 'jsDelivr Fastly', url: 'https://fastly.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
-    { name: 'jsDelivr Gcore', url: 'https://gcore.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
-    { name: 'GitHub Raw', url: 'https://raw.githubusercontent.com/polarsta/gjj-policy-watch/main/negative_news/negative_news.json' },
-    { name: '本地镜像', url: 'negative_news.json' }
-  ];
-  for (const src of sources) {
+const NEG_SOURCES = [
+  { name: 'jsDelivr CDN', url: 'https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
+  { name: 'jsDelivr Fastly', url: 'https://fastly.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
+  { name: 'jsDelivr Gcore', url: 'https://gcore.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
+  { name: 'GitHub Raw', url: 'https://raw.githubusercontent.com/polarsta/gjj-policy-watch/main/negative_news/negative_news.json' }
+];
+function negLabelFor(name, meta) {
+  const gen = meta && meta.generated_at ? meta.generated_at : '';
+  return name === '本地镜像' ? (gen ? `本地快照 ${gen}` : '本地快照')
+    : (gen ? `后台更新 ${gen}·${name}` : `后台更新·${name}`);
+}
+async function fetchRemoteNeg() {
+  for (const src of NEG_SOURCES) {
     try {
       const ctrl = new AbortController();
       const tm = setTimeout(() => ctrl.abort(), 10000);
-      const r = await fetch(src.url + (src.url.includes('?') ? '&' : '?') + '_t=' + Date.now(), { signal: ctrl.signal, cache: 'no-store' });
+      const r = await fetch(src.url + '?_t=' + Date.now(), { signal: ctrl.signal, cache: 'no-store' });
       clearTimeout(tm);
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+      if (!r.ok) continue;
       const j = await r.json();
-      const items = normalizeNeg(j);
-      if (!items.length) throw new Error('舆情数据为空');
-      NEG_NEWS = items;
-      NEG_META = (j && !Array.isArray(j) && j.meta) || null;
-      const lbl = $('#risk-src-label');
-      if (lbl) {
-        const gen = NEG_META && NEG_META.generated_at ? NEG_META.generated_at : '';
-        lbl.textContent = src.name === '本地镜像'
-          ? (gen ? `本地快照 ${gen}` : '本地快照')
-          : (gen ? `后台更新 ${gen}·${src.name}` : `后台更新·${src.name}`);
-      }
-      fetchLiveNeg();
-      return;
+      if (!normalizeNeg(j).length) continue;
+      return j;
     } catch (e) { console.warn('舆情源失败:', src.name, e.message); }
   }
-  NEG_NEWS = NEG_NEWS || [];
+  return null;
+}
+async function revalidateNeg(current) {
+  try {
+    const j = await fetchRemoteNeg();
+    if (j && isNewer(j, current)) await cachePut(KEY_NEG, j);
+  } catch (e) { /* 静默 */ }
+}
+async function loadNegNews() {
+  let data = null, from = '';
+  /* ① 本地数据仓（上次后台更新的新版） */
+  const cached = await cacheGet(KEY_NEG);
+  if (cached && normalizeNeg(cached).length) { data = cached; from = '本地缓存'; }
+  /* ② 站点本地镜像：同域，约 0.1 秒 */
+  if (!data) {
+    try {
+      const r = await fetch('negative_news.json');
+      if (r.ok) {
+        const j = await r.json();
+        if (j && normalizeNeg(j).length) { data = j; from = '本地镜像'; }
+      }
+    } catch (e) { /* 落到远程兜底 */ }
+  }
+  /* ③ 远程兜底：仅本地来源全部不可用时才阻塞 */
+  if (!data) {
+    const j = await fetchRemoteNeg();
+    if (j) { data = j; from = '后台更新'; }
+  }
+  if (data) {
+    NEG_NEWS = normalizeNeg(data);
+    NEG_META = (!Array.isArray(data) && data.meta) || null;
+    const lbl = $('#risk-src-label');
+    if (lbl) lbl.textContent = negLabelFor(from, NEG_META);
+  } else {
+    NEG_NEWS = NEG_NEWS || [];
+  }
   fetchLiveNeg();
+  /* ④ 后台静默更新：本次不重绘，新版下次打开生效 */
+  revalidateNeg(data);
 }
 /* ---- 实时抓取：经公共 CORS 代理抓 360 搜索（失败静默，保留快照） ---- */
 async function fetchLiveNeg() {
