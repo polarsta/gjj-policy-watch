@@ -2,10 +2,10 @@
   "meta": {
     "title": "住房公积金负面新闻与舆情汇编",
     "dataset": "negative_news",
-    "generated_at": "2026-09-07",
-    "time_range": "2025-09-01 ~ 2026-09-07（近12个月；2026-09-07 巡检补录 2026-08-31~09-07 新增条目）",
-    "total": 63,
-    "link_verified": "63/63",
+    "generated_at": "2026-09-09",
+    "time_range": "2025-09-01 ~ 2026-09-09（近12个月；2026-09-07 巡检补录 2026-08-31~09-07 新增条目 18 条；2026-09-09 补录六安市直管理部负责人被查 1 条）",
+    "total": 64,
+    "link_verified": "64/64",
     "source_priority": [
       "1. 政府网站公告（含公积金中心通告、审计/巡察/纪检通报、政务信箱）",
       "2. 中央及地方官方媒体（新华社、央视网、工人日报、重庆日报、中国经济网等）",
@@ -52,7 +52,7 @@
       "source_url": "https://www.bijie.gov.cn/bm/bjszfgjjglzx/dt/bmdt/202608/t20260831_90797441.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-002",
@@ -69,7 +69,7 @@
       "source_url": "https://www.wengan.gov.cn/gk/zdlyxx/zfycxjs/zfgjjjg/202606/t20260601_90231452.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-003",
@@ -86,7 +86,7 @@
       "source_url": "https://gjj.anqing.gov.cn/xxfb/tzgg/2004191157.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-004",
@@ -103,7 +103,7 @@
       "source_url": "http://gx.news.cn/20260119/52468b011bef4f1794704088295345f2/c.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-005",
@@ -120,7 +120,7 @@
       "source_url": "http://www.fenyong.gov.cn/gkmlpt/content/2/2180/post_2180883.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-006",
@@ -137,7 +137,7 @@
       "source_url": "https://www.zhanjiang.gov.cn/zjsfw/bmdh/zfgjj/zwgk/zfgg/content/mpost_2197675.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-007",
@@ -154,7 +154,7 @@
       "source_url": "https://www.toutiao.com/article/7654779330710471168",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-008",
@@ -171,7 +171,7 @@
       "source_url": "https://www.changshatx.jcy.gov.cn/tzgg/202604/t20260402_7668300.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-009",
@@ -188,7 +188,7 @@
       "source_url": "https://news.qq.com/rain/a/20260724A0C91V00",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-010",
@@ -205,7 +205,7 @@
       "source_url": "https://big5.cctv.com/gate/big5/news.cctv.com/2026/05/19/ARTIYhBqsRGhTjnBWrpRbca4260519.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-011",
@@ -222,7 +222,7 @@
       "source_url": "https://new.qq.com/rain/a/20260710A061N600?refer=cp_1009",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-012",
@@ -239,7 +239,7 @@
       "source_url": "https://www.jwview.com/jingwei/html/01-18/654793.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-013",
@@ -256,7 +256,7 @@
       "source_url": "https://news.qq.com/rain/a/20260819A0DZQS00",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-014",
@@ -273,7 +273,7 @@
       "source_url": "https://m.thepaper.cn/newsDetail_forward_33337084",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-015",
@@ -290,7 +290,7 @@
       "source_url": "https://big5.cctv.com/gate/big5/news.cctv.cn/2026/06/11/ARTINASBmjhS7q8uq4xIPO5k260611.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-016",
@@ -307,7 +307,7 @@
       "source_url": "https://www.toutiao.com/article/7650014599688847898",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-017",
@@ -324,7 +324,7 @@
       "source_url": "https://news.shufe.edu.cn/f5/10/c13908a259344/page.htm",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-018",
@@ -341,7 +341,7 @@
       "source_url": "https://www.cqrb.cn/caijingzonghe/2026-08-02/2740940_pc.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-019",
@@ -358,7 +358,7 @@
       "source_url": "https://ifnews.com/news.html?aid=819968",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-020",
@@ -375,7 +375,7 @@
       "source_url": "https://www.ce.cn/xwzx/gnsz/gdxw/202604/t20260425_2929473.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-021",
@@ -392,7 +392,7 @@
       "source_url": "http://www.gzdis.gov.cn/scdc/xcjjyxgb/202601/t20260113_89295212.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-022",
@@ -409,7 +409,7 @@
       "source_url": "https://www.jinantimes.com.cn/news-172-5233956.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-023",
@@ -426,7 +426,7 @@
       "source_url": "https://hlwjjd.hunan.gov.cn/portal/portalIndex/content?groupKey=430400000000&newsId=4304001517120250267701249&type=superviseNews",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-024",
@@ -443,7 +443,7 @@
       "source_url": "https://www.chaozhou.gov.cn/czsjj/gkmlpt/content/3/3996/post_3996724.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-025",
@@ -460,7 +460,7 @@
       "source_url": "https://www.nxgy.gov.cn/zwgk/zfxxgkml/czyjsgk_27316/202605/t20260522_5247406.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-026",
@@ -477,7 +477,7 @@
       "source_url": "http://yhlz.yuhuan.gov.cn/col/col1632016/art/2026/art_3cbb7d923be44a1989b5efe8c1a71b21.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-027",
@@ -494,7 +494,7 @@
       "source_url": "https://lysjcj.longyan.gov.cn/xxgk/xcgz/202608/t20260826_2309735.htm",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-028",
@@ -507,11 +507,11 @@
       "impact": "反向印证此前提取环节主要依赖人工审核、制度刚性不足的普遍性问题。",
       "severity": "中",
       "source_type": "政府网站",
-      "source_name": "呼伦贝尔市审计局",
-      "source_url": "https://mzj.hlbe.gov.cn/News/show/1423716.html",
+      "source_name": "满洲里市人民政府（满洲里市审计局）",
+      "source_url": "https://manzhouli.gov.cn/Elderly/News/show/1423397.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-029",
@@ -528,7 +528,7 @@
       "source_url": "https://www.nanchong.gov.cn/xwdt/gsgg/t_2356521.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-030",
@@ -545,7 +545,7 @@
       "source_url": "https://jyh.huangshi.gov.cn/pub/hszfgjj/xwdt/tzgg/202606/t20260617_1335858.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-031",
@@ -562,7 +562,7 @@
       "source_url": "https://gjj.zhuhai.gov.cn/gkmlpt/content/3/3913/post_3913194.html?jump=true",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-032",
@@ -579,7 +579,7 @@
       "source_url": "https://zfgjj.hanzhong.gov.cn/hzgjj/tzgg/202607/20270224397a426392b1e32a4cc5f149.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-033",
@@ -596,7 +596,7 @@
       "source_url": "http://zfgjj.gxhz.gov.cn/tzgg/t28018932.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-034",
@@ -613,7 +613,7 @@
       "source_url": "https://gjj.gz.gov.cn/gg/tzgg/content/post_10648388.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-035",
@@ -630,7 +630,7 @@
       "source_url": "https://www.jxxz.gov.cn/jxxz/c120610/202605/9b7432a89d6c4d7b9d69e0ff8e5e7308.shtml",
       "link_status": "200（人工核验：江西政务站点对自动化请求返回 412，浏览器可正常打开）",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-036",
@@ -647,7 +647,7 @@
       "source_url": "http://www.baise.gov.cn/ggfw/zfbz/wyk/zfgjj/t27228875.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-037",
@@ -664,7 +664,7 @@
       "source_url": "https://www.piyao.org.cn/20260604/82557f2e5fc747fb880b7c68f8d1c33d/c.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-038",
@@ -681,7 +681,7 @@
       "source_url": "http://hancheng.gov.cn/appeal/view.jsp?model_id=1&sq_id=30184",
       "link_status": "200（人工核验：已抓取页面全文，含“住房公积金”“限号”等原文表述）",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-039",
@@ -698,7 +698,7 @@
       "source_url": "https://www.jnnews.tv/app/politics/content/detail?id=366248",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-040",
@@ -715,7 +715,7 @@
       "source_url": "https://www.nanyang.gov.cn/2026/08-20/1427949.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-041",
@@ -732,7 +732,7 @@
       "source_url": "https://www.foshan.gov.cn/zsk?kCode=AFS00015467&parent=",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-042",
@@ -749,7 +749,7 @@
       "source_url": "http://zfgjj.gxhz.gov.cn/xxgk/fdzdgknr/tjxx/t27907787.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-043",
@@ -766,7 +766,7 @@
       "source_url": "http://zfgjj.gxhz.gov.cn/xxgk/fdzdgknr/tjxx/t27907787.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-044",
@@ -783,7 +783,7 @@
       "source_url": "https://www.zjxc.gov.cn/col/col1229786103/art/2026/art_562442463021493ba4548c70e45f716c.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-045",
@@ -800,7 +800,7 @@
       "source_url": "https://xjgjj.xjjs.gov.cn/info/1115/25811.htm",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-046",
@@ -817,7 +817,7 @@
       "source_url": "https://www.legaldaily.com.cn/index_article/content/2026-09/03/content_9451495.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-047",
@@ -834,7 +834,7 @@
       "source_url": "https://hnjysfy.hncourt.gov.cn/public/detail.php?id=4101",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-048",
@@ -851,7 +851,7 @@
       "source_url": "https://gjj.xuancheng.gov.cn/News/show/1728021.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-049",
@@ -868,7 +868,7 @@
       "source_url": "https://gjj.zhenjiang.gov.cn/zxxx/xwdt/202609/0fdbaa5af3874bdbb177639fa00e3cd8.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-050",
@@ -885,7 +885,7 @@
       "source_url": "https://www.toutiao.com/article/7680553311212274212",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-051",
@@ -902,7 +902,7 @@
       "source_url": "https://zfgjj.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13083_n_1605682382.0377/doc_6a98bd5358a37d2c69b798d6.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-052",
@@ -919,7 +919,7 @@
       "source_url": "https://www.toutiao.com/article/7681960050210751010",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-053",
@@ -936,7 +936,7 @@
       "source_url": "https://www.sohu.com/a/1071935497_121106875",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-054",
@@ -953,7 +953,7 @@
       "source_url": "https://www.leshan.cn/html/113D9C4BB2925A7A/2026/09/04/view_BD7FE2D0FD50E02D.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-055",
@@ -970,7 +970,7 @@
       "source_url": "https://m.sohu.com/a/1071472471_121106869",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-056",
@@ -987,7 +987,7 @@
       "source_url": "https://gjj.gzlps.gov.cn/yqgg/202609/t20260905_90823459.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-057",
@@ -1004,7 +1004,7 @@
       "source_url": "https://gjj.hangzhou.gov.cn/col/col1229287674/art/2026/art_22f089408f4b49ef86f87ba93217a7bf.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-058",
@@ -1021,7 +1021,7 @@
       "source_url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zfggsd/202609/t20260902_2842426.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-059",
@@ -1038,7 +1038,7 @@
       "source_url": "https://zfgjj.ly.gov.cn/2026/09-07/1083586.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-060",
@@ -1055,7 +1055,7 @@
       "source_url": "https://zfgjj.km.gov.cn/c/2026-09-02/5108880.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-061",
@@ -1072,7 +1072,7 @@
       "source_url": "https://fsgjj.foshan.gov.cn/gkmlpt/content/7/7294/post_7294757.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-062",
@@ -1089,7 +1089,7 @@
       "source_url": "https://12345.hainan.gov.cn/hnwsbsdt/hnwebsite/pages/default/appeal_details?guid=336dcb61-e8d8-4fd3-b466-57768afd5a82",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
     },
     {
       "id": "NEG-063",
@@ -1106,7 +1106,24 @@
       "source_url": "https://www.toutiao.com/article/7680866177559675431",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-07"
+      "verified_date": "2026-09-09"
+    },
+    {
+      "id": "NEG-064",
+      "category": "违纪违法与监管问责",
+      "title": "六安：市住房公积金中心市直管理部副主任朱军涉嫌严重违法接受监察调查",
+      "date": "2026-09-08",
+      "region": "安徽·六安",
+      "subject": "六安市监委（指定金安区监委管辖）",
+      "summary": "六安纪检监察网 2026年9月8日17:20 发布：六安市住房公积金中心市直管理部副主任朱军涉嫌严重违法，经六安市监委指定管辖，目前正接受金安区监委监察调查（金安区纪委监委）。",
+      "impact": "继滨州（NEG-022）、衡阳（NEG-023）之后又一地市中心派出管理部负责人被查，反映执纪监督持续向公积金一线业务岗位延伸。管理部直接经办缴存登记、提取与贷款受理，业务权限集中而稽核力量相对薄弱；合作银行在受托业务对接中需关注经办人员变动期的交接连续性，并对存量业务做好合规复核。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "六安纪检监察网（六安市纪委监委）",
+      "source_url": "https://www.lajjjc.gov.cn/xxgk/scdc/zjsc/8948789.html",
+      "link_status": "200",
+      "link_ok": "是",
+      "verified_date": "2026-09-09"
     }
   ]
 }
