@@ -47,6 +47,7 @@ let FEAT = {};            // city -> 特征对象
 let LOCAL_REC = [];       // 本地新增记录
 let NAT_POLICIES = [];    // 挖掘出的全国性政策
 let CUR_SRC = '';         // 当前数据源名
+let GOT_UPDATE = false;   // 手动刷新时是否真的拉到了更新版本（用于提示文案准确性）
 let BR_CITY = null;       // 分行当前城市
 let BR_RANGE = 0;         // 分行时间筛选（天，0=全部）
 let HQ_RANGE = 365;       // 总行速览时间范围
@@ -72,43 +73,138 @@ function verCompare(a, b) {
   return 0;
 }
 
+/* ================= 本地数据仓（Cache Storage）=================
+ * 用途：支撑「下次打开才生效」——后台静默更新拉到的新版写入此处，本次访问不重绘，
+ *       下次打开时优先读取，实现 0 网络请求秒开。
+ * 选型：localStorage 约 5MB 且按 UTF-16 计量，3.5MB 中文数据易超限；
+ *       Cache Storage 配额通常为数百 MB，更适合存放数据库快照。
+ * 降级：任何异常一律静默返回空值，自动回退到站点本地镜像，不影响主流程。
+ */
+const DB_CACHE = 'gjj-data-v1';
+const KEY_DB = 'db';
+const KEY_NEG = 'neg';
+const KEY_LEADER = 'leader';
+
+async function cacheGet(key) {
+  if (typeof caches === 'undefined') return null;
+  try {
+    const c = await caches.open(DB_CACHE);
+    const r = await c.match(key);
+    return r ? await r.json() : null;
+  } catch (e) { return null; }
+}
+
+async function cachePut(key, data) {
+  if (typeof caches === 'undefined' || !data) return false;
+  try {
+    const c = await caches.open(DB_CACHE);
+    await c.put(key, new Response(JSON.stringify(data), {
+      headers: { 'Content-Type': 'application/json; charset=utf-8' }
+    }));
+    return true;
+  } catch (e) { return false; }
+}
+
+/* ---------------- 双因子版本比较 ----------------
+ * version 与 generated_at 任一更新即判定为新版本。
+ * 只比 version 的风险：某次改数据若忘了 bump 版本号，将永久拿不到更新且不报错。
+ * 兼容各数据集字段位置（顶层 或 meta 内）与命名（generated_at / generated）。
+ */
+function verOf(o) {
+  if (!o || typeof o !== 'object') return { v: null, t: 0 };
+  const m = (o.meta && typeof o.meta === 'object') ? o.meta : {};
+  const t = Date.parse(o.generated_at || o.generated || m.generated_at || m.generated || '') || 0;
+  return { v: o.version || m.version || null, t };
+}
+function isNewer(a, b) {
+  const A = verOf(a), B = verOf(b);
+  if (!A.v && !A.t) return false;   // 新数据无版本信息，不认定为更新
+  if (!B.v && !B.t) return true;
+  const va = verCompare(A.v, B.v);
+  if (va !== 0) return va > 0;      // 版本号可比且不同，以版本号为准
+  return A.t > B.t;                 // 版本号相同或缺失，退化为时间戳比较
+}
+
 /* ---------------- 数据加载 ---------------- */
-async function loadDB(forceRefresh) {
-  const pill = $('#src-pill'), txt = $('#src-txt');
-  let lastErr = null;
-  const sources = await resolveDataSources();
-  for (const src of sources) {
+/* 远程抓取：按 jsDelivr / GitHub Raw 顺序尝试，返回首个可用的完整数据；全部失败返回 null */
+async function fetchRemoteDB(timeout) {
+  for (const src of await resolveDataSources()) {
+    if (src.name === '本地镜像') continue;
     try {
       const ctrl = new AbortController();
-      const tm = setTimeout(() => ctrl.abort(), 20000);
+      const tm = setTimeout(() => ctrl.abort(), timeout || 20000);
+      // 刷新与后台更新必须 no-store + 时间戳，否则命中缓存将永远拿不到新版
       const r = await fetch(src.url + (src.url.includes('?') ? '&' : '?') + '_t=' + Date.now(), { signal: ctrl.signal, cache: 'no-store' });
       clearTimeout(tm);
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+      if (!r.ok) continue;
       const j = await r.json();
-      if (!j || !Array.isArray(j.cities) || !j.cities.length) throw new Error('数据结构不完整');
-      // 防 CDN 缓存回退：若本地镜像版本更新（部署时打包的快照），优先采用较新者
-      if (src.name !== '本地镜像') {
-        try {
-          const lr = await fetch('gjj_policy_database.json?_t=' + Date.now(), { cache: 'no-store' });
-          if (lr.ok) {
-            const lj = await lr.json();
-            if (lj && verCompare(lj.version, j.version) > 0) {
-              CUR_SRC = `本地镜像（较新，${src.name} 缓存为旧版）`;
-              pill.classList.add('ok'); pill.href = REPO_URL;
-              txt.textContent = `已连接·${CUR_SRC} v${lj.version || ''} ${lj.generated_at || ''}`;
-              return lj;
-            }
-          }
-        } catch (le) { /* 本地镜像不可读则用远程 */ }
-      }
-      CUR_SRC = src.name;
-      pill.classList.add('ok'); pill.href = REPO_URL;
-      txt.textContent = `已连接·${src.name} v${j.version || ''} ${j.generated_at || ''}`;
+      if (!j || !Array.isArray(j.cities) || !j.cities.length) continue;
       return j;
-    } catch (e) { lastErr = e; console.warn('数据源失败:', src.name, e.message); }
+    } catch (e) { console.warn('远程源失败:', src.name, e.message); }
   }
-  pill.classList.add('bad'); txt.textContent = '数据源连接失败';
-  throw lastErr || new Error('所有数据源均不可用');
+  return null;
+}
+
+/* 后台静默更新（尽力而为）：仅当远程版本确实更新时才写入数据仓，供下次打开使用。
+ * 不阻塞首屏、不提示、失败完全静默；远程版本更旧时不写入（等价于原有的防 CDN 回退）。 */
+async function revalidateDB(current) {
+  try {
+    const j = await fetchRemoteDB(20000);
+    if (j && isNewer(j, current)) await cachePut(KEY_DB, j);
+  } catch (e) { /* 后台更新整体失败，静默 */ }
+}
+
+async function loadDB(forceRefresh) {
+  const pill = $('#src-pill'), txt = $('#src-txt');
+  GOT_UPDATE = false;
+  let data = null;
+
+  /* ① 本地数据仓：上次后台静默更新写入的新版，0 网络请求，最快 */
+  if (!forceRefresh) {
+    const cached = await cacheGet(KEY_DB);
+    if (cached && Array.isArray(cached.cities) && cached.cities.length) { data = cached; CUR_SRC = '本地缓存'; }
+  }
+
+  /* ② 站点本地镜像：与页面同域，约 0.5 秒。
+   *    不附加时间戳、不禁用缓存，以便命中浏览器 HTTP 缓存（改造点 B）。 */
+  if (!data) {
+    try {
+      const r = await fetch('gjj_policy_database.json');
+      if (r.ok) {
+        const j = await r.json();
+        if (j && Array.isArray(j.cities) && j.cities.length) { data = j; CUR_SRC = '本地镜像'; }
+      }
+    } catch (e) { /* 落到远程兜底 */ }
+  }
+
+  /* ③ 远程兜底：仅当本地来源全部不可用时才阻塞等待 */
+  if (!data) {
+    let lastErr = null;
+    try {
+      const j = await fetchRemoteDB(20000);
+      if (j) { data = j; CUR_SRC = '远程源'; }
+    } catch (e) { lastErr = e; }
+    if (!data) {
+      pill.classList.add('bad'); txt.textContent = '数据源连接失败';
+      throw lastErr || new Error('所有数据源均不可用');
+    }
+  }
+
+  /* 手动刷新：同步走远程（12 秒超时）。拿不到新版就沿用本地数据，不视为失败 */
+  if (forceRefresh) {
+    const fresh = await fetchRemoteDB(12000);
+    if (fresh && isNewer(fresh, data)) {
+      await cachePut(KEY_DB, fresh);
+      data = fresh; CUR_SRC = '远程更新'; GOT_UPDATE = true;
+    }
+  }
+
+  pill.classList.add('ok'); pill.href = REPO_URL;
+  txt.textContent = `已连接·${CUR_SRC} v${data.version || ''} ${data.generated_at || ''}`;
+
+  /* ④ 后台静默更新：本次不重绘，新版留到下次打开生效（用户选定的策略） */
+  if (!forceRefresh) revalidateDB(data);
+  return data;
 }
 
 /* ---------------- 城市口径（任务4：134城，以年报库为准；排除「全国」等非城市条目） ---------------- */
@@ -638,7 +734,7 @@ function exportOvData() {
   const pctRaw = (c, p) => (c && c.value != null && p && p.value) ? (Math.round((c - p) / p * 1000) / 10) : '';
   const H = ['城市', '省份', '新开户单位(家)', '实缴单位(万家)', '实缴单位同比', '新开户职工(万人)', '实缴职工(万人)',
     '缴存额2025(亿元)', '缴存额同比', '提取额2025(亿元)', '提取额同比(%)', '提取额较2024增减(亿元)',
-    '发放贷款2025(亿元)', '发放贷款同比(%)', '发放贷款较2024增减(亿元)', '资金存款2025(亿元)', '资金存款较2024', '2025年报链接', '2024年报链接'];
+    '发放贷款2025(亿元)', '发放贷款同比(%)', '发放贷款较2024增减(亿元)', '贷款余额2025(亿元)', '贷款余额同比(%)', '资金存款2025(亿元)', '资金存款较2024', '2025年报链接', '2024年报链接'];
   const lines = [H];
   let sum = null;
   for (const x of rows) {
@@ -647,11 +743,12 @@ function exportOvData() {
       num(s.new_employees), num(s.active_employees), num(s.deposit_amount), (s.deposit_amount || {}).yoy || '',
       num(s.withdraw_amount), pctOf(s.withdraw_amount, s24.withdraw_amount), diff(s.withdraw_amount, s24.withdraw_amount),
       num(s.loan_issued), pctOf(s.loan_issued, s24.loan_issued), diff(s.loan_issued, s24.loan_issued),
+      num(s.loan_balance), (s.loan_balance || {}).yoy || '',
       num(s.fund_deposit_balance), chg.text || '',
       (x.report_2025 || {}).url || '', (x.report_2024 || {}).url || '']);
   }
   // 合计行
-  const K = ['new_units', 'active_units', 'new_employees', 'active_employees', 'deposit_amount', 'withdraw_amount', 'loan_issued', 'fund_deposit_balance'];
+  const K = ['new_units', 'active_units', 'new_employees', 'active_employees', 'deposit_amount', 'withdraw_amount', 'loan_issued', 'loan_balance', 'fund_deposit_balance'];
   const t = {}, t24 = {};
   for (const k of K) { let a = 0; for (const x of rows) { const o = (x.stats_2025 || {})[k]; if (o && o.value != null) a += o.value; } t[k] = Math.round(a * 100) / 100; }
   for (const k of ['withdraw_amount', 'loan_issued']) { let a = 0, b = 0; for (const x of rows) { const c = (x.stats_2025 || {})[k] || {}, p = (x.stats_2024 || {})[k] || {}; if (c.value != null && p.value != null) { a += c.value; b += p.value; } } t24[k] = [Math.round(a * 100) / 100, Math.round(b * 100) / 100]; }
@@ -660,6 +757,7 @@ function exportOvData() {
   lines.push(['合计(' + rows.length + '城)', '', t.new_units, t.active_units, '', t.new_employees, t.active_employees,
     t.deposit_amount, '', t.withdraw_amount, pctRaw(dW[0], dW[1]), dW[0] || dW[1] ? Math.round((dW[0] - dW[1]) * 100) / 100 : '',
     t.loan_issued, pctRaw(dL[0], dL[1]), dL[0] || dL[1] ? Math.round((dL[0] - dL[1]) * 100) / 100 : '',
+    t.loan_balance, '',
     t.fund_deposit_balance, (dF[0] || dF[1]) ? ((dF[0] - dF[1]) >= 0 ? '增加' : '减少') + Math.abs(Math.round((dF[0] - dF[1]) * 100) / 100) + '亿元' : '', '', '']);
   const csv = '﻿' + lines.map(r => r.map(v => { const s = String(v == null ? '' : v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }).join(',')).join('\n');
   const a = document.createElement('a');
@@ -808,6 +906,13 @@ function renderTables() {
     if (kw) arRows = arRows.filter(x => (x.city + x.province + (x.note || '')).includes(kw));
     const av = (o, unit) => (o && o.value != null) ? `${fmtNum(o.value)} <small style="color:var(--mute)">${unit || o.unit || ''}</small>` : '<span style="color:var(--mute)">—</span>';
     const yoy = o => (o && o.yoy) ? ` <span class="yoy ${String(o.yoy).startsWith('-') ? 'yoy-dn' : 'yoy-up'}">${String(o.yoy).startsWith('-') ? '▼' : '▲'}${esc(String(o.yoy).replace(/^[+\-]/, ''))}</span>` : '';
+    // 贷款余额同比：年报原文披露口径（或按 2024 年报余额计算/人工核定，悬停见提取方式），固定显示百分比
+    const lbYoy = o => {
+      if (!o || !o.yoy) return '';
+      const dn = String(o.yoy).startsWith('-');
+      const tip = (o.extract_method || '') + (o.source_name ? '｜' + o.source_name : '');
+      return ` <span class="yoy ${dn ? 'yoy-dn' : 'yoy-up'}" title="${esc(tip)}">${dn ? '▼' : '▲'} ${esc(String(o.yoy).replace(/^[+\-]/, ''))}</span>`;
+    };
     // 与上年度比较值：按 OV_CMP 二选一展示「同比%」或「较2024增减值」（均以 2025 与 2024 年报绝对值为口径自行计算，悬停可见两年绝对值）
     const cmp = (cur, prev) => {
       const c = cur && cur.value, p = prev && prev.value;
@@ -823,7 +928,7 @@ function renderTables() {
     // 数据加总（与导出共用）：2025 各指标合计 + 2024 可比口径合计
     const ovTotals = rows2 => {
       const t = {};
-      for (const k of ['new_units', 'active_units', 'new_employees', 'active_employees', 'deposit_amount', 'withdraw_amount', 'loan_issued', 'fund_deposit_balance']) {
+      for (const k of ['new_units', 'active_units', 'new_employees', 'active_employees', 'deposit_amount', 'withdraw_amount', 'loan_issued', 'loan_balance', 'fund_deposit_balance']) {
         let s = 0, n = 0;
         for (const x of rows2) { const o = (x.stats_2025 || {})[k]; if (o && o.value != null) { s += o.value; n++; } }
         t[k] = { s: Math.round(s * 100) / 100, n };
@@ -839,24 +944,24 @@ function renderTables() {
       return t;
     };
     html += `<div id="ov-sec-data"><h4 style="margin:14px 0 8px;font-size:14.5px;color:#0e9594">④ 运行数据 · 各市 2025 年度运行统计 <span class="badge b-nat">年报库</span> <button onclick="exportOvData()" style="margin-left:8px;border:1px solid #0e9594;background:#0e9594;color:#fff;border-radius:16px;padding:4px 14px;font-size:12px;font-weight:600;cursor:pointer;vertical-align:2px">⬇ 一键导出</button><span style="display:inline-flex;margin-left:8px;vertical-align:2px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff"><span style="font-size:12px;color:var(--mute);padding:4px 6px 4px 10px;background:#fff">提取额、贷款额同比展示</span><button onclick="setOvCmp('pct')" style="border:none;background:${OV_CMP==='pct'?'#0e9594':'none'};color:${OV_CMP==='pct'?'#fff':'var(--sub)'};padding:4px 12px;font-size:12px;font-weight:600;cursor:pointer">同比%</button><button onclick="setOvCmp('diff')" style="border:none;background:${OV_CMP==='diff'?'#0e9594':'none'};color:${OV_CMP==='diff'?'#fff':'var(--sub)'};padding:4px 12px;font-size:12px;font-weight:600;cursor:pointer">增减值</button></span></h4>
-    <div class="h-sub" style="margin:-2px 0 8px">来源：各市《住房公积金 2025 年年度报告》；资金存款为公积金中心存款余额（变化量较 2024 年报）；提取额 / 发放贷款的同比变化可按上表头右侧按钮在「同比%（▲/▼X%）」与「增减值（▲/▼X亿元）」间切换（二选一，▲红涨 ▼绿跌，悬停可查看两年绝对值），均以 2025 与 2024 年报绝对值口径自行计算；「—」为未披露</div>
+    <div class="h-sub" style="margin:-2px 0 8px">来源：各市《住房公积金 2025 年年度报告》；资金存款为公积金中心存款余额（变化量较 2024 年报）；提取额 / 发放贷款的同比变化可按上表头右侧按钮在「同比%（▲/▼X%）」与「增减值（▲/▼X亿元）」间切换（二选一，▲红涨 ▼绿跌，悬停可查看两年绝对值），均以 2025 与 2024 年报绝对值口径自行计算；贷款余额的同比为年报原文披露值（部分城市按 2024 年报余额计算或人工核定，悬停可查看提取方式与来源）；「—」为未披露</div>
     <div class="tbl-wrap"><table class="tb"><thead>
       <tr class="grp">
         <th rowspan="2" class="g-plain">城市</th>
         <th colspan="5" class="g-dep">缴存</th>
         <th class="g-wit">提取</th>
-        <th class="g-loan">贷款</th>
+        <th colspan="2" class="g-loan">贷款</th>
         <th colspan="2" class="g-fund">资金存款</th>
         <th rowspan="2" class="g-plain">年报原文</th>
       </tr>
       <tr>
         <th>新开户单位</th><th>实缴单位</th><th>新开户职工</th><th>实缴职工</th><th>缴存额</th>
-        <th>提取额(2025)</th><th>发放贷款(2025)</th><th>资金存款(2025)</th><th>存款较2024</th>
+        <th>提取额(2025)</th><th>发放贷款(2025)</th><th>贷款余额(2025)</th><th>资金存款(2025)</th><th>存款较2024</th>
       </tr>
     </thead><tbody>`;
     lastProv = '';
     for (const x of arRows) {
-      if (x.province !== lastProv) { lastProv = x.province; html += `<tr class="prov-row"><td colspan="11">${esc(x.province)}</td></tr>`; }
+      if (x.province !== lastProv) { lastProv = x.province; html += `<tr class="prov-row"><td colspan="12">${esc(x.province)}</td></tr>`; }
       const s = x.stats_2025 || {};
       const s24 = x.stats_2024 || {};
       const chg = x.fund_deposit_change;
@@ -871,6 +976,7 @@ function renderTables() {
         <td class="num">${av(s.deposit_amount, '亿元')}${yoy(s.deposit_amount)}</td>
         <td class="num">${av(s.withdraw_amount, '亿元')}${cmp(s.withdraw_amount, s24.withdraw_amount)}</td>
         <td class="num">${av(s.loan_issued, '亿元')}${cmp(s.loan_issued, s24.loan_issued)}</td>
+        <td class="num">${av(s.loan_balance, '亿元')}${lbYoy(s.loan_balance)}</td>
         <td class="num">${av(s.fund_deposit_balance, '亿元')}</td>
         <td>${chg && chg.text ? `<span class="yoy ${chg.direction === '减少' ? 'yoy-dn' : 'yoy-up'}">${chg.direction === '减少' ? '▼' : '▲'} ${esc(chg.text.replace(/^(增加|减少)/, ''))}</span>` : '<span style="color:var(--mute)">—</span>'}</td>
         <td style="white-space:nowrap">${x.report_2025 && x.report_2025.url ? `<a class="badge b-dep" href="${esc(x.report_2025.url)}" target="_blank" rel="noopener" title="${esc(x.report_2025.title)}">2025年报 ↗</a>` : ''}${x.report_2024 && x.report_2024.url ? ` <a class="badge b-src" href="${esc(x.report_2024.url)}" target="_blank" rel="noopener" title="${esc(x.report_2024.title)}">2024 ↗</a>` : ''}</td></tr>`;
@@ -896,6 +1002,7 @@ function renderTables() {
       <td class="num">${avN(T.deposit_amount.s, '亿元', T.deposit_amount.n)}</td>
       <td class="num">${avN(T.withdraw_amount.s, '亿元', T.withdraw_amount.n)}${cmpN(T.withdraw_amount_24.paired, T.withdraw_amount_24.s, T.withdraw_amount_24.n)}</td>
       <td class="num">${avN(T.loan_issued.s, '亿元', T.loan_issued.n)}${cmpN(T.loan_issued_24.paired, T.loan_issued_24.s, T.loan_issued_24.n)}</td>
+      <td class="num">${avN(T.loan_balance.s, '亿元', T.loan_balance.n)}</td>
       <td class="num">${avN(T.fund_deposit_balance.s, '亿元', T.fund_deposit_balance.n)}</td>
       <td>${cmpN(T.fund_deposit_balance_24.paired, T.fund_deposit_balance_24.s, T.fund_deposit_balance_24.n) || '<span style="color:var(--mute)">—</span>'}</td>
       <td></td></tr>`;
@@ -1166,21 +1273,22 @@ function leaderAct(g) {
   if (/开除党籍|双开/.test(t) || (/免/.test(t) && !/任/.test(t))) return 'removed';
   return 'new';
 }
-async function loadLeaderChanges() {
-  const bases = [];
-  try {
-    const ctrl = new AbortController();
-    const tm = setTimeout(() => ctrl.abort(), 5000);
-    const r = await fetch('https://api.github.com/repos/polarsta/gjj-policy-watch/commits/main', { signal: ctrl.signal, cache: 'no-store' });
-    clearTimeout(tm);
-    if (r.ok) { const j = await r.json(); if (j && j.sha) bases.push(`https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@${j.sha}/research/personnel-changes.json`); }
-  } catch (e) { /* SHA 解析失败走常规源 */ }
-  bases.push(
-    'https://raw.githubusercontent.com/polarsta/gjj-policy-watch/main/research/personnel-changes.json',
-    'https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/research/personnel-changes.json',
-    'research/personnel-changes.json'
-  );
-  for (const u of bases) {
+/* 远程源顺序：jsDelivr@main（有数小时缓存但可达性较好）→ GitHub Raw。
+ * 不再先解析 api.github.com 的提交 SHA：该请求实测不通，且每次白白增加 5 秒等待。 */
+const LEADER_SOURCES = [
+  'https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/research/personnel-changes.json',
+  'https://raw.githubusercontent.com/polarsta/gjj-policy-watch/main/research/personnel-changes.json'
+];
+const LEADER_LOCAL = 'research/personnel-changes.json';
+
+function applyLeader(j) {
+  if (!j || !Array.isArray(j.confirmed_changes)) return false;
+  LEADER_META = j.meta || {};
+  LEADER_CHANGES = convertLeaderChanges(j);
+  return true;
+}
+async function fetchRemoteLeader() {
+  for (const u of LEADER_SOURCES) {
     try {
       const ctrl = new AbortController();
       const tm = setTimeout(() => ctrl.abort(), 12000);
@@ -1189,15 +1297,39 @@ async function loadLeaderChanges() {
       if (!r.ok) continue;
       const j = await r.json();
       if (!j || !Array.isArray(j.confirmed_changes)) continue;
-      LEADER_META = j.meta || {};
-      LEADER_CHANGES = convertLeaderChanges(j);
-      console.log('领导变动数据已加载：', u, '，覆盖', Object.keys(LEADER_CHANGES).length, '城');
-      LEADER_READY = true;
-      return;
+      return j;
     } catch (e) { console.warn('领导变动数据源失败:', u, e.message); }
   }
-  console.warn('领导变动数据不可用，相关卡片不显示');
+  return null;
+}
+async function revalidateLeader(current) {
+  try {
+    const j = await fetchRemoteLeader();
+    if (j && isNewer(j, current)) await cachePut(KEY_LEADER, j);
+  } catch (e) { /* 静默 */ }
+}
+async function loadLeaderChanges() {
+  let data = null;
+  /* ① 本地数据仓（上次后台更新的新版） */
+  const cached = await cacheGet(KEY_LEADER);
+  if (cached && applyLeader(cached)) data = cached;
+  /* ② 站点本地镜像：同域，约 0.1 秒 */
+  if (!data) {
+    try {
+      const r = await fetch(LEADER_LOCAL);
+      if (r.ok) { const j = await r.json(); if (applyLeader(j)) data = j; }
+    } catch (e) { /* 落到远程兜底 */ }
+  }
+  /* ③ 远程兜底：仅本地来源全部不可用时才阻塞 */
+  if (!data) {
+    const j = await fetchRemoteLeader();
+    if (j && applyLeader(j)) data = j;
+  }
+  if (data) console.log('领导变动数据已加载，覆盖', Object.keys(LEADER_CHANGES).length, '城');
+  else console.warn('领导变动数据不可用，相关卡片不显示');
   LEADER_READY = true;
+  /* ④ 后台静默更新：本次不重绘，新版下次打开生效 */
+  revalidateLeader(data);
 }
 /* ================= 分行视图 ================= */
 function cityByName(n) { return CITIES.find(c => c.city === n); }
@@ -1585,39 +1717,69 @@ function normalizeNeg(j) {
     return r;  // 旧版快照结构原样透传
   }).filter(i => i.title);
 }
-async function loadNegNews() {
-  const sources = [
-    { name: 'jsDelivr CDN', url: 'https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
-    { name: 'jsDelivr Fastly', url: 'https://fastly.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
-    { name: 'jsDelivr Gcore', url: 'https://gcore.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
-    { name: 'GitHub Raw', url: 'https://raw.githubusercontent.com/polarsta/gjj-policy-watch/main/negative_news/negative_news.json' },
-    { name: '本地镜像', url: 'negative_news.json' }
-  ];
-  for (const src of sources) {
+const NEG_SOURCES = [
+  { name: 'jsDelivr CDN', url: 'https://cdn.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
+  { name: 'jsDelivr Fastly', url: 'https://fastly.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
+  { name: 'jsDelivr Gcore', url: 'https://gcore.jsdelivr.net/gh/polarsta/gjj-policy-watch@main/negative_news/negative_news.json' },
+  { name: 'GitHub Raw', url: 'https://raw.githubusercontent.com/polarsta/gjj-policy-watch/main/negative_news/negative_news.json' }
+];
+function negLabelFor(name, meta) {
+  const gen = meta && meta.generated_at ? meta.generated_at : '';
+  return name === '本地镜像' ? (gen ? `本地快照 ${gen}` : '本地快照')
+    : (gen ? `后台更新 ${gen}·${name}` : `后台更新·${name}`);
+}
+async function fetchRemoteNeg() {
+  for (const src of NEG_SOURCES) {
     try {
       const ctrl = new AbortController();
       const tm = setTimeout(() => ctrl.abort(), 10000);
-      const r = await fetch(src.url + (src.url.includes('?') ? '&' : '?') + '_t=' + Date.now(), { signal: ctrl.signal, cache: 'no-store' });
+      const r = await fetch(src.url + '?_t=' + Date.now(), { signal: ctrl.signal, cache: 'no-store' });
       clearTimeout(tm);
-      if (!r.ok) throw new Error('HTTP ' + r.status);
+      if (!r.ok) continue;
       const j = await r.json();
-      const items = normalizeNeg(j);
-      if (!items.length) throw new Error('舆情数据为空');
-      NEG_NEWS = items;
-      NEG_META = (j && !Array.isArray(j) && j.meta) || null;
-      const lbl = $('#risk-src-label');
-      if (lbl) {
-        const gen = NEG_META && NEG_META.generated_at ? NEG_META.generated_at : '';
-        lbl.textContent = src.name === '本地镜像'
-          ? (gen ? `本地快照 ${gen}` : '本地快照')
-          : (gen ? `后台更新 ${gen}·${src.name}` : `后台更新·${src.name}`);
-      }
-      fetchLiveNeg();
-      return;
+      if (!normalizeNeg(j).length) continue;
+      return j;
     } catch (e) { console.warn('舆情源失败:', src.name, e.message); }
   }
-  NEG_NEWS = NEG_NEWS || [];
+  return null;
+}
+async function revalidateNeg(current) {
+  try {
+    const j = await fetchRemoteNeg();
+    if (j && isNewer(j, current)) await cachePut(KEY_NEG, j);
+  } catch (e) { /* 静默 */ }
+}
+async function loadNegNews() {
+  let data = null, from = '';
+  /* ① 本地数据仓（上次后台更新的新版） */
+  const cached = await cacheGet(KEY_NEG);
+  if (cached && normalizeNeg(cached).length) { data = cached; from = '本地缓存'; }
+  /* ② 站点本地镜像：同域，约 0.1 秒 */
+  if (!data) {
+    try {
+      const r = await fetch('negative_news.json');
+      if (r.ok) {
+        const j = await r.json();
+        if (j && normalizeNeg(j).length) { data = j; from = '本地镜像'; }
+      }
+    } catch (e) { /* 落到远程兜底 */ }
+  }
+  /* ③ 远程兜底：仅本地来源全部不可用时才阻塞 */
+  if (!data) {
+    const j = await fetchRemoteNeg();
+    if (j) { data = j; from = '后台更新'; }
+  }
+  if (data) {
+    NEG_NEWS = normalizeNeg(data);
+    NEG_META = (!Array.isArray(data) && data.meta) || null;
+    const lbl = $('#risk-src-label');
+    if (lbl) lbl.textContent = negLabelFor(from, NEG_META);
+  } else {
+    NEG_NEWS = NEG_NEWS || [];
+  }
   fetchLiveNeg();
+  /* ④ 后台静默更新：本次不重绘，新版下次打开生效 */
+  revalidateNeg(data);
 }
 /* ---- 实时抓取：经公共 CORS 代理抓 360 搜索（失败静默，保留快照） ---- */
 async function fetchLiveNeg() {
