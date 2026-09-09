@@ -1266,11 +1266,20 @@ function convertLeaderChanges(j) {
 /* 变动类型推断：new=新任 removed=免职/处分 pending=任前公示 mid=中层干部 staff=非领导职务 sup=分管市领导 */
 function leaderAct(g) {
   if (g._group === 'sup') return 'sup';
-  const c = g.category || '', t = g.content || '';
+  if (g.act) return g.act;                       // 数据侧显式声明优先
+  const c = g.category || '';
+  /* 先剔除文号：否则「咸政任字〔2026〕35号」「遵府任〔2026〕40号」中的「任」会被误判为任命信号 */
+  const t = (g.content || '').replace(/[\u4e00-\u9fa5]{2,6}(?:任|干)字?〔[^〕]*〕\d*号?/g, '');
   if (/拟任|任前公示/.test(t)) return 'pending';
   if (c === '中层干部') return 'mid';
   if (c === '非领导职务') return 'staff';
-  if (/开除党籍|双开/.test(t) || (/免/.test(t) && !/任/.test(t))) return 'removed';
+  /* 以人名做锚点识别"任命"：「副主任」「主任」等职务词自带的「任」不会误命中 */
+  const names = Array.isArray(g.persons) ? g.persons.filter(n => typeof n === 'string' && n.length >= 2) : [];
+  const appointed = names.some(n => new RegExp(n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:任|担任|出任|为)').test(t));
+  const removed = /开除党籍|双开|免去|不再担任|辞去|撤职|免职/.test(t);
+  /* 任免同时出现时（如「A任副主任，免去B副主任」）按新任处理——有人到任即有触达价值 */
+  if (appointed) return 'new';
+  if (removed) return 'removed';
   return 'new';
 }
 /* 远程源顺序：jsDelivr@main（有数小时缓存但可达性较好）→ GitHub Raw。
