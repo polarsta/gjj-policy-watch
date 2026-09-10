@@ -753,11 +753,13 @@ function exportOvData() {
   for (const k of K) { let a = 0; for (const x of rows) { const o = (x.stats_2025 || {})[k]; if (o && o.value != null) a += o.value; } t[k] = Math.round(a * 100) / 100; }
   for (const k of ['withdraw_amount', 'loan_issued']) { let a = 0, b = 0; for (const x of rows) { const c = (x.stats_2025 || {})[k] || {}, p = (x.stats_2024 || {})[k] || {}; if (c.value != null && p.value != null) { a += c.value; b += p.value; } } t24[k] = [Math.round(a * 100) / 100, Math.round(b * 100) / 100]; }
   { let a = 0, b = 0; for (const x of rows) { const c = (x.stats_2025 || {}).fund_deposit_balance || {}, p = (x.stats_2024 || {}).fund_deposit_balance || {}; if (c.value != null && p.value != null) { a += c.value; b += p.value; } } t24.fund = [Math.round(a * 100) / 100, Math.round(b * 100) / 100]; }
-  const dW = t24.withdraw_amount, dL = t24.loan_issued, dF = t24.fund;
+  // 贷款余额合计同比：2024 年末按各市年报披露的贷款余额同比逐城反推后加总
+  { let a = 0, b = 0; for (const x of rows) { const o = (x.stats_2025 || {}).loan_balance; if (!o || o.value == null || !o.yoy) continue; const pp = parseFloat(String(o.yoy).replace('%', '')) / 100; if (!isFinite(pp) || pp <= -1) continue; a += o.value; b += o.value / (1 + pp); } t24.lb = [Math.round(a * 100) / 100, Math.round(b * 100) / 100]; }
+  const dW = t24.withdraw_amount, dL = t24.loan_issued, dF = t24.fund, dLB = t24.lb;
   lines.push(['合计(' + rows.length + '城)', '', t.new_units, t.active_units, '', t.new_employees, t.active_employees,
     t.deposit_amount, '', t.withdraw_amount, pctRaw(dW[0], dW[1]), dW[0] || dW[1] ? Math.round((dW[0] - dW[1]) * 100) / 100 : '',
     t.loan_issued, pctRaw(dL[0], dL[1]), dL[0] || dL[1] ? Math.round((dL[0] - dL[1]) * 100) / 100 : '',
-    t.loan_balance, '',
+    t.loan_balance, pctRaw(dLB[0], dLB[1]),
     t.fund_deposit_balance, (dF[0] || dF[1]) ? ((dF[0] - dF[1]) >= 0 ? '增加' : '减少') + Math.abs(Math.round((dF[0] - dF[1]) * 100) / 100) + '亿元' : '', '', '']);
   const csv = '﻿' + lines.map(r => r.map(v => { const s = String(v == null ? '' : v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }).join(',')).join('\n');
   const a = document.createElement('a');
@@ -899,10 +901,12 @@ function renderTables() {
     html += '</tbody></table></div></div>';
     /* ======== ④ 运行数据表（各市 2025 年报统计，来自 annual_reports 年报库） ======== */
     const ARC = (DB.annual_reports && DB.annual_reports.cities) || [];
-    const rowSet = new Set(rows.map(c => c.city));
+    // 城市名归一化（去「地区/市/州/县/盟/区」后缀）：兼容主库「吉林市」与年报库「吉林」等命名差异，避免合计漏城
+    const arNorm = s => String(s || '').replace(/(地区|[市州县盟区]+)$/, '');
+    const rowSet = new Set(rows.map(c => arNorm(c.city)));
     // 海南省为省级统一管理机构（全省仅1个独立法人机构，无市级年报），与海口/三亚同组单列一行省级数据；海口/三亚保持放空
     const includeHN = rowSet.has('海口') || rowSet.has('三亚');
-    let arRows = ARC.filter(x => rowSet.has(x.city) || (includeHN && x.city === '海南省'));
+    let arRows = ARC.filter(x => rowSet.has(arNorm(x.city)) || (includeHN && x.city === '海南省'));
     if (kw) arRows = arRows.filter(x => (x.city + x.province + (x.note || '')).includes(kw));
     const av = (o, unit) => (o && o.value != null) ? `${fmtNum(o.value)} <small style="color:var(--mute)">${unit || o.unit || ''}</small>` : '<span style="color:var(--mute)">—</span>';
     const yoy = o => (o && o.yoy) ? ` <span class="yoy ${String(o.yoy).startsWith('-') ? 'yoy-dn' : 'yoy-up'}">${String(o.yoy).startsWith('-') ? '▼' : '▲'}${esc(String(o.yoy).replace(/^[+\-]/, ''))}</span>` : '';
@@ -941,10 +945,22 @@ function renderTables() {
         }
         t[k + '_24'] = { s: Math.round(b * 100) / 100, n, paired: Math.round(a * 100) / 100 };
       }
+      // 贷款余额可比基数：各市 2024 年末余额绝对值未入库，按年报披露的贷款余额同比逐城反推 base = 本年/(1+同比) 后加总
+      {
+        let a = 0, b = 0, n = 0;
+        for (const x of rows2) {
+          const o = (x.stats_2025 || {}).loan_balance;
+          if (!o || o.value == null || !o.yoy) continue;
+          const p = parseFloat(String(o.yoy).replace('%', '')) / 100;
+          if (!isFinite(p) || p <= -1) continue;
+          a += o.value; b += o.value / (1 + p); n++;
+        }
+        t.loan_balance_24 = { s: Math.round(b * 100) / 100, n, paired: Math.round(a * 100) / 100 };
+      }
       return t;
     };
     html += `<div id="ov-sec-data"><h4 style="margin:14px 0 8px;font-size:14.5px;color:#0e9594">④ 运行数据 · 各市 2025 年度运行统计 <span class="badge b-nat">年报库</span> <button onclick="exportOvData()" style="margin-left:8px;border:1px solid #0e9594;background:#0e9594;color:#fff;border-radius:16px;padding:4px 14px;font-size:12px;font-weight:600;cursor:pointer;vertical-align:2px">⬇ 一键导出</button><span style="display:inline-flex;margin-left:8px;vertical-align:2px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff"><span style="font-size:12px;color:var(--mute);padding:4px 6px 4px 10px;background:#fff">提取额、贷款额同比展示</span><button onclick="setOvCmp('pct')" style="border:none;background:${OV_CMP==='pct'?'#0e9594':'none'};color:${OV_CMP==='pct'?'#fff':'var(--sub)'};padding:4px 12px;font-size:12px;font-weight:600;cursor:pointer">同比%</button><button onclick="setOvCmp('diff')" style="border:none;background:${OV_CMP==='diff'?'#0e9594':'none'};color:${OV_CMP==='diff'?'#fff':'var(--sub)'};padding:4px 12px;font-size:12px;font-weight:600;cursor:pointer">增减值</button></span></h4>
-    <div class="h-sub" style="margin:-2px 0 8px">来源：各市《住房公积金 2025 年年度报告》；资金存款为公积金中心存款余额（变化量较 2024 年报）；提取额 / 发放贷款的同比变化可按上表头右侧按钮在「同比%（▲/▼X%）」与「增减值（▲/▼X亿元）」间切换（二选一，▲红涨 ▼绿跌，悬停可查看两年绝对值），均以 2025 与 2024 年报绝对值口径自行计算；贷款余额的同比为年报原文披露值（部分城市按 2024 年报余额计算或人工核定，悬停可查看提取方式与来源）；「—」为未披露</div>
+    <div class="h-sub" style="margin:-2px 0 8px">来源：各市《住房公积金 2025 年年度报告》；资金存款为公积金中心存款余额（变化量较 2024 年报）；提取额 / 发放贷款的同比变化可按上表头右侧按钮在「同比%（▲/▼X%）」与「增减值（▲/▼X亿元）」间切换（二选一，▲红涨 ▼绿跌，悬停可查看两年绝对值），均以 2025 与 2024 年报绝对值口径自行计算；贷款余额的同比为年报原文披露值（部分城市按 2024 年报余额计算或人工核定，悬停可查看提取方式与来源）；合计行的贷款余额同比为按各市披露同比反推 2024 年末可比基数后加权汇总所得（非年报总量原文，悬停可见两年合计值）；「—」为未披露</div>
     <div class="tbl-wrap"><table class="tb"><thead>
       <tr class="grp">
         <th rowspan="2" class="g-plain">城市</th>
@@ -994,6 +1010,16 @@ function renderTables() {
       if (OV_CMP === 'diff') return ` <span class="yoy ${cls}" title="${tip}">${d < 0 ? '▼' : '▲'} ${fmtNum(Math.abs(d))}亿元</span>`;
       return ` <span class="yoy ${cls}" title="${tip}">${d < 0 ? '▼' : '▲'} ${Math.abs(pct)}%</span>`;
     };
+    // 贷款余额合计同比：各市 2024 年末余额绝对值未入库，按年报披露的贷款余额同比逐城反推 2024 年末可比基数后加总计算（悬停可见两年合计与口径说明）
+    const lbTotalYoy = d => {
+      const c = d && d.paired, p = d && d.s, n = d && d.n;
+      if (!n || !p) return '';
+      const pct = Math.round((c - p) / p * 1000) / 10;
+      const tip = `${n} 城合计口径：2025年末 ${fmtNum(c)} 亿元 ← 2024年末 ${fmtNum(p)} 亿元（2024 年由各市年报披露的贷款余额同比逐城反推后加总，属推算基数，非年报总量原文）`;
+      if (Math.abs(pct) < 0.05) return ` <span class="yoy" style="color:var(--mute)" title="${esc(tip)}">— 持平</span>`;
+      const cls = pct < 0 ? 'yoy-dn' : 'yoy-up';
+      return ` <span class="yoy ${cls}" title="${esc(tip)}">${pct < 0 ? '▼' : '▲'} ${Math.abs(pct)}%</span>`;
+    };
     html += `<tr class="sum-row"><td class="city" style="cursor:default">📊 合计 <small style="font-weight:400;color:var(--mute)">${arRows.length} 行</small></td>
       <td class="num">${avN(T.new_units.s, '家', T.new_units.n)}</td>
       <td class="num">${avN(T.active_units.s, '万家', T.active_units.n)}</td>
@@ -1002,7 +1028,7 @@ function renderTables() {
       <td class="num">${avN(T.deposit_amount.s, '亿元', T.deposit_amount.n)}</td>
       <td class="num">${avN(T.withdraw_amount.s, '亿元', T.withdraw_amount.n)}${cmpN(T.withdraw_amount_24.paired, T.withdraw_amount_24.s, T.withdraw_amount_24.n)}</td>
       <td class="num">${avN(T.loan_issued.s, '亿元', T.loan_issued.n)}${cmpN(T.loan_issued_24.paired, T.loan_issued_24.s, T.loan_issued_24.n)}</td>
-      <td class="num">${avN(T.loan_balance.s, '亿元', T.loan_balance.n)}</td>
+      <td class="num">${avN(T.loan_balance.s, '亿元', T.loan_balance.n)}${lbTotalYoy(T.loan_balance_24)}</td>
       <td class="num">${avN(T.fund_deposit_balance.s, '亿元', T.fund_deposit_balance.n)}</td>
       <td>${cmpN(T.fund_deposit_balance_24.paired, T.fund_deposit_balance_24.s, T.fund_deposit_balance_24.n) || '<span style="color:var(--mute)">—</span>'}</td>
       <td></td></tr>`;
