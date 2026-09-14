@@ -1498,7 +1498,7 @@ function renderBranch(city) {
   // 商机追踪：相似城市 + 案例
   const sims = similarCities(city, 10);
   $('#br-case-sub').textContent = `案例库共 ${CASES.length} 个真实案例 · 优先展示本市及政策特征相似地区`;
-  $('#br-sim').innerHTML = sims.length ? `<div style="margin-bottom:8px;font-size:12.5px;color:var(--sub)">与当地政策特征相似的城市（可对标学习）：</div>` + sims.map(s => `<span class="chip" onclick="gotoBranch('${s.name}')">${s.name} · 相似${s.score}项</span>`).join('') : '';
+  $('#br-sim').innerHTML = sims.length ? `<div style="margin-bottom:8px;font-size:12.5px;color:var(--sub)">与当地政策特征相似的城市（可对标学习）：</div>` + sims.map(s => `<span class="chip" onclick="gotoBranch('${s.name}')">${s.name}</span>`).join('') : '';
   const cityCases = CASES.filter(x => x.city === city);
   const provCases = CASES.filter(x => x.city !== city && x.province === c.province);
   const simSet = new Set(sims.map(s => s.name));
