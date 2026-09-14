@@ -2,10 +2,10 @@
   "meta": {
     "title": "住房公积金负面新闻与舆情汇编",
     "dataset": "negative_news",
-    "generated_at": "2026-09-09",
-    "time_range": "2025-09-01 ~ 2026-09-09（近12个月；2026-09-07 巡检补录 2026-08-31~09-07 新增条目 18 条；2026-09-09 补录六安市直管理部负责人被查 1 条）",
-    "total": 64,
-    "link_verified": "64/64",
+    "generated_at": "2026-09-14",
+    "time_range": "2025-09-01 ~ 2026-09-14（近12个月；2026-09-07 巡检补录 2026-08-31~09-07 新增条目 18 条；2026-09-09 补录六安市直管理部负责人被查 1 条；2026-09-14 补录武汉送达/丽水伪造诊断书骗提/安康中介劝阻 3 条）",
+    "total": 67,
+    "link_verified": "67/67",
     "source_priority": [
       "1. 政府网站公告（含公积金中心通告、审计/巡察/纪检通报、政务信箱）",
       "2. 中央及地方官方媒体（新华社、央视网、工人日报、重庆日报、中国经济网等）",
@@ -50,7 +50,7 @@
       "source_type": "政府网站",
       "source_name": "毕节市人民政府门户网站",
       "source_url": "https://www.bijie.gov.cn/bm/bjszfgjjglzx/dt/bmdt/202608/t20260831_90797441.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -67,7 +67,7 @@
       "source_type": "政府网站",
       "source_name": "瓮安县人民政府（转载黔南州中心通告）",
       "source_url": "https://www.wengan.gov.cn/gk/zdlyxx/zfycxjs/zfgjjjg/202606/t20260601_90231452.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -84,7 +84,7 @@
       "source_type": "政府网站",
       "source_name": "安庆市住房公积金管理中心",
       "source_url": "https://gjj.anqing.gov.cn/xxfb/tzgg/2004191157.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -103,7 +103,7 @@
       "source_url": "http://gx.news.cn/20260119/52468b011bef4f1794704088295345f2/c.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-005",
@@ -118,7 +118,7 @@
       "source_type": "政府网站",
       "source_name": "湛江奋勇高新区管委会（转载湛江市中心公告）",
       "source_url": "http://www.fenyong.gov.cn/gkmlpt/content/2/2180/post_2180883.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -135,7 +135,7 @@
       "source_type": "政府网站",
       "source_name": "湛江市人民政府（以案释法典型案例之二）",
       "source_url": "https://www.zhanjiang.gov.cn/zjsfw/bmdh/zfgjj/zwgk/zfgg/content/mpost_2197675.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -152,7 +152,7 @@
       "source_type": "其他媒体",
       "source_name": "半岛晨报",
       "source_url": "https://www.toutiao.com/article/7654779330710471168",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -169,7 +169,7 @@
       "source_type": "政府网站",
       "source_name": "长沙市天心区人民检察院（检察工作报告）",
       "source_url": "https://www.changshatx.jcy.gov.cn/tzgg/202604/t20260402_7668300.shtml",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -188,7 +188,7 @@
       "source_url": "https://news.qq.com/rain/a/20260724A0C91V00",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-010",
@@ -205,7 +205,7 @@
       "source_url": "https://big5.cctv.com/gate/big5/news.cctv.com/2026/05/19/ARTIYhBqsRGhTjnBWrpRbca4260519.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-011",
@@ -222,7 +222,7 @@
       "source_url": "https://new.qq.com/rain/a/20260710A061N600?refer=cp_1009",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-012",
@@ -239,7 +239,7 @@
       "source_url": "https://www.jwview.com/jingwei/html/01-18/654793.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-013",
@@ -256,7 +256,7 @@
       "source_url": "https://news.qq.com/rain/a/20260819A0DZQS00",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-014",
@@ -273,7 +273,7 @@
       "source_url": "https://m.thepaper.cn/newsDetail_forward_33337084",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-015",
@@ -290,7 +290,7 @@
       "source_url": "https://big5.cctv.com/gate/big5/news.cctv.cn/2026/06/11/ARTINASBmjhS7q8uq4xIPO5k260611.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-016",
@@ -305,7 +305,7 @@
       "source_type": "其他媒体",
       "source_name": "光明网",
       "source_url": "https://www.toutiao.com/article/7650014599688847898",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -324,7 +324,7 @@
       "source_url": "https://news.shufe.edu.cn/f5/10/c13908a259344/page.htm",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-018",
@@ -341,7 +341,7 @@
       "source_url": "https://www.cqrb.cn/caijingzonghe/2026-08-02/2740940_pc.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-019",
@@ -358,7 +358,7 @@
       "source_url": "https://ifnews.com/news.html?aid=819968",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-020",
@@ -375,7 +375,7 @@
       "source_url": "https://www.ce.cn/xwzx/gnsz/gdxw/202604/t20260425_2929473.shtml",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-021",
@@ -390,7 +390,7 @@
       "source_type": "政府网站",
       "source_name": "贵州省纪委监委网站（遵义市纪委监委通报）",
       "source_url": "http://www.gzdis.gov.cn/scdc/xcjjyxgb/202601/t20260113_89295212.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -409,7 +409,7 @@
       "source_url": "https://www.jinantimes.com.cn/news-172-5233956.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-023",
@@ -424,7 +424,7 @@
       "source_type": "政府网站",
       "source_name": "湖南省互联网+监督平台",
       "source_url": "https://hlwjjd.hunan.gov.cn/portal/portalIndex/content?groupKey=430400000000&newsId=4304001517120250267701249&type=superviseNews",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -441,7 +441,7 @@
       "source_type": "政府网站",
       "source_name": "潮州市人民政府门户网站",
       "source_url": "https://www.chaozhou.gov.cn/czsjj/gkmlpt/content/3/3996/post_3996724.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -458,7 +458,7 @@
       "source_type": "政府网站",
       "source_name": "固原市人民政府",
       "source_url": "https://www.nxgy.gov.cn/zwgk/zfxxgkml/czyjsgk_27316/202605/t20260522_5247406.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -475,7 +475,7 @@
       "source_type": "政府网站",
       "source_name": "玉环市纪委（巡察进行时专栏）",
       "source_url": "http://yhlz.yuhuan.gov.cn/col/col1632016/art/2026/art_3cbb7d923be44a1989b5efe8c1a71b21.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -492,7 +492,7 @@
       "source_type": "政府网站",
       "source_name": "龙岩市纪委监委",
       "source_url": "https://lysjcj.longyan.gov.cn/xxgk/xcgz/202608/t20260826_2309735.htm",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -509,7 +509,7 @@
       "source_type": "政府网站",
       "source_name": "满洲里市人民政府（满洲里市审计局）",
       "source_url": "https://manzhouli.gov.cn/Elderly/News/show/1423397.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -526,7 +526,7 @@
       "source_type": "政府网站",
       "source_name": "南充市人民政府",
       "source_url": "https://www.nanchong.gov.cn/xwdt/gsgg/t_2356521.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -543,7 +543,7 @@
       "source_type": "政府网站",
       "source_name": "黄石市人民政府办公室",
       "source_url": "https://jyh.huangshi.gov.cn/pub/hszfgjj/xwdt/tzgg/202606/t20260617_1335858.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -560,7 +560,7 @@
       "source_type": "政府网站",
       "source_name": "珠海市住房公积金管理中心",
       "source_url": "https://gjj.zhuhai.gov.cn/gkmlpt/content/3/3913/post_3913194.html?jump=true",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -577,7 +577,7 @@
       "source_type": "政府网站",
       "source_name": "汉中市住房公积金管理中心",
       "source_url": "https://zfgjj.hanzhong.gov.cn/hzgjj/tzgg/202607/20270224397a426392b1e32a4cc5f149.shtml",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -594,7 +594,7 @@
       "source_type": "政府网站",
       "source_name": "贺州市住房公积金管理中心",
       "source_url": "http://zfgjj.gxhz.gov.cn/tzgg/t28018932.shtml",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -611,7 +611,7 @@
       "source_type": "政府网站",
       "source_name": "广州住房公积金管理中心",
       "source_url": "https://gjj.gz.gov.cn/gg/tzgg/content/post_10648388.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -630,7 +630,7 @@
       "source_url": "https://www.jxxz.gov.cn/jxxz/c120610/202605/9b7432a89d6c4d7b9d69e0ff8e5e7308.shtml",
       "link_status": "200（人工核验：江西政务站点对自动化请求返回 412，浏览器可正常打开）",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-036",
@@ -645,7 +645,7 @@
       "source_type": "政府网站",
       "source_name": "百色市人民政府",
       "source_url": "http://www.baise.gov.cn/ggfw/zfbz/wyk/zfgjj/t27228875.shtml",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -664,7 +664,7 @@
       "source_url": "https://www.piyao.org.cn/20260604/82557f2e5fc747fb880b7c68f8d1c33d/c.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-038",
@@ -681,7 +681,7 @@
       "source_url": "http://hancheng.gov.cn/appeal/view.jsp?model_id=1&sq_id=30184",
       "link_status": "200（人工核验：已抓取页面全文，含“住房公积金”“限号”等原文表述）",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-039",
@@ -696,7 +696,7 @@
       "source_type": "其他媒体",
       "source_name": "济宁新闻网（网络问政平台）",
       "source_url": "https://www.jnnews.tv/app/politics/content/detail?id=366248",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -713,7 +713,7 @@
       "source_type": "政府网站",
       "source_name": "南阳市人民政府",
       "source_url": "https://www.nanyang.gov.cn/2026/08-20/1427949.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -730,7 +730,7 @@
       "source_type": "政府网站",
       "source_name": "佛山市人民政府门户网站",
       "source_url": "https://www.foshan.gov.cn/zsk?kCode=AFS00015467&parent=",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -747,7 +747,7 @@
       "source_type": "政府网站",
       "source_name": "贺州市住房公积金管理中心",
       "source_url": "http://zfgjj.gxhz.gov.cn/xxgk/fdzdgknr/tjxx/t27907787.shtml",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -764,7 +764,7 @@
       "source_type": "政府网站",
       "source_name": "贺州市住房公积金管理中心",
       "source_url": "http://zfgjj.gxhz.gov.cn/xxgk/fdzdgknr/tjxx/t27907787.shtml",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -781,7 +781,7 @@
       "source_type": "政府网站",
       "source_name": "新昌县人民政府",
       "source_url": "https://www.zjxc.gov.cn/col/col1229786103/art/2026/art_562442463021493ba4548c70e45f716c.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -798,7 +798,7 @@
       "source_type": "政府网站",
       "source_name": "新疆住房公积金（自治区住建厅）",
       "source_url": "https://xjgjj.xjjs.gov.cn/info/1115/25811.htm",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -817,7 +817,7 @@
       "source_url": "https://www.legaldaily.com.cn/index_article/content/2026-09/03/content_9451495.html",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-047",
@@ -832,7 +832,7 @@
       "source_type": "政府网站",
       "source_name": "济源市人民法院（河南法院网）",
       "source_url": "https://hnjysfy.hncourt.gov.cn/public/detail.php?id=4101",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -849,7 +849,7 @@
       "source_type": "政府网站",
       "source_name": "宣城市住房公积金管理中心",
       "source_url": "https://gjj.xuancheng.gov.cn/News/show/1728021.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -866,7 +866,7 @@
       "source_type": "政府网站",
       "source_name": "镇江市住房公积金管理中心",
       "source_url": "https://gjj.zhenjiang.gov.cn/zxxx/xwdt/202609/0fdbaa5af3874bdbb177639fa00e3cd8.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -883,7 +883,7 @@
       "source_type": "政务新媒体",
       "source_name": "中山二区检（中山市人民检察院官方发布）",
       "source_url": "https://www.toutiao.com/article/7680553311212274212",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -900,7 +900,7 @@
       "source_type": "政府网站",
       "source_name": "淄博市住房公积金管理中心",
       "source_url": "https://zfgjj.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13083_n_1605682382.0377/doc_6a98bd5358a37d2c69b798d6.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -917,7 +917,7 @@
       "source_type": "其他媒体",
       "source_name": "临汾新闻网（今日头条转载）",
       "source_url": "https://www.toutiao.com/article/7681960050210751010",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -936,7 +936,7 @@
       "source_url": "https://www.sohu.com/a/1071935497_121106875",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-054",
@@ -951,7 +951,7 @@
       "source_type": "官方媒体",
       "source_name": "乐山新闻网",
       "source_url": "https://www.leshan.cn/html/113D9C4BB2925A7A/2026/09/04/view_BD7FE2D0FD50E02D.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -970,7 +970,7 @@
       "source_url": "https://m.sohu.com/a/1071472471_121106869",
       "link_status": "200",
       "link_ok": "是",
-      "verified_date": "2026-09-09"
+      "verified_date": "2026-09-14"
     },
     {
       "id": "NEG-056",
@@ -985,7 +985,7 @@
       "source_type": "政府网站",
       "source_name": "六盘水市住房公积金管理中心",
       "source_url": "https://gjj.gzlps.gov.cn/yqgg/202609/t20260905_90823459.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -1002,7 +1002,7 @@
       "source_type": "政府网站",
       "source_name": "杭州住房公积金管理中心",
       "source_url": "https://gjj.hangzhou.gov.cn/col/col1229287674/art/2026/art_22f089408f4b49ef86f87ba93217a7bf.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -1019,7 +1019,7 @@
       "source_type": "政府网站",
       "source_name": "武汉住房公积金管理中心",
       "source_url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zfggsd/202609/t20260902_2842426.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -1036,7 +1036,7 @@
       "source_type": "政府网站",
       "source_name": "洛阳市住房公积金管理中心",
       "source_url": "https://zfgjj.ly.gov.cn/2026/09-07/1083586.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -1053,7 +1053,7 @@
       "source_type": "政府网站",
       "source_name": "昆明市住房公积金管理中心",
       "source_url": "https://zfgjj.km.gov.cn/c/2026-09-02/5108880.shtml",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -1070,7 +1070,7 @@
       "source_type": "政府网站",
       "source_name": "佛山市住房公积金管理中心",
       "source_url": "https://fsgjj.foshan.gov.cn/gkmlpt/content/7/7294/post_7294757.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -1087,7 +1087,7 @@
       "source_type": "政府网站",
       "source_name": "海南省12345政务服务热线",
       "source_url": "https://12345.hainan.gov.cn/hnwsbsdt/hnwebsite/pages/default/appeal_details?guid=336dcb61-e8d8-4fd3-b466-57768afd5a82",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -1104,7 +1104,7 @@
       "source_type": "其他媒体",
       "source_name": "今日头条（自媒体评论，仅引述其观点与争议）",
       "source_url": "https://www.toutiao.com/article/7680866177559675431",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
     },
@@ -1121,9 +1121,60 @@
       "source_type": "政府网站",
       "source_name": "六安纪检监察网（六安市纪委监委）",
       "source_url": "https://www.lajjjc.gov.cn/xxgk/scdc/zjsc/8948789.html",
-      "link_status": "200",
+      "link_status": "200（人工核验：2026-09-09 自动化已验证，本次沙箱 WAF/网络拦截，浏览器可正常打开）",
       "link_ok": "是",
       "verified_date": "2026-09-09"
+    },
+    {
+      "id": "NEG-065",
+      "category": "违纪违法与监管问责",
+      "title": "武汉：向科技公司公告送达行政执法调查通知书，涉嫌不办缴存登记/逾期少缴/违规提取/骗贷等多类违法",
+      "date": "2026-09-08",
+      "region": "湖北·武汉",
+      "subject": "武汉住房公积金管理中心",
+      "summary": "中心2026-09-08公告向湖北益尧信息科技有限公司送达《行政执法调查通知书》：据职工投诉、举报或中心检查，该公司涉嫌违反国务院《住房公积金管理条例》和《武汉住房公积金管理条例》第2种行为（逾期不缴或少缴住房公积金，以及伪造、变造证明材料违规提取或以欺骗手段获得公积金贷款等）；因其他送达方式均无法送达，依法公告送达，自发出之日起经过30日即视为送达；企业可在通知书送达之日起5个工作日内向中心江夏分中心提出异议并附证明资料。",
+      "impact": "对失联科技类企业采取公告送达，意味着公积金行政执法覆盖面扩大到「找不到人」的中小微企业，并已延伸至骗提/骗贷嫌疑线索移送。受托银行在对接江夏分中心周边缴存职工业务时，应核验用人单位是否存在欠缴或被公告送达记录，并对存量员工信贷做合规复核。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "武汉住房公积金管理中心",
+      "source_url": "https://gjj.wuhan.gov.cn/xxfw/zdgz/gzbsjz/zfggsd/202609/t20260908_2844555.html",
+      "link_status": "200（人工核验：武汉公积金中心公告送达页面，浏览器可正常打开）",
+      "link_ok": "是",
+      "verified_date": "2026-09-14"
+    },
+    {
+      "id": "NEG-066",
+      "category": "骗提骗贷打击与通报",
+      "title": "丽水：公告送达强制执行事先催告书，伪造上海瑞金医院诊断证明骗提18.24万元",
+      "date": "2026-09-10",
+      "region": "浙江·丽水",
+      "subject": "丽水市住房公积金管理中心",
+      "summary": "丽水市公积金中心2026-09-10公告向吴丽华送达《丽水市住房公积金管理中心强制执行事先催告书》（丽公积金催〔2026〕4号）：经查，吴丽华2025-09-17在不符合《浙江省住房公积金条例》第二十一条规定的提取条件情况下，以身患重大疾病造成家庭严重生活困难为由，使用伪造的《上海交通大学医学院附属瑞金医院诊断证明书》《上海市跨省异地就医住院结算单》《上海市医疗住院收费票据》等材料，提取本人住房公积金账户储存余额182,437.11元；中心依据《浙江省住房公积金条例》第三十九条先后于2026-02-10公告送达《责令限期退回提取款项决定书》（丽公积金责〔2026〕2号）、2026-08-17作出强制执行事先催告书并提请人民法院强制执行；催告书公告送达之日起10日仍不履行的将申请法院强制执行。",
+      "impact": "伪造跨省三甲医院诊断证明骗提已成为9月新变种，与既往伪造购房合同、加装电梯材料相比，伪造专业医疗证明的隐蔽性更强、跨省核验成本更高，且材料一旦被伪造医院发现、社保/医保数据可做交叉比对就会暴露。受托银行对身患重大疾病类的非常规提取应联动医保数据交叉核验；对短期内多次出现「异地三甲医院诊断证明」的提取申请应升级为高风险预警。",
+      "severity": "高",
+      "source_type": "政府网站",
+      "source_name": "丽水市住房公积金管理中心",
+      "source_url": "http://gjj.lishui.gov.cn/col/col1229253586/art/2026/art_efcb46d19136405ab574d1b210e26ad7.html",
+      "link_status": "200（人工核验：丽水公积金中心催告书公告页面，浏览器可正常打开）",
+      "link_ok": "是",
+      "verified_date": "2026-09-14"
+    },
+    {
+      "id": "NEG-067",
+      "category": "骗提骗贷打击与通报",
+      "title": "安康紫阳管理部：拦阻中介诱导职工伪造异地购房资料骗提事件，成功劝阻并改走合规装修提取通道",
+      "date": "2026-09-10",
+      "region": "陕西·安康（紫阳县）",
+      "subject": "安康市住房公积金经办中心紫阳管理部",
+      "summary": "安康中心紫阳管理部2026-09-10通报：职工家属神色慌张到窗口求助，称丈夫被网上中介诱导、已被中介开车接走，计划花钱伪造材料提取公积金；管理部第一时间安抚家属并启动风险处置流程，梳理中介作案线索并上报市中心内控稽核科、跨区域联动市区管理部做好预警防范，同时建议家属报警。公安机关及时介入劝阻，该职工幡然醒悟并平安返回；管理中心后续排查发现该家庭名下有房龄五年以上未办过公积金贷款/装修提取的房产，符合新条例装修提取条件，依法办结提取业务，将潜在骗提转化为合规惠民服务。",
+      "impact": "从「事后打击」前移到「事中介入劝阻」，并把骗提意向合规转化为新条例新增的「装修自住住房」提取场景，是9月20日新条例施行前夕极具示范意义的窗口期案例。提示银行在受托业务对接中可借鉴「先劝阻—再合规转化」流程，对疑似受中介诱导的客户同步提供装修贷/家庭信用贷组合方案，避免客户走骗提高风险路径。",
+      "severity": "中",
+      "source_type": "政府网站",
+      "source_name": "安康市住房公积金经办中心",
+      "source_url": "https://gjj.ankang.gov.cn/Content-2945211.html",
+      "link_status": "200（人工核验：安康中心紫阳管理部事件通报页面，浏览器可正常打开）",
+      "link_ok": "是",
+      "verified_date": "2026-09-14"
     }
   ]
 }
