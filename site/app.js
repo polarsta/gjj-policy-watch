@@ -1410,7 +1410,58 @@ function renderBranch(city) {
   $('#br-local').innerHTML = items.map(polItem).join('') || '<div class="empty">所选时间范围内无更新，可切换「全部」查看现行政策</div>';
   // 上位政策
   $('#br-nat').innerHTML = NAT_POLICIES.map(p => polItem({ nat: true, sec: '', title: p.title, text: p.desc, date: p.date, url: p.url, signal: { t: '中性', c: 'b-mid', k: 'mid' } })).join('');
-  // 营销建议（资格驱动：目标中心 → 资格攻坚/经营深化 → 当年重点 → 人事关注 → 灵活就业）
+  // 营销建议（资格驱动：目标中心 → 资格攻坚/经营深化 → 当年重点 → 人事关注 → 灵活就业；与一键导出简报共用 buildAdviceCards）
+  const adv = buildAdviceCards(city, items);
+  $('#br-advice').innerHTML =
+    (adv.quals.length ? '' : `<div style="font-size:12px;color:var(--risk);margin-bottom:6px">⚠ 该行在该市的公积金合作资格数据未收录，以下建议按政策特征生成，资格情况请人工核对。</div>`) +
+    adv.qualHtml +
+    adv.cards.slice(0, 8).map(a => `<div class="adv-card"><div class="tt">${a.t}</div><div class="ds">${a.d}${a.ev ? `<div style="margin-top:4px;font-size:11px;color:var(--mute)">依据：${esc(clip(a.ev.title, 50))}${a.ev.date ? '（' + a.ev.date + '）' : ''}${a.ev.url ? ` <a href="${esc(a.ev.url)}" target="_blank" rel="noopener">原文 ↗</a>` : ''}</div>` : ''}</div></div>`).join('');
+  // 资格矩阵（紧凑表格：分组表头 + 每列一个资格，状态图标一行展示）
+  const f = FEAT[city] || {};
+  const qGroups = [['缴存', 'var(--dep)', F_KEYS.deposit], ['提取', 'var(--wit)', F_KEYS.withdrawal], ['贷款', 'var(--loan)', F_KEYS.loan]];
+  $('#br-feat').innerHTML = `<div class="tbl-wrap"><table class="tb qmx-tb"><thead>
+    <tr class="grp">${qGroups.map(g => `<th colspan="${g[2].length}" style="background:${g[1]};color:#fff;text-align:center;letter-spacing:2px">${g[0]}</th>`).join('')}</tr>
+    <tr>${qGroups.map(g => g[2].map(k => `<th>${k[1]}</th>`).join('')).join('')}</tr>
+    </thead><tbody><tr>${qGroups.map(g => g[2].map(k => { const ft = f[k[0]] || { st: 'u' }; return `<td class="mx-cell${ft.url ? ' has-src' : ''}" data-city="${esc(city)}" data-dim="${k[0]}" data-label="${esc(k[1])}" style="text-align:center"><span class="st st-${ft.st}">${ST_TXT[ft.st]}</span></td>`; }).join('')).join('')}</tr></tbody></table></div>`;
+  // 商机追踪：相似城市 + 案例
+  const sims = similarCities(city, 10);
+  $('#br-case-sub').textContent = `案例库共 ${CASES.length} 个真实案例 · 优先展示本市及政策特征相似地区`;
+  $('#br-sim').innerHTML = sims.length ? `<div style="margin-bottom:8px;font-size:12.5px;color:var(--sub)">与当地政策特征相似的城市（可对标学习）：</div>` + sims.map(s => `<span class="chip" onclick="gotoBranch('${s.name}')">${s.name}</span>`).join('') : '';
+  const cityCases = CASES.filter(x => x.city === city);
+  const provCases = CASES.filter(x => x.city !== city && x.province === c.province);
+  const simSet = new Set(sims.map(s => s.name));
+  const simCases = CASES.filter(x => x.city !== city && x.province !== c.province && simSet.has(x.city));
+  const other = CASES.filter(x => !cityCases.includes(x) && !provCases.includes(x) && !simCases.includes(x));
+  const list = [...cityCases, ...provCases, ...simCases, ...other].slice(0, 6);
+  $('#br-cases').innerHTML = list.map(caseCard).join('') || '<div class="empty">案例库暂无相关案例</div>';
+}
+function caseCard(cs) {
+  const s0 = (cs.sources || [])[0] || {};
+  return `<div class="case-card">
+    <div class="hd2" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px"><span class="badge b-city">${esc(cs.city)}</span><span class="badge b-nat">${esc(cs.theme)}</span>${cs.confidence === 'high' ? '<span class="badge b-good">高置信</span>' : ''}</div>
+    <div class="tt">${esc(cs.title)}</div>
+    <div class="ds"><b>参与方：</b>${esc((cs.parties || []).join('、'))}</div>
+    <div class="ds">${esc(clip(cs.summary, 150))}</div>
+    <div class="pr"><b>可借鉴做法：</b><ol>${(cs.practices || []).slice(0, 4).map(p => `<li>${esc(p)}</li>`).join('')}</ol></div>
+    <div class="mt"><span>📍 ${esc(cs.province || '')}</span><span>📅 ${cs.date || '—'}</span>${s0.url ? `<a href="${esc(s0.url)}" target="_blank" rel="noopener" title="${esc(s0.title)}">真实来源 ↗</a>` : ''}</div>
+  </div>`;
+}
+function similarCities(city, topN) {
+  const f0 = FEAT[city]; if (!f0) return [];
+  const keys = Object.keys(f0).filter(k => f0[k].st === 'y');
+  const out = [];
+  for (const c of CITIES) {
+    if (c.city === city) continue;
+    const f = FEAT[c.city]; if (!f) continue;
+    let score = 0;
+    for (const k of keys) if (f[k] && f[k].st === 'y') score++;
+    if (score >= 2) out.push({ name: c.city, score });
+  }
+  out.sort((a, b) => b.score - a.score);
+  return out.slice(0, topN);
+}
+/* ---- 分行营销建议卡片生成（分行视图与一键导出简报共用，保证两处口径一致） ---- */
+function buildAdviceCards(city, items) {
   const f = FEAT[city] || {};
   const quals = BANK_QUAL.filter(q => q[0] === city || (city === '北京' && q[0] === '雄安'));
   const cards = [];
@@ -1485,52 +1536,7 @@ function renderBranch(city) {
     cards.push({ t: '🚶 灵活就业缴存｜分行经营补充建议', d: '当地已开展灵活就业人员缴存（' + clip(f.flex_dep.txt || '自愿缴存', 60).replace(/[）)]+$/, '') + '）。建议分行：面向外卖、网约车、个体工商户等群体开展缴存代办与政策宣讲，配套灵活就业专属账户、缴存代扣与小额经营贷联动，将扩面流量转化为个人存贷客群。' });
   }
   if (!cards.length) cards.push({ t: '📡 持续监测', d: '该市政策特征尚在采集中。建议保持对当地公积金中心官网监测，政策更新后系统将自动提示营销切入点。' });
-  $('#br-advice').innerHTML =
-    (quals.length ? '' : `<div style="font-size:12px;color:var(--risk);margin-bottom:6px">⚠ 该行在该市的公积金合作资格数据未收录，以下建议按政策特征生成，资格情况请人工核对。</div>`) +
-    qualHtml +
-    cards.slice(0, 8).map(a => `<div class="adv-card"><div class="tt">${a.t}</div><div class="ds">${a.d}${a.ev ? `<div style="margin-top:4px;font-size:11px;color:var(--mute)">依据：${esc(clip(a.ev.title, 50))}${a.ev.date ? '（' + a.ev.date + '）' : ''}${a.ev.url ? ` <a href="${esc(a.ev.url)}" target="_blank" rel="noopener">原文 ↗</a>` : ''}</div>` : ''}</div></div>`).join('');
-  // 资格矩阵（紧凑表格：分组表头 + 每列一个资格，状态图标一行展示）
-  const qGroups = [['缴存', 'var(--dep)', F_KEYS.deposit], ['提取', 'var(--wit)', F_KEYS.withdrawal], ['贷款', 'var(--loan)', F_KEYS.loan]];
-  $('#br-feat').innerHTML = `<div class="tbl-wrap"><table class="tb qmx-tb"><thead>
-    <tr class="grp">${qGroups.map(g => `<th colspan="${g[2].length}" style="background:${g[1]};color:#fff;text-align:center;letter-spacing:2px">${g[0]}</th>`).join('')}</tr>
-    <tr>${qGroups.map(g => g[2].map(k => `<th>${k[1]}</th>`).join('')).join('')}</tr>
-    </thead><tbody><tr>${qGroups.map(g => g[2].map(k => { const ft = f[k[0]] || { st: 'u' }; return `<td class="mx-cell${ft.url ? ' has-src' : ''}" data-city="${esc(city)}" data-dim="${k[0]}" data-label="${esc(k[1])}" style="text-align:center"><span class="st st-${ft.st}">${ST_TXT[ft.st]}</span></td>`; }).join('')).join('')}</tr></tbody></table></div>`;
-  // 商机追踪：相似城市 + 案例
-  const sims = similarCities(city, 10);
-  $('#br-case-sub').textContent = `案例库共 ${CASES.length} 个真实案例 · 优先展示本市及政策特征相似地区`;
-  $('#br-sim').innerHTML = sims.length ? `<div style="margin-bottom:8px;font-size:12.5px;color:var(--sub)">与当地政策特征相似的城市（可对标学习）：</div>` + sims.map(s => `<span class="chip" onclick="gotoBranch('${s.name}')">${s.name}</span>`).join('') : '';
-  const cityCases = CASES.filter(x => x.city === city);
-  const provCases = CASES.filter(x => x.city !== city && x.province === c.province);
-  const simSet = new Set(sims.map(s => s.name));
-  const simCases = CASES.filter(x => x.city !== city && x.province !== c.province && simSet.has(x.city));
-  const other = CASES.filter(x => !cityCases.includes(x) && !provCases.includes(x) && !simCases.includes(x));
-  const list = [...cityCases, ...provCases, ...simCases, ...other].slice(0, 6);
-  $('#br-cases').innerHTML = list.map(caseCard).join('') || '<div class="empty">案例库暂无相关案例</div>';
-}
-function caseCard(cs) {
-  const s0 = (cs.sources || [])[0] || {};
-  return `<div class="case-card">
-    <div class="hd2" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:4px"><span class="badge b-city">${esc(cs.city)}</span><span class="badge b-nat">${esc(cs.theme)}</span>${cs.confidence === 'high' ? '<span class="badge b-good">高置信</span>' : ''}</div>
-    <div class="tt">${esc(cs.title)}</div>
-    <div class="ds"><b>参与方：</b>${esc((cs.parties || []).join('、'))}</div>
-    <div class="ds">${esc(clip(cs.summary, 150))}</div>
-    <div class="pr"><b>可借鉴做法：</b><ol>${(cs.practices || []).slice(0, 4).map(p => `<li>${esc(p)}</li>`).join('')}</ol></div>
-    <div class="mt"><span>📍 ${esc(cs.province || '')}</span><span>📅 ${cs.date || '—'}</span>${s0.url ? `<a href="${esc(s0.url)}" target="_blank" rel="noopener" title="${esc(s0.title)}">真实来源 ↗</a>` : ''}</div>
-  </div>`;
-}
-function similarCities(city, topN) {
-  const f0 = FEAT[city]; if (!f0) return [];
-  const keys = Object.keys(f0).filter(k => f0[k].st === 'y');
-  const out = [];
-  for (const c of CITIES) {
-    if (c.city === city) continue;
-    const f = FEAT[c.city]; if (!f) continue;
-    let score = 0;
-    for (const k of keys) if (f[k] && f[k].st === 'y') score++;
-    if (score >= 2) out.push({ name: c.city, score });
-  }
-  out.sort((a, b) => b.score - a.score);
-  return out.slice(0, topN);
+  return { cards, quals, qualHtml };
 }
 /* ---- 一键导出城市简报 ---- */
 function exportSheet() {
@@ -1539,34 +1545,76 @@ function exportSheet() {
   const f = FEAT[BR_CITY] || {};
   const d = c.deposit || {}, w = c.withdrawal || {}, l = c.loan || {};
   const cases = CASES.filter(x => x.city === BR_CITY || x.province === c.province).slice(0, 3);
-  const rows = (obj, ks) => ks.map(k => `<tr><th style="width:22%">${k[0]}</th><td>${k[1](obj)}</td></tr>`).join('');
-  const srcL = o => (o.sources || []).map(s => `<li><a href="${esc(s.url)}">${esc(s.title)}</a>（${s.date || '—'}）</li>`).join('') || '<li>待补充</li>';
+  const li = (k, v) => `<div class="p-line"><b>${k}：</b>${v}</div>`;
+  /* ---- 2025 年度运行数据（年报库 annual_reports；城市名归一化兼容「吉林市/吉林」等命名差异） ---- */
+  const ARC = (DB.annual_reports && DB.annual_reports.cities) || [];
+  const arN = s => String(s || '').replace(/(地区|[市州县盟区]+)$/, '');
+  let ar, arNote = '';
+  // 海口/三亚在年报库为占位空行（省级统一管理，无市级年报），直接取海南省条目
+  if (c.city === '海口' || c.city === '三亚') { ar = ARC.find(x => x.city === '海南省'); arNote = '（海南省为省级统一管理机构，海口/三亚共用全省年报数据）'; }
+  else ar = ARC.find(x => arN(x.city) === arN(c.city));
+  // 条目存在但数值全空（占位行）时按未收录处理
+  if (ar && !Object.values(ar.stats_2025 || {}).some(o => o && o.value != null)) ar = null;
+  const s25 = (ar && ar.stats_2025) || {}, s24 = (ar && ar.stats_2024) || {};
+  const av2 = o => (o && o.value != null) ? fmtNum(o.value) + ' ' + (o.unit || '') : '<span style="color:#999">—</span>';
+  const yoyP = o => (o && o.yoy) ? ` <span style="color:${String(o.yoy).startsWith('-') ? '#0a7d2c' : '#c0392b'}">${String(o.yoy).startsWith('-') ? '▼' : '▲'} ${String(o.yoy).replace(/^[+\-]/, '')}</span>` : '';
+  const cmpP = (cur, prev) => {
+    const a = cur && cur.value, b = prev && prev.value;
+    if (a == null || b == null || !b) return '';
+    const pct = Math.round((a - b) / b * 1000) / 10;
+    if (Math.abs(pct) < 0.05) return ' <span style="color:#999">（较2024持平）</span>';
+    return ` <span style="color:${pct < 0 ? '#0a7d2c' : '#c0392b'}">（较2024 ${pct < 0 ? '▼' : '▲'} ${Math.abs(pct)}%）</span>`;
+  };
+  const fundChg = (ar && ar.fund_deposit_change && ar.fund_deposit_change.text) ? ` <span style="color:#555">（较2024${ar.fund_deposit_change.text}）</span>` : '';
+  const rp = (ar && ar.report_2025) || {};
+  const dataHtml = ar ? `<table><tr><th>资金存款</th><th>新开户单位</th><th>实缴单位</th><th>实缴职工</th><th>缴存金额</th><th>提取金额</th><th>发放贷款</th></tr><tr>
+      <td>${av2(s25.fund_deposit_balance)}${fundChg}</td>
+      <td>${av2(s25.new_units)}</td>
+      <td>${av2(s25.active_units)}${yoyP(s25.active_units)}</td>
+      <td>${av2(s25.active_employees)}</td>
+      <td>${av2(s25.deposit_amount)}${yoyP(s25.deposit_amount)}</td>
+      <td>${av2(s25.withdraw_amount)}${cmpP(s25.withdraw_amount, s24.withdraw_amount)}</td>
+      <td>${av2(s25.loan_issued)}${cmpP(s25.loan_issued, s24.loan_issued)}</td></tr></table>
+    <div class="p-sub" style="margin-top:2px">来源：《${esc(rp.title || '住房公积金2025年年度报告')}》${rp.publish_date ? '（' + rp.publish_date + ' 发布）' : ''}${rp.url ? `　<a href="${esc(rp.url)}">${esc(rp.url)}</a>` : ''}${arNote}</div>`
+    : '<div class="p-sub">该市 2025 年报数据暂未收录。</div>';
+  /* ---- 分行营销建议（复用分行视图同款逻辑；导出按全量政策动态生成） ---- */
+  const allItems = [];
+  for (const sec of ['deposit', 'withdrawal', 'loan']) {
+    const o = c[sec] || {};
+    allItems.push({
+      city: c.city, sec, title: `${c.city}·${SEC_NAME[sec]}政策`, text: o.note || (o.conditions || []).join('；') || '',
+      date: ((o.sources || [])[0] || {}).date || c.last_updated, url: ((o.sources || [])[0] || {}).url || ''
+    });
+    for (const s of (o.sources || []).slice(1)) allItems.push({ city: c.city, sec, title: s.title, text: o.note || '', date: s.date, url: s.url });
+  }
+  const adv = buildAdviceCards(BR_CITY, allItems);
+  const advHtml =
+    (adv.quals.length ? `<div class="p-line"><b>🎯 目标公积金中心（${adv.quals.length} 家）：</b>${adv.quals.map(q => esc(q[1])).join('、')}</div>` : '<div class="p-sub">⚠ 该行在该市的公积金合作资格数据未收录，以下建议按政策特征生成，资格情况请人工核对。</div>') +
+    adv.cards.slice(0, 6).map(a => `<div class="p-sec"><b>${a.t}</b><br>${a.d}</div>`).join('');
   $('#print-sheet').innerHTML = `
     <h1>${c.city} · 住房公积金政策一页简报</h1>
-    <div class="p-sub">${c.province} ｜ 数据更新 ${c.last_updated || '—'} ｜ 生成 ${today()} ｜ 来源：gjj-policy-watch 数据库 v${DB.version}（GitHub 自动更新）｜ 公积金政策监控台</div>
-    <h2>一、缴存政策</h2><table>${rows(d, [
-      ['单位+个人比例', () => esc(d.ratio || '待核实')],
-      ['基数上限 / 下限', () => `${d.base_upper ? fmtNum(d.base_upper) + ' 元' : '待核实'} / ${d.base_lower ? fmtNum(d.base_lower) + ' 元' : '待核实'}`],
-      ['执行年度', () => esc(d.period || '待核实')],
-      ['要点', () => esc(d.note || '—')]
-    ])}</table>
-    <h2>二、提取政策</h2><table>${rows(w, [
-      ['主要情形', () => esc((w.conditions || []).join('、') || '待核实')],
-      ['租房月上限', () => esc(w.rent_limit || '待核实')],
-      ['要点', () => esc(w.note || '—')]
-    ])}</table>
-    <h2>三、贷款政策</h2><table>${rows(l, [
-      ['单职工 / 双职工上限', () => `${esc(l.max_single || '待核实')} / ${esc(l.max_family || '待核实')}`],
-      ['首套利率 / 首付', () => `${esc(l.rate_first || '—')} / ${esc(l.down_payment_first || '—')}`],
-      ['二套利率 / 首付', () => `${esc(l.rate_second || '—')} / ${esc(l.down_payment_second || '—')}`],
-      ['申请条件', () => esc(l.conditions || '待核实')],
-      ['要点', () => esc(l.note || '—')]
-    ])}</table>
-    <h2>四、政策特征画像</h2><table><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<th>${k[1]}</th>`).join('')}</tr><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<td style="text-align:center">${ST_TXT[(f[k[0]] || { st: 'u' }).st]} ${ST_NAME[(f[k[0]] || { st: 'u' }).st]}</td>`).join('')}</tr>
+    <div class="p-sub">${c.province} ｜ 数据更新 ${c.last_updated || '—'} ｜ 生成 ${today()} ｜ 来源：gjj-policy-watch 数据库 v${DB.version}（GitHub 自动更新）｜ 公积金智策平台</div>
+    <h2>一、缴存政策</h2>
+    ${li('缴存比例（单位+个人）', esc(d.ratio || '待核实'))}
+    ${li('基数上限 / 下限', `${d.base_upper ? fmtNum(d.base_upper) + ' 元' : '待核实'} / ${d.base_lower ? fmtNum(d.base_lower) + ' 元' : '待核实'}`)}
+    ${li('执行年度', esc(d.period || '待核实'))}
+    ${d.note ? li('要点', esc(d.note)) : ''}
+    <h2>二、提取政策</h2>
+    ${li('主要情形', esc((w.conditions || []).join('、') || '待核实'))}
+    ${li('租房月上限', esc(w.rent_limit || '待核实'))}
+    ${w.note ? li('要点', esc(w.note)) : ''}
+    <h2>三、贷款政策</h2>
+    ${li('单职工 / 双职工上限', `${esc(l.max_single || '待核实')} / ${esc(l.max_family || '待核实')}`)}
+    ${li('首套 / 二套', `利率 ${esc(l.rate_first || '—')} / ${esc(l.rate_second || '—')}；首付 ${esc(l.down_payment_first || '—')} / ${esc(l.down_payment_second || '—')}`)}
+    ${l.conditions ? li('申请条件', esc(l.conditions)) : ''}
+    ${l.note ? li('要点', esc(l.note)) : ''}
+    <h2>四、2025 年度运行数据（年报）</h2>
+    ${dataHtml}
+    <h2>五、政策特征画像</h2><table><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<th>${k[1]}</th>`).join('')}</tr><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<td style="text-align:center">${ST_TXT[(f[k[0]] || { st: 'u' }).st]} ${ST_NAME[(f[k[0]] || { st: 'u' }).st]}</td>`).join('')}</tr>
     <tr>${[...F_KEYS.loan.slice(0, 6)].map(k => `<th>${k[1]}</th>`).join('')}</tr><tr>${[...F_KEYS.loan.slice(0, 6)].map(k => `<td style="text-align:center">${ST_TXT[(f[k[0]] || { st: 'u' }).st]} ${ST_NAME[(f[k[0]] || { st: 'u' }).st]}</td>`).join('')}</tr></table>
-    ${cases.length ? `<h2>五、可对标商机案例</h2>${cases.map(cs => `<div class="p-sec"><b>${esc(cs.title)}</b>（${esc(cs.city)} · ${cs.date || '—'}）<br>${esc(clip(cs.summary, 120))}<br><b>可借鉴：</b>${esc((cs.practices || [])[0] || '—')}</div>`).join('')}` : ''}
-    <h2>${cases.length ? '六' : '五'}、官方来源（可点击核验）</h2>
-    <div class="p-sec"><b>缴存：</b><ul>${srcL(d)}</ul><b>提取：</b><ul>${srcL(w)}</ul><b>贷款：</b><ul>${srcL(l)}</ul>${c.official_site ? `<div>公积金中心官网：<a href="${esc(c.official_site)}">${esc(c.official_site)}</a></div>` : ''}</div>
+    <h2>六、分行营销建议</h2>
+    ${advHtml}
+    ${cases.length ? `<h2>七、可对标商机案例</h2>${cases.map(cs => `<div class="p-sec"><b>${esc(cs.title)}</b>（${esc(cs.city)} · ${cs.date || '—'}）<br>${esc(clip(cs.summary, 120))}<br><b>可借鉴：</b>${esc((cs.practices || [])[0] || '—')}</div>`).join('')}` : ''}
     <div class="p-sub" style="margin-top:10px">⚠️ 本简报基于公开政策数据库自动生成，供客户经理拜访公积金中心参考；具体业务以当地公积金中心最新官方文件为准。</div>`;
   window.print();
 }
