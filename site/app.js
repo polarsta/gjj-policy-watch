@@ -1597,7 +1597,7 @@ function exportSheet() {
   const fundChg = (ar && ar.fund_deposit_change && ar.fund_deposit_change.text) ? ` <span style="color:#555">（较2024${ar.fund_deposit_change.text}）</span>` : '';
   const rp = (ar && ar.report_2025) || {};
   const dataHtml = ar ? `<table><tr><th>资金存款</th><th>新开户单位</th><th>实缴单位</th><th>实缴职工</th><th>缴存金额</th><th>提取金额</th><th>发放贷款</th></tr><tr>
-      <td>${av2(s25.fund_deposit_balance)}${fundChg}</td>
+      <td><b>${av2(s25.fund_deposit_balance)}</b>${fundChg}</td>
       <td>${av2(s25.new_units)}</td>
       <td>${av2(s25.active_units)}${yoyP(s25.active_units)}</td>
       <td>${av2(s25.active_employees)}</td>
