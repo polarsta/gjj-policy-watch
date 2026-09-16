@@ -1546,7 +1546,35 @@ function exportSheet() {
   const d = c.deposit || {}, w = c.withdrawal || {}, l = c.loan || {};
   const cases = CASES.filter(x => x.city === BR_CITY || x.province === c.province)
     .sort((a, b) => (b.date || '').localeCompare(a.date || '')).slice(0, 3);
-  const li = (k, v) => `<div class="p-line"><b>${k}：</b>${v}</div>`;
+  /* 要点式单元格 + 长备注浓缩：去掉「此前记录」历史段与核验日期前缀，优先保留含关键词的分句，按字数截断 */
+  const cell = items => items.filter(Boolean).map(x => `<div class="p-line">· ${x}</div>`).join('');
+  const keyNote = (note, max) => {
+    if (!note) return '';
+    let s = String(note).split(/[｜|]\s*此前记录/)[0].replace(/^\d{4}-\d{2}-\d{2}核验最高额度。?/, '').trim();
+    const parts = s.split(/[；;]/).map(x => x.trim()).filter(p => p && !/来源为|转载/.test(p));
+    const keys = parts.filter(p => /上浮|额度|利率|首付|生效|套数|互认|互贷|商转公|提取/.test(p));
+    let out = (keys.length ? keys : parts).slice(0, 4).join('；');
+    if (out.length > max) out = out.slice(0, max).replace(/[，、；。…]*$/, '') + '…';
+    return out;
+  };
+  const bizHtml = `<table>
+    <tr><th style="width:11%">类别</th><th>政策要点</th></tr>
+    <tr><th>缴存</th><td>${cell([
+      `比例 ${esc(d.ratio || '待核实')}（单位+个人）`,
+      `基数上限 ${d.base_upper ? fmtNum(d.base_upper) + ' 元' : '待核实'} ／ 下限 ${d.base_lower ? fmtNum(d.base_lower) + ' 元' : '待核实'}${d.period ? '（' + esc(d.period) + '）' : ''}`,
+      d.note ? esc(keyNote(d.note, 140)) : ''
+    ])}</td></tr>
+    <tr><th>提取</th><td>${cell([
+      `主要情形：${esc((w.conditions || []).join('、') || '待核实')}`,
+      w.rent_limit ? `租房月提取上限 ${esc(w.rent_limit)}` : '',
+      w.note ? esc(keyNote(w.note, 140)) : ''
+    ])}</td></tr>
+    <tr><th>贷款</th><td>${cell([
+      `最高额度：单职工 ${esc(l.max_single || '待核实')} ／ 双职工 ${esc(l.max_family || '待核实')}`,
+      `首套：利率 ${esc(l.rate_first || '—')}、首付 ${esc(l.down_payment_first || '—')}；二套：利率 ${esc(l.rate_second || '—')}、首付 ${esc(l.down_payment_second || '—')}`,
+      l.note ? esc(keyNote(l.note, 200)) : ''
+    ])}</td></tr>
+  </table>`;
   /* ---- 2025 年度运行数据（年报库 annual_reports；城市名归一化兼容「吉林市/吉林」等命名差异） ---- */
   const ARC = (DB.annual_reports && DB.annual_reports.cities) || [];
   const arN = s => String(s || '').replace(/(地区|[市州县盟区]+)$/, '');
@@ -1595,27 +1623,15 @@ function exportSheet() {
   $('#print-sheet').innerHTML = `
     <h1>${c.city} · 公积金政策一纸通</h1>
     <div class="p-sub">${c.province} ｜ 生成 ${today()} ｜ 来源：gjj-policy-watch 数据库 v${DB.version}（GitHub 自动更新）｜ 公积金智策平台</div>
-    <h2>一、缴存政策</h2>
-    ${li('缴存比例（单位+个人）', esc(d.ratio || '待核实'))}
-    ${li('基数上限 / 下限', `${d.base_upper ? fmtNum(d.base_upper) + ' 元' : '待核实'} / ${d.base_lower ? fmtNum(d.base_lower) + ' 元' : '待核实'}`)}
-    ${li('执行年度', esc(d.period || '待核实'))}
-    ${d.note ? li('要点', esc(d.note)) : ''}
-    <h2>二、提取政策</h2>
-    ${li('主要情形', esc((w.conditions || []).join('、') || '待核实'))}
-    ${li('租房月上限', esc(w.rent_limit || '待核实'))}
-    ${w.note ? li('要点', esc(w.note)) : ''}
-    <h2>三、贷款政策</h2>
-    ${li('单职工 / 双职工上限', `${esc(l.max_single || '待核实')} / ${esc(l.max_family || '待核实')}`)}
-    ${li('首套 / 二套', `利率 ${esc(l.rate_first || '—')} / ${esc(l.rate_second || '—')}；首付 ${esc(l.down_payment_first || '—')} / ${esc(l.down_payment_second || '—')}`)}
-    ${l.conditions ? li('申请条件', esc(l.conditions)) : ''}
-    ${l.note ? li('要点', esc(l.note)) : ''}
-    <h2>四、2025 年度运行数据（年报）</h2>
-    ${dataHtml}
-    <h2>五、政策特征画像</h2><table><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<th>${k[1]}</th>`).join('')}</tr><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<td style="text-align:center">${ST_TXT[(f[k[0]] || { st: 'u' }).st]} ${ST_NAME[(f[k[0]] || { st: 'u' }).st]}</td>`).join('')}</tr>
+    <h2>一、政策特征画像</h2><table><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<th>${k[1]}</th>`).join('')}</tr><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<td style="text-align:center">${ST_TXT[(f[k[0]] || { st: 'u' }).st]} ${ST_NAME[(f[k[0]] || { st: 'u' }).st]}</td>`).join('')}</tr>
     <tr>${[...F_KEYS.loan.slice(0, 6)].map(k => `<th>${k[1]}</th>`).join('')}</tr><tr>${[...F_KEYS.loan.slice(0, 6)].map(k => `<td style="text-align:center">${ST_TXT[(f[k[0]] || { st: 'u' }).st]} ${ST_NAME[(f[k[0]] || { st: 'u' }).st]}</td>`).join('')}</tr></table>
-    <h2>六、分行营销建议</h2>
+    <h2>二、业务政策</h2>
+    ${bizHtml}
+    <h2>三、2025 年度运行数据（年报）</h2>
+    ${dataHtml}
+    <h2>四、分行营销建议</h2>
     ${advHtml}
-    ${cases.length ? `<h2>七、可对标商机案例</h2>${cases.map(cs => `<div class="p-sec"><b>${esc(cs.title)}</b>（${esc(cs.city)} · ${cs.date || '—'}）<br>${esc(clip(cs.summary, 120))}<br><b>可借鉴：</b>${esc((cs.practices || [])[0] || '—')}</div>`).join('')}` : ''}
+    ${cases.length ? `<h2>五、可对标商机案例</h2>${cases.map(cs => `<div class="p-sec"><b>${esc(cs.title)}</b>（${esc(cs.city)} · ${cs.date || '—'}）<br>${esc(clip(cs.summary, 120))}<br><b>可借鉴：</b>${esc((cs.practices || [])[0] || '—')}</div>`).join('')}` : ''}
     <div class="p-sub" style="margin-top:10px">⚠️ 本简报基于公开政策数据库自动生成，供客户经理拜访公积金中心参考；具体业务以当地公积金中心最新官方文件为准。</div>`;
   /* 版式自适应：量高后排版——能放一页的保持紧凑一页；超出一页的按比例放大撑满两页，避免第二页只有零星内容 */
   const ps = $('#print-sheet');
