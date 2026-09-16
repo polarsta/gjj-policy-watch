@@ -1621,7 +1621,7 @@ function exportSheet() {
     (adv.quals.length ? `<div class="p-line"><b>🎯 目标公积金中心（${adv.quals.length} 家）：</b>${adv.quals.map(q => esc(q[1])).join('、')}</div>` : '<div class="p-sub">⚠ 该行在该市的公积金合作资格数据未收录，以下建议按政策特征生成，资格情况请人工核对。</div>') +
     adv.cards.slice(0, 6).map(a => `<div class="p-sec"><b>${a.t}</b><br>${a.d}</div>`).join('');
   $('#print-sheet').innerHTML = `
-    <h1>${c.city} · 公积金政策一纸通</h1>
+    <h1>${c.city}·公积金政策简报</h1>
     <div class="p-sub">公积金智策引擎 ｜ ${c.province} ｜ 生成 ${today()} ｜ 来源：gjj-policy-watch 数据库 v${DB.version}（GitHub 自动更新）</div>
     <h2>一、政策特征画像</h2><table><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<th>${k[1]}</th>`).join('')}</tr><tr>${[...F_KEYS.withdrawal.slice(0, 6)].map(k => `<td style="text-align:center">${ST_TXT[(f[k[0]] || { st: 'u' }).st]} ${ST_NAME[(f[k[0]] || { st: 'u' }).st]}</td>`).join('')}</tr>
     <tr>${[...F_KEYS.loan.slice(0, 6)].map(k => `<th>${k[1]}</th>`).join('')}</tr><tr>${[...F_KEYS.loan.slice(0, 6)].map(k => `<td style="text-align:center">${ST_TXT[(f[k[0]] || { st: 'u' }).st]} ${ST_NAME[(f[k[0]] || { st: 'u' }).st]}</td>`).join('')}</tr></table>
