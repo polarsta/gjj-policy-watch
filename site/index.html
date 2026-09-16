@@ -359,17 +359,18 @@ td.mx-cell:hover{box-shadow:inset 0 0 0 2px var(--blue2)}
 #mx-tip .tp-src{border-top:1px solid rgba(255,255,255,.14);padding-top:7px;color:#9fb0c0;font-size:12px}
 #mx-tip .tp-src a{color:#7db8f0;font-weight:600;text-decoration:none}
 #mx-tip .tp-src a:hover{text-decoration:underline}
+@page{margin:12mm 14mm}
 @media print{
   body>*{display:none !important}
   #print-sheet{display:block !important;font-size:12px;color:#000}
   #print-sheet h1{font-size:19px;margin-bottom:2px}
-  #print-sheet h2{font-size:14.5px;margin:13px 0 5px;border-left:4px solid #0e5f9e;padding-left:8px}
+  #print-sheet h2{font-size:14.5px;margin:13px 0 5px;border-left:4px solid #0e5f9e;padding-left:8px;break-after:avoid;page-break-after:avoid}
   #print-sheet .p-sub{color:#444;font-size:11.5px;margin-bottom:8px}
-  #print-sheet table{border-collapse:collapse;width:100%;font-size:11px}
+  #print-sheet table{border-collapse:collapse;width:100%;font-size:11px;break-inside:avoid;page-break-inside:avoid}
   #print-sheet th,#print-sheet td{border:1px solid #999;padding:4px 6px;text-align:left;vertical-align:top}
   #print-sheet th{background:#e8f0f7}
   #print-sheet ul{margin:2px 0 2px 18px}
-  #print-sheet .p-sec{margin-bottom:8px}
+  #print-sheet .p-sec{margin-bottom:8px;break-inside:avoid;page-break-inside:avoid}
   #print-sheet .p-line{font-size:12px;margin:2px 0;line-height:1.55}
 </style>
 </head>
@@ -511,6 +512,6 @@ td.mx-cell:hover{box-shadow:inset 0 0 0 2px var(--blue2)}
 </div>
 <div class="toast" id="toast" data-page-node-id="X58KP0LDM4OlysuMuCUJju"></div>
 <div id="print-sheet" data-page-node-id="8o25JfnLgfsOelfh4i6tqz"></div>
-<script src="app.js?v=20260916-2"></script>
+<script src="app.js?v=20260916-3"></script>
 </body>
 </html>

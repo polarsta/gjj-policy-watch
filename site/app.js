@@ -1515,10 +1515,10 @@ function buildAdviceCards(city, items) {
     sup: p => `🏛️ 分管市领导调整｜${p.persons}（${p.date}）`
   };
   const ACT_ADV = {
-    new: () => '建议分行（属地机构）领导两周内上门拜访新到任领导，介绍我行公积金归集、提取、委贷服务能力与年度合作计划，交流重点服务方案，在新任期起点加深合作关系。',
+    new: () => '建议及时拜访：分行（属地机构）领导两周内上门拜访新到任领导，介绍我行公积金归集、提取、委贷服务能力与年度合作计划，交流重点服务方案，在新任期起点加深合作关系。',
     removed: () => '建议分行关注该中心领导班子补位安排，保持与中心其他班子成员的常态化业务沟通衔接，确保合作平稳过渡；待补位人选明确后两周内上门拜访，衔接年度合作计划。',
     pending: () => '目前处于任前公示阶段。建议分行关注正式任命进展，待其到任后两周内上门拜访，介绍我行公积金服务能力与年度合作计划，抢占合作先机。',
-    mid: () => '属中层干部调整。建议分行安排属地支行负责人走访新任干部，围绕分中心、管理部辖区业务深化日常对接与服务响应。',
+    mid: () => '属中层干部调整，建议及时拜访。建议分行安排属地支行负责人走访新任干部，围绕分中心、管理部辖区业务深化日常对接与服务响应。',
     staff: () => '属非领导职务调整，触达价值有限，供分行参考，无需专项拜访。',
     sup: p => `分管市领导对公积金政策方向与管委会决策有重要影响。建议分行通过公积金管委会会议、政府条线汇报等渠道对接${p.persons}，汇报我行公积金金融服务方案与年度合作成果，争取政策与业务支持。`
   };
@@ -1544,7 +1544,8 @@ function exportSheet() {
   const c = cityByName(BR_CITY); if (!c) return;
   const f = FEAT[BR_CITY] || {};
   const d = c.deposit || {}, w = c.withdrawal || {}, l = c.loan || {};
-  const cases = CASES.filter(x => x.city === BR_CITY || x.province === c.province).slice(0, 3);
+  const cases = CASES.filter(x => x.city === BR_CITY || x.province === c.province)
+    .sort((a, b) => (b.date || '').localeCompare(a.date || '')).slice(0, 3);
   const li = (k, v) => `<div class="p-line"><b>${k}：</b>${v}</div>`;
   /* ---- 2025 年度运行数据（年报库 annual_reports；城市名归一化兼容「吉林市/吉林」等命名差异） ---- */
   const ARC = (DB.annual_reports && DB.annual_reports.cities) || [];
@@ -1592,7 +1593,7 @@ function exportSheet() {
     (adv.quals.length ? `<div class="p-line"><b>🎯 目标公积金中心（${adv.quals.length} 家）：</b>${adv.quals.map(q => esc(q[1])).join('、')}</div>` : '<div class="p-sub">⚠ 该行在该市的公积金合作资格数据未收录，以下建议按政策特征生成，资格情况请人工核对。</div>') +
     adv.cards.slice(0, 6).map(a => `<div class="p-sec"><b>${a.t}</b><br>${a.d}</div>`).join('');
   $('#print-sheet').innerHTML = `
-    <h1>${c.city} · 住房公积金政策一页简报</h1>
+    <h1>${c.city} · 公积金政策一纸通</h1>
     <div class="p-sub">${c.province} ｜ 数据更新 ${c.last_updated || '—'} ｜ 生成 ${today()} ｜ 来源：gjj-policy-watch 数据库 v${DB.version}（GitHub 自动更新）｜ 公积金智策平台</div>
     <h2>一、缴存政策</h2>
     ${li('缴存比例（单位+个人）', esc(d.ratio || '待核实'))}
@@ -1616,6 +1617,18 @@ function exportSheet() {
     ${advHtml}
     ${cases.length ? `<h2>七、可对标商机案例</h2>${cases.map(cs => `<div class="p-sec"><b>${esc(cs.title)}</b>（${esc(cs.city)} · ${cs.date || '—'}）<br>${esc(clip(cs.summary, 120))}<br><b>可借鉴：</b>${esc((cs.practices || [])[0] || '—')}</div>`).join('')}` : ''}
     <div class="p-sub" style="margin-top:10px">⚠️ 本简报基于公开政策数据库自动生成，供客户经理拜访公积金中心参考；具体业务以当地公积金中心最新官方文件为准。</div>`;
+  /* 版式自适应：量高后排版——能放一页的保持紧凑一页；超出一页的按比例放大撑满两页，避免第二页只有零星内容 */
+  const ps = $('#print-sheet');
+  ps.style.zoom = '';
+  const prevCss = ps.style.cssText;
+  ps.style.cssText = 'display:block;position:absolute;left:-9999px;top:0;width:182mm;visibility:hidden;zoom:1';
+  const h = ps.offsetHeight;
+  ps.style.cssText = prevCss;
+  const PAGE = 1030; // A4 纵向、12mm 页边距下单页可用高度 ≈ 273mm ≈ 1030px
+  if (h > PAGE && h < PAGE * 2) {
+    const z = Math.min(PAGE * 2 * 0.92 / h, 1.55);
+    if (z > 1.02) ps.style.zoom = String(Math.round(z * 100) / 100);
+  }
   window.print();
 }
 
