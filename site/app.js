@@ -1594,7 +1594,7 @@ function exportSheet() {
     adv.cards.slice(0, 6).map(a => `<div class="p-sec"><b>${a.t}</b><br>${a.d}</div>`).join('');
   $('#print-sheet').innerHTML = `
     <h1>${c.city} · 公积金政策一纸通</h1>
-    <div class="p-sub">${c.province} ｜ 数据更新 ${c.last_updated || '—'} ｜ 生成 ${today()} ｜ 来源：gjj-policy-watch 数据库 v${DB.version}（GitHub 自动更新）｜ 公积金智策平台</div>
+    <div class="p-sub">${c.province} ｜ 生成 ${today()} ｜ 来源：gjj-policy-watch 数据库 v${DB.version}（GitHub 自动更新）｜ 公积金智策平台</div>
     <h2>一、缴存政策</h2>
     ${li('缴存比例（单位+个人）', esc(d.ratio || '待核实'))}
     ${li('基数上限 / 下限', `${d.base_upper ? fmtNum(d.base_upper) + ' 元' : '待核实'} / ${d.base_lower ? fmtNum(d.base_lower) + ' 元' : '待核实'}`)}
