@@ -1648,6 +1648,10 @@ function exportSheet() {
   window.print();
 }
 
+/* 导出 PDF 顶部页眉取的是页面 <title>：打印时临时改为「公积金智策引擎」，打印结束恢复标签页原标题 */
+window.addEventListener('beforeprint', () => { window.__t0 = document.title; document.title = '公积金智策引擎'; });
+window.addEventListener('afterprint', () => { if (window.__t0) { document.title = window.__t0; window.__t0 = ''; } });
+
 /* ================= 全局搜索 ================= */
 function doSuggest(kw) {
   const box = $('#suggest');
